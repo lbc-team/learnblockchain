@@ -1,0 +1,227 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+
+# Social Links.
+# Usage: `Key: permalink || icon`
+# Key is the link label showing to end users.
+# Value before `||` delimeter is the target permalink.
+# Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
+social:
+  GitHub: https://github.com/xilibi2003 || github
+  Weibo: http://weibo.com/xilibi2003 || weibo
+  知乎: https://www.zhihu.com/people/xiong-li-bing/activities
+  E-Mail: mailto:xlb@upchain.pro || envelope
+  #Google: https://plus.google.com/yourname || google
+  #Twitter: https://twitter.com/yourname || twitter
+  #FB Page: https://www.facebook.com/yourname || facebook
+  #VK Group: https://vk.com/yourname || vk
+  #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
+  #YouTube: https://youtube.com/yourname || youtube
+  #Instagram: https://instagram.com/yourname || instagram
+  #Skype: skype:yourname?call|chat || skype
+
+social_icons:
+  enable: true
+  知乎: zhihu
+  icons_only: false
+  transition: false
+
+# title, chinese available
+# Blog rolls
+links_icon: link
+links_title: 推荐阅读
+links_layout: block
+# links
+links:
+  区块链入门及比特币: https://wiki.learnblockchain.cn/bitcoin/readme.html
+  以太坊开发资源汇总: https://wiki.learnblockchain.cn/ethereum/readme.html
+  钱包开发资源汇总: https://learnblockchain.cn/2019/04/11/wallet-dev-guide/
+  以太坊设计与实现: http://learnblockchain.cn/books/geth/
+  solidity中文文档: https://solidity-cn.readthedocs.io
+  柚子EOS开发资源汇总: https://wiki.learnblockchain.cn/eos/readme.html
+  超级账本开发资源汇总: https://wiki.learnblockchain.cn/hyperledger/readme.html
+  IPFS开发资源汇总: https://wiki.learnblockchain.cn/hyperledger/readme.html
+  跨链开发资源汇总: https://wiki.learnblockchain.cn/hyperledger/readme.html
+  区块链专业分享及问答: https://learnblockchain.cn/images/zsxq.png
+  区块链付费小专栏: https://xiaozhuanlan.com/blockchaincore
+  友情链接: https://learnblockchain.cn/friends/
+
+project:
+  比特币: /categories/bitcoin || false
+  以太坊: /categories/ethereum || false
+  EOS: /categories/EOS || false
+  Fabric: /categories/Fabric || false
+  IPFS: /categories/IPFS || false
+  FileCoin: /categories/FileCoin || false
+
+project_icons:
+  enable: true
+
+# Site
+title: 深入浅出区块链
+subtitle: 系统学习区块链技术
+description: 打造最好、最专业的区块链技术博客，内容从入门到及精通，范围覆盖比特币、以太坊及EOS柚子等公链及超级账本等联盟链、已经IPFS、FileCoin等去中心化存储以及Plasma Loom 等Layer2技术，是系统学习区块链的地方。
+author: LBC-Team
+language: zh-Hans
+timezone: Asia/Shanghai
+
+# Set default keywords (Use a comma to separate)
+keywords: "区块链技术, Learn BlockChain,系统学习区块链, 区块链导航, 以太坊, solidity, 比特币, 教程, 课程, EOS, IPFS, 钱包, FileCoin, Plasma "
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: https://learnblockchain.cn
+root: /
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :year/:title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace:
+
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ''
+  per_page: 15
+  order_by: -date
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+  以太坊: ethereum
+  比特币: bitcoin
+  钱包: wallet
+  密码学: cryptography
+  跨链: cross_chain
+  其他: other
+  技术工坊: dev_meeting
+tag_map:
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+
+# index2 generator是否包含官方的hexo-generator-index，默认true（包含）
+index2_include_index: true # defult is true
+
+# 配置index2 generator，可以是数组或对象
+index2_generator:
+  per_page: 20
+  order_by: -date
+  include:
+
+  exclude:
+    category 技术工坊 # 不包含分类为Hexo的文章
+
+# Pagination
+## Set per_page to 0 to disable pagination
+
+pagination_dir: page
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: next
+
+
+
+# ---------------------------------------------------------------
+# Menu Settings
+# ---------------------------------------------------------------
+
+# When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash from link value (/archives -> archives).
+# Usage: `Key: /link/ || icon`
+# Key is the name of menu item. If translate for this menu will find in languages - this translate will be loaded; if not - Key name will be used. Key is case-senstive.
+# Value before `||` delimeter is the target link.
+# Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
+menu:
+  home: / || home
+  wiki: https://wiki.learnblockchain.cn || book
+  etherscan: https://learnblockchain.cn/docs/etherscan/ || book
+  web3: https://learnblockchain.cn/docs/web3js-0.2x/ || book
+  about: /about/ || user
+  tags: /tags/ || tags
+  categories: /categories/ || th
+  meeting: /categories/dev-meeting/ || th
+  course: /course/ || spinner
+  
+  
+  #schedule: /schedule/ || calendar
+  #sitemap: /sitemap.xml || sitemap
+  #commonweal: /404/ || heartbeat
+
+# Enable/Disable menu icons.
+menu_icons:
+  enable: true
+  course: spinner
+  web3: book
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repo: git@github.com:lbc-team/learnblockchain.git
+  branch: master
+
+sitemap:
+  path: sitemap.xml
+  template: ./sitemap_template.xml
+
+# algolia:
+#   applicationID: 'ERVKOTY9C3'
+#   apiKey: '145d6b00595f05cb28bf9c6e3c5bdbc3'
+#   adminApiKey: 'dd88cfd44148585bff97b7de2999f9e1'
+#   indexName: 'learnblockchain'
+#   chunkSize: 5000
+
+# https://github.com/iissnan/theme-next-docs/issues/162
+
+algolia:
+  applicationID: 'UT2K1ZRSWK'
+  apiKey: '0bbb261dfad58df8f8a657a1ed3255cd'
+  adminApiKey: '8bc1e78669a4ae726c48a0ac5e20b39d'
+  indexName: 'learnblockchain'
+  chunkSize: 5000
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+
+
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20

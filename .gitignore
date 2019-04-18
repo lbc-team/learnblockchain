@@ -1,0 +1,11 @@
+.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/
+public/
+.deploy*/
+.npmignore
+source/_posts/2019/images/*
+source/.MWebMetaData
+
