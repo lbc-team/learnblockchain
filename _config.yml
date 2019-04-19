@@ -176,7 +176,6 @@ menu:
   meeting: /categories/dev-meeting/ || th
   course: /course/ || spinner
   
-  
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat

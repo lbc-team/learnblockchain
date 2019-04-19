@@ -2,6 +2,7 @@
 title: 零知识证明 - zkSNARK入门
 permalink: learn-zkSNARK
 un_reward: true
+mathjax: true
 date: 2019-04-18 15:10:54
 categories: 其他
 tags: 
