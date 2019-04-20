@@ -209,10 +209,9 @@ public class TransactionsViewModel extends BaseViewModel {
     private final MutableLiveData<ETHWallet> defaultWallet;
     private final MutableLiveData<List<Transaction>> transactions;
 }
-``` 
+```
 
 UI 界面  `PropertyDetailActivity` 通过订阅 `LiveData` 数据 `transactions` 来展现UI， `TransactionsViewModel` 获取交易列表数据逻辑（序列图只保持了主干）如下：
-
 
 
 {% mermaid sequenceDiagram %}
