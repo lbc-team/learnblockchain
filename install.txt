@@ -1,3 +1,5 @@
+主题升级后，不要需要：
+
 博客对 对hexo 主题有所修改, 为node配置文件 增加了首页、不同分类与不同标签的文章置顶功能：
 
 node_modules/文件夹下：
@@ -7,3 +9,8 @@ hexo-generator-category 修改lib/generator.js
 hexo-generator-tag  修改lib/generator.js
 
 把修改后的 js 覆盖原有文件。
+
+
+https://github.com/theme-next/theme-next-pangu
+
+https://theme-next.org/docs/third-party-services/search-services

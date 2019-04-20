@@ -14,7 +14,6 @@
 
 }
 
-
 // < 767px
 +mobile() {
 
@@ -56,6 +55,7 @@
   .post-block {
     // Inside posts blocks content padding (default 40px).
     padding: $content-mobile-padding 0 !important;
+    margin-top: initial !important;
   }
 
   .post-body {
@@ -71,9 +71,24 @@
     }
 
     // For paragraphs narrow width.
-    p {
+    > p {
       margin: 0 0 10px 0;
       padding: 0 18px;
+    }
+
+    // For lists narrow width.
+    > ul {
+       margin-inline-end: 1em;
+    }
+
+    // For blockquotes.
+    > blockquote {
+      margin: 0 18px;
+    }
+
+    // For external links alignment.
+    > span.exturl {
+      margin-left: 18px;
     }
 
     // Rewrite paddings & margins inside tags.

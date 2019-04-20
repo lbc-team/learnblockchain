@@ -1,369 +1,168 @@
-# <div align="center"><a href="https://github.com/iissnan/hexo-theme-next"><img align="center" width="56" height="56" src="../../blob/master/source/images/logo.svg"></a> e x T</div>
+<div align="right">Language: :us:
+<a title="Chinese" href="docs/zh-CN/README.md">:cn:</a>
+<a title="Russian" href="docs/ru/README.md">:ru:</a></div>
 
-<p align="center">NexT is a high quality elegant <a href="http://hexo.io">Hexo</a> theme. It is crafted from scratch, with love.</p>
+# <div align="center"><a title="NexT website repository" href="https://github.com/theme-next/theme-next.org"><img align="center" width="56" height="56" src="https://raw.githubusercontent.com/theme-next/hexo-theme-next/master/source/images/logo.svg?sanitize=true"></a> e x T</div>
 
-[![gitter-image]][gitter-url]
-[![mnt-image]][commits-url]
-[![travis-image]][travis-url]
-[![rel-image]][releases-url]
-[![hexo-image]][hexo-url]
-[![lic-image]](LICENSE)
+<p align="center">«NexT» is a high quality elegant <a href="http://hexo.io">Hexo</a> theme. It is crafted from scratch with love.</p>
 
-* [Chinese Documentation](README.cn.md)
+<p align="center">
+  <a href="https://bestpractices.coreinfrastructure.org/projects/2625"><img src="https://bestpractices.coreinfrastructure.org/projects/2625/badge" title="Core Infrastructure Initiative Best Practices"></a>
+  <a href="https://www.codacy.com/app/theme-next/hexo-theme-next?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=theme-next/hexo-theme-next&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/72f7fe7609c2438a92069f448e5a341a" title="Project Grade"></a>
+  <a href="https://travis-ci.org/theme-next/hexo-theme-next?branch=master"><img src="https://travis-ci.org/theme-next/hexo-theme-next.svg?branch=master" title="Travis CI [Linux]"></a>
+  <a href="https://i18n.theme-next.org"><img src="https://d322cqt584bo4o.cloudfront.net/theme-next/localized.svg" title="Add or improve translation in few seconds!"></a>
+  <a href="https://github.com/theme-next/hexo-theme-next/releases"><img src="https://badge.fury.io/gh/theme-next%2Fhexo-theme-next.svg"></a>
+  <a href="http://hexo.io"><img src="https://img.shields.io/badge/hexo-%3E%3D%203.5.0-blue.svg"></a>
+  <a href="https://github.com/theme-next/hexo-theme-next/blob/master/LICENSE.md"><img src="https://img.shields.io/badge/license-%20AGPL-blue.svg"></a>
+</p>
 
 ## Live Preview
 
-* :heart_decoration: Muse scheme: [XiaMo](https://notes.wanghao.work) | [OAwan](https://oawan.me) | [Hui Wang](http://hui-wang.info)
-* :six_pointed_star: Mist scheme: [Jeff](https://blog.zzbd.org) | [uchuhimo](http://uchuhimo.me) | [xirong](http://www.ixirong.com)
-* :pisces: Pisces scheme: [Vi](http://notes.iissnan.com) | [Acris](https://blog.mrx.one) | [Rainy](https://rainylog.com)
-* :gemini: Gemini scheme: [Ivan.Nginx](https://almostover.ru) | [Alynx](http://sh.alynx.xyz) | [Raincal](https://raincal.top)
+* :heart_decoration: Muse scheme: [LEAFERx](https://leaferx.online) | [Alex LEE](http://saili.science) | [Miaia](https://11.tt)
+* :six_pointed_star: Mist scheme: [uchuhimo](http://uchuhimo.me) | [xirong](http://www.ixirong.com)
+* :pisces: Pisces scheme: [Vi](http://notes.iissnan.com) | [Acris](https://acris.me) | [Jiaxi He](http://jiaxi.io)
+* :gemini: Gemini scheme: [Ivan.Nginx](https://almostover.ru) | [Raincal](https://raincal.com) | [Dandy](https://dandyxu.me)
 
-More NexT examples [here](https://github.com/iissnan/hexo-theme-next/issues/119).
+More «NexT» examples [here](https://github.com/iissnan/hexo-theme-next/issues/119).
 
 ## Installation
 
-**1.** Change dir to **hexo root** directory. There must be `node_modules`, `source`, `themes` and other directories:
+Simplest way to install is by cloning the entire repository:
+
    ```sh
    $ cd hexo
-   $ ls
-   _config.yml  node_modules  package.json  public  scaffolds  source  themes
+   $ git clone https://github.com/theme-next/hexo-theme-next themes/next
    ```
 
-**2.** Get theme from GitHub. There are several variants to do it:
+Or you can see [detailed installation instructions][docs-installation-url] if you want any other variant.
 
-### Download [latest release version][releases-latest-url].
-   At most cases **stable**. Recommended for most users.
+## Plugins
 
-   [![curl-tar-wget-image]][curl-tar-wget-url]
+In NexT config now you can find dependencies on each module which was moved to external repositories which can be found by [main organization link](https://github.com/theme-next).
 
-   ```sh
-   $ mkdir themes/next
-   $ curl -s https://api.github.com/repos/iissnan/hexo-theme-next/releases/latest | grep tarball_url | cut -d '"' -f 4 | wget -i - -O- | tar -zx -C themes/next --strip-components=1
-   ```
+For example, if you want to use `fancybox` in your site, go to NexT config and see:
 
-### Download [tagged release version][releases-url].
-   You must define version. Replace `v5.1.2` with any version from [tags list][tags-url].
+```yml
+# Fancybox
+# Dependencies: https://github.com/theme-next/theme-next-fancybox
+fancybox: false
+```
 
-   [![curl-tar-image]][curl-tar-url]
+Then turn on `fancybox` and go to «Dependencies» link with installation instructions of this module.
 
-   ```sh
-   $ mkdir themes/next
-   $ curl -L https://api.github.com/repos/iissnan/hexo-theme-next/tarball/v5.1.2 | tar -zxv -C themes/next --strip-components=1
-   ```
+### Exceptions
 
-   [![git-image]][git-url]
+If you use cdn for any plugins, you need to replace your cdn link.
 
-   ```sh
-   $ git clone --branch v5.1.2 https://github.com/iissnan/hexo-theme-next themes/next
-   ```
+For example, if you want to use `fancybox` and you configured a cdn link, go to NexT config and see:
 
-### Download [latest master branch][download-latest-url].
-   May be **unstable**, but includes latest features. Recommended for developers.
+```yml
+vendors:
+  # ...
+  # Some contents...
+  # ...
+  fancybox: # Set or update fancybox cdn url.
+  fancybox_css: # Set or update fancybox cdn url.
+```
 
-   [![curl-tar-image]][curl-tar-url]
-
-   ```sh
-   $ mkdir themes/next
-   $ curl -L https://api.github.com/repos/iissnan/hexo-theme-next/tarball | tar -zxv -C themes/next --strip-components=1
-   ```
-
-   [![git-image]][git-url]
-
-   ```sh
-   $ git clone https://github.com/iissnan/hexo-theme-next themes/next
-   ```
-
-   Clone command will give you the **whole repository**. And in any time you can switch to any tagged release.\
-   Get tags list:
-
-   ```sh
-   $ cd themes/next
-   $ git tag -l
-   …
-   v5.0.0
-   v5.0.1
-   v5.1.0
-   v5.1.1
-   v5.1.2
-   ```
-
-   For example, you want to switch on `v5.1.0` [tagged release version][tags-url]. Input the following command:
-
-   ```sh
-   $ git checkout tags/v5.1.0
-   Note: checking out 'tags/v5.1.0'.
-   …
-   HEAD now on 1f72f68... CSS: Remove global list-style setting of ul
-   ```
-
-   And if you want to switch back on [master branch][commits-url], input this command:
-
-   ```sh
-   $ git checkout master
-   ```
-
-**3.** Set theme in main **hexo root config** `_config.yml` file:
-
-    theme: next
-
-### Bugs
-For those who also encounter **Error: Cannot find module 'hexo-util'** [issue](https://github.com/iissnan/hexo-theme-next/issues/1490), please check your NPM version. 
-
-- `> 3`: Still not work. Please remove `node_modules` directory and reinstall using `npm install`.
-- `< 3`: Please add `hexo-util` explicitly via `npm install --save-dev hexo-util` to you site package deps.
+Instead of defining [main organization link](https://github.com/theme-next) for updates.
 
 ## Update
+
+You can update to latest master branch by the following command:
 
 ```sh
 $ cd themes/next
 $ git pull
 ```
 
-### Bugs
+And if you see any error message during update (something like **«Commit your changes or stash them before you can merge»**), recommended to learn [Hexo data files][docs-data-files-url] feature.\
+However, you can bypass update errors by using the `Commit`, `Stash` or `Reset` commands for local changes. See [here](https://stackoverflow.com/a/15745424/5861495) how to do it.
 
-> Commit your changes or stash them before you can merge
+**If you want to update from v5.1.x to v6.0.x, read [here][docs-update-5-1-x-url].**
 
-You must Commit, Stash or Discard local changes. See [here](https://stackoverflow.com/a/15745424/5861495) how to do it.
+## Known Bugs
 
-### Theme configurations using Hexo data files ([#328](https://github.com/iissnan/hexo-theme-next/issues/328))
+For those who also encounter **«[Error: Cannot find module 'hexo-util'](https://github.com/iissnan/hexo-theme-next/issues/1490)»**, please check your NPM version.
 
-Currently, it is not smooth to update NexT theme from pulling or downloading new releases. It is quite often running into conflict status when updating NexT theme via `git pull`, or need to merge configurations manually when upgrading to new releases.
-
- At present, NexT encourages users to store some options in site's `_config.yml` and other options in theme's `_config.yml`. This approach is applicable, but has some drawbacks:
-1. Configurations are splited into two pieces
-2. Users maybe confuse which place should be for options
-
-In order to resolve this issue, NexT will take advantage of Hexo [Data files](https://hexo.io/docs/data-files.html). Because Data files is introduced in Hexo 3, so you need upgrade Hexo to 3.0 (or above) to use this feature.  
-
-If you prefer Hexo 2.x, you can still use the old approach for configurations. NexT is still compatible with Hexo 2.x.
-
-#### Benefits
-
-With this feature, now you can put all your configurations into one place (`source/_data/next.yml`), you don't need to touch `next/_config.yml`. If there are any new options in new releases, you just need to copy those options from `next/_config.yml`, paste into `_data/next.yml` and set their values to whatever you want.
-
-#### How to use this feature
-
-1. Please ensure you are using Hexo 3 (or above)
-2. Create an file named `next.yml` in site's `source/_data` directory (create `_data` directory if it did not exist)
-3. Copy NexT theme options both in site's `_config.yml` and theme's `_config.yml` into `next.yml`.
-4. Use `--config source/_data/next.yml` parameter to start server, generate or deploy.\
-   For example: `hexo clean --config source/_data/next.yml && hexo g --config source/_data/next.yml`.
-
-## Features
-
-### Multiple languages support, including:
-:cn: Simplified Chinese & Traditional Chinese.<br>
-:us: English<br>
-:ru: Russian<br>
-:fr: French<br>
-:de: German<br>
-:jp: Japanese<br>
-:indonesia: Indonesian<br>
-:portugal: Portuguese (Brazil)<br>
-:kr: Korean<br>
-:it: Italian<br>
-:netherlands: Dutch
-
-Default language is English.
-
-```yml
-language: en
-# language: zh-Hans
-# language: zh-hk
-# language: zh-tw
-# language: ru
-# language: fr-FR
-# language: de
-# language: ja
-# language: id
-# language: pt
-# language: pt-BR
-# language: ko
-# language: it
-# language: nl-NL
-```
-
-Set `language` field as following in site `_config.yml` to change to Chinese.
-
-```yml
-language: zh-Hans
-```
-
-### Comment support.
-
-NexT has native support for `DuoShuo` and `Disqus` comment systems.
-
-Add the following snippets to your `_config.yml`:
-
-```yml
-duoshuo:
-  enable: true
-  shortname: your-duoshuo-shortname
-```
-
-OR
-
-```yml
-disqus_shortname: your-disqus-shortname
-```
-
-### Tags page.
-
-> Add a tags page contains all tags in your site.
-
-- Create a page named `tags`
-
-        hexo new page "tags"
-
-- Edit tags page, set page type to `tags`.
-
-        title: All tags
-        date: 2014-12-22 12:39:04
-        type: "tags"
-
-- Add `tags` to theme `_config.yml`:
-
-        menu:
-          home: /
-          archives: /archives
-          tags: /tags
-
-### Categories page.
-
-> Add a categories page contains all categories in your site.
-
-- Create a page named `categories`
-
-        hexo new page "categories"
-
-- Edit categories page, set page type to `categories`.
-
-        title: All categories
-        date: 2014-12-22 12:39:04
-        type: "categories"
-
-- Add `categories` to theme `_config.yml`:
-
-        menu:
-          home: /
-          archives: /archives
-          categories: /categories
-
-### Social Media
-
-NexT can automatically add links to your Social Media accounts:
-
-```yml
-social:
-  GitHub: your-github-url
-  Twitter: your-twitter-url
-  Weibo: your-weibo-url
-  DouBan: your-douban-url
-  ZhiHu: your-zhihu-url
-```
-
-### Feed link.
-
-> Show a feed link.
-
-Set `rss` field in theme's `_config.yml`, as the following value:
-
-1. `rss: false` will totally disable feed link.
-2. `rss:  ` use sites' feed link. This is the default option.
-
-    Follow the installation instruction in the plugin's README. After the configuration is done for this plugin, the feed link is ready too.
-
-3. `rss: http://your-feed-url` set specific feed link.
-
-### Up to 5 code highlight themes built-in.
-
-NexT uses [Tomorrow Theme](https://github.com/chriskempson/tomorrow-theme) with 5 themes for you to choose from.
-Next use `normal` by default. Have a preview about `normal` and `night`:
-
-![Tomorrow Normal Preview](http://iissnan.com/nexus/next/tomorrow-normal.png)
-![Tomorrow Night Preview](http://iissnan.com/nexus/next/tomorrow-night.png)
-
-Head over to [Tomorrow Theme](https://github.com/chriskempson/tomorrow-theme) for more details.
-
-## Configuration
-
-NexT comes with few configurations.
-
-```yml
-
-# Menu configuration.
-menu:
-  home: /
-  archives: /archives
-
-# Favicon
-favicon: /favicon.ico
-
-# Avatar (put the image into next/source/images/)
-# can be any image format supported by web browsers (JPEG,PNG,GIF,SVG,..)
-avatar: /default_avatar.png
-
-# Code highlight theme
-# available: normal | night | night eighties | night blue | night bright
-highlight_theme: normal
-
-# Fancybox for image gallery
-fancybox: true
-
-# Specify the date when the site was setup
-since: 2013
-
-```
-
-## Browser support
-
-![browser-image]
-
-[![Browser Stack](.github/browserstack_logo.png)](https://www.browserstack.com/)
->**BrowserStack** is a cloud-based cross-browser testing tool that enables developers to test their websites across various browsers on different operating systems and mobile devices, without requiring users to install virtual machines, devices or emulators.
+* `> 3`: Still not work? Please remove `node_modules` directory and reinstall using `npm install`.
+* `< 3`: Please add `hexo-util` explicitly via `npm install --save-dev hexo-util` to you site package deps.
 
 ## Contributing
 
 Contribution is welcome, feel free to open an issue and fork. Waiting for your pull request.
-<!--
-[![hexo-image]][hexo-url]
-[![bower-image]][bower-url]
-[![jquery-image]][jquery-url]
 
-[hexo-image]: http://img.shields.io/badge/Hexo-2.4+-2BAF2B.svg?style=flat-square
-[hexo-url]: http://hexo.io
-[bower-image]: http://img.shields.io/badge/Bower-*-2BAF2B.svg?style=flat-square
-[bower-url]: http://bower.io
-[jquery-image]: https://img.shields.io/badge/jquery-1.9-blue.svg?style=flat-square
-[jquery-url]: http://jquery.com/
--->
+## Feedback
+
+* Ask a question on [Stack Overflow][stack-url].
+* Report a bug in [GitHub Issues][issues-bug-url].
+* Request a new feature on [GitHub][issues-feat-url].
+* Vote for [popular feature requests][feat-req-vote-url].
+* Join to our [Gitter][gitter-url] / [Riot][riot-url] / [Telegram][t-chat-url] chats.
+* Follow us with [Telegram Channel][t-news-url] for latest news.
+
+## Third party applications
+
+* :triangular_flag_on_post: <a title="Hexo Markdown Editor" href="https://github.com/zhuzhuyule/HexoEditor" target="_blank">HexoEditor</a>
+
+## Thanks
+
+<p align="center">
+«NexT» send special thanks to these great services that sponsor our core infrastructure:
+</p>
+
+<p align="center"><a href="https://github.com"><img align="center" width="100" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png"></a>
+&nbsp;<a href="https://www.netlify.com"><img align="center" width="150" src="https://cdn.netlify.com/15ecf59b59c9d04b88097c6b5d2c7e8a7d1302d0/1b6d6/img/press/logos/full-logo-light.svg"></a></p>
+<p align="center">
+  <sub>GitHub allows us to host the Git repository, Netlify allows us to distribute the documentation.</sub>
+</p>
+
+<p align="center"><a href="https://crowdin.com"><img align="center" width="180" src="https://support.crowdin.com/assets/logos/crowdin-logo1-small.png"></a></p>
+<p align="center">
+  <sub>Crowdin allows us to translate conveniently the documentation.</sub>
+</p>
+
+<p align="center"><a href="https://codacy.com"><img align="center" width="155" src="https://user-images.githubusercontent.com/16944225/55026017-623f8f00-5002-11e9-88bf-0d6a5884c6c2.png"></a>
+&nbsp;<a href="https://www.browserstack.com"><img align="center" width="140" src="https://www.browserstack.com/images/mail/browserstack-logo-footer.png"></a></p>
+<p align="center">
+  <sub>Codacy allows us to run the test suite, BrowserStack allows us to test in real browsers.</sub>
+</p>
 
 [browser-image]: https://img.shields.io/badge/browser-%20chrome%20%7C%20firefox%20%7C%20opera%20%7C%20safari%20%7C%20ie%20%3E%3D%209-lightgrey.svg
 [browser-url]: https://www.browserstack.com
 
-[gitter-image]: https://badges.gitter.im/Join%20Chat.svg
-[gitter-url]: https://gitter.im/iissnan/hexo-theme-next?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+[stack-url]: https://stackoverflow.com/questions/tagged/theme-next
+[issues-bug-url]: https://github.com/theme-next/hexo-theme-next/issues/new?assignees=&labels=Bug&template=bug-report.md
+[issues-feat-url]: https://github.com/theme-next/hexo-theme-next/issues/new?assignees=&labels=Feature+Request&template=feature-request.md
+[feat-req-vote-url]: https://github.com/theme-next/hexo-theme-next/issues?q=is%3Aopen+is%3Aissue+label%3A%22Feature+Request%22+sort%3Areactions-%2B1-desc
 
-[travis-image]: https://travis-ci.org/iissnan/hexo-theme-next.svg?branch=master
-[travis-url]: https://travis-ci.org/iissnan/hexo-theme-next?branch=master "Travis CI"
+[gitter-url]: https://gitter.im/theme-next
+[riot-url]: https://riot.im/app/#/room/#theme-next:matrix.org
+[t-chat-url]: https://t.me/theme_next
+[t-news-url]: https://t.me/theme_next_news
 
-[hexo-image]: https://img.shields.io/badge/hexo-%3E%3D%203.0-blue.svg
-[hexo-url]: http://hexo.io
+<!--[rel-image]: https://img.shields.io/github/release/theme-next/hexo-theme-next.svg-->
+<!--[rel-image]: https://badge.fury.io/gh/theme-next%2Fhexo-theme-next.svg-->
+<!--[mnt-image]: https://img.shields.io/maintenance/yes/2018.svg-->
 
-[mnt-image]: https://img.shields.io/maintenance/yes/2017.svg
-[rel-image]: https://img.shields.io/github/release/iissnan/hexo-theme-next.svg
-<!--[lic-image]: https://img.shields.io/npm/l/hexo-theme-next.svg-->
-[lic-image]: https://img.shields.io/dub/l/vibe-d.svg
+[download-latest-url]: https://github.com/theme-next/hexo-theme-next/archive/master.zip
+[releases-latest-url]: https://github.com/theme-next/hexo-theme-next/releases/latest
+<!--[releases-url]: https://github.com/theme-next/hexo-theme-next/releases-->
+[tags-url]: https://github.com/theme-next/hexo-theme-next/tags
+[commits-url]: https://github.com/theme-next/hexo-theme-next/commits/master
 
-[git-image]: https://img.shields.io/badge/install%20with%20-git-blue.svg
-[curl-tar-image]: https://img.shields.io/badge/install%20with%20-curl%20%7C%20tar-blue.svg
-[curl-tar-wget-image]: https://img.shields.io/badge/install%20with%20-curl%20%7C%20tar%20%7C%20wget-blue.svg
-[git-url]: http://lmgtfy.com/?q=linux+git+install
-[curl-tar-url]: http://lmgtfy.com/?q=linux+curl+tar+install
-[curl-tar-wget-url]: http://lmgtfy.com/?q=linux+curl+tar+wget+install
+[docs-installation-url]: https://github.com/theme-next/hexo-theme-next/blob/master/docs/INSTALLATION.md
+[docs-data-files-url]: https://github.com/theme-next/hexo-theme-next/blob/master/docs/DATA-FILES.md
+[docs-update-5-1-x-url]: https://github.com/theme-next/hexo-theme-next/blob/master/docs/UPDATE-FROM-5.1.X.md
 
-[download-latest-url]: https://github.com/iissnan/hexo-theme-next/archive/master.zip
-[releases-latest-url]: https://github.com/iissnan/hexo-theme-next/releases/latest
-[releases-url]: https://github.com/iissnan/hexo-theme-next/releases
-[tags-url]: https://github.com/iissnan/hexo-theme-next/tags
-[commits-url]: https://github.com/iissnan/hexo-theme-next/commits/master
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+
+<table><tr><td align="center"><a href="https://almostover.ru"><img src="https://avatars2.githubusercontent.com/u/16944225?v=4" width="100px;" alt="Ivan.Nginx"/><br /><sub><b>Ivan.Nginx</b></sub></a><br /><a href="https://github.com/theme-next/hexo-theme-next/issues?q=author%3Aivan-nginx" title="Bug reports">🐛</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=ivan-nginx" title="Code">💻</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=ivan-nginx" title="Documentation">📖</a> <a href="#ideas-ivan-nginx" title="Ideas, Planning, & Feedback">🤔</a> <a href="#blog-ivan-nginx" title="Blogposts">📝</a> <a href="#review-ivan-nginx" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=ivan-nginx" title="Tests">⚠️</a> <a href="#translation-ivan-nginx" title="Translation">🌍</a> <a href="#design-ivan-nginx" title="Design">🎨</a> <a href="#infra-ivan-nginx" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-ivan-nginx" title="Maintenance">🚧</a></td><td align="center"><a href="http://saili.science"><img src="https://avatars3.githubusercontent.com/u/8521181?v=4" width="100px;" alt="Alex LEE"/><br /><sub><b>Alex LEE</b></sub></a><br /><a href="https://github.com/theme-next/hexo-theme-next/issues?q=author%3Asli1989" title="Bug reports">🐛</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=sli1989" title="Code">💻</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=sli1989" title="Documentation">📖</a> <a href="#review-sli1989" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=sli1989" title="Tests">⚠️</a> <a href="#translation-sli1989" title="Translation">🌍</a></td><td align="center"><a href="https://tsanie.us"><img src="https://avatars1.githubusercontent.com/u/980449?v=4" width="100px;" alt="Tsanie Lily"/><br /><sub><b>Tsanie Lily</b></sub></a><br /><a href="https://github.com/theme-next/hexo-theme-next/issues?q=author%3Atsanie" title="Bug reports">🐛</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=tsanie" title="Code">💻</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=tsanie" title="Documentation">📖</a> <a href="#review-tsanie" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=tsanie" title="Tests">⚠️</a> <a href="#translation-tsanie" title="Translation">🌍</a></td><td align="center"><a href="https://wafer.li"><img src="https://avatars1.githubusercontent.com/u/12459199?v=4" width="100px;" alt="Wafer Li"/><br /><sub><b>Wafer Li</b></sub></a><br /><a href="https://github.com/theme-next/hexo-theme-next/issues?q=author%3Awafer-li" title="Bug reports">🐛</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=wafer-li" title="Code">💻</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=wafer-li" title="Documentation">📖</a> <a href="#review-wafer-li" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=wafer-li" title="Tests">⚠️</a> <a href="#translation-wafer-li" title="Translation">🌍</a></td><td align="center"><a href="https://leaferx.online"><img src="https://avatars2.githubusercontent.com/u/20595509?v=4" width="100px;" alt="Lawrence Ye"/><br /><sub><b>Lawrence Ye</b></sub></a><br /><a href="https://github.com/theme-next/hexo-theme-next/issues?q=author%3ALEAFERx" title="Bug reports">🐛</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=LEAFERx" title="Code">💻</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=LEAFERx" title="Documentation">📖</a> <a href="#review-LEAFERx" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=LEAFERx" title="Tests">⚠️</a> <a href="#translation-LEAFERx" title="Translation">🌍</a></td><td align="center"><a href="https://blog.maple3142.net/"><img src="https://avatars1.githubusercontent.com/u/9370547?v=4" width="100px;" alt="maple"/><br /><sub><b>maple</b></sub></a><br /><a href="https://github.com/theme-next/hexo-theme-next/issues?q=author%3Amaple3142" title="Bug reports">🐛</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=maple3142" title="Code">💻</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=maple3142" title="Documentation">📖</a> <a href="#review-maple3142" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=maple3142" title="Tests">⚠️</a> <a href="#translation-maple3142" title="Translation">🌍</a></td><td align="center"><a href="https://raincal.com"><img src="https://avatars1.githubusercontent.com/u/6279478?v=4" width="100px;" alt="Raincal"/><br /><sub><b>Raincal</b></sub></a><br /><a href="https://github.com/theme-next/hexo-theme-next/issues?q=author%3ARaincal" title="Bug reports">🐛</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=Raincal" title="Code">💻</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=Raincal" title="Documentation">📖</a> <a href="#review-Raincal" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=Raincal" title="Tests">⚠️</a></td></tr><tr><td align="center"><a href="https://rainylog.com"><img src="https://avatars1.githubusercontent.com/u/7333266?v=4" width="100px;" alt="Rainy"/><br /><sub><b>Rainy</b></sub></a><br /><a href="https://github.com/theme-next/hexo-theme-next/issues?q=author%3Ageekrainy" title="Bug reports">🐛</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=geekrainy" title="Code">💻</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=geekrainy" title="Documentation">📖</a> <a href="#review-geekrainy" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=geekrainy" title="Tests">⚠️</a> <a href="#translation-geekrainy" title="Translation">🌍</a></td><td align="center"><a href="https://liolok.github.io/"><img src="https://avatars0.githubusercontent.com/u/34574198?v=4" width="100px;" alt="李皓奇"/><br /><sub><b>李皓奇</b></sub></a><br /><a href="https://github.com/theme-next/hexo-theme-next/issues?q=author%3Aliolok" title="Bug reports">🐛</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=liolok" title="Code">💻</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=liolok" title="Documentation">📖</a> <a href="#review-liolok" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=liolok" title="Tests">⚠️</a></td><td align="center"><a href="http://ioliu.cn"><img src="https://avatars2.githubusercontent.com/u/10877162?v=4" width="100px;" alt="Nine"/><br /><sub><b>Nine</b></sub></a><br /><a href="https://github.com/theme-next/hexo-theme-next/issues?q=author%3AxCss" title="Bug reports">🐛</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=xCss" title="Code">💻</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=xCss" title="Documentation">📖</a> <a href="#review-xCss" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=xCss" title="Tests">⚠️</a></td><td align="center"><a href="https://github.com/jackey8616"><img src="https://avatars0.githubusercontent.com/u/12930377?v=4" width="100px;" alt="Clooooode"/><br /><sub><b>Clooooode</b></sub></a><br /><a href="https://github.com/theme-next/hexo-theme-next/issues?q=author%3Ajackey8616" title="Bug reports">🐛</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=jackey8616" title="Code">💻</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=jackey8616" title="Documentation">📖</a></td><td align="center"><a href="https://github.com/xu-song"><img src="https://avatars3.githubusercontent.com/u/13825126?v=4" width="100px;" alt="Xu Song"/><br /><sub><b>Xu Song</b></sub></a><br /><a href="https://github.com/theme-next/hexo-theme-next/issues?q=author%3Axu-song" title="Bug reports">🐛</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=xu-song" title="Code">💻</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=xu-song" title="Documentation">📖</a></td><td align="center"><a href="https://github.com/HuntedCodes"><img src="https://avatars3.githubusercontent.com/u/10931391?v=4" width="100px;" alt="Jack Sullivan"/><br /><sub><b>Jack Sullivan</b></sub></a><br /><a href="https://github.com/theme-next/hexo-theme-next/issues?q=author%3AHuntedCodes" title="Bug reports">🐛</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=HuntedCodes" title="Code">💻</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=HuntedCodes" title="Documentation">📖</a></td><td align="center"><a href="https://github.com/dpyzo0o"><img src="https://avatars1.githubusercontent.com/u/24768249?v=4" width="100px;" alt="dpyzo0o"/><br /><sub><b>dpyzo0o</b></sub></a><br /><a href="https://github.com/theme-next/hexo-theme-next/issues?q=author%3Adpyzo0o" title="Bug reports">🐛</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=dpyzo0o" title="Code">💻</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=dpyzo0o" title="Documentation">📖</a></td></tr><tr><td align="center"><a href="http://zhuzhuyule.com"><img src="https://avatars1.githubusercontent.com/u/11242146?v=4" width="100px;" alt="zhuzhuxia"/><br /><sub><b>zhuzhuxia</b></sub></a><br /><a href="https://github.com/theme-next/hexo-theme-next/issues?q=author%3Azhuzhuyule" title="Bug reports">🐛</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=zhuzhuyule" title="Code">💻</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=zhuzhuyule" title="Documentation">📖</a></td><td align="center"><a href="https://kuleyu-hugo.netlify.com/"><img src="https://avatars0.githubusercontent.com/u/25771340?v=4" width="100px;" alt="kuleyu"/><br /><sub><b>kuleyu</b></sub></a><br /><a href="https://github.com/theme-next/hexo-theme-next/issues?q=author%3Akuleyu" title="Bug reports">🐛</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=kuleyu" title="Code">💻</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=kuleyu" title="Documentation">📖</a></td><td align="center"><a href="http://jdhao.github.io"><img src="https://avatars2.githubusercontent.com/u/16662357?v=4" width="100px;" alt="jdhao"/><br /><sub><b>jdhao</b></sub></a><br /><a href="https://github.com/theme-next/hexo-theme-next/issues?q=author%3Ajdhao" title="Bug reports">🐛</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=jdhao" title="Code">💻</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=jdhao" title="Documentation">📖</a></td><td align="center"><a href="http://www.albertgao.xyz"><img src="https://avatars1.githubusercontent.com/u/18282328?v=4" width="100px;" alt="AlbertGao"/><br /><sub><b>AlbertGao</b></sub></a><br /><a href="https://github.com/theme-next/hexo-theme-next/issues?q=author%3AAlbert-Gao" title="Bug reports">🐛</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=Albert-Gao" title="Code">💻</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=Albert-Gao" title="Documentation">📖</a></td><td align="center"><a href="https://yoshinorin.net/"><img src="https://avatars0.githubusercontent.com/u/11273093?v=4" width="100px;" alt="YoshinoriN"/><br /><sub><b>YoshinoriN</b></sub></a><br /><a href="https://github.com/theme-next/hexo-theme-next/issues?q=author%3AYoshinoriN" title="Bug reports">🐛</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=YoshinoriN" title="Code">💻</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=YoshinoriN" title="Documentation">📖</a></td><td align="center"><a href="https://zhaoqi99.github.io/"><img src="https://avatars3.githubusercontent.com/u/25344334?v=4" width="100px;" alt="Qi Zhao"/><br /><sub><b>Qi Zhao</b></sub></a><br /><a href="https://github.com/theme-next/hexo-theme-next/issues?q=author%3AZhaoQi99" title="Bug reports">🐛</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=ZhaoQi99" title="Code">💻</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=ZhaoQi99" title="Documentation">📖</a></td><td align="center"><a href="https://changchen.me/"><img src="https://avatars2.githubusercontent.com/u/6239652?v=4" width="100px;" alt="Henry Zhu"/><br /><sub><b>Henry Zhu</b></sub></a><br /><a href="https://github.com/theme-next/hexo-theme-next/issues?q=author%3Adaya0576" title="Bug reports">🐛</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=daya0576" title="Code">💻</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=daya0576" title="Documentation">📖</a></td></tr><tr><td align="center"><a href="https://github.com/cxyfreedom"><img src="https://avatars1.githubusercontent.com/u/8132652?v=4" width="100px;" alt="CxyFreedom"/><br /><sub><b>CxyFreedom</b></sub></a><br /><a href="https://github.com/theme-next/hexo-theme-next/issues?q=author%3Acxyfreedom" title="Bug reports">🐛</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=cxyfreedom" title="Code">💻</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=cxyfreedom" title="Documentation">📖</a></td><td align="center"><a href="https://kaitohh.com/"><img src="https://avatars1.githubusercontent.com/u/13927774?v=4" width="100px;" alt="KaitoHH"/><br /><sub><b>KaitoHH</b></sub></a><br /><a href="https://github.com/theme-next/hexo-theme-next/issues?q=author%3AKaitoHH" title="Bug reports">🐛</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=KaitoHH" title="Code">💻</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=KaitoHH" title="Documentation">📖</a></td><td align="center"><a href="http://www.zhaojun.im"><img src="https://avatars2.githubusercontent.com/u/35387985?v=4" width="100px;" alt="赵俊"/><br /><sub><b>赵俊</b></sub></a><br /><a href="https://github.com/theme-next/hexo-theme-next/issues?q=author%3Azhaojun1998" title="Bug reports">🐛</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=zhaojun1998" title="Code">💻</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=zhaojun1998" title="Documentation">📖</a></td><td align="center"><a href="https://github.com/izyhang"><img src="https://avatars2.githubusercontent.com/u/13059924?v=4" width="100px;" alt="zyhang"/><br /><sub><b>zyhang</b></sub></a><br /><a href="https://github.com/theme-next/hexo-theme-next/issues?q=author%3Aizyhang" title="Bug reports">🐛</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=izyhang" title="Code">💻</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=izyhang" title="Documentation">📖</a></td><td align="center"><a href="https://xiaolony.github.io"><img src="https://avatars2.githubusercontent.com/u/18529307?v=4" width="100px;" alt="Xiaolong Yang"/><br /><sub><b>Xiaolong Yang</b></sub></a><br /><a href="https://github.com/theme-next/hexo-theme-next/issues?q=author%3AXiaolonY" title="Bug reports">🐛</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=XiaolonY" title="Code">💻</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=XiaolonY" title="Documentation">📖</a></td><td align="center"><a href="https://github.com/yzca"><img src="https://avatars1.githubusercontent.com/u/15226118?v=4" width="100px;" alt="花蛄"/><br /><sub><b>花蛄</b></sub></a><br /><a href="https://github.com/theme-next/hexo-theme-next/issues?q=author%3Ayzca" title="Bug reports">🐛</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=yzca" title="Code">💻</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=yzca" title="Documentation">📖</a></td><td align="center"><a href="http://hengyunabc.github.io/"><img src="https://avatars2.githubusercontent.com/u/1683936?v=4" width="100px;" alt="hengyunabc"/><br /><sub><b>hengyunabc</b></sub></a><br /><a href="https://github.com/theme-next/hexo-theme-next/issues?q=author%3Ahengyunabc" title="Bug reports">🐛</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=hengyunabc" title="Code">💻</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=hengyunabc" title="Documentation">📖</a></td></tr><tr><td align="center"><a href="http://bluefisher.github.io"><img src="https://avatars2.githubusercontent.com/u/6104460?v=4" width="100px;" alt="Fisher Chang"/><br /><sub><b>Fisher Chang</b></sub></a><br /><a href="https://github.com/theme-next/hexo-theme-next/issues?q=author%3ABlueFisher" title="Bug reports">🐛</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=BlueFisher" title="Code">💻</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=BlueFisher" title="Documentation">📖</a></td><td align="center"><a href="http://chansonshen.com/"><img src="https://avatars2.githubusercontent.com/u/4521477?v=4" width="100px;" alt="Chanson Shen"/><br /><sub><b>Chanson Shen</b></sub></a><br /><a href="https://github.com/theme-next/hexo-theme-next/issues?q=author%3Ashenchsh" title="Bug reports">🐛</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=shenchsh" title="Code">💻</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=shenchsh" title="Documentation">📖</a></td><td align="center"><a href="http://ywjno.com"><img src="https://avatars2.githubusercontent.com/u/842383?v=4" width="100px;" alt="Thomas Yang"/><br /><sub><b>Thomas Yang</b></sub></a><br /><a href="https://github.com/theme-next/hexo-theme-next/issues?q=author%3Aywjno" title="Bug reports">🐛</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=ywjno" title="Code">💻</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=ywjno" title="Documentation">📖</a></td><td align="center"><a href="http://legendarynacar.github.io"><img src="https://avatars3.githubusercontent.com/u/8149261?v=4" width="100px;" alt="Legendary Nacar"/><br /><sub><b>Legendary Nacar</b></sub></a><br /><a href="#translation-legendarynacar" title="Translation">🌍</a></td><td align="center"><a href="https://github.com/Rikusen0335"><img src="https://avatars0.githubusercontent.com/u/19174234?v=4" width="100px;" alt="rikusen0335"/><br /><sub><b>rikusen0335</b></sub></a><br /><a href="#translation-Rikusen0335" title="Translation">🌍</a></td><td align="center"><a href="https://www.dnocm.com"><img src="https://avatars3.githubusercontent.com/u/15902347?v=4" width="100px;" alt="Mr.J"/><br /><sub><b>Mr.J</b></sub></a><br /><a href="https://github.com/theme-next/hexo-theme-next/issues?q=author%3AJiangTJ" title="Bug reports">🐛</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=JiangTJ" title="Code">💻</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=JiangTJ" title="Documentation">📖</a> <a href="#infra-JiangTJ" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td><td align="center"><a href="https://1v9.im"><img src="https://avatars3.githubusercontent.com/u/29083921?v=4" width="100px;" alt="1v9"/><br /><sub><b>1v9</b></sub></a><br /><a href="https://github.com/theme-next/hexo-theme-next/issues?q=author%3A1v9" title="Bug reports">🐛</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=1v9" title="Code">💻</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=1v9" title="Documentation">📖</a> <a href="#translation-1v9" title="Translation">🌍</a> <a href="#review-1v9" title="Reviewed Pull Requests">👀</a></td></tr><tr><td align="center"><a href="https://zhangshuqiao.org"><img src="https://avatars1.githubusercontent.com/u/16272760?v=4" width="100px;" alt="Mimi"/><br /><sub><b>Mimi</b></sub></a><br /><a href="https://github.com/theme-next/hexo-theme-next/issues?q=author%3Astevenjoezhang" title="Bug reports">🐛</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=stevenjoezhang" title="Code">💻</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=stevenjoezhang" title="Documentation">📖</a> <a href="#review-stevenjoezhang" title="Reviewed Pull Requests">👀</a> <a href="#translation-stevenjoezhang" title="Translation">🌍</a></td><td align="center"><a href="https://i-m.dev"><img src="https://avatars2.githubusercontent.com/u/17429111?v=4" width="100px;" alt="张强"/><br /><sub><b>张强</b></sub></a><br /><a href="https://github.com/theme-next/hexo-theme-next/issues?q=author%3Azq-97" title="Bug reports">🐛</a> <a href="https://github.com/theme-next/hexo-theme-next/commits?author=zq-97" title="Code">💻</a></td></tr></table>
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!

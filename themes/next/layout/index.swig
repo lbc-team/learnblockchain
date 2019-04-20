@@ -2,7 +2,7 @@
 {% import '_macro/post.swig' as post_template %}
 {% import '_macro/sidebar.swig' as sidebar_template %}
 
-{% block title %}{{ config.title }}{% if theme.index_with_subtitle and config.subtitle %} - {{config.subtitle }}{% endif %}{% endblock %}
+{% block title %}{{ title }}{% if theme.index_with_subtitle and subtitle %} – {{ subtitle }}{% endif %}{% endblock %}
 
 {% block page_class %}
   {% if is_home() %}page-home{% endif -%}
@@ -11,9 +11,7 @@
 {% block content %}
   <section id="posts" class="posts-expand">
     {% for post in page.posts %}
-      {% if post.hide_in_home != true %}
-        {{ post_template.render(post, true) }}
-      {% endif %}
+      {{ post_template.render(post, true) }}
     {% endfor %}
   </section>
 
