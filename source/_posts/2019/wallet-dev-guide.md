@@ -46,7 +46,7 @@ author: Tiny熊
 * [如何开发一款以太坊安卓钱包系列3 - 资产信息展示](https://learnblockchain.cn/2019/03/24/eth_wallet_dev_3/)
 * [如何开发一款以太坊安卓钱包系列4 - 获取以太及Token余额](https://learnblockchain.cn/2019/03/26/eth-wallet-dev-4/)
 * [如何开发一款以太坊安卓钱包系列5 - 发送转账交易](https://learnblockchain.cn/2019/04/04/eth-wallet-dev-5/)
-
+* [如何开发一款以太坊安卓钱包系列6 - 获取账号交易列表](https://learnblockchain.cn/2019/04/19/eth-wallet-dev-6/)
 
 
 欢迎钱包开发讨论微信群，加微信：xlbxiong 备注：钱包 

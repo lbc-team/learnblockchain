@@ -19,7 +19,7 @@ date: 2017-10-24 18:16:10
 
 ### 贡献
 
-如果你有意加入我们，成为我们的一员，[Github](https://github.com/lbc-team/learnblockchain)
+如果你有意加入我们，成为我们的一员，我们的[Github](https://github.com/lbc-team)
 
 我们愿意和所有的技术社区建立联系与合作，一起推动区块链技术在中国的发展。
 我的微信： xlbxiong
