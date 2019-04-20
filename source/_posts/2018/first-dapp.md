@@ -25,7 +25,7 @@ author: Tiny熊
 除此之外，你最好还了解一些HTML及JavaScript知识。
 
 本文通过实例教大家来开发去中心化应用，应用效果如图：
-![](https://img.learnblockchain.cn/2018/Petshop.jpg!wl)
+![](https://img.learnblockchain.cn/2018/Petshop.jpg!wl/scale/45%)
 
 从本文，你可以学习到：
 * 搭建智能合约开发环境

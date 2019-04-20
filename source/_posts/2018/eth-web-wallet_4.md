@@ -49,7 +49,7 @@ contract ERC20Interface {
 
 ABI 全称是 Application Binary Interface，它就是合约接口的描述，因此有了合约的接口定义，就可以很容易通过编译拿到ABI 信息，比如像下图在Remix 的编译选项卡就可以直接复制ABI。
 
-![](https://img.learnblockchain.cn/2018/15403775499051.jpg!wl)
+![](https://img.learnblockchain.cn/2018/15403775499051.jpg!wl/scale/70%)
 
 生成的 ABI 描述大概长这样：
 
@@ -127,7 +127,7 @@ ethers.js 构造合约对象很简单，仅需要提供三个参数给ethers.Con
 
 结合UI来实现以下获取Token余额，UI如下：
 
- ![](https://img.learnblockchain.cn/2018/15405195250777.jpg!wl)
+ ![](https://img.learnblockchain.cn/2018/15405195250777.jpg!wl/scale/30%)
 
 在HTML里，定义的标签如下：
 
@@ -155,7 +155,7 @@ ethers.js 构造合约对象很简单，仅需要提供三个参数给ethers.Con
 
 转移Token的UI效果如下：
 
- ![](https://img.learnblockchain.cn/2018/15405195493994.jpg!wl)
+ ![](https://img.learnblockchain.cn/2018/15405195493994.jpg!wl/scale/40%)
 
 界面的HTML代码如下：
 

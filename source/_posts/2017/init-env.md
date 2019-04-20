@@ -42,7 +42,7 @@ brew install ethereum
 geth --datadir testNet --dev console 2>> test.log
 ```
 执行命名后，会进入geth控制台，这时光标停在一个向右的箭头处，像这样：
-![](https://img.learnblockchain.cn/2017/open_geth_eth.jpg!wl)
+![geth控制台](https://img.learnblockchain.cn/2017/open_geth_eth.jpg)
 
 命令参数说明（更多命令详解可阅读[Geth命令用法-参数详解篇](https://learnblockchain.cn/2017/11/29/geth_cmd_options/)）:
 **--dev** 启用开发者网络（模式），开发者网络会使用POA共识，默认预分配一个开发者账户并且会自动开启挖矿。
@@ -63,7 +63,7 @@ tail -f test.log
 > eth.accounts
 ```
 回车后，返回一个账户数组，里面有一个默认账户，如：
-![](https://img.learnblockchain.cn/2017/geth_accounts_1.jpg!wl)
+![](https://img.learnblockchain.cn/2017/geth_accounts_1.jpg)
 > 也可以使用personal.listAccounts查看账户，
 
 再来看一下账户里的余额，使用一下命令：
@@ -95,7 +95,7 @@ TinyXiong为新账户的密码，回车后，返回一个新账户。
 0
 ```
 回车后，返回的是0，新账户是0。结果如：
-![](https://img.learnblockchain.cn/2017/geth_accounts_2.jpg!wl)
+![](https://img.learnblockchain.cn/2017/geth_accounts_2.jpg)
 
 ### 给新账户转账
 我们知道没有余额的账户是没法部署合约的，那我们就从默认账户转1以太币给新账户，使用以下命令（请使用你自己eth.accounts对应输出的账户）：
@@ -136,10 +136,10 @@ contract hello {
 ```
 简单解释下，我们定义了一个名为hello的合约，在合约初始化时保存了一个字符串（我们会传入hello world），每次调用say返回字符串。
 把这段代码写(拷贝)到[Browser-Solidity](https://ethereum.github.io/browser-solidity)，如果没有错误，点击Details获取部署代码，如：
-![](https://img.learnblockchain.cn/2017/eth_code_hello_step1.jpeg!wl)
+![](https://img.learnblockchain.cn/2017/eth_code_hello_step1.jpeg!wl/scale/70%)
 
 在弹出的对话框中找到WEB3DEPLOY部分，点拷贝，粘贴到编辑器后，修改初始化字符串为hello world。
-![](https://img.learnblockchain.cn/2017/eth_code_hello_step2.jpeg!wl)
+![remix 生成 部署代码](https://img.learnblockchain.cn/2017/eth_code_hello_step2.jpeg!wl/scale/70%)
 
 > solidity在博文写作时（2017/11/24），版本为0.4.18，solidity发展非常快，solidity版本之间有可能不能兼容，这是你可以在Browser-Solidity的Settings里选择对应的编译器版本。
 > Browser-Solidity也不停的更新中，截图可能和你看到的界面不一样。

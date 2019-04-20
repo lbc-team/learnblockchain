@@ -1,10 +1,15 @@
 ---
 title: 如何开发一款以太坊安卓钱包系列6 - 获取账号交易列表 
 permalink: eth-wallet-dev-6
-un_reward: true
+un_reward: false
 date: 2019-04-19 22:34:40
-categories:
+categories: 
+    - 以太坊
+    - 钱包
 tags:
+    - 钱包
+    - 以太坊
+    - web3j
 author: Tiny熊
 ---
 
@@ -15,7 +20,7 @@ author: Tiny熊
 ## 交易列表功能
 
 几乎每一个数字钱包都会把账号的交易列表展示出来，像下面这样一个列表:
-![](https://img.learnblockchain.cn/2019/15553370001937.jpg!wl)
+![](https://img.learnblockchain.cn/2019/15553370001937.jpg!wl/fw/700)
 
 这篇文章来看看如何来实现交易列表，首先得了解一点：**以太坊官方的节点服务不提供获取某一个地址的历史交易**。
 
@@ -104,22 +109,15 @@ Trust-ray 是一个Node项目，服务如何搭建请大家订阅[小专栏](htt
 Trust-ray 提供的功能有两块：一个是扫描解析区块， 一个是提供API服务。
 Trust-ray 扫描解析区块逻辑在 `common` 目录下，入口是[ParseStarter.ts](https://github.com/xilibi2003/trust-ray/blob/master/src/common/ParseStarter.ts) 大家最好对照代码阅读，大致解析逻辑（有删减）如下：
 
-
-![Trust-ray 解析区块逻辑](/svg/trust-ray-parse-block.svg)
-
-
-<div style='display: none'>
-
-```sequence
-Title: 解析区块逻辑
-Note left of ParseStarter: start
-ParseStarter->BlockchainState: getState
-ParseStarter->BlockchainParser: start
-BlockchainParser->TransactionParser: parseTransactions
-BlockchainParser->TokenParser: parseERC20Contracts
+{% mermaid sequenceDiagram %}
+Title: Trust-ray 解析区块逻辑序列图
+Note left of ParseStarter: 调用 start()
+ParseStarter->>BlockchainState: getState
+ParseStarter->>BlockchainParser: start
+BlockchainParser->>TransactionParser: parseTransactions
+BlockchainParser->>TokenParser: parseERC20Contracts
 Note right of BlockchainParser:  写入MongoDB
-```
-</div>
+{% endmermaid %}
 
 ### Trust-ray 提供接口服务
 
@@ -216,19 +214,19 @@ public class TransactionsViewModel extends BaseViewModel {
 UI 界面  `PropertyDetailActivity` 通过订阅 `LiveData` 数据 `transactions` 来展现UI， `TransactionsViewModel` 获取交易列表数据逻辑（序列图只保持了主干）如下：
 
 
-![获取交易列表数据逻辑序列图](/svg/wallet-6-fetch-transaction.svg)
 
-<div style='display: none'>
-```sequence
-Title: 获取账号交易列表
+{% mermaid sequenceDiagram %}
+
+Title: 获取交易列表数据逻辑序列图
 Note left of TransactionsViewModel: UI 调用 fetchTransactions
 TransactionsViewModel->FetchTransactionsInteract: fetch
 FetchTransactionsInteract->TransactionRepository: fetchTransaction
 TransactionRepository->BlockExplorerClient: fetchTransactions
 Note left of BlockExplorerClient: 通过 Retrofit2 请求服务器接口
 FetchTransactionsInteract-->>TransactionsViewModel: onTransactions
-```
-<div>
+{% endmermaid %}
+
+
 
 请求上面 Trust-ray 提供获取交易列表API 是有 BlockExplorerClient 类完成的，其使用了网络请求框架 `Retrofit2` ，服务返回的数据会封装成 `Transaction` 结构对象列表 `transactions` ，这个列表会一直通过订阅的
 

@@ -28,7 +28,7 @@ author: Tiny熊
 
 在界面上，需要看到每个候选人的得票数， 已经选择投票人进行投票，来看看实现的效果图：
 
-![投票界面及结果](https://img.learnblockchain.cn/2019/15548051127201.jpg!wl)
+![投票界面及结果](https://img.learnblockchain.cn/2019/15548051127201.jpg!wl/scale/30%)
 
 
 ## 投票合约实现

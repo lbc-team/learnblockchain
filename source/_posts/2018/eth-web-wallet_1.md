@@ -70,7 +70,7 @@ console.log(randomNumber._hex);
 
 现在我们结合界面，完整的实现创建账号，其效果图如下，加载私钥时创建账号。
 
-![](https://img.learnblockchain.cn/2018/15401942330046.jpg!wl)
+![](https://img.learnblockchain.cn/2018/15401942330046.jpg!wl/scale/30%)
 
 界面代码（HTML）代码如下（主要是在表格中定义个一个输入框及一个按钮）：
 
@@ -134,7 +134,7 @@ ethers.Wallet.fromMnemonic(mnemonic, path);
 
 现在我们结合界面来实现一下通过助记词方式创建钱包账号，其效果图如下：
 
-![](https://img.learnblockchain.cn/2018/15401977091699.jpg!wl)
+![](https://img.learnblockchain.cn/2018/15401977091699.jpg!wl/scale/30%)
 
 界面代码（HTML）代码如下（主要是在表格中定义个两个输入框及一个按钮）：
 

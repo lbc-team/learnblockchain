@@ -152,7 +152,7 @@ ethers.js 直接提供了加载keystore JSON来创建钱包对象以及加密生
 
 现在结合界面来完整的实现账号导出及导入，先看看导出，UI图如下：
 
-![](https://img.learnblockchain.cn/2018/15402637447655.jpg!wl)
+![](https://img.learnblockchain.cn/2018/15402637447655.jpg!wl/scale/40%)
 
 HTML 代码如下：
 
@@ -198,7 +198,7 @@ HTML 代码如下：
 
 再来看看导入keystore 文件, UI图如下：
 
-![](https://img.learnblockchain.cn/2018/15402647159310.jpg!wl)
+![](https://img.learnblockchain.cn/2018/15402647159310.jpg!wl/scale/40%)
 
 
 ```html

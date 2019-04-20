@@ -72,7 +72,7 @@ public class NetworkInfo {
 
 在`EthereumNetworkRepository.java`中用一个 NetworkInfo 数组 `NETWORKS` 列出了所有支持的网络，其中包含了一个本地开发网络，：
 
-```java
+```java EthereumNetworkRepository.java
 
     private final NetworkInfo[] NETWORKS = new NetworkInfo[] {
             new NetworkInfo("Mainnet","ETH",
@@ -104,7 +104,7 @@ geth --datadir  my_datadir --dev --rpc --rpcaddr "0.0.0.0" console
 
 在钱包有一个设置项，会把用户选中的网络的`name`保存到 `SharedPreference`， 如图：
 
-![](https://img.learnblockchain.cn/2019/15536708197342.jpg!wl)
+![确定当前网络](https://img.learnblockchain.cn/2019/15536708197342.jpg!wl/scale/50%)
 
 确定网络的代码逻辑就简单了： 从`SharedPreference`读取到选中的网络名再对`NETWORKS` 做一个匹配，[代码](https://github.com/xilibi2003/Upchain-wallet)在`EthereumNetworkRepository`中，大家可对照查看。
 
@@ -167,24 +167,23 @@ public class TokenInfo {
 > Realm 是一个移动端数据库，是替代sqlite的一种解决方案。
 
 在用户通过以下界面添加新资产，会调用`RealmTokenSource`类的`put`方法保存到`.realm`文件。
-![](https://img.learnblockchain.cn/2019/15536710194901.jpg!wl)
+![](https://img.learnblockchain.cn/2019/15536710194901.jpg!wl/scale/50%)
 
 现在来看看如何获取账号所关联的 Token， 逻辑上比较简单，不过涉及了多个类，我把调用序列图梳理一下：
 
-![](https://img.learnblockchain.cn/2019/15536757559224.jpg!wl)
 
+{% mermaid sequenceDiagram %}
 
-<div style='display: none'>
-
-流程图源码
-```sequence
 Title: 获取账号Token种类
 TokensViewModel->FetchTokensInteract: fetch
 FetchTokensInteract->TokenRepository: fetch
 TokenRepository->TokenLocalSource: fetch
 TokenLocalSource-->>TokensViewModel: OnTokens
-```
-</div>
+{% endmermaid %}
+
+
+
+
 
 
 通过这个调用过程，最终通过TokensViewModel类的onTokens获取到Token种类。

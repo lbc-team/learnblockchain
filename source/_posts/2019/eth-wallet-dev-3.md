@@ -54,7 +54,7 @@ LiveData是一个可观察的数据持有者类。观察者可以方便我们以
 
 展示信息主要包括账号地址、eth余额及该账号所拥有的Token及余额， 其界面效果如下:
 
-![上图](https://img.learnblockchain.cn/2019/15532473043633.jpg!wl)
+![上图](https://img.learnblockchain.cn/2019/15532473043633.jpg!wl/scale/50%)
 > 这个界面应的是[登链钱包](https://github.com/xilibi2003/Upchain-wallet)的`PropertyFragment`，上图的UPT 是我自己发行的Token，所以没有显示价格
 
 
@@ -97,8 +97,7 @@ TokensViewModel中定义了一个`MutableLiveData<ETHWallet> defaultWallet` ，�
 在上一篇[导入账号及账号管理](https://learnblockchain.cn/2019/03/18/eth-wallet-dev-2/)，所有的账号使用greenDao 存储起来， 因此我们只需要把所有账号从加载出来，挑选出当前选中的那一个。 结合代码看一看：
 
 
-```java
-// WalletDaoUtils.java
+```java WalletDaoUtils.java
     public static ETHWallet getCurrent() {
         List<ETHWallet> ethWallets = ethWalletDao.loadAll();
         for (ETHWallet ethwallet : ethWallets) {
@@ -114,8 +113,7 @@ TokensViewModel中定义了一个`MutableLiveData<ETHWallet> defaultWallet` ，�
 
 其代码如下：
 
-```java 
-   // FetchWalletInteract.java
+```java FetchWalletInteract.java
    // 返回一个可订阅的Single<ETHWallet> 对象
    public Single<ETHWallet> findDefault() {
         return Single.fromCallable(() -> {

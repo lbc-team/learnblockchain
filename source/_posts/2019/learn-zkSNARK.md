@@ -33,7 +33,7 @@ author: Star Li
 
 先给出零知识证明的逻辑框架：
 
-![零知识证明的逻辑框架图](https://img.learnblockchain.cn/2019/15555712771039.jpg)
+{% fi https://img.learnblockchain.cn/2019/15555712771039.jpg, 零知识证明的逻辑框架图, 框架图, 35% %}
 
 
 ###  **零知识证明的基本概念**
@@ -189,7 +189,7 @@ $$e(B, g) = e(E(\alpha (\delta + f(s)), g) = e(g^{\alpha (\delta + f(s))}, g) = 
 
 多项式的整个证明过程如下图所示：
 
-![多项式证明过程](https://img.learnblockchain.cn/2019/15555714473237.jpg)
+{% fi https://img.learnblockchain.cn/2019/15555714473237.jpg, 多项式证明过程, 证明过程图, 50% %}
 
 
 ## **4 - QSP问题的skSNARK证明**
@@ -275,7 +275,7 @@ $$= e(g,g)^{(\beta_v\gamma)v_{free}(s)}e(g,g)^{(\beta_w\gamma)w(s)} =  e(g, g)^{
 
 到目前为止，整个QSP的zkSNARK的证明过程逻辑已见雏形：
 
-![QSP的zkSNARK的证明过程图](https://img.learnblockchain.cn/2019/15555714821588.jpg)
+{% fi https://img.learnblockchain.cn/2019/15555714821588.jpg, QSP的zkSNARK的证明过程图, 证明过程图, 80% %}
 
 
 **4.4 $\delta $ 偏移**

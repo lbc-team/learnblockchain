@@ -62,7 +62,7 @@ activeWallet.getTransactionCount().then(function(transactionCount) {
 
 activeWallet就是后面可以用来请求发送交易的对象
 
-![](https://img.learnblockchain.cn/2018/15402868832290.jpg!wl)
+![](https://img.learnblockchain.cn/2018/15402868832290.jpg!wl/scale/40%)
 
 
 ```js
@@ -207,7 +207,7 @@ web3.eth.sendRawTransaction(serializedTx, function (err, transactionHash) {
 
 先来看看发送交易的UI界面：
 
-![](https://img.learnblockchain.cn/2018/15403685871339.jpg!wl)
+![交易的UI界面](https://img.learnblockchain.cn/2018/15403685871339.jpg!wl/scale/60%)
 
 
 ```html

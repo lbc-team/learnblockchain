@@ -21,7 +21,8 @@ author: 盖盖
 
 整个 Plasma MVP 的生命周期可以通过下面这幅图表现出来：
 
-<img src="https://raw.githubusercontent.com/gitferry/mastering-ethereum/master/Plasma-in-depth/images/plasma-mvp.jpg"  width="360" height="400" alt="Blockchains of Blockchain" />
+![Blockchains of Blockchain](https://img.learnblockchain.cn/2019/15557680031121.jpg)
+
 
 ## Plasma 合约
 首先需要将 Plasma 合约部署到主链（以太坊）上作为主链和子链沟通的媒介。Plasma 合约会处理由子链提交的区块，并且将区块的哈希值存在主链上。除此之外，还会处理用户的存款（deposit）、取款（withdrawal/exit）以及争议（challenge）操作。

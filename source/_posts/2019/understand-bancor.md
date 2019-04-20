@@ -55,7 +55,8 @@ Bancor协议要求在创建Smart Token的时候必须提供储备金，储备金
 ### 公式2 - 价格计算
 
 在知道储备金比例的前提下，用户可以通过Bancor协议买卖Smart Token。每次买卖时，价格的计算公式如下：
-![](https://img.learnblockchain.cn/2019/15553147727085.jpg)
+![价格的计算公式](https://img.learnblockchain.cn/2019/15553147727085.jpg)
+
 
 当前的价格等于当前的储备金数量除以储备金比例，再除以当前的Smart Token的流通量。还以2.2中讲的STAR币为例，初始时STAR币的总流通量是1000万。如果这时需要买入STAR币，价格是：
 
@@ -110,23 +111,24 @@ Bancor协议要求在创建Smart Token的时候必须提供储备金，储备金
 
 CW=100%的情况，储备金和Smart Token的价值相当，Smart Token的价格恒定为1。也就是，在储备金和Smart Token的价值相当的情况下，不论Smart Token的流通量如何变化，Smart Token的价格不变。有多少Smart Token，就有多少储备金。
 
-![](https://img.learnblockchain.cn/2019/15553149064731.jpg)
+![](https://img.learnblockchain.cn/2019/15553149064731.jpg!/scale/60%
+)
 
 CW=50%的情况下，储备金的价值是Smart Token价值的一半，买卖的价格和流通量成线性增长。
 
-![](https://img.learnblockchain.cn/2019/15553149186334.jpg)
+![](https://img.learnblockchain.cn/2019/15553149186334.jpg!/scale/60%)
 
 CW=10%的情况下，储备金只有Smart Token价值的10%，买卖的价格指数级增长。买卖后，储备金的数量相对来说急剧上升，导致下一次价格进一步扩大。
 
-![](https://img.learnblockchain.cn/2019/15553149306805.jpg)
+![](https://img.learnblockchain.cn/2019/15553149306805.jpg!/scale/60%)
 
 CW=90%的情况下，储备金是Smart Token价值的90%，买卖的价格缓慢的增长。
 
-![](https://img.learnblockchain.cn/2019/15553149483999.jpg)
+![](https://img.learnblockchain.cn/2019/15553149483999.jpg!/scale/60%)
 
 现实中，往往是很容易先画出价格曲线，然后再利用Bancor协议，求解出储备金比例CW。在已知价格曲线的情况下，求解CW的方法如下图所示（以CW=10%的价格曲线为例）：
 
-![](https://img.learnblockchain.cn/2019/15553149606674.jpg)
+![求解CW的方法图](https://img.learnblockchain.cn/2019/15553149606674.jpg!/scale/70%)
 
 
 也就是说，CW = 价格曲线下面的面积/价格曲线所在的矩形。

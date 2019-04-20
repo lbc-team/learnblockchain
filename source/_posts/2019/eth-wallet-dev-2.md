@@ -180,7 +180,7 @@ ethWallet为ETHWallet实例， 前面不管是新创建还是导入的账号都�
 考虑到用户可能会创建多个账号，因此需要确定一个当前选定的账号，一般情况下，用户新创建的账号应该作为当前选中的的账号，同时其他账号应该取消选中， 我们完善下账号存储逻辑， 如下：
 （代码在[代码库](https://github.com/xilibi2003/Upchain-wallet)中的`app/src/pro/upchain/wallet/utils/WalletDaoUtils.java`文件中）
 
-```java
+```java WalletDaoUtils.java
 
     /**
      * 插入新创建钱包

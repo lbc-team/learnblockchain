@@ -1,7 +1,7 @@
 ---
 title: 如何开发一款以太坊安卓钱包系列5 - 发送转账交易
 permalink: eth-wallet-dev-5
-un_reward: true
+un_reward: false
 date: 2019-04-04 14:34:14
 categories: 
     - 以太坊
@@ -10,6 +10,7 @@ tags:
     - 钱包
     - 以太坊
     - web3j
+author: Tiny熊
 ---
 
 
@@ -65,7 +66,7 @@ tags:
 ## 交易界面
 
 用户在App界面通过以下界面来发起一个交易：
-![](https://img.learnblockchain.cn/2019/15543662438500.jpg!wl)
+![发起一个交易](https://img.learnblockchain.cn/2019/15543662438500.jpg!wl/scale/40%)
 
 这个界面对应的[代码](https://github.com/xilibi2003/Upchain-wallet)是`SendActivity.java`，构造交易目标地址和金额可以直接从界面获得。
 
@@ -131,7 +132,8 @@ Gas Limit用来确定工作量，不像Gas Price 谁时间的变化而浮动，�
 
 这里使用推荐默认值，在FetchGasSettingsInteract加入方法：
 
-```java
+```java FetchGasSettingsInteract.java
+
     public Single<GasSettings> fetch(ConfirmationType type) {
 
         return Single.fromCallable( () -> {
@@ -151,26 +153,23 @@ Gas Limit用来确定工作量，不像Gas Price 谁时间的变化而浮动，�
 
 为了避免 SendActivity（UI） 与数据的耦合使用了`ConfirmationViewModel`， `ConfirmationViewModel` 中保留了一个 `FetchGasSettingsInteract` 对象，界面提供推荐的gas的代码逻辑调用流程是这样：
 
-![diagram](https://learnblockchain.cn/svg/wallet_gas.svg)
-
-其中虚线部分是数据订阅回调，在SendActivity拿到GasSettings就可以进行展示。
-
-<div style='display: none'>
-
-```sequence
+{% mermaid sequenceDiagram %}
 Title: 获取Gas 过程
 SendActivity->ConfirmationViewModel: prepare
-ConfirmationViewModel->FetchGasSettingsInteract: gasPriceUpdate
-Note right of FetchGasSettingsInteract: 定时请求
+ConfirmationViewModel->>FetchGasSettingsInteract: gasPriceUpdate
+loop 获取最新价格
+    FetchGasSettingsInteract->>FetchGasSettingsInteract: fetchGasPriceByWeb3
+end
+
 FetchGasSettingsInteract-->>ConfirmationViewModel: onGasPrice
-ConfirmationViewModel->FetchGasSettingsInteract: fetch
-FetchGasSettingsInteract->FetchGasSettingsInteract: fetch
+ConfirmationViewModel->>FetchGasSettingsInteract: fetch
+FetchGasSettingsInteract->>FetchGasSettingsInteract: fetch
 FetchGasSettingsInteract-->>ConfirmationViewModel: onGasSettings
 ConfirmationViewModel-->>SendActivity: onGasSettings
-```
+{% endmermaid %}
 
-流程图源码， hexo 无法渲染，使用 https://bramp.github.io/js-sequence-diagrams/
-</div>
+
+其中虚线部分是数据订阅回调，在SendActivity拿到GasSettings就可以进行展示。
 
 
 代码调用代码逻辑，大家最好把代码[https://github.com/xilibi2003/Upchain-wallet](https://github.com/xilibi2003/Upchain-wallet) 克隆到本地跟一下。
@@ -179,7 +178,7 @@ ConfirmationViewModel-->>SendActivity: onGasSettings
 
 用户在没有填写收款地址、发送金额以及调整好Gas（可选），在发送交易之前，一般需要用户再次确认下交易详情，使用下面这个对话框：
 
-![](https://img.learnblockchain.cn/2019/15543883352378.jpg!wl)
+![确认交易详情图](https://img.learnblockchain.cn/2019/15543883352378.jpg!wl/scale/40%)
 
 代码中使用的一个自定义的ConfirmTransactionView来展示这个信息，UI部分的代码就不贴了。
 
@@ -205,25 +204,19 @@ public Single<BigInteger> getLastTransactionNonce(Web3j web3j, String walletAddr
 
 完整的交易流程调用序列图如下：
 
-![diagram-3](https://learnblockchain.cn/svg/wallet_transfer.svg)
-
-<div style='display: none'>
-
-```sequence
+{% mermaid sequenceDiagram %}
 Title: 用户发起交易调用
 Note left of SendActivity: 用户点击发送
 SendActivity->ConfirmationViewModel: createTransaction
-ConfirmationViewModel->CreateTransactionInteract: createEthTransaction
-CreateTransactionInteract->EthereumNetworkRepository: getLastTransactionNonce
-CreateTransactionInteract->CreateTransactionInteract: createRawTransaction
-CreateTransactionInteract->CreateTransactionInteract: signMessage
-CreateTransactionInteract->CreateTransactionInteract: ethSendRawTransaction
+ConfirmationViewModel->>CreateTransactionInteract: createEthTransaction
+CreateTransactionInteract->>EthereumNetworkRepository: getLastTransactionNonce
+CreateTransactionInteract->>CreateTransactionInteract: createRawTransaction
+CreateTransactionInteract->>CreateTransactionInteract: signMessage
+CreateTransactionInteract->>CreateTransactionInteract: ethSendRawTransaction
 CreateTransactionInteract-->>ConfirmationViewModel: onCreateTransaction
 ConfirmationViewModel-->>SendActivity:onTransaction
-```
+{% endmermaid %}
 
-流程图源码， 因 hexo 无法渲染，使用 https://bramp.github.io/js-sequence-diagrams/
-</div>
 
 
 交易主要在`createEthTransaction`函数完成，逻辑有：
