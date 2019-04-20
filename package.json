@@ -20,6 +20,7 @@
     "hexo-generator-searchdb": "^1.0.8",
     "hexo-generator-sitemap": "^1.2.0",
     "hexo-generator-tag": "^0.2.0",
+    "hexo-related-popular-posts": "^3.0.4",
     "hexo-renderer-ejs": "^0.3.0",
     "hexo-renderer-jade": "^0.4.1",
     "hexo-renderer-kramed": "^0.1.4",
