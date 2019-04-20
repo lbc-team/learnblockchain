@@ -7,10 +7,9 @@ categories:
     - 以太坊
     - 钱包
 tags:
-    - 钱包
+    - HD钱包
     - 以太坊
-    - 助记词
-    - web3j
+    - Web3j
 author: Tiny熊
 ---
 

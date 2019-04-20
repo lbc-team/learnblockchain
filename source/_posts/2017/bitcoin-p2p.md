@@ -4,9 +4,8 @@ permalink: bitcoin-p2p
 date: 2017-11-07 11:25:30
 categories: 比特币
 tags:
-    - p2p
-    - 去中心化
-    - 比特币网络
+    - p2p网络
+    - 比特币
 author: Tiny熊
 ---
 

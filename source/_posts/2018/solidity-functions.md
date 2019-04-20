@@ -4,7 +4,6 @@ permalink: solidity-functions
 date: 2018-05-17 22:16:29
 categories: 
     - 以太坊
-    - 智能合约
     - Solidity
 tags:
     - Solidity

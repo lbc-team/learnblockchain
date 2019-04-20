@@ -5,8 +5,7 @@ un_reward: true
 date: 2019-03-23 12:04:30
 categories: 跨链
 tags:
-    - 侧链
-    - 中继链
+    - 跨链
 author: Xiaoyi Wang
 ---
 

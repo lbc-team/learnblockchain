@@ -7,6 +7,7 @@ categories:
     - Solidity
 tags:
     - Solidity手册
+    - 安全
 author: Tiny熊
 ---
 

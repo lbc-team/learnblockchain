@@ -3,6 +3,10 @@ title: 第9期 - 漫谈区块图技术之XDAG和Conflux
 permalink: dev_meeting_9
 date: 2019-01-11 10:47:23
 categories: 技术工坊
+tags: 
+    - DAG
+    - Conflux
+    - 树图
 hide_in_home: true
 un_subscription: true
 un_reward: true

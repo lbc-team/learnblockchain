@@ -3,6 +3,7 @@ title: 第8期 - 大白话区块链共识机制算法
 permalink: dev_meeting_8
 date: 2019-01-04 10:47:23
 categories: 技术工坊
+tags: 共识
 hide_in_home: true
 un_subscription: true
 un_reward: true

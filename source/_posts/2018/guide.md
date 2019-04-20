@@ -6,7 +6,6 @@ categories: 目录
 top: true
 tags:
     - 如何学习
-    - 目录
 author: Tiny熊
 ---
 

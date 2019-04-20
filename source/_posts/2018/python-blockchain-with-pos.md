@@ -2,11 +2,10 @@
 title: Python实现一条基于POS算法的区块链
 permalink: python-blockchain-with-pos
 date: 2018-08-07 20:44:00
-categories: 比特币
+categories: 其他
 tags:
-    - 区块链
-    - 权益证明
-    - Python
+    - 创建区块链
+    - POS
 author: Magic_陈
 ---
 

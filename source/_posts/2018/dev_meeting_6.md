@@ -3,6 +3,9 @@ title: 第六期 - DAG技术中的比特币XDAG
 permalink: dev_meeting_6
 date: 2018-12-21 11:41:23
 categories: 技术工坊
+tags:
+ - DAG
+ - XDAG
 hide_in_home: true
 un_subscription: true
 un_reward: true

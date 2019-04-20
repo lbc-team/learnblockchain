@@ -5,7 +5,7 @@ date: 2017-12-07 16:12:29
 categories: 比特币
 tags:
     - 比特币
-    - 共识协议
+    - 共识
 author: Tiny熊
 ---
 

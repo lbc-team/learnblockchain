@@ -5,8 +5,6 @@ date: 2017-11-20 11:51:52
 categories: 以太坊
 tags:
     - 以太坊入门
-    - ethereum
-    - 以太坊概念
 author: Tiny熊
 ---
 

@@ -4,10 +4,7 @@ permalink: whatbc
 date: 2017-10-25 23:26:04
 categories: 比特币
 tags:
-    - 区块链
-    - 原理
-    - 哈希
-    - 如何记账
+    - 共识
 author: Tiny熊
 ---
 

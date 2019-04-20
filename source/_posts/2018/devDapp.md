@@ -3,11 +3,10 @@ title:  程序员如何切入区块链去中心化应用开发
 permalink: devDapp
 date: 2018-08-31 11:30:55
 categories: 
-    - 以太坊
-    - Dapp
+    - 其他
 tags:
-    - Dapp入门
-    - 以太坊概念
+    - DApp
+    - 以太坊入门
 author: Tiny熊
 ---
 

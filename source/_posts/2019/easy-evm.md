@@ -4,7 +4,8 @@ permalink: easy-evm
 un_reward: true
 date: 2019-04-09 20:53:52
 categories: 以太坊
-tags: 虚拟机
+tags:
+  - EVM
 author: Star Li
 ---
 

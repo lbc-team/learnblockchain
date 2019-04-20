@@ -4,11 +4,9 @@ permalink: geth_cmd_options
 date: 2017-11-29 11:51:52
 categories: 
     - 以太坊
-    - geth
+    - Geth
 tags:
-    - Geth命令用法
-    - Geth命令参数详解
-    - Geth手册
+    - Geth
 author: Tiny熊
 ---
 

@@ -3,6 +3,9 @@ title: 技术工坊 第11期
 permalink: dev_meeting_11
 date: 2019-03-16 18:47:23
 categories: 技术工坊
+tags:
+    - FileCoin
+    - EOS
 hide_in_home: true
 un_subscription: true
 un_reward: true

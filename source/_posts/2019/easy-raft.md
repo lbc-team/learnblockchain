@@ -5,7 +5,9 @@ un_reward: true
 date: 2019-03-22 21:27:59
 un_subscription: true
 categories: 共识
-tags: 一致性算法
+tags: 
+  - 共识
+  - 一致性算法
 author: TopJohn
 ---
 

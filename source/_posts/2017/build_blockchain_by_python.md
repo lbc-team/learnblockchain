@@ -4,9 +4,8 @@ permalink: build_blockchain_by_python
 date: 2017-10-27 10:15:28
 categories: 其他
 tags:
-    - python
     - 创建区块链
-    - 翻译
+    - POW
 author: Tiny熊
 ---
 

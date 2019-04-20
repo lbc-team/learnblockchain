@@ -3,6 +3,7 @@ title: 第五期 - 搞明白以太坊DAPP开发
 permalink: dev_meeting_5
 date: 2018-12-14 11:41:23
 categories: 技术工坊
+tags: DApp
 hide_in_home: true
 un_subscription: true
 un_reward: true

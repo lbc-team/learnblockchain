@@ -3,6 +3,8 @@ title: 第二期 - 深度探索以太坊智能合约
 permalink: dev_meeting_2
 date: 2018-12-13 11:26:23
 categories: 技术工坊
+tags: 
+  - EVM
 hide_in_home: true
 un_subscription: true
 un_reward: true

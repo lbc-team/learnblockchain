@@ -9,7 +9,7 @@ categories:
 tags:
     - Solidity
     - Event
-    - web3
+    - Web3.js
     - 智能合约
 
 author: Tiny熊

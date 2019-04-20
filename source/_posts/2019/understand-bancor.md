@@ -4,7 +4,9 @@ permalink: understand-bancor
 un_reward: true
 date: 2019-04-15 15:36:54
 categories: DeFi
-tags: Bancor
+tags: 
+  - Bancor
+  - DeFi
 author: Star Li
 ---
 

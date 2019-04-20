@@ -6,7 +6,7 @@ categories:
     - 以太坊
     - 智能合约
 tags:
-    - IDE
+    - Remix
 
 author: Tiny熊
 

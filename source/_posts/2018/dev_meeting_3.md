@@ -3,6 +3,10 @@ title: 第三期 - 高TPS与去中心化存储带来的机遇
 permalink: dev_meeting_3
 date: 2018-12-13 11:27:23
 categories: 技术工坊
+tags: 
+  - EOS
+  - IPFS
+  - FIBOS
 hide_in_home: true
 un_subscription: true
 un_reward: true

@@ -3,6 +3,7 @@ title: 第7期 - 选对赛道，穿越凛冬：区块链的设计思想和演化
 permalink: dev_meeting_7
 date: 2018-12-28 11:41:23
 categories: 技术工坊
+tags: 共识
 hide_in_home: true
 un_subscription: true
 un_reward: true

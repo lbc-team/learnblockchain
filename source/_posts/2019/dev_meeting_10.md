@@ -3,6 +3,8 @@ title: 第10期 - 区块链安全的至暗时刻
 permalink: dev_meeting_10
 date: 2019-01-18 10:47:23
 categories: 技术工坊
+tags:
+    - 安全
 hide_in_home: true
 un_subscription: true
 un_reward: true

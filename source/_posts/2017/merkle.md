@@ -4,8 +4,6 @@ permalink: merkle
 date: 2017-11-09 10:03:36
 categories: 比特币
 tags:
-    - 比特币
-    - 区块结构
     - Merkle树
     - SPV简单支付验证
 

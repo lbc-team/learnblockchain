@@ -4,8 +4,7 @@ permalink: whatiseos
 date: 2018-07-17 14:25:44
 categories: EOS
 tags:
-    - EOS入门
-    - 柚子
+    - EOS
 author: Tiny熊
 ---
 

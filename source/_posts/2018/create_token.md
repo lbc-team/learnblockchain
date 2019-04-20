@@ -1,5 +1,5 @@
 ---
-title:  一步步教你创建自己的数字货币（代币）进行ICO
+title:  创建自己的数字货币（ERC20 代币）进行ICO
 permalink: create_token
 date: 2018-01-12 22:36:39
 categories: 
@@ -7,8 +7,9 @@ categories:
     - 智能合约
 tags:
     - Token
-    - 智能合约
     - ERC20
+    - MetaMask
+    - Remix
 author: Tiny熊
 ---
 

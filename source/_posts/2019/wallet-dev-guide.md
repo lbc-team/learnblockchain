@@ -10,9 +10,8 @@ categories:
     - 钱包
 tags:
     - 钱包
-    - 助记词
-    - web3j
-    - web3.js
+    - HD钱包
+    - Web3
     - ethers.js
 author: Tiny熊
 ---

@@ -7,8 +7,6 @@ categories:
     - 钱包
 tags:
     - 钱包
-    - Keystore
-    - KDF
     - ethers.js
 
 author: Tiny熊

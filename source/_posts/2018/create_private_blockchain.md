@@ -4,9 +4,8 @@ permalink: create_private_blockchain
 date: 2018-03-18 20:05:59
 categories: 
     - 以太坊
-    - 私有链
 tags:
-    -  以太坊 
+    -  环境搭建
     -  私有链
 author: 被打劫的强盗
 ---

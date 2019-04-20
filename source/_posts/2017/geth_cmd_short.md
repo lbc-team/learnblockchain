@@ -6,7 +6,7 @@ categories:
     - 以太坊
     - geth
 tags:
-    - Geth使用
+    - Geth
     - Web3.js
 author: Tiny熊
 ---

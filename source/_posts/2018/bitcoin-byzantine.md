@@ -4,8 +4,9 @@ permalink: bitcoin-byzantine
 date: 2018-02-05
 categories: 比特币
 tags:
-    - 比特币
-    - 共识协议
+    - 共识
+    - 分布式系统
+    - POW
 author: Tiny熊
 ---
 

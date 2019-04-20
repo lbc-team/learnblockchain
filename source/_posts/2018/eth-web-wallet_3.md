@@ -8,8 +8,6 @@ categories:
 tags:
     - 钱包
     - ethers.js
-    - 交易
-    - 签名
 author: Tiny熊
 ---
 

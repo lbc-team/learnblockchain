@@ -4,9 +4,8 @@ permalink: init-env
 date: 2017-11-24 19:41:53
 categories: 以太坊
 tags:
-    - 环境
-    - geth安装
-    - 第一个智能合约
+    - 环境搭建
+    - Geth
 author: Tiny熊
 ---
 

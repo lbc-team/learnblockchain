@@ -4,10 +4,8 @@ permalink: bitcoin-pow
 date: 2017-11-04 16:12:29
 categories: 比特币
 tags:
-    - 比特币
-    - 挖矿
-    - 工作量证明
-    - 共识机制
+    - POW
+    - 共识
 author: Tiny熊
 ---
 
