@@ -218,9 +218,9 @@ UI 界面  `PropertyDetailActivity` 通过订阅 `LiveData` 数据 `transactions
 
 Title: 获取交易列表数据逻辑序列图
 Note left of TransactionsViewModel: UI 调用 fetchTransactions
-TransactionsViewModel->FetchTransactionsInteract: fetch
-FetchTransactionsInteract->TransactionRepository: fetchTransaction
-TransactionRepository->BlockExplorerClient: fetchTransactions
+TransactionsViewModel->>FetchTransactionsInteract: fetch
+FetchTransactionsInteract->>TransactionRepository: fetchTransaction
+TransactionRepository->>BlockExplorerClient: fetchTransactions
 Note left of BlockExplorerClient: 通过 Retrofit2 请求服务器接口
 FetchTransactionsInteract-->>TransactionsViewModel: onTransactions
 {% endmermaid %}

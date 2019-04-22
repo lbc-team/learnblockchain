@@ -99,6 +99,7 @@ index2_generator:
   exclude:
     - category 技术工坊 # 不包含分类为Hexo的文章
     - path 2019/wallet-dev-guide.md
+    - path 2019/hexo-help.md
 
 # Pagination
 ## Set per_page to 0 to disable pagination
