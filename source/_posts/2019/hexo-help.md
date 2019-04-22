@@ -27,7 +27,8 @@ author: Tiny熊
 {% label primary @ primary： 主要 %}
 {% label warning @ warning： 警告 %}
 {% label success @ success：成功 %}
-{% label danger @ danger： 危险 %} <mark>Mark</mark>
+{% label danger @ danger： 危险 %} 
+<mark>Mark</mark>
 
 
 ## 引入信息

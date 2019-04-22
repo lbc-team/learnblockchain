@@ -19,6 +19,8 @@
 
 博客是由Hexo生成，因此写文章的时候，只要编写Markdown文件就好，博客源文件也都托管在Github，因此写好之后提交Pull Request 就好。
 
+> 如果需要插入公式、图片、给某些文字添加醒目颜色，可以参考[Hexo的一个高级用法](https://learnblockchain.cn/2019/04/21/hexo_help/)。
+
 步骤如下：
 1. 先把博客站git clone 到本地，命令如下：
 
