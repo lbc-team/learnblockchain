@@ -1,4 +1,28 @@
-主题升级后，不要需要：
+**修改主题侧片栏**
+
+主题config.yml 加入 两个字段：
+
+join_solgan: 扫码加入社区
+join_desc: 专业的博客 专业的社区 <br/>（如遇二维码过期，请刷新页面）
+
+
+修改 Avatar 显示大小
+themes/next/source/css/_custom/custom.styl 添加：
+```css
+.site-author-image {
+    width: 130px;
+}
+```
+
+
+themes/next/layout/_macro/sidebar.swig 修改：
+
+显示join_solgan 及  join_desc 字段
+
+
+
+
+主题升级后，以下不要需要：
 
 博客对 对hexo 主题有所修改, 为node配置文件 增加了首页、不同分类与不同标签的文章置顶功能：
 

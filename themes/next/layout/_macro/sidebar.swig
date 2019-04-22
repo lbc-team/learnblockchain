@@ -26,13 +26,17 @@
       <div class="site-overview-wrap sidebar-panel{% if not display_toc or toc(page.content).length <= 1 %} sidebar-panel-active{% endif %}">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
             {% if theme.avatar.url %}
+              <p class="site-author-name" itemprop="name">{{ theme.join_solgan }}</p>
               <img class="site-author-image" itemprop="image"
                 src="{{ url_for( theme.avatar.url | default(theme.images + '/avatar.gif') ) }}"
                 alt="{{ author }}"/>
+                <div class="site-description motion-element" itemprop="description">{{ theme.join_desc }}</div>
+            {% else %}
+                <p class="site-author-name" itemprop="name">{{ author }}</p>
+                <div class="site-description motion-element" itemprop="description">{{ description }}</div>
             {% endif %}
-              <p class="site-author-name" itemprop="name">{{ author }}</p>
-              <div class="site-description motion-element" itemprop="description">{{ description }}</div>
           </div>
 
           {% if theme.site_state %}

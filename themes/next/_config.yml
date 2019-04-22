@@ -185,6 +185,7 @@ scheme: Pisces
 # Posts / Categories / Tags in sidebar.
 site_state: false
 
+
 # Social Links
 # Usage: `Key: permalink || icon`
 # Key is the link label showing to end users.
@@ -222,12 +223,15 @@ links:
   友情链接: https://learnblockchain.cn/friends/
 
 
+join_solgan: 扫码加入社区
+join_desc: 专业的博客 专业的社区 <br/>（如遇二维码过期，请刷新页面）
+
 # Sidebar Avatar
 avatar:
   # In theme directory (source/images): /images/avatar.gif
   # In site directory (source/uploads): /uploads/avatar.gif
   # You can also use other linking images.
-  url: #/images/avatar.gif
+  url: https://img.learnblockchain.cn/qrcode/xlbxiong_qrcode.jpg
   # If true, the avatar would be dispalyed in circle.
   rounded: false
   # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.
