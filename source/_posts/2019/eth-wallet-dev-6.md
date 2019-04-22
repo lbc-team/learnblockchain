@@ -227,7 +227,7 @@ FetchTransactionsInteract-->>TransactionsViewModel: onTransactions
 
 
 
-请求上面 Trust-ray 提供获取交易列表API 是有 BlockExplorerClient 类完成的，其使用了网络请求框架 `Retrofit2` ，服务返回的数据会封装成 `Transaction` 结构对象列表 `transactions` ，这个列表会一直通过订阅的
+请求上面 Trust-ray 提供获取交易列表API 是有 BlockExplorerClient 类完成的，其使用了网络请求框架 `Retrofit2` ，服务返回的数据会封装成 `Transaction` 结构对象列表 `transactions` ，这个列表会作为一个订阅数据返回给PropertyDetailActivity。
 
 代码就不列了，大家可对照GitHub阅读。
 

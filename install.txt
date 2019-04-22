@@ -20,6 +20,9 @@ themes/next/layout/_macro/sidebar.swig 修改：
 显示join_solgan 及  join_desc 字段
 
 
+修改页面显示：
+
+themes/next/layout/_partials/pagination.swig
 
 
 主题升级后，以下不要需要：

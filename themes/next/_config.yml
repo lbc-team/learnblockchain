@@ -153,6 +153,7 @@ baidu_push: true
 menu:
   home: / || home
   wiki: https://wiki.learnblockchain.cn || book
+  solidity: https://learnblockchain.cn/docs/solidity/ || book
   etherscan: https://learnblockchain.cn/docs/etherscan/ || book
   web3: https://learnblockchain.cn/docs/web3js-0.2x/ || book
   about: /about/ || user

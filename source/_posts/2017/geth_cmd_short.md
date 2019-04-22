@@ -4,7 +4,7 @@ permalink: geth_cmd_short
 date: 2017-12-01 19:41:53
 categories: 
     - 以太坊
-    - geth
+    - Geth
 tags:
     - Geth
     - Web3.js
