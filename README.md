@@ -2,7 +2,7 @@
 
 [深入浅出区块链](http://learnblockchain.cn)是由一群区块链技术爱好者共同维护的一个秉承去中心化精神的区块链技术博客。
 
-博客最初由Tiny熊发起，后[HiBlock区块链社区](https://hiblock.one)、[登链学院-区块链技术培训学院](https://upchain.ke.qq.com/?tuin=bd898bbf) 等其他的组织及个人加入贡献内容。
+博客最初由Tiny熊发起，后[HiBlock区块链社区](https://hiblock.one)、[磨链社区](http://mochain.cc/)、[登链学院-区块链技术培训学院](https://upchain.ke.qq.com/?tuin=bd898bbf) 等其他的组织及个人加入贡献内容。
 经过一年多的发展已经是国内内容质量最高、访问量最大的区块链技术博客站。
 
 深入浅出区块链建站依赖一直秉承开放、协作、透明、链接、分享的价值观，致力于分享高质量的内容给开发者，帮助开发者成长。
