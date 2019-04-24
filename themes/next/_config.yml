@@ -232,7 +232,7 @@ avatar:
   # In theme directory (source/images): /images/avatar.gif
   # In site directory (source/uploads): /uploads/avatar.gif
   # You can also use other linking images.
-  url: https://img.learnblockchain.cn/qrcode/xlbxiong_qrcode.jpg
+  url: https://img.learnblockchain.cn/qrcode/xiaona_qrcode2.jpeg
   # If true, the avatar would be dispalyed in circle.
   rounded: false
   # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.
