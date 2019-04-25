@@ -37,8 +37,7 @@ IDEX 需要在中心化服务器上进行订单的撮合，如何保证订单不
 
 但是，上一步提到的签名有个很大的缺陷，我们能看到的签名信息只能是像下面这样的一串哈希值，至于生成这个哈希值的原始数据，我们是无从得知的，进而也就不易验证。
 
-![哈希图](https://img.learnblockchain.cn/2019/15561121071312.jpg!/scale/55%)
-
+![Hash哈希图](https://img.learnblockchain.cn/2019/15561121071312.jpg!/scale/55%)
 
 
 使用 EIP712 之后，我们看到的签名窗口就是下面这样的了。在这里，我们不只是看到一串哈希数据了，而是能看到完整的签名数据，进而可以验证所签名的数据是不是正确的数据，有没有被攥改。
@@ -51,7 +50,8 @@ IDEX 需要在中心化服务器上进行订单的撮合，如何保证订单不
 
 下面我们以一个拍卖场景为例，看看如何在产品中把 EIP712 用起来。
 
-1. 定义数据结构
+### 定义数据结构
+
 首先，用 JSON 格式列出用户所要签名的数据。 比如作为一个拍卖应用，需要签名的就是下面的投标数据：
     
 ```js
@@ -65,23 +65,23 @@ IDEX 需要在中心化服务器上进行订单的撮合，如何保证订单不
     }
 }
 ```
-
+    
 然后，我们可以从上面的代码片段中提炼出两个数据结构: 竞标 Bid，它包括以 ERC20 代币资产和拍卖 id 确定的出价金额，以及身份 Identity，它指定了用户 id 和 用户钱包地址。
 下一步，将 Bid 和 Identity 定义为结构体，就可以写出下面的 solidity 合约代码了。 可以通过 EIP712 协议草案查看 EIP712 所支持的完整数据类型列表，比如地址、 bytes32、 uint256等。
-
+    
 ```js
 Bid: {
     amount: uint256, 
     bidder: Identity
 }
-
+    
 Identity: {
     userId: uint256,
     wallet: address
 }
 ```
 
-2. 设计域分隔符（domain separator）
+### 设计域分隔符（domain separator）
 
 主要防止一个 DApp 的签名还能在另一个 DApp 中工作，从而导致签名冲突。拿拍卖为例子的话，一个拍卖应用里的投标请求竟然在另外一个拍卖应用里也能执行成功，可能会就导致不必要的损失。
 
@@ -97,9 +97,10 @@ Identity: {
 }
 ```
 
-3. 安装最新版的 MetaMask 浏览器插件钱包
-4. 为 DApp 编写签名代码
+### 为 DApp 编写签名代码
 DApp 的前端 Javascript 代码需要能够请求 MetaMask 对相应的数据签名。
+
+> 备注：需要安装最新版的 MetaMask 浏览器插件钱包
 
 首先，定义数据类型:
 
@@ -177,7 +178,7 @@ function(err, result) {
 );
 ```
 
-5. 在智能合约中添加验证签名代码
+### 在智能合约中添加验证签名代码
 
 按 EIP712 的要求，数据在签名前首先要进行格式化和相应的哈希计算。为了能够通过 [ecrecover](https://learnblockchain.cn/docs/solidity/units-and-global-variables.html#ecrecover) 来确定是哪个账户进行的数据签名，我们在合约里也要按同样的规则对数据进行格式化。
 
@@ -248,6 +249,7 @@ function verify(address signer, Bid memory bid, sigR, sigS, sigV) public pure re
     return signer == ecrecover(hashBid(bid), sigV, sigR, sigS);
 }
 ```
+
 
 本文经作者[Ashton](https://www.jianshu.com/u/922115b98e3f)授权转载。
 
