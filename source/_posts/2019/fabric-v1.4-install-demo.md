@@ -445,8 +445,7 @@ buy.js文件可查看合约内容.
 
 ```
 修改package.json文件
-vi package.json
-把里面1.0.0版本改成1.4.0
+vi package.json  # 把里面1.0.0版本改成1.4.0
 npm install（如报错执行下列命令）
 npm install --unsafe-perm fabric-network
 ```
@@ -476,9 +475,10 @@ npm install -g js-yaml
 
 
 参考文章：
-1.https://www.jianshu.com/p/cb032c42c909
-2.https://blog.csdn.net/ASN_forever/article/details/87859346
-3.https://hyperledger-fabric.readthedocs.io/en/latest/
+
+1. https://www.jianshu.com/p/cb032c42c909
+2. https://blog.csdn.net/ASN_forever/article/details/87859346
+3. https://hyperledger-fabric.readthedocs.io/en/latest/
 
 
   [1]: http://static.zybuluo.com/JackyJin/j4oj3qpfpe9gyneamd9sg515/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-04-01%20%E4%B8%8B%E5%8D%883.37.38.png
