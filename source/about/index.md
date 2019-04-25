@@ -49,6 +49,9 @@ date: 2017-10-24 18:16:10
 * [Star li](https://github.com/BlockHeader)
   Dora网络的CTO， 公众号：星想法 作者
   
+* Ashton
+ 80后程序员一枚，胸无大志，心无旁骛，自在的享受技术的乐趣，目前醉心于区块链技术...
+
 * [杨尉](https://github.com/waynewyang)
   先河系统CTO
 
