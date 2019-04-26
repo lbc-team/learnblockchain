@@ -28,7 +28,7 @@ date: 2017-10-24 18:16:10
 
 * [Tiny熊](http://tinyxiong.com)
   写过代码，带过团队，抱过娃，
-  北航硕士，登链创始人&CTO，[精通以太坊智能合约开发](http://edu.upchain.pro/book.html)作者。
+  北航硕士，登链创始人及CTO，[精通以太坊智能合约开发](http://edu.upchain.pro/book.html)作者。
 
 * [Bob](https://github.com/bobjiang) 
   HiBlock 社区发起人，敏捷开发培训专家。
@@ -48,7 +48,10 @@ date: 2017-10-24 18:16:10
  
 * [Star li](https://github.com/BlockHeader)
   Dora网络的CTO， 公众号：星想法 作者
-  
+
+* [风静縠纹平](https://github.com/riversyang)
+  资深软件工程师、架构师；区块链技术布道者；有 17 年的软件行业从业经验。目前专注于区块链技术推广、中文技术社区贡献以及智能合约开发和安全审计方向。
+
 * Ashton
  80后程序员一枚，胸无大志，心无旁骛，自在的享受技术的乐趣，目前醉心于区块链技术...
 
