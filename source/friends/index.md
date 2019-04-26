@@ -17,11 +17,10 @@ date: 2019-03-24 15:52:24
 
 ## 部分作者及友人 的个人博客
 
-* [Tiny熊的博客](http://tinyxiong.com) - Tiny熊个人博客
 * [Bob's Blog](https://bobjiang.com/) - Bob 个人博客
 * [TopJohn’s Blog](https://www.xuanzhangjiong.top) - TopJohn 个人博客
 * [虞双齐的博客](https://yushuangqi.com) - 虞双齐的博客
-
+* [Tiny熊的博客](http://tinyxiong.com) - Tiny熊个人博客
 * [forecho 的博客](https://blog.forecho.com/) - forecho 个人博客
 * [静轩之别苑](https://quickapp.lovejade.cn/) - 个人博客、前端开发博客
 
