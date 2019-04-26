@@ -142,7 +142,7 @@ Plasma 协议定义了一套子链（侧链）的实现协议，其中包括  5 
 [4] Minimal Viable Plasma: https://ethresear.ch/t/minimal-viable-plasma/426
 
 
-编者注：本文作者风静縠纹平（[作者的简书](https://www.jianshu.com/u/726933951c63)）是以太坊资深专家，经作者本人授权转载。
+编者注：本文作者风静縠纹平（-[作者的简书](https://www.jianshu.com/u/726933951c63)）是以太坊资深专家，经作者本人授权转载。
 
 
 [深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，打造最好的[区块链技术博客](https://learnblockchain.cn/)。
