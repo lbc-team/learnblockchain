@@ -19,8 +19,8 @@ date: 2019-03-24 15:52:24
 * [静轩之别苑](https://quickapp.lovejade.cn/) - 个人博客、前端开发博客
 * [币兔](https://www.bitool.cn/) - 发现DAPP
 * [无退社区](https://wutui.pro/) - 区块链社区
-* [BlockFlow](https://blockflow.net/) - 区块链论坛
 * [区块链技术中文社区](https://bitshuo.com)
 
 
 [友链申请](https://learnblockchain.cn/images/tiny_wx_code.jpeg)
+
