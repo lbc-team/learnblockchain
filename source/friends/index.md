@@ -6,7 +6,8 @@ date: 2019-03-24 15:52:24
 ## 排名不分先后
 
 * [HiBlock区块链社区](https://hiblock.one/)
-* [图书-精通智能合约开发](http://edu.upchain.pro/book.html)
+* [磨链社区](http://www.mochain.info/)
+* [登链学院](http://edu.upchain.pro)
 * [区块链技术博客](http://me.tryblockchain.org/)
 * [BG区块链技术论坛](http://blockgeek.org/)
 * [EOS中文社区](https://eosfans.io/)
