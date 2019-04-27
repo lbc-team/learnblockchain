@@ -20,6 +20,8 @@ menu:
   wiki: 技术导航
   solidity: Solidity 中文文档
   etherscan: Etherscan文档
+  geth: 以太坊设计与实现
+  truffle: Truffle 中文文档
 
 sidebar:
   overview: 站点概览

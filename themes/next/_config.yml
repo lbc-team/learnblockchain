@@ -156,6 +156,8 @@ menu:
   solidity: https://learnblockchain.cn/docs/solidity/ || book
   etherscan: https://learnblockchain.cn/docs/etherscan/ || book
   web3: https://learnblockchain.cn/docs/web3js-0.2x/ || book
+  truffle: https://learnblockchain.cn/docs/truffle/ || book
+  geth: http://learnblockchain.cn/books/geth/ || book
   about: /about/ || user
   tags: /tags/ || tags
   categories: /categories/ || th
@@ -213,8 +215,7 @@ links:
   区块链入门及比特币: https://wiki.learnblockchain.cn/bitcoin/readme.html
   以太坊开发资源汇总: https://wiki.learnblockchain.cn/ethereum/readme.html
   钱包开发资源汇总: https://learnblockchain.cn/2019/04/11/wallet-dev-guide/
-  以太坊设计与实现: http://learnblockchain.cn/books/geth/
-  solidity中文文档: https://solidity-cn.readthedocs.io
+  
   柚子EOS开发资源汇总: https://wiki.learnblockchain.cn/eos/readme.html
   超级账本开发资源汇总: https://wiki.learnblockchain.cn/hyperledger/readme.html
   IPFS开发资源汇总: https://wiki.learnblockchain.cn/hyperledger/readme.html

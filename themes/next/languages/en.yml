@@ -15,10 +15,12 @@ menu:
   sitemap: Sitemap
   commonweal: Commonweal 404
   course: Course
-  web3: Web3 Docs
+  web3: Web3 CN Docs
   wiki: Tech Wiki
-  solidity: Solidity Docs
-  etherscan: Etherscan Docs
+  solidity: Solidity CN Docs
+  etherscan: Etherscan CN Docs
+  geth: Geth Develop
+  truffle: Truffle CN Docs
 
 sidebar:
   overview: Overview
