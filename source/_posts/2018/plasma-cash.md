@@ -19,12 +19,14 @@ author: 盖盖
 <!-- more -->
 
 
-在[上一篇](https://github.com/gitferry/mastering-ethereum/blob/master/Plasma-in-depth/plasma-mvp.md)文章中我们已经理解了 Plasma 的最小实现 Plasma MVP 如何使用 UTXO 模型实现 Plasma 链下扩容的核心思想。但由于 Plasma MVP 本身过于简单，并不能用于实际的生产环境中。2018 年 3 月，在巴黎举行的以太坊开发者大会上，Vitalik 发布了 Plasma Cash 模型[[1]](https://ethresear.ch/t/plasma-cash-plasma-with-much-less-per-user-data-checking/1298)，可以视为对 Plasma MVP 的改进。Plasma Cash 与 Plasma MVP 的主要区别是每次存款操作都会产生一个唯一的 coin ID 对应转移到侧链上的资产，并使用一种称为稀疏梅克尔树（Sparse Merkle Tree）的数据结构存储交易历史。由此带来的好处是用户不需要关注子链上的每个动态，只需要关注跟自己的 token 有关的动态。在下文中将介绍具体细节。
+在[上一篇: Plasma MVP](https://learnblockchain.cn/2018/11/03/plasma-mvp/)文章中我们已经理解了 Plasma 的最小实现 Plasma MVP 如何使用 UTXO 模型实现 Plasma 链下扩容的核心思想。但由于 Plasma MVP 本身过于简单，并不能用于实际的生产环境中。2018 年 3 月，在巴黎举行的以太坊开发者大会上，Vitalik 发布了 Plasma Cash 模型[[1]](https://ethresear.ch/t/plasma-cash-plasma-with-much-less-per-user-data-checking/1298)，可以视为对 Plasma MVP 的改进。Plasma Cash 与 Plasma MVP 的主要区别是每次存款操作都会产生一个唯一的 coin ID 对应转移到侧链上的资产，并使用一种称为稀疏梅克尔树（Sparse Merkle Tree）的数据结构存储交易历史。由此带来的好处是用户不需要关注子链上的每个动态，只需要关注跟自己的 token 有关的动态。在下文中将介绍具体细节。
 
 ### 存款（Deposits）
-Plasma Cash 中的每次存款操作都会对应产生一个 NFT（non-fungible token）[[2]](https://en.wikipedia.org/wiki/Non-fungible_token)。NFT 可以简单理解为“不可互换的 token”，即每个 token 都是独一无二的，由唯一的 ID 标记。以太坊官方为 NFT 提供了 ERC721 标准[[3]](http://erc721.org/)，在之前火爆到阻塞以太坊的 CryptoKitties 就是由 ERC721 合约实现的。
+Plasma Cash 中的**每次存款操作**都会对应产生一个 NFT（non-fungible token）[[2]](https://en.wikipedia.org/wiki/Non-fungible_token)。NFT 可以简单理解为“不可互换的 token”，即每个 token 都是独一无二的，由唯一的 ID 标记。以太坊官方为 NFT 提供了 ERC721 标准[[3]](http://erc721.org/)，在之前火爆到阻塞以太坊的 CryptoKitties 就是由 [ERC721 合约](https://learnblockchain.cn/2018/03/23/token-erc721/)实现的。
 
 在 Plasma Cash 中，当用户向 Plasma 合约发送存款交易时，合约会生成一个与存款等值的 token，并给这个 token 分配一个唯一的 ID。如果一个用户分别执行两次存款操作，且每次存款都是 5 ETH，那么他将得到相等价值的两个完全不同的 token。和 Plasma MVP 一样，每次存款操作都会使得 Plasma 合约产生一个只包含这个存款交易的区块。
+
+> 这里的`区块`及下文的`区块`指的是子链区块对应在主链合约中的记录。
 
 ### Plasma Cash 区块
 Plasma Cash 中的每个 token 都被分配唯一的 ID，因此可以按 ID 的顺序存储每个 token 的交易历史。Plasma Cash 的区块按 token ID 的顺序给每个 token 分配了一个插槽（slot），每个插槽会记录这个 token 是否被交易的信息。例如在下图（来源[[4]](https://github.com/ethsociety/learn-plasma)）的区块中，包含 4 个 token，id 分别是 #1，#2，#3，#4。其中 #1，#2，#3 被标记为没有被花费，而 #4 由用户 A 发送给用户 B。

@@ -30,9 +30,9 @@ Plasma 作为以太坊的二层扩容框架，自从 2017 年被 Joseph Poon（L
 
 <img src="https://raw.githubusercontent.com/gitferry/mastering-ethereum/master/Plasma-in-depth/images/layer1.jpg"  width="320" height="150" alt="Layer 1 扩容" />
 
-目前最典型的一层扩容方案是 Vitalik 和他的研究团队提出的“Sharding（分片）”，也就是说将区块链划分成不同的部分（shards），每个部分独立处理交易。想要了解更多关于 Sharding 的信息，可以参考以太坊官方的 Wiki[[5]](https://github.com/ethereum/wiki/wiki/Sharding-FAQs)。
+目前最典型的一层扩容方案是 Vitalik 和他的研究团队提出的“[Sharding（分片）](https://learnblockchain.cn/2018/05/16/ethereum-sharding/)”，也就是说将区块链划分成不同的部分（shards），每个部分独立处理交易。想要[了解更多关于 Sharding](https://learnblockchain.cn/2018/05/16/ethereum-sharding/) 的信息，可以参考以太坊官方的 Wiki[[5]](https://github.com/ethereum/wiki/wiki/Sharding-FAQs)。
 
-二层扩容也称链下（off-chain）扩容，同样非常好理解，这种扩容方案不需要修改区块链底层协议，而是通过将大量、频繁的计算工作转移到“链下”完成，并定期或在需要时将链下的计算结果提交到“链上”保证其最终性（finality）。二层扩容的核心思想是将底层区块链作为共识基础，使用智能合约或者其它手段作为链下和链上沟通的桥梁，当有欺诈行为发生时链下的用户仍然可以回到链上的某一状态。虽然将计算转移到链下会在一段时间内损失最终性，但这个代价是值得的，因为这样做不止可以极大提高区块链的灵活性和可扩展性，也极大降低了用户进行交易所需要的代价。将计算转移到链下也并不意味着完全放弃安全性，因为最终的安全性还是由底层所依赖的区块链来保证，因此二层扩容主要关注的问题就在于如何保证链上链下切换过程的安全性。这种思想最早被用在闪电网络（Lightning Network）当中作为比特币的其中一个扩容方案，并取得了很好的效果。
+二层扩容也称链下（off-chain）扩容，同样非常好理解，这种扩容方案不需要修改区块链底层协议，而是通过将大量、频繁的计算工作转移到“链下”完成，并定期或在需要时将链下的计算结果提交到“链上”保证其最终性（finality）。二层扩容的核心思想是将底层区块链作为共识基础，使用智能合约或者其它手段作为链下和链上沟通的桥梁，当有欺诈行为发生时链下的用户仍然可以回到链上的某一状态。虽然将计算转移到链下会在一段时间内损失最终性，但这个代价是值得的，因为这样做不止可以极大提高区块链的灵活性和可扩展性，也极大降低了用户进行交易所需要的代价。将计算转移到链下也并不意味着完全放弃安全性，因为最终的安全性还是由底层所依赖的区块链来保证，因此二层扩容主要关注的问题就在于如何保证链上链下切换过程的安全性。这种思想最早被用在[闪电网络（Lightning Network）](https://wiki.learnblockchain.cn/bitcoin/lightning.html)当中作为比特币的其中一个扩容方案，并取得了很好的效果。
 
 <img src="https://raw.githubusercontent.com/gitferry/mastering-ethereum/master/Plasma-in-depth/images/layer2.jpg"  width="320" height="150" alt="Layer 2 扩容"/>
 
