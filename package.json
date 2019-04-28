@@ -27,6 +27,14 @@
     "hexo-renderer-stylus": "^0.3.1",
     "hexo-server": "^0.2.0",
     "hexo-symbols-count-time": "^0.4.4",
-    "hexo-util": "^0.6.2"
+    "hexo-util": "^0.6.2",
+    "grunt": "~0.4.2",
+    "grunt-cli": "~0.1.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-htmlmin": "^2.0.0",
+    "grunt-contrib-jshint": "~0.7.2",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-exec": "^1.0.1"
   }
 }
