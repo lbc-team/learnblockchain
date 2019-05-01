@@ -1,5 +1,5 @@
 ---
-title: 零知识证明 - zkSNARK入门
+title: 零知识证明 - 深入理解 zkSNARK
 permalink: learn-zkSNARK
 un_reward: true
 mathjax: true

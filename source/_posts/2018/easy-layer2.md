@@ -8,6 +8,7 @@ tags:
     - Plasma
     - TrueBit
     - 状态通道
+    - 扩容
 author: 元家昕
 ---
 
