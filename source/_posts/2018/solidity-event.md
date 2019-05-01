@@ -1,5 +1,5 @@
 ---
-title: 详解 Solidity 事件Event - 完全搞懂事件的使用
+title:  搞懂 Solidity 事件Event - 如何在DApp中使用
 permalink: solidity-event
 date: 2018-05-09 20:37:03
 

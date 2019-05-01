@@ -31,6 +31,9 @@ author: Tiny熊
 
 本合约也部署到以太坊官方测试网络Ropsten， 如Englist first Note 的交易记录可以在[EtherScan查询](https://ropsten.etherscan.io/tx/0xd6b7366fa06a643be0de7abc26e04b0509595f9a1cf216e6f7c29f1ad78c8775)。
 
+
+> 更新：我还有一篇博客文章介绍了如何把这个[合约部署到 loom 构建的以太坊侧链](https://learnblockchain.cn/2019/04/29/use-loom/)， 有兴趣的可阅读。
+
 ## 项目准备
 
 创建项目文件夹：noteOnChain，然后在目录下，执行：
