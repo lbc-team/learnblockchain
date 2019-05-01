@@ -3,7 +3,7 @@ title: 深入理解Plasma（一）Plasma 框架
 permalink: plasma-framework
 date: 2018-10-20 15:54:17
 categories:
-    - 以太坊
+    - 扩容技术
     - Plasma
 tags:
     - 以太坊

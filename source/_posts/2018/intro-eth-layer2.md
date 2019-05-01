@@ -2,7 +2,7 @@
 title: 浅谈区块链扩容 之 Layer2 扩展
 permalink: intro-eth-layer2
 date: 2018-06-30 20:48:34
-categories: 以太坊
+categories: 扩容技术
 tags: 
     - Plasma
     - Layer2

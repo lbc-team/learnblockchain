@@ -3,7 +3,7 @@ title: 深入理解Plasma（四）Plasma Cash
 permalink: plasma-cash
 date: 2018-11-16 12:44:17
 categories:
-    - 以太坊
+    - 扩容技术
     - Plasma
 tags:
     - 以太坊

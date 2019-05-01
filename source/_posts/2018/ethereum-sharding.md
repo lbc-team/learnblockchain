@@ -2,7 +2,9 @@
 title: 以太坊扩容 之 分片(Sharding)
 permalink: ethereum-sharding
 date: 2018-05-16 20:48:34
-categories: 以太坊
+categories: 
+    - 扩容技术
+    - 分片
 tags: 
     - 扩容
     - 分片

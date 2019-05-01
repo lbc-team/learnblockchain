@@ -3,7 +3,7 @@ title: 深入理解Plasma（三）Plasma MVP（验证实现）
 permalink: plasma-mvp
 date: 2018-11-03 16:54:17
 categories:
-    - 以太坊
+    - 扩容技术
     - Plasma
 tags:
     - 以太坊

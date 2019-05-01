@@ -3,7 +3,7 @@ title: 深入理解Plasma（二）Plasma 细节
 permalink: plasma-in-detail
 date: 2018-10-24 20:54:17
 categories:
-    - 以太坊
+    - 扩容技术
     - Plasma
 tags:
     - 以太坊
