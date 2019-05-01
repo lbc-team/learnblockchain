@@ -2,7 +2,7 @@
 title: 非对称加密技术- RSA算法数学原理分析
 permalink: asy-encryption
 date: 2017-11-15 10:53:27
-categories: 其他
+categories: 基础理论
 tags:
     - 密码学
     - RSA算法

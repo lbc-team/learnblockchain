@@ -4,7 +4,7 @@ permalink: learn-zkSNARK
 un_reward: true
 mathjax: true
 date: 2019-04-18 15:10:54
-categories: 其他
+categories: 基础理论
 tags: 
     - 密码学
     - zkSNARK
