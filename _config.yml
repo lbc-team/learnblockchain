@@ -77,7 +77,7 @@ category_map:
   密码学: cryptography
   跨链: cross_chain
   其他: other
-  基础理论: 
+  基础理论: basic
   扩容技术: scaling
   技术工坊: dev_meeting
 tag_map:
