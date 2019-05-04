@@ -9,7 +9,7 @@ tags:
 author: Tiny熊
 ---
 
-本章的文章越来越多，本文是一个索引帖，方便找到自己感兴趣的文章，你也可以使用左侧的[分类](https://learnblockchain.cn/categories/)、[标签](https://learnblockchain.cn/tags/)及搜索功能。
+本章的文章越来越多，本文是一个索引帖，方便找到自己感兴趣的文章，你也可以使用左侧的[分类](https://learnblockchain.cn/categories/)、[标签](https://learnblockchain.cn/tags/)及**搜索**功能。
 有新文章时会更新本文，建议大家加入收藏夹中，如果你觉得本站不错，欢迎你转发给朋友。
 
 <!-- more -->
@@ -59,6 +59,8 @@ author: Tiny熊
 * [深入浅出以太坊虚拟机](https://learnblockchain.cn/2019/04/09/easy-evm/)
 
 ### 智能合约及应用开发
+
+* [完全理解以太坊智能合约](https://learnblockchain.cn/2018/01/04/understanding-smart-contracts/)
 * [程序员如何切入区块链去中心化应用开发](https://learnblockchain.cn/2018/08/31/devDapp/#more)
 * [一步步教你开发、部署第一个Dapp应用](https://learnblockchain.cn/2018/01/12/first-dapp/)
 * [一步步教你创建自己的数字货币（代币）进行ICO](https://learnblockchain.cn/2018/01/12/create_token/)
@@ -67,7 +69,6 @@ author: Tiny熊
 * [剖析非同质化代币ERC721--全面解析ERC721标准](https://learnblockchain.cn/2018/03/23/token-erc721/)
 * [Web3与智能合约交互实战](https://learnblockchain.cn/2018/04/15/web3-html/)
 * [Web3监听合约事件](https://learnblockchain.cn/2018/05/09/solidity-event/)
-
 * [如何编写一个可升级的智能合约](https://learnblockchain.cn/2018/03/15/contract-upgrade/)
 * [美链BEC合约漏洞技术分析](https://learnblockchain.cn/2018/04/25/bec-overflow/)
 
@@ -91,7 +92,7 @@ author: Tiny熊
 * [如何理解以太坊ABI - 应用程序二进制接口](https://learnblockchain.cn/2018/08/09/understand-abi/)
 
 
-### 以太扩容
+## 区块链扩容
 
 * [深入理解Plasma（一）Plasma 框架](https://learnblockchain.cn/2018/10/20/plasma-framework/)
 * [深入理解Plasma（二）Plasma 细节](https://learnblockchain.cn/2018/10/24/plasma-in-detail/)
@@ -100,6 +101,7 @@ author: Tiny熊
 
 
 ### 钱包开发系列
+
 * [理解开发HD 钱包涉及的 BIP32、BIP44、BIP39](https://learnblockchain.cn/2018/09/28/hdwallet/)
 * [以太坊钱包开发系列1 - 创建钱包账号](https://learnblockchain.cn/2018/10/25/eth-web-wallet_1/)
 * [以太坊钱包开发系列2 - 账号Keystore文件导入导出](https://learnblockchain.cn/2018/10/25/eth-web-wallet_2/)
