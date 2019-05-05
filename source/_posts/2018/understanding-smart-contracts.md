@@ -269,6 +269,7 @@ contract MyToken {
 
 想学习在以太坊上编程可以学习这门课程[以太坊DAPP开发实战](https://ke.qq.com/course/335169)
 
+本文的英文原文链接为：http://www.gjermundbjaanes.com/understanding-ethereum-smart-contracts/
 
 加入[知识星球](https://learnblockchain.cn/images/zsxq.png)，和一群优秀的区块链从业者一起学习。
 [深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，学区块链的都在这里，打造最好的区块链技术博客。
