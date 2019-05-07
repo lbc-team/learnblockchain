@@ -40,7 +40,7 @@ QSP/QAP问题的思想都是出自2012年一篇论文：Quadratic Span Programs 
 * **SNARK - Succinct Non-interactive ARgumentss of Knowledge**，相比SNARG，SNARK多了Knowledge，也就是说，SNARK不光能证明计算过程，还能确认证明者“拥有”计算需要的Knowledge（只要证明者能给出证明就证明证明者拥有相应的解）。
 * **zkSNARK - zero-knowledge SNARK**，在SNARK的基础上，证明和验证双方除了能验证计算外，验证者对其他信息一无所知。
 * **Statement** - 对于QSP/QAP，和电路结构本身（计算函数）相关的参数。比如说，某个计算电路的输入/输出以及电路内部门信息。Statement对证明者和验证者都是公开的。
-* **Witness** - Witness只有验证者知道。可以理解成，某个计算电路的正确的解（输入）。
+* **Witness** - Witness只有证明者知道。可以理解成，某个计算电路的正确的解（输入）。
 
 ## **QAP问题的定义**
 
@@ -128,7 +128,7 @@ $c = [0, 0, 1, 0, 0, 0]$
 
 $f_0(1) = 0, f_0(2) = 0, f_0(3)=0, f_0(4)=5$
 
-在获知一系列的输入和输出的前提下，可以通过朗格朗日定理，获取多项式表达式。小伙伴可以通过这个[工具](http://skisickness.com/2010/04/28/)计算多项式。
+在获知一系列的输入和输出的前提下，可以通过拉格朗日定理，获取多项式表达式。小伙伴可以通过这个[工具](http://skisickness.com/2010/04/28/)计算多项式。
 
 ![计算多项式](https://img.learnblockchain.cn/2019/15572163507443.jpg!/scale/70%)
 

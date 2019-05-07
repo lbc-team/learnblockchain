@@ -1,5 +1,5 @@
 ---
-title: 百亿美金DeFi（去中心化金融）市场，还需要一个它
+title: Hydro 为百亿 DeFi（去中心化金融）准备了一个SDK
 permalink: defi-hydro
 un_reward: true
 date: 2019-04-13 22:02:08
@@ -10,9 +10,10 @@ tags:
 author: 代世超 雷达熊
 ---
 
-今天讲一个「给淘金人卖水」的生意。
+> 编者注：本文转自Hydro 公众号。
 
-这一波淘金人就是各种 DeFi 项目（Decentralized Finance 去中心化金融）。
+Hydro 觉的这一波淘金人就是各种 DeFi 项目（Decentralized Finance 去中心化金融），Hydro 通过 SDK 为淘金人送水，本文分析了DeFi市场的变化、去中心化交易平台需要的什么样的技术，以及给出来相应的方案。
+
 <!-- more -->
 
 ## DeFi市场的变化
