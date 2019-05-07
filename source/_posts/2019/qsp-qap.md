@@ -4,6 +4,7 @@ title: 零知识证明 - 从QSP到QAP
 permalink: qsp-qap
 un_reward: true
 mathjax: true
+hide_wechat_subscriber: true
 date: 2019-05-07 15:10:54
 categories: 基础理论
 tags: 
@@ -227,7 +228,10 @@ $$h(s) \rightarrow h(s)+\delta_{free}(w_0(s) + w(s)) + \delta_w(v_0(s) + v_{in}(
 ## **总结**：
 QAP和QSP问题类似。QSP问题主要用于布尔电路计算表达，QAP问题主要用于算术电路计算表达。将一个算术电路计算转化为QAP问题的过程，其实就是对电路中每个门电路进行描述限制的过程。通过朗格朗日定理，实现算术电路的多项式表达。QAP问题的zkSNARK的证明验证过程和QSP非常相似。
 
-作者Star Li，他的公众号[星想法](https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzU5MzMxNTk2Nw==&scene=124#wechat_redirect)有很多原创高质量文章，欢迎大家关注。
+本文作者 Star Li，他的公众号**星想法**有很多原创高质量文章，欢迎大家扫码关注。
+
+![公众号-星想法](https://img.learnblockchain.cn/2019/15572190575887.jpg!/scale/20%)
+
 
 [深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，学区块链都在这里，打造最好的区块链技术博客。
 

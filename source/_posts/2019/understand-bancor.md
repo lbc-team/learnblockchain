@@ -1,7 +1,8 @@
 ---
-title: 区块链 - 深入浅出Bancor协议
+title: 深入浅出Bancor协议
 permalink: understand-bancor
 un_reward: true
+hide_wechat_subscriber: true
 date: 2019-04-15 15:36:54
 categories: DeFi
 tags: 
@@ -138,7 +139,10 @@ CW=90%的情况下，储备金是Smart Token价值的90%，买卖的价格缓慢
 **总结**：Bancor协议是为了降低币币交易的门槛，形成Token经济中的Token交易的长尾效应。Bancor协议，取名Bancor，是为了纪念宏观经济经济学之父 - 约翰·梅纳德·凯恩斯。Bancor协议在一定储备金的前提下，实现Smart Token的交易。储备金比例不同，Smart Token交易的价格曲线也不同。储备金比例越高，价格曲线越平坦，储备金比例越低，价格曲线越陡峭。在已知某一价格曲线的情况下，用曲线下方的面积除以整个矩形面积即可求出储备金比例CW。
 
 
-作者Star Li，他的公众号[星想法](https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzU5MzMxNTk2Nw==&scene=124#wechat_redirect)有很多原创高质量文章，欢迎大家关注。
+本文作者 Star Li，他的公众号**星想法**有很多原创高质量文章，欢迎大家扫码关注。
+
+![公众号-星想法](https://img.learnblockchain.cn/2019/15572190575887.jpg!/scale/20%)
+
 
 [深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，学区块链都在这里，打造最好的区块链技术博客。
 

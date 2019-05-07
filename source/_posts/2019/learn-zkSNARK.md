@@ -3,6 +3,7 @@ title: 零知识证明 - zkSNARK入门
 permalink: learn-zkSNARK
 un_reward: true
 mathjax: true
+hide_wechat_subscriber: true
 date: 2019-04-18 15:10:54
 categories: 基础理论
 tags: 
@@ -302,7 +303,9 @@ $v_{free}(s)/w(s)/h(s)​$进行如下的变形，验证者用同样的逻辑验
 
 零知识证明由四部分组成：多项式问题的转化，随机挑选验证，同态隐藏以及零知识。需要零知识证明的问题先转化为特定的NP问题，挑选随机数，设置参数，公布CRS。证明者，在求得证据的情况下，通过CRS计算出证据。验证者再无需其他知识的情况下可以进行验证。
 
-作者Star Li，他的公众号[星想法](https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzU5MzMxNTk2Nw==&scene=124#wechat_redirect)有很多原创高质量文章，欢迎大家关注。
+本文作者 Star Li，他的公众号**星想法**有很多原创高质量文章，欢迎大家扫码关注。
+
+![公众号-星想法](https://img.learnblockchain.cn/2019/15572190575887.jpg!/scale/20%)
 
 [深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，学区块链都在这里，打造最好的区块链技术博客。
 

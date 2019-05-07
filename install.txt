@@ -20,9 +20,18 @@ themes/next/layout/_macro/sidebar.swig 修改：
 显示join_solgan 及  join_desc 字段
 
 
-修改页面显示：
+**修改页面显示**：
 
 themes/next/layout/_partials/pagination.swig
+
+**加入不显示微信订阅号**
+
+themes/next/layout/_macro/post.swig 修改：
+```
+ not post.hide_wechat_subscriber
+```
+
+文章中加入 hide_wechat_subscriber: true
 
 
 主题升级后，以下不要需要：

@@ -338,7 +338,7 @@
     {### END POST BODY ###}
     {#####################}
 
-    {% if theme.wechat_subscriber.enable and not is_index %}
+    {% if theme.wechat_subscriber.enable and not is_index and not post.hide_wechat_subscriber %}
       {% include '../_partials/post/wechat-subscriber.swig' %}
     {% endif %}
 
