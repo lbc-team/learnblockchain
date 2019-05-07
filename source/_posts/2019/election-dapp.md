@@ -235,7 +235,7 @@ listenForEvents: function() {    App.contracts.Election.deployed().then(function
   }
 ```
 
-这里有一份[web3.js 监听事件 API文档说明](https://web3.learnblockchain.cn/0.2x.x/web3.eth/#contract-events)
+这里有一份[web3.js 监听事件 API文档说明](https://learnblockchain.cn/docs/web3js-0.2x/web3.eth.html#contract-events)
 
 ### 候选人界面渲染
 

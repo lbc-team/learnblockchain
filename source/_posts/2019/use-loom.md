@@ -2,10 +2,12 @@
 title: 用Loom SDK 搭建的以太坊侧链并部署智能合约
 permalink: use-loom
 date: 2019-04-29 20:41:20
-categories: 以太坊
+categories: 
+    - 扩容技术
+    - Loom
 tags: 
     - Loom
-    - DApp
+    - 智能合约
 author: Tiny熊
 ---
 
