@@ -11,7 +11,7 @@ tags:
 author: Tiny熊
 ---
 
-前两天写了一篇 [用Truffle开发一个链上记事本](https://learnblockchain.cn/2019/03/30/dapp_noteOnChain/) ，很多人讲，这样写一条笔记成本该多高呀，今天我们开看看如何在Loom SDK 搭建的以太坊侧链部署这个DApp。
+前两天写了一篇 [用Truffle开发一个链上记事本](https://learnblockchain.cn/2019/03/30/dapp_noteOnChain/) ，很多人讲，这样写一条笔记成本该多高呀，这篇我们看看如何把链上记事本智能合约迁移到Loom SDK 搭建的以太坊侧链，在下一篇会介绍如何来[用loom.js重写这个DApp](https://learnblockchain.cn/2019/05/06/use-loom-for-dapp/)。
 
 <!-- more -->
 
