@@ -2,12 +2,10 @@
 title: 美链BEC合约漏洞技术分析
 permalink: bec-overflow
 date: 2018-04-25 10:13:07
-categories: 
-    - 以太坊
-    - 智能合约
+categories: 区块链安全
 tags:
-    - 智能合约
-    - 安全
+    - 漏洞分析
+    - 智能合约安全
 author: Tiny熊
 ---
 
@@ -100,3 +98,5 @@ contract TestFlow {
 ![](https://img.learnblockchain.cn/2018/BEC_transfer_flow.jpg!wl)
 
 -->
+
+
