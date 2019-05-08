@@ -80,6 +80,7 @@ category_map:
   基础理论: basic
   扩容技术: scaling
   技术工坊: dev_meeting
+  区块链安全: security
 tag_map:
 
 # Date / Time format
