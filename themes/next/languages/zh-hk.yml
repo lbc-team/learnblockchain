@@ -22,6 +22,7 @@ menu:
   etherscan: Etherscan文档
   geth: 以太坊设计与实现
   truffle: Truffle 中文文档
+  ethers.js: ethers.js 中文文档
 
 sidebar:
   overview: 本站概覽

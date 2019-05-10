@@ -6,7 +6,7 @@ categories: 技术工坊
 hide_in_home: true
 un_subscription: true
 un_reward: true
-top: 1
+
 ---
 
 **我们是谁、我们的目标**

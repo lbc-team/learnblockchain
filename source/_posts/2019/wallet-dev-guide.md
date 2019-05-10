@@ -26,7 +26,9 @@ author: Tiny熊
 
 * [理解开发HD 钱包涉及的 BIP32、BIP44、BIP39](https://learnblockchain.cn/2018/09/28/hdwallet/) - 理解钱包开发核心原理和概念
 
-## 使用 Ethers.js 库 开发网页钱包
+<a name="使用 ethers.js 库 开发网页钱包" id="ethers.js"></a>
+
+## 使用 ethers.js 库 开发网页钱包
 
 通过开发一个简单的网页，可以快速掌握钱包开发原理。
 

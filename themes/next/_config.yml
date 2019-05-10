@@ -155,9 +155,11 @@ menu:
   wiki: https://wiki.learnblockchain.cn || book
   solidity: https://learnblockchain.cn/docs/solidity/ || book
   etherscan: https://learnblockchain.cn/docs/etherscan/ || book
+  ethers.js: https://learnblockchain.cn/docs/ethers.js/ || book
   web3: https://learnblockchain.cn/docs/web3js-0.2x/ || book
   truffle: https://learnblockchain.cn/docs/truffle/ || book
   geth: http://learnblockchain.cn/books/geth/ || book
+
   about: /about/ || user
   tags: /tags/ || tags
   categories: /categories/ || th

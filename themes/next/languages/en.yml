@@ -21,6 +21,7 @@ menu:
   etherscan: Etherscan CN Docs
   geth: Geth Develop
   truffle: Truffle CN Docs
+  ethers.js: ethers.js  Docs
 
 sidebar:
   overview: Overview
