@@ -35,7 +35,7 @@ author: Tiny熊
 * 如何通过Web3和智能合约交互
 * MetaMask 的使用
 
-[小专栏](https://xiaozhuanlan.com/blockchaincore)用户在教程结尾处可以下载完整的Dapp代码。
+[小专栏](https://xiaozhuanlan.com/topic/4875690231)用户在教程结尾处可以下载完整的Dapp代码。
 
 ## 项目背景
 
@@ -48,7 +48,7 @@ Pete有一个宠物店，有16只宠物，他想开发一个去中心化应用�
 2. 安装 Truffle ：`npm install -g truffle`
 3. 安装[Ganache](http://truffleframework.com/ganache/)
 
-> Ganache（或Ganache CLI）已经取代了 testrpc。
+> Ganache（或Ganache CLI）已经取代了 testrpc
 
 ## 创建项目
 
@@ -77,7 +77,7 @@ Commands:
 ```
 这一步需要等待一会
 
-> 也可以使用truffle init 来创建一个全新的项目。
+> 也可以使用truffle init 来创建一个全新的项目。Truffle 的使用可以参阅[这份文档](https://learnblockchain.cn/docs/truffle/) 。
 
 ## 项目目录结构
 
@@ -119,7 +119,7 @@ contract Adoption {
 
 ## 编译部署智能合约
 
-Truffle集成了一个开发者控制台，可用来生成一个开发链用来测试和部署智能合约。
+[Truffle](https://learnblockchain.cn/docs/truffle/)集成了一个[开发者控制台](https://learnblockchain.cn/docs/truffle/getting-started/compiling-contracts.html)，可用来生成一个开发链用来测试和部署智能合约。
 
 ### 编译
 
@@ -140,7 +140,7 @@ Writing artifacts to ./build/contracts
 ### 部署
 
 编译之后，就可以部署到区块链上。
-在migrations文件夹下已经有一个1_initial_migration.js部署脚本，用来部署Migrations.sol合约。
+在migrations文件夹下已经有一个1_initial_migration.js[部署脚本](https://learnblockchain.cn/docs/truffle/getting-started/running-migrations.html)，用来部署Migrations.sol合约。
 Migrations.sol 用来确保不会部署相同的合约。
 
 现在我们来创建一个自己的部署脚本`2_deploy_contracts.js`
@@ -193,7 +193,7 @@ Saving artifacts...
 
 现在我们来测试一下智能合约，测试用例可以用 JavaScript 或 Solidity来编写，这里使用Solidity。
 
-在`test`目录下新建一个`TestAdoption.sol`，编写测试合约
+在`test`目录下新建一个`TestAdoption.sol`，[编写测试合约](https://learnblockchain.cn/docs/truffle/testing/writing-tests-in-solidity.html)
 
 ```js
 
@@ -277,7 +277,7 @@ Compiling truffle/DeployedAddresses.sol...
 可以看到用来管理整个应用的App对象，init函数加载宠物信息，就初始化[web3](https://github.com/ethereum/web3.js/).
 web3是一个实现了与以太坊节点通信的库，我们利用web3来和合约进行交互。
 
-### 初始化web3、
+### 初始化 web3
 
 接下来，我们来编辑app.js修改initWeb3():
 删除注释，修改为：
@@ -316,6 +316,7 @@ web3是一个实现了与以太坊节点通信的库，我们利用web3来和合
 代码中优先使用[Mist](https://github.com/ethereum/mist) 或 [MetaMask](https://metamask.io/)提供的web3实例，如果没有则从本地环境创建一个。
 
 ### 实例化合约
+
 使用truffle-contract会帮我们保存合约部署的信息，就不需要我们手动修改合约地址，修改initContract()代码如下：
 
 ```js
@@ -477,6 +478,7 @@ candy maple cake sugar pudding cream honey rich smooth crumble sweet treat
 ## 参考文档
 
 * [Truffle手册](http://truffleframework.com/tutorials/pet-shop)
+* [Truffle 官方文档-中文版](https://learnblockchain.cn/docs/truffle/) 
 
 
 [深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，打造最好的区块链技术博客。

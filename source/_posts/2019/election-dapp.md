@@ -117,7 +117,7 @@ mapping(uint => Candidate) public candidates
 emit votedEvent(_candidateId);
 ```
 
-合约部分代码编写完了， 订阅[小专栏](https://xiaozhuanlan.com/blockchaincore) 获取完整源代码。
+合约部分代码编写完了， 订阅[小专栏](https://xiaozhuanlan.com/topic/6427931058) 获取完整源代码。
 
 ## 合约部署
 
@@ -293,7 +293,7 @@ npm run dev
 
 ## 参考文档
 
-[Truffle 官方文档](https://truffleframework.com/) 
+[Truffle 官方文档-中文版](https://learnblockchain.cn/docs/truffle/) 
 
 
 加我微信：xlbxiong 备注：DApp， 加入以太坊DApp开发微信群。

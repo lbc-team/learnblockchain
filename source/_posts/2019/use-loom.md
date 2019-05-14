@@ -318,6 +318,7 @@ truffle(loom_dapp_chain)> noteNum.toNumber()
 2. [PlasmaChain与排名前100的ERC20代币集成，通过多币种支持实现闪电级的第2层稳定币支付](https://medium.com/loom-network/plasmachain-integrates-with-top-100-erc20-tokens-enabling-lightning-fast-layer-2-stablecoin-fb9c99e879d4)
 3. [https://plasma.io/](https://plasma.io/)
 4. [Loom SDK 介绍](https://loomx.io/developers/docs/zh-CN/intro-loom-sdk.html)
+5. [Truffle 官方文档-中文版](https://learnblockchain.cn/docs/truffle/) 
 
 
 

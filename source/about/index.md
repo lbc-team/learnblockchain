@@ -42,6 +42,8 @@ date: 2017-10-24 18:16:10
 * [盖盖](https://github.com/gitferry)
   英属哥伦比亚大学电子工程系博士（在读），专注于解决区块链扩容问题，关注最新区块链技术研究，探索区块链在身份认证、物联网、安全与隐私方面的应用。
   Solidity 中文文档译者之一。
+* [王晓轩](https://github.com/onecool2)
+  区块链研究员 Dockone 社区金牌翻译，PaaS/BaaS 架构师
 
 * [TopJohn](https://www.xuanzhangjiong.top)
  区块链开源社区爱好者，磨链社区共建者，目前从事区块链研究相关工作，超级账本TWGC工作组active volunteer。

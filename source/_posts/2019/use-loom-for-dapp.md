@@ -294,6 +294,20 @@ export default class App {
 
 前面在编写 DApp 如何与 loom 侧链交互的代码时，有一个创建账号的步骤，即页面刷新的时候，每次都会用`CryptoUtils`重新创建一个账号，账号没有很好的办法复用是个挺大的问题，希望loom 能早日配合 MetaMask 钱包使用（或者开发出自己的钱包插件）。
 
+有一个方法是把私钥存储在localStorage，实例代码如下:
+
+```js
+const storedKey = localStorage.getItem('loomKey')
+let privKey
+if (storedKey) {
+    privKey = CryptoUtils.B64ToUint8Array(storedKey);
+} else {
+    privateKey = CryptoUtils.generatePrivateKey()
+    localStorage.setItem('loomKey', CryptoUtils.Uint8ArrayToB64(privKey))
+}     
+
+```
+
 > 根据Loom 在 medium的这篇[博客](https://medium.com/loom-network/universal-transaction-signing-seamless-layer-2-dapp-scaling-for-ethereum-b63a733fc65c) 说可以使用 ethers.js 的 signer 来通过 MetaMask 签名，不过我自己试验下来，并没有成功，希望成功的朋友可以留言讨论。
 
 
@@ -322,9 +336,13 @@ watch event: Error: Method "eth_getFilterLogs" not supported on this provider
 2. [loom sdk 文档](https://loomx.io/developers/docs/zh-CN/web3js-loom-provider-truffle.html)
 3. [Plasma Cash Smart Contracts](https://github.com/loomnetwork/plasma-cash)
 4. [deploying-your-first-app-to-loom-plasmachain](https://medium.com/loom-network/deploying-your-first-app-to-loom-plasmachain-installing-loom-setting-up-your-environment-and-b04aecfccf1f)
+5. [Truffle 官方文档-中文版](https://learnblockchain.cn/docs/truffle/) 
 
 
 加入[知识星球](https://learnblockchain.cn/images/zsxq.png)，和一群优秀的区块链从业者一起学习。
 [深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，学区块链的都在这里，打造最好的区块链技术博客。
+
+
+![](https://img.learnblockchain.cn/2019/15578231135557.jpg)
 
 

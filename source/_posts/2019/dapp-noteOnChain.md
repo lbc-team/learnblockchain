@@ -12,7 +12,7 @@ tags:
 author: Tiny熊
 ---
 
-以编写一个链上记事本为例，介绍如何开发DApp，一年多前写的[开发、部署第一个DApp](https://learnblockchain.cn/2018/01/12/first-dapp/)因为Truffle 、MetaMask、Solidity都有升级，也随手更新了。
+以编写一个链上记事本为例，介绍如何开发DApp，一年多前写的[开发、部署第一个DApp](https://learnblockchain.cn/2018/01/12/first-dapp/)因为[Truffle](https://learnblockchain.cn/docs/truffle/) 、MetaMask、Solidity都有升级，也随手更新了。
 通过两个教程大家可以更好理解前端如何与合约进行交互， 本文也将介绍如何使用**Truffle 把合约部署到以太坊正式网络**上（貌似很多人遇到问题）。
 
 <!-- more -->
@@ -46,7 +46,7 @@ truffle unbox pet-shop
 
 > 如果没有使用过truffle 可以阅读[开发、部署第一个DApp](https://learnblockchain.cn/2018/01/12/first-dapp/)。
 
-Truffle 的Box，是一套套的开发模板， 它会帮助我们安装好相应的依赖，快速的启动应用开发。
+[Truffle](https://learnblockchain.cn/docs/truffle/) 的Box，是一套套的开发模板， 它会帮助我们安装好相应的依赖，快速的启动应用开发。
 如果我们项目需要是使用到 JQuery， Bootstrap库，使用`pet-shop`这个Box 是不错的选择，官方还提供了React 、 Vue 项目相应的模板，所有的Box 可以在[这里](https://truffleframework.com/boxes)查询。
 
 
@@ -351,7 +351,7 @@ npm run dev
 
 ## 参考文档
 
-[Truffle 官方文档](https://truffleframework.com/) 
+[Truffle 官方文档-中文版](https://learnblockchain.cn/docs/truffle/) 
 
 
 加我微信：xlbxiong 备注：DApp， 加入以太坊DApp开发微信群。
