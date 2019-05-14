@@ -300,7 +300,7 @@ python script.py 109
 
 漏洞修复代码在这个[提交](https://github.com/loveblockchain/eosdice/commit/3c6f9bac570cac236302e94b62432b73f6e74c3b)
 
-`EOSDice`的账户余额用了很多账户的余额的总和来当种子，这个貌似也是无法预测变化的。不过这样真的安全了吗？很明显，不是的，仅在漏洞修复6天后`EOSDice`再次受到随机数攻击，下篇文章会详细分析[EOS DApp 随机数漏洞分析2 - EOSDice 随机数被操控](https://learnblockchain.cn//2019/05/14/eosdice-random2/)。
+`EOSDice`的账户余额用了很多账户的余额的总和来当种子，这个貌似也是无法预测变化的。不过这样真的安全了吗？很明显，不是的，仅在漏洞修复6天后`EOSDice`再次受到随机数攻击，下篇文章会详细分析[EOS DApp 随机数漏洞分析2 - EOSDice 随机数被操控](https://learnblockchain.cn/2019/05/14/eosdice-random2/)。
 
 ## 推荐修复方法
 
