@@ -1,5 +1,5 @@
 ---
-title: EOS DApp 漏洞分析 - EOSDice 随机数被预测
+title: EOS DApp 随机数漏洞分析1 - EOSDice 随机数被预测
 date: 2019-05-14 18:03:59
 permalink: eosdice-random1
 category:
@@ -10,12 +10,12 @@ tags:
 author: 零时科技
 ---
 
-EOSDice 在2018年11月3日受到黑客攻击，被盗2,545 EOS，约合 1.35 万美元，针对这个漏洞，零时科技团队进行了详细的分析及攻击过程复盘，尽管这个漏洞已经发生过一段时间，不过这个因随机数被预测被预测引发的漏洞还是比较典型。
+EOSDice 在2018年11月3日受到黑客攻击，被盗2,545 EOS，约合 1.35 万美元，针对这个漏洞，零时科技团队进行了详细的分析及攻击过程复盘，尽管这个漏洞已经发生过一段时间，不过这个因随机数被预测引发的漏洞还是比较典型。
 
 <!-- more -->
 
 
-## 背景
+## 漏洞背景
 
 `EOSDice` 在2018年11月3日受到黑客攻击，根据 `EOSDice` 官方通告，此次攻击共被盗 `2,545.1135 EOS`，约 1.35 万美元，当时价格 1 EOS ≈ 5.13 USD），下图为交易截图：
 
@@ -58,6 +58,7 @@ EOSDice 在2018年11月3日受到黑客攻击，被盗2,545 EOS，约合 1.35 �
 - pool_eos # 本合约的EOS余额
 
 
+
 ### 随机数种子分析
 
 其中随机数种子`account_name`、`game_id`、`pool_eos`很容易获取到，那么如果需要预测随机数，必须要预测所有的随机数种子，也就是 说`current_time`、`tapos_block_prefix`、`tapos_block_num`也要可以预测。
@@ -69,13 +70,15 @@ EOSDice 在2018年11月3日受到黑客攻击，被盗2,545 EOS，约合 1.35 �
 ![current_time](https://img.learnblockchain.cn/2019/15578445507382.jpg)
 
 
-其实返回的就是一个时间戳，由于`EOSDice`开奖使用的是`defer action`，因此，我们只需要知道下注的`action`的时间戳再加上`delay_sec`就可以算出开奖`reval`的时间戳了。`EOSDice`的`delay_sec`为1秒，所以`开奖时时间戳 = 下注时时间戳 + 1000000`。
+其实返回的就是一个时间戳，由于`EOSDice`开奖使用的是`defer action` （延时交易），因此，我们只需要知道下注的`action`的时间戳再加上`delay_sec`就可以算出开奖`reval`的时间戳了。`EOSDice`的`delay_sec`为1秒，所以`开奖时时间戳 = 下注时时间戳 + 1000000`。
 
 2. 接着，我们分析`tapos_block_prefix`和`tapos_block_num`是否可以预测
 
+> 注： tapos: Transactions as Proof-of-Stake (TaPOS) 它指定一个过去的区块（ ref_block_num ），用来做 Proof-of-Stake 的 ， 代码中使用的 tapos_block_preﬁx 和tapos_block_num， 正是由这个 ref_block_num 算出来的。
+
 其实，`tapos_block_prefix`和`tapos_block_num`均为开奖`block`的`ref block`的信息。`EOS`为了防止分叉，所以每一个`block`都会有一个`ref block`也就是引用块。因为`reveal`开奖的块在下注前并不知道，它的`ref block`看似也不知道，所以貌似这两个种子是未来的值。不过，根据`EOS`的机制，因为开奖采用的是`defer action`，所以`reveal`开奖块的`ref block`为下注块的前一个块，也就是说`tapos_block_prefix`和`tapos_block_num`是在下注前可以获取到的！
 
-![ref block](https://img.learnblockchain.cn/2019/15578448446006.jpg)
+![应用块 ref block](https://img.learnblockchain.cn/2019/15578448446006.jpg)
 
 
 至此，`EOSDice`的随机数种子在下注前均可以获取，那就意味着我们可以在下注前预测到下注后的随机数，完全可以达到必中的效果。
@@ -297,7 +300,7 @@ python script.py 109
 
 漏洞修复代码在这个[提交](https://github.com/loveblockchain/eosdice/commit/3c6f9bac570cac236302e94b62432b73f6e74c3b)
 
-`EOSDice`的账户余额用了很多账户的余额的总和来当种子，这个貌似也是无法预测变化的。不过这样真的安全了吗？很明显，不是的，仅在漏洞修复6天后`EOSDice`再次受到随机数攻击，下篇文章会详细分析第二次攻击。
+`EOSDice`的账户余额用了很多账户的余额的总和来当种子，这个貌似也是无法预测变化的。不过这样真的安全了吗？很明显，不是的，仅在漏洞修复6天后`EOSDice`再次受到随机数攻击，下篇文章会详细分析[EOS DApp 随机数漏洞分析2 - EOSDice 随机数被操控](https://learnblockchain.cn//2019/05/14/eosdice-random2/)。
 
 ## 推荐修复方法
 
