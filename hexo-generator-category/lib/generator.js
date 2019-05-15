@@ -39,7 +39,7 @@ module.exports = function(locals){
     if (category.name == '问与答') {
       option = {
           perPage: perPage,
-          layout: ['category-', 'archive', 'index'],
+          layout: ['category-post', 'archive', 'index'],
           format: paginationDir + '/%d/',
           data: {
             category: category.name
