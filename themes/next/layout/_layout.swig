@@ -43,7 +43,7 @@
       <div class="main-inner">
         <div class="content-wrap">
           {% if theme.scheme === 'Pisces' || theme.scheme === 'Gemini' %}
-            {% include '_partials/header/sub-menu.swig' %}
+            {% include '_partials/header/my-sub-menu.swig' %}
           {% endif %}
           <div id="content" class="content">
             {% block content %}{% endblock %}

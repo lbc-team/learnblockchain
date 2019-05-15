@@ -150,9 +150,15 @@ baidu_push: true
 # Menu Settings
 # ---------------------------------------------------------------
 
-menu:
+topmenu:
+  solidity: https://learnblockchain.cn/docs/solidity/ || book
+  etherscan: https://learnblockchain.cn/docs/etherscan/ || book
+  ethers.js: https://learnblockchain.cn/docs/ethers.js/ || book
+  web3: https://learnblockchain.cn/docs/web3js-0.2x/ || book
+  truffle: https://learnblockchain.cn/docs/truffle/ || book
 
-  home: / || book
+menu:
+  home: / || home
   wiki: https://wiki.learnblockchain.cn || book
   solidity: https://learnblockchain.cn/docs/solidity/ || book
   etherscan: https://learnblockchain.cn/docs/etherscan/ || book
@@ -401,7 +407,7 @@ post_edit:
 # ---------------------------------------------------------------
 
 # Reduce padding / margin indents on devices with narrow width.
-mobile_layout_economy: false
+mobile_layout_economy: true
 
 # Android Chrome header panel color ($brand-bg / $headband-bg => $black-deep).
 android_chrome_color: "#222"
