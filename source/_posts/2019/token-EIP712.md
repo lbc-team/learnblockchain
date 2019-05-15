@@ -251,7 +251,7 @@ function verify(address signer, Bid memory bid, sigR, sigS, sigV) public pure re
 ```
 
 
-本文经作者[Ashton](https://www.jianshu.com/u/922115b98e3f)授权转载。
+本文作者为深入浅出社区共建者 Ashton ，喜欢他的文章可关注[他的简书](https://www.jianshu.com/u/922115b98e3f)。
 
 [深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，学区块链的都在这里，打造最好的区块链技术博客。
 

@@ -81,6 +81,7 @@ category_map:
   扩容技术: scaling
   技术工坊: dev_meeting
   区块链安全: security
+  杂文: essay
 tag_map:
 
 # Date / Time format
@@ -102,6 +103,7 @@ index2_generator:
 
   exclude:
     - category 技术工坊 # 不包含分类为Hexo的文章
+    - category 杂文
     - path 2019/wallet-dev-guide.md
     - path 2019/hexo-help.md
 
