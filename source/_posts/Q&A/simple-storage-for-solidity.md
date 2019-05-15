@@ -114,7 +114,7 @@ contract mappingWithStruct {
 }
 ```
 
-**使用具有唯一ID的结构体数组**
+### **使用具有唯一ID的结构体数组**
 
 **优点**
 
@@ -171,7 +171,7 @@ contract arrayWithUniqueIds {
 }
 ```
 
-**带索引的结构体映射**
+### **带索引的结构体映射**
 
 **优点**
 
@@ -223,7 +223,7 @@ contract MappedStructsWithIndex {
 }
 ```
 
-**可删除索引的结构体映射**
+### **可删除索引的结构体映射**
 
 **优点**
 
@@ -301,7 +301,6 @@ contract mappedWithUnorderedIndexAndDelete {
 
 原问答链接：https://ethereum.stackexchange.com/questions/13167/are-there-well-solved-and-simple-storage-patterns-for-solidity
 
-问答有深入浅出区块链社区成员整理。
-
+问答由深入浅出区块链社区成员整理。
 
 [深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，学区块链的都在这里，打造最好的区块链技术博客。

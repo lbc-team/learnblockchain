@@ -26,14 +26,28 @@ module.exports = function(locals){
       else return b.date - a.date; // 都没定义按照文章日期降序排
     });
 
-    var data = pagination(category.path, posts, {
+
+    var option = {
       perPage: perPage,
       layout: ['category', 'archive', 'index'],
       format: paginationDir + '/%d/',
       data: {
         category: category.name
       }
-    });
+    };
+
+    if (category.name == '问与答') {
+      option = {
+          perPage: perPage,
+          layout: ['category-', 'archive', 'index'],
+          format: paginationDir + '/%d/',
+          data: {
+            category: category.name
+          }
+        };
+    }
+
+    var data = pagination(category.path, posts, option);
 
     return result.concat(data);
   }, []);
