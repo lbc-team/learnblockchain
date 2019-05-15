@@ -23,6 +23,7 @@ menu:
   geth: 以太坊设计与实现
   truffle: Truffle 中文文档
   ethers.js: ethers.js 中文文档
+  qa: 问与答
 
 sidebar:
   overview: 本站概覽

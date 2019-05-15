@@ -22,6 +22,7 @@ menu:
   geth: Geth Develop
   truffle: Truffle CN Docs
   ethers.js: ethers.js  Docs
+  qa: Questions
 
 sidebar:
   overview: Overview

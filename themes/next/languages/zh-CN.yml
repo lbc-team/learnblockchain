@@ -20,9 +20,10 @@ menu:
   wiki: 技术导航
   ethers.js: ethers.js 中文文档
   solidity: Solidity 中文文档
-  etherscan: Etherscan文档
+  etherscan: Etherscan 中文文档
   geth: 以太坊设计与实现
   truffle: Truffle 中文文档
+  qa: 问与答
 
 sidebar:
   overview: 站点概览

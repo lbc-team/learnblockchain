@@ -151,7 +151,8 @@ baidu_push: true
 # ---------------------------------------------------------------
 
 menu:
-  home: / || home
+
+  home: / || book
   wiki: https://wiki.learnblockchain.cn || book
   solidity: https://learnblockchain.cn/docs/solidity/ || book
   etherscan: https://learnblockchain.cn/docs/etherscan/ || book
@@ -159,12 +160,11 @@ menu:
   web3: https://learnblockchain.cn/docs/web3js-0.2x/ || book
   truffle: https://learnblockchain.cn/docs/truffle/ || book
   geth: http://learnblockchain.cn/books/geth/ || book
-
-  about: /about/ || user
+  qa: http://learnblockchain.cn/categories/QA/ || life-ring
   tags: /tags/ || tags
   categories: /categories/ || th
-  meeting: /categories/dev-meeting/ || th
   course: /course/ || spinner
+  about: /about/ || user
 
 # Enable / Disable menu icons / item badges.
 menu_settings:

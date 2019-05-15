@@ -7,6 +7,8 @@ top: 1
 comments: false
 ---
 
-摘录及翻译 [ethereum.stackexchange.com](https://ethereum.stackexchange.com/questions?sort=frequent) 热门问答。
+这个版块摘录摘录及翻译 [ethereum.stackexchange.com](https://ethereum.stackexchange.com/questions?sort=frequent) 上一些热门问答。
+
+
 
 
