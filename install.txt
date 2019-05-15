@@ -6,11 +6,26 @@ join_solgan: 扫码加入社区
 join_desc: 专业的博客 专业的社区 <br/>（如遇二维码过期，请刷新页面）
 
 
-修改 Avatar 显示大小
+修改 Avatar 显示大小, 及间距
 themes/next/source/css/_custom/custom.styl 添加：
 ```css
 .site-author-image {
     width: 130px;
+}
+
+.content-wrap {
+    padding: 6px 40px;
+}  
+
+.posts-expand {
+  .post-eof {
+    margin: 70px auto 50px;
+
+     +mobile(){
+         margin: 40px auto 30px;
+     }
+
+  }
 }
 ```
 
