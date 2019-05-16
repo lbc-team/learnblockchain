@@ -159,14 +159,11 @@ topmenu:
 
 menu:
   home: / || home
-  wiki: https://wiki.learnblockchain.cn || book
-  solidity: https://learnblockchain.cn/docs/solidity/ || book
-  etherscan: https://learnblockchain.cn/docs/etherscan/ || book
-  ethers.js: https://learnblockchain.cn/docs/ethers.js/ || book
-  web3: https://learnblockchain.cn/docs/web3js-0.2x/ || book
-  truffle: https://learnblockchain.cn/docs/truffle/ || book
-  geth: http://learnblockchain.cn/books/geth/ || book
+  wiki: https://wiki.learnblockchain.cn || rocket
+  docs: /docs/ || columns
   qa: http://learnblockchain.cn/categories/QA/ || life-ring
+  geth: http://learnblockchain.cn/books/geth/ || book
+  meeting: /categories/dev-meeting/ || flag
   tags: /tags/ || tags
   categories: /categories/ || th
   course: /course/ || spinner

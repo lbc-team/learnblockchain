@@ -16,14 +16,15 @@ menu:
   commonweal: 公益 404
   course: 视频教程
   meeting: 技术工坊
-  web3: Web3文档
+  web3: Web3.js 文档
   wiki: 技术导航
   solidity: Solidity文档
   etherscan: Etherscan文档
   geth: 以太坊设计与实现
   truffle: Truffle 中文文档
   ethers.js: ethers.js 中文文档
-  qa: 问与答
+  qa: 区块链问答
+  docs: 技术文档
 
 sidebar:
   overview: 本站概要

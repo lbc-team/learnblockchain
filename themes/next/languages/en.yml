@@ -15,7 +15,7 @@ menu:
   sitemap: Sitemap
   commonweal: Commonweal 404
   course: Course
-  web3: Web3 CN Docs
+  web3: Web3.js CN Docs
   wiki: Tech Wiki
   solidity: Solidity CN Docs
   etherscan: Etherscan CN Docs
@@ -23,6 +23,7 @@ menu:
   truffle: Truffle CN Docs
   ethers.js: ethers.js  Docs
   qa: Questions
+  docs: Docs
 
 sidebar:
   overview: Overview
