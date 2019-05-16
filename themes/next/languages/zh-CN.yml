@@ -50,12 +50,12 @@ post:
     author: 本文作者
     link: 本文链接
     license_title: 版权声明
-    license_content: "本博客文章除特别声明外，均采用 %s 许可协议。转载请注明出处！"
+    license_content: "本文采用 %s 许可协议（禁止修改内容），转载请保留本段声明！"
 page:
   totally: 共有
   tags: 标签
 footer:
-  powered: "由 %s 强力驱动"
+  powered: "由 %s 驱动"
   theme: 主题
   total_views: 总访问量
   total_visitors: 总访客量

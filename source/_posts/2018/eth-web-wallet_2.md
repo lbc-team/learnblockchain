@@ -18,7 +18,7 @@ author: Tiny熊
 
 ## 如何导入Geth创建的账号？
 
-在[上一篇文章](https://learnblockchain.cn/2018/10/20/eth-web-wallet_1/)，介绍了如何使用私钥及助记词来创建账号，如果是使用已有的私钥及助记词，这其实也是账号导入的过程。
+在[上一篇文章](https://learnblockchain.cn/2018/10/25/eth-web-wallet_1/)，介绍了如何使用私钥及助记词来创建账号，如果是使用已有的私钥及助记词，这其实也是账号导入的过程。
 
 有一些同学会问，我的账号是Geth生成的，如何导入到钱包呢？使用Geth的同学，应该知道Geth在创建账号时会生成一个对应keystore JSON文件，Keystore文件存储加密后的私钥信息，因此我们需要做的就是导入这个Keystore文件，这个文件通常在同步区块数据的目录下的keystore文件夹（如： ~/.ethereum/keystore）里。
 
