@@ -18,7 +18,7 @@ author: Tiny熊
 
 ## 应用如何连接 Loom 侧链
 
-之前我们在开发DApp时，我们会引入 web3.js 或 ethers.js 作为链和应用前端的桥梁，通过一个设置一个Provider 来和指定的节点进行通信，以[web3.js 0.20](https://learnblockchain.cn/docs/web3js-0.2x/web3.eth.html#contract) 为例，代码大概是这样的：
+之前我们在开发DApp时，我们会引入 web3.js 或 [ethers.js](https://learnblockchain.cn/docs/ethers.js/) 作为链和应用前端的桥梁，通过一个设置一个Provider 来和指定的节点进行通信，以[web3.js 0.20](https://learnblockchain.cn/docs/web3js-0.2x/web3.eth.html#contract) 为例，代码大概是这样的：
 
 ```js 
 var web3Provider = window.ethereum;  // ❶
@@ -323,6 +323,7 @@ loom-js  对LoomProvider事件支持还不够完善，比如，我们添加事�
 ```
 
 会提示错误：
+
 ```
 watch event: Error: Method "eth_getFilterLogs" not supported on this provider
 ```
@@ -341,8 +342,5 @@ watch event: Error: Method "eth_getFilterLogs" not supported on this provider
 
 加入[知识星球](https://learnblockchain.cn/images/zsxq.png)，和一群优秀的区块链从业者一起学习。
 [深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，学区块链的都在这里，打造最好的区块链技术博客。
-
-
-![](https://img.learnblockchain.cn/2019/15578231135557.jpg)
 
 
