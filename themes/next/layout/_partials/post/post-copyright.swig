@@ -7,7 +7,7 @@
 {% else %}
   {% set ccType = 'licenses/' + ccLicense + '/4.0/' + ccLanguage %}
 {% endif %}
-{% set ccURL = 'https://creativecommons.org/' + ccType %}
+{% set ccURL = 'https://learnblockchain.cn/about/#版权及转载声明' %}
 
 <ul class="post-copyright">
   <li class="post-copyright-author">

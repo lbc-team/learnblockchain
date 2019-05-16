@@ -55,6 +55,15 @@ themes/next/layout/_macro/post.swig 修改：
 修改 hexo-generator-category 修改 lib/generator.js
 
 
+** 页脚 链接加入 Nofollow ** 
+修改 next_nofollow_url.js 添加一个方法
+
+themes/next/layout/_partials/footer.swig
+
+修改版权链接： post-copyright.swig 
+
+
+
 主题升级后，以下不要需要：
 
 博客对 对hexo 主题有所修改, 为node配置文件 增加了首页、不同分类与不同标签的文章置顶功能：
