@@ -3,7 +3,7 @@ title: 区块链技术学习指引
 permalink: guide
 date: 2018-01-11 15:03:36
 categories: 目录
-top: true
+top: 100
 tags:
     - 如何学习
 author: Tiny熊

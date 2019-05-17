@@ -1,3 +1,10 @@
+## 主题定制修改点
+
+**修改首页排序**
+
+hexo-generator-index2  修改lib/generator2.js
+
+
 **修改主题侧片栏**
 
 主题config.yml 加入 两个字段：
@@ -29,6 +36,7 @@ themes/next/source/css/_custom/custom.styl 添加：
 }
 ```
 
+** 二维码 显示** 
 
 themes/next/layout/_macro/sidebar.swig 修改：
 
@@ -70,7 +78,6 @@ themes/next/layout/_partials/footer.swig
 
 node_modules/文件夹下：
 
-hexo-generator-index2  修改lib/generator2.js
 hexo-generator-category 修改lib/generator.js
 hexo-generator-tag  修改lib/generator.js
 
