@@ -174,6 +174,8 @@ fi 是FullImage的简写，可[参考文档](https://theme-next.org/docs/tag-plu
 使用fi，图片占用35%，效果如：
 {% fi https://img.learnblockchain.cn/2019/15558608460463.jpg, 图片占用35图, 35%, 35% %}
 
+<p class="image-caption">图片占用35%</p>
+
 
 ## 使用 mermaid 显示 流程图、序列图
 

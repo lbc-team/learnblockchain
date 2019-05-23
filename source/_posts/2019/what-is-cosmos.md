@@ -209,9 +209,35 @@ Zones 是常规的异构链, Hubs 是专门为将 Zones 连接在一起而设计
 
 在Cosmos网络中推出的第一个 Hub 是Cosmos Hub。 Cosmos Hub 是一个开放的权益证明（POS）的区块链，其原生staking 代币为ATOM，并且交易费用可以用多个Token支付。 Cosmos Hub 的推出也标志着[Cosmos 主网上线](https://cosmos.network/launch)。
 
-## 桥接非 Tendermint 链
+## 如何桥接非 Tendermint 链
 
 到目前为止，我们展示的 Cosmos 架构展示了基于Tendermint的链如何进行交互操作。 但Cosmos并不限于Tendermint链。 事实上，任何类型的区块链都可以连接到Cosmos。
+
+如何桥接非 Tendermint 链 以及 Cosmos 如何解决可扩展性问题，我会在[区块链扩容及跨链技术](https://xiaozhuanlan.com/interchain)专栏介绍。
+
+## 总结，Cosmos是什么?
+
+![Cosmos is the internet of blockchains](https://img.learnblockchain.cn/2019/05/15585168934635.jpg!wl/scale/60%)
+
+希望现在你对Cosmos 有了更清晰的了解。简洁回顾下 Cosmos 三个要点:
+
+* Cosmos 通过 Tendermint BFT 和 模块化的 Cosmos SDK 使区块链易于开发。
+* Cosmos 使区块链能够通过 IBC 和 Peg-Zones 相互转移价值, 同时让它们保留主权。
+* Cosmos 允许区块链应用通过水平和垂直可扩展性解决方案可支持数百万用户。
+
+最后，Cosmos 不是一个产品, 而是建立在一套模块化、适应性强和可交互工具之上的生态系统。
+
+
+### 进一步
+
+* 阅读 [Cosmos 白皮书](https://cosmos.network/whitepaper)
+* 开始 [在 Cosmos 开发](https://cosmos.network/developers)
+
+本文参考官网的[What is Cosmos?](https://cosmos.network/intro)。
+
+[深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，学区块链的都在这里，打造最好的区块链技术博客。
+
+<!-- 
 
 我们有两种情况来区分：具有快速最终确定性的区块链和概率确定性的区块链。
 
@@ -221,7 +247,6 @@ Zones 是常规的异构链, Hubs 是专门为将 Zones 连接在一起而设计
 
 
 ### 概率确定性区块链
-
 
 对于没有快速确定性的区块链 (如工作证明链), 更棘手一些。对于这些链, 需要使用一种特殊的称为 [Peg-Zone 的代理链](https://blog.cosmos.network/the-internet-of-blockchains-how-cosmos-does-interoperability-starting-with-the-ethereum-peg-zone-8744d4d2bc3f)。
 
@@ -253,25 +278,4 @@ Peg-Zone 是跟踪另一个区块链状态的区块链。Peg-Zone 本身具有�
 ![Horizontal scalability with multiple blockchains](https://img.learnblockchain.cn/2019/05/15585168553965.jpg!wl/scale/60%)
 
  Cosmos 在启动时提供非常好的垂直可扩展性, 这将是对目前区块链解决方案的重大改进。在 IBC 模块完成后, 水平可扩展性解决方案将开始实现。
-
-## 总结，Cosmos是什么?
-
-![Cosmos is the internet of blockchains](https://img.learnblockchain.cn/2019/05/15585168934635.jpg!wl/scale/60%)
-
-希望现在你对Cosmos 有了更清晰的了解。简洁回顾下 Cosmos 三个要点:
-
-* Cosmos 通过 Tendermint BFT 和 模块化的 Cosmos SDK 使区块链易于开发。
-* Cosmos 使区块链能够通过 IBC 和 Peg-Zones 相互转移价值, 同时让它们保留主权。
-* Cosmos 允许区块链应用通过水平和垂直可扩展性解决方案可支持数百万用户。
-
-最后，Cosmos 不是一个产品, 而是建立在一套模块化、适应性强和可交互工具之上的生态系统。
-
-
-### 进一步
-
-* 阅读 [Cosmos 白皮书](https://cosmos.network/whitepaper)
-* 开始 [在 Cosmos 开发](https://cosmos.network/developers)
-
-本文参考官网的[What is Cosmos?](https://cosmos.network/intro)。
-
-[深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，学区块链的都在这里，打造最好的区块链技术博客。
+ -->
