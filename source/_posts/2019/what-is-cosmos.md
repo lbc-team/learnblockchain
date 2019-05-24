@@ -10,7 +10,7 @@ tags:
 author: Tiny熊
 ---
 
-本文带你从技术角度全面了解 Cosmos 项目， Tendermint 是什么，Cosmos SDK 要解决什么，如何进行跨链，如何解决扩展性问题。
+本文从技术角度全面了解 Cosmos 项目， Tendermint 是什么，Cosmos SDK 要解决什么，如何进行跨链，如何解决扩展性问题。
 
 <!-- more -->
 
