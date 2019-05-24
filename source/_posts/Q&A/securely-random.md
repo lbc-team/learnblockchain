@@ -3,7 +3,9 @@ title: 如何在智能合约中安全地生成随机数？
 permalink: securely-random
 date: 2019-02-10 11:25:59
 categories: 问与答
-tags: Solidity
+tags: 
+    - 随机数
+    - 安全
 author: Tjaden Hess
 ---
 
@@ -33,7 +35,7 @@ author: Tjaden Hess
 
 ## 一个技术方案
 
-**完全去中心的彩票方案（也许扩展不要）**：
+**完全去中心的彩票方案（也许扩展不好）**：
 
 1. 赌场为一个随机数字预留了奖励
 2. 每个用户生成自己的秘密随机数 `N`
