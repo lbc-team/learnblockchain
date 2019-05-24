@@ -151,6 +151,7 @@ baidu_push: true
 # ---------------------------------------------------------------
 
 topmenu:
+  qa: /categories/QA/ || life-ring
   solidity: https://learnblockchain.cn/docs/solidity/ || book
   etherscan: https://learnblockchain.cn/docs/etherscan/ || book
   ethers.js: https://learnblockchain.cn/docs/ethers.js/ || book
@@ -161,7 +162,7 @@ menu:
   home: / || home
   wiki: https://wiki.learnblockchain.cn || rocket
   docs: /docs/ || columns
-  qa: http://learnblockchain.cn/categories/QA/ || life-ring
+  qa: /categories/QA/ || life-ring
   geth: http://learnblockchain.cn/books/geth/ || book
   meeting: /categories/dev-meeting/ || flag
   tags: /tags/ || tags
@@ -218,15 +219,11 @@ links_layout: block
 #links_layout: inline
 links:
   区块链入门及比特币: https://wiki.learnblockchain.cn/bitcoin/readme.html
-  以太坊开发资源汇总: https://wiki.learnblockchain.cn/ethereum/readme.html
-  钱包开发资源汇总: https://learnblockchain.cn/2019/04/11/wallet-dev-guide/
-  
-  柚子EOS开发资源汇总: https://wiki.learnblockchain.cn/eos/readme.html
-  超级账本开发资源汇总: https://wiki.learnblockchain.cn/hyperledger/readme.html
-  IPFS开发资源汇总: https://wiki.learnblockchain.cn/hyperledger/readme.html
-  跨链开发资源汇总: https://wiki.learnblockchain.cn/hyperledger/readme.html
-  区块链专业分享及问答: https://learnblockchain.cn/images/zsxq.png
-  区块链付费小专栏: https://xiaozhuanlan.com/blockchaincore
+  以太坊开发导航: https://wiki.learnblockchain.cn/ethereum/readme.html
+  柚子EOS开发导航: https://wiki.learnblockchain.cn/eos/readme.html
+  超级账本开发导航: https://wiki.learnblockchain.cn/hyperledger/readme.html
+  波卡 开发导航: https://wiki.learnblockchain.cn/cross-chain/polka.html
+  Cosmos开发导航: https://wiki.learnblockchain.cn/cross-chain/cosmos.html
   友情链接: https://learnblockchain.cn/friends/
 
 
