@@ -127,15 +127,15 @@ $$C = C_\alpha \alpha + C_\beta \beta + C_\gamma \gamma + C_\delta \delta + C(x)
 
 从Schwartz-Zippel 定理，我们可以把A/B/C看作是$\alpha, \beta, \gamma, \delta, x$的多项式。观察$A\cdot B = \alpha \cdot \beta + \cfrac{\sum_{i=0}^\ell a_i (\beta u_i(x)+\alpha v_i(x)+w_i(x))}{\gamma} \cdot \gamma + C \cdot \delta$ 这个验证等式，发现一些变量的限制条件：
 
-1). $$A_\alpha B_\alpha \alpha^2 = 0$$ (等式的右边没有$$\alpha^2因子$$)
+1） $$A_\alpha B_\alpha \alpha^2 = 0$$ (等式的右边没有$$\alpha^2因子$$)
 
 不失一般性，可以假设$B_\alpha = 0$。
 
-2). $$A_\alpha B_\beta + A_\beta B_\alpha = A_\alpha B_\beta = 1$$ （等式右边$$\alpha \beta = 1$$）
+2） $$A_\alpha B_\beta + A_\beta B_\alpha = A_\alpha B_\beta = 1$$ （等式右边$$\alpha \beta = 1$$）
 
 不失一般性，可以假设$$A_\alpha = B_\beta = 1$$。
 
-3). $$A_\beta B_\beta = A_\beta = 0 $$(等式的右边没有$\beta^2$因子)
+3） $$A_\beta B_\beta = A_\beta = 0 $$(等式的右边没有$\beta^2$因子)
 
 也就是$A_\beta = 0$。
 
