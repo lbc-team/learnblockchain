@@ -1,10 +1,10 @@
 ---
-title:EOS入门第二篇-技术原理
-permalink:eos-dev-principle
-date:2019-05-2522:48:34
-categories:EOS
-tags:EOS
-author:Ashton
+title: EOS入门第二篇-技术原理
+permalink: eos-dev-principle
+date: 2019-05-2522:48:34
+categories: EOS
+tags: EOS
+author: Ashton
 ---
 
 上一篇[简析了下 EOS](https://learnblockchain.cn/2019/05/24/eos-dev-intro/) , 这篇分析下[EOS的技术原理](https://learnblockchain.cn/2019/05/25/eos-dev-principle/) 。
