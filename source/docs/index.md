@@ -32,6 +32,9 @@ date: 2019-04-11 22:43:45
   * [Truffle 中文文档](https://learnblockchain.cn/docs/truffle/)
     以太坊 DApp 开发框架让你爱不释手。
 
+  * [Cosmos SDK 中文文档](https://learnblockchain.cn/docs/cosmos/)
+   Cosmos SDK 让链开发更简单。 
+
 更多文档正在路上...
 
 你想要什么文档，欢迎留言。

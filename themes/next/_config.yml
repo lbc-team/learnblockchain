@@ -157,6 +157,7 @@ topmenu:
   ethers.js: https://learnblockchain.cn/docs/ethers.js/ || book
   web3: https://learnblockchain.cn/docs/web3js-0.2x/ || book
   truffle: https://learnblockchain.cn/docs/truffle/ || book
+  cosmos: https://learnblockchain.cn/docs/cosmos/ || book
 
 menu:
   home: / || home

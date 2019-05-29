@@ -18,11 +18,12 @@ menu:
   meeting: 技术工坊
   web3: Web3.js 文档
   wiki: 技术导航
-  solidity: Solidity文档
-  etherscan: Etherscan文档
+  solidity: Solidity 文档
+  etherscan: Etherscan 文档
   geth: 以太坊设计与实现
-  truffle: Truffle 中文文档
-  ethers.js: ethers.js 中文文档
+  truffle: Truffle 文档
+  ethers.js: ethers.js 文档
+  cosmos: Cosmos SDK 文档
   qa: 区块链问答
   docs: 技术文档
 
