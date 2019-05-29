@@ -1,7 +1,7 @@
 ---
 title: EOS入门第二篇-技术原理
 permalink: eos-dev-principle
-date: 2019-05-2522:48:34
+date: 2019-05-27 10:48:34
 categories: EOS
 tags: EOS
 author: Ashton
