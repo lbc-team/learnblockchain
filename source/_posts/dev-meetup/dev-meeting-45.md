@@ -1,6 +1,6 @@
 ---
 title: 技术工坊45期 - 案例解析通证经济模型设计
-permalink: dev-meeting-44
+permalink: dev-meeting-45
 date: 2019-05-30 10:47:23
 categories: 技术工坊
 tags: 
@@ -47,7 +47,6 @@ author: 辉哥
 
 # 2.会议实录
 ![通证设计方法论](https://img.learnblockchain.cn/2019/05/15592033755100.jpg)
-
 ![](https://img.learnblockchain.cn/2019/05/15592035794969.jpg)
 ![](https://img.learnblockchain.cn/2019/05/15592038182777.jpg)
 
