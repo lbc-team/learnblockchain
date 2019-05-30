@@ -25,7 +25,10 @@ author: 辉哥
 
 
 **3）嘉宾：**
-![](https://upload-images.jianshu.io/upload_images/1190574-8f72a10a747840cb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![](https://img.learnblockchain.cn/2019/05/15592033625608.png)
+
 
 
 **陈军**，杭州区研教育科技有限公司联合创始人，20多年大型银行信贷、风控、供应链金融管理经验，2015年进入区块链行业，专注对区块链与传统行业实体产业融合研究和区块链新商业创新，著有《区块链深度思考》（火星财经专栏连载）。
@@ -43,82 +46,91 @@ author: 辉哥
 
 
 # 2.会议实录
-![0001.jpg](https://upload-images.jianshu.io/upload_images/1190574-cb62d02f6d561f66.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![通证设计方法论](https://img.learnblockchain.cn/2019/05/15592033755100.jpg)
 
-![0002.jpg](https://upload-images.jianshu.io/upload_images/1190574-16dd587de5644461.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://img.learnblockchain.cn/2019/05/15592035794969.jpg)
+![](https://img.learnblockchain.cn/2019/05/15592038182777.jpg)
 
-![0003.jpg](https://upload-images.jianshu.io/upload_images/1190574-1aec554ecc8d4b33.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://img.learnblockchain.cn/2019/05/15592038252738.jpg)
 
-![0004.jpg](https://upload-images.jianshu.io/upload_images/1190574-556c0f903a4b380d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://img.learnblockchain.cn/2019/05/15592038318462.jpg)
 
-![0005.jpg](https://upload-images.jianshu.io/upload_images/1190574-f907bf8e0c0955c5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://img.learnblockchain.cn/2019/05/15592038389106.jpg)
 
-![0006.jpg](https://upload-images.jianshu.io/upload_images/1190574-60dbd7a5d5d4c928.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://img.learnblockchain.cn/2019/05/15592038460087.jpg)
 
-![0007.jpg](https://upload-images.jianshu.io/upload_images/1190574-cdec588194dce686.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://img.learnblockchain.cn/2019/05/15592038527251.jpg)
 
-![0008.jpg](https://upload-images.jianshu.io/upload_images/1190574-082e44d9a5f1061f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://img.learnblockchain.cn/2019/05/15592038592955.jpg)
 
-![0009.jpg](https://upload-images.jianshu.io/upload_images/1190574-bf2db6ca7a2c8882.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![通证设计的5个环节](https://img.learnblockchain.cn/2019/05/15592038685539.jpg)
 
-![0010.jpg](https://upload-images.jianshu.io/upload_images/1190574-97404fd030adf01f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![如何理解通证与代币](https://img.learnblockchain.cn/2019/05/15592038757650.jpg)
+--
+![](https://img.learnblockchain.cn/2019/05/15592038831320.jpg)
 
-![0011.jpg](https://upload-images.jianshu.io/upload_images/1190574-081913b4d48c6ea1.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://img.learnblockchain.cn/2019/05/15592038898841.jpg)
 
-![0012.jpg](https://upload-images.jianshu.io/upload_images/1190574-c9d3a0998d0df7c5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://img.learnblockchain.cn/2019/05/15592038971178.jpg)
 
-![0013.jpg](https://upload-images.jianshu.io/upload_images/1190574-0d22b7ae5a54ab15.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://img.learnblockchain.cn/2019/05/15592039067810.jpg)
 
-![0014.jpg](https://upload-images.jianshu.io/upload_images/1190574-ee953563e332b789.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://img.learnblockchain.cn/2019/05/15592039139701.jpg)
 
-![0015.jpg](https://upload-images.jianshu.io/upload_images/1190574-df2d5d0edf2a9da6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://img.learnblockchain.cn/2019/05/15592039213264.jpg)
 
-![0016.jpg](https://upload-images.jianshu.io/upload_images/1190574-b339345baae53292.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://img.learnblockchain.cn/2019/05/15592039307985.jpg)
 
-![0017.jpg](https://upload-images.jianshu.io/upload_images/1190574-9c754fa324914979.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://img.learnblockchain.cn/2019/05/15592039403183.jpg)
 
-![0018.jpg](https://upload-images.jianshu.io/upload_images/1190574-0e7cca3b8630159c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://img.learnblockchain.cn/2019/05/15592039464830.jpg)
 
-![0019.jpg](https://upload-images.jianshu.io/upload_images/1190574-34f2fe24969d7f2f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://img.learnblockchain.cn/2019/05/15592037978814.jpg)
 
-![0020.jpg](https://upload-images.jianshu.io/upload_images/1190574-55c8b0a602749a9a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-![0021.jpg](https://upload-images.jianshu.io/upload_images/1190574-72cfb2fca587bdf5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://img.learnblockchain.cn/2019/05/15592037814115.jpg)
 
-![0022.jpg](https://upload-images.jianshu.io/upload_images/1190574-4e07ea54a4325531.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://img.learnblockchain.cn/2019/05/15592037694080.jpg)
 
-![0023.jpg](https://upload-images.jianshu.io/upload_images/1190574-f40cf7667a5958d2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://img.learnblockchain.cn/2019/05/15592037605767.jpg)
 
-![0024.jpg](https://upload-images.jianshu.io/upload_images/1190574-26a7ffacb5e88e52.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://img.learnblockchain.cn/2019/05/15592037490334.jpg)
 
-![0025.jpg](https://upload-images.jianshu.io/upload_images/1190574-120e77fd72b7d8ce.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://img.learnblockchain.cn/2019/05/15592037396621.jpg)
 
-![0026.jpg](https://upload-images.jianshu.io/upload_images/1190574-0e7da632291bf928.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://img.learnblockchain.cn/2019/05/15592037319903.jpg)
 
-![0027.jpg](https://upload-images.jianshu.io/upload_images/1190574-ed2262fa3be3fe36.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://img.learnblockchain.cn/2019/05/15592037252859.jpg)
 
-![0028.jpg](https://upload-images.jianshu.io/upload_images/1190574-8dfc334474c44c6b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-![0029.jpg](https://upload-images.jianshu.io/upload_images/1190574-80127c4e27b4f811.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://img.learnblockchain.cn/2019/05/15592037170725.jpg)
 
-![0030.jpg](https://upload-images.jianshu.io/upload_images/1190574-d0c112f0b6d6a39b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-![0031.jpg](https://upload-images.jianshu.io/upload_images/1190574-36b42c222497a450.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://img.learnblockchain.cn/2019/05/15592037088038.jpg)
 
-![0032.jpg](https://upload-images.jianshu.io/upload_images/1190574-028a5452e83cfc89.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-![0033.jpg](https://upload-images.jianshu.io/upload_images/1190574-587a4983a9fd68db.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://img.learnblockchain.cn/2019/05/15592037005576.jpg)
 
-![0034.jpg](https://upload-images.jianshu.io/upload_images/1190574-ce887eb27bf5b428.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-![0035.jpg](https://upload-images.jianshu.io/upload_images/1190574-59facf16871eaa86.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://img.learnblockchain.cn/2019/05/15592036929191.jpg)
 
-![0036.jpg](https://upload-images.jianshu.io/upload_images/1190574-cb4ea4549cd959f2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![](https://img.learnblockchain.cn/2019/05/15592036860228.jpg)
+
+
+![](https://img.learnblockchain.cn/2019/05/15592036777429.jpg)
+
+![](https://img.learnblockchain.cn/2019/05/15592036687987.jpg)
+
+
+![](https://img.learnblockchain.cn/2019/05/15592036590223.jpg)
 
 
 *本次实录纪要由辉哥(王登辉，下笔有神区块链 CTO 王登辉，HiBlock上海合伙人)整理记录，转发务必注明出处及本段信息。*
 
 **现场活动合影照片：**
-![](https://upload-images.jianshu.io/upload_images/1190574-1582dae39e890a22.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![](https://img.learnblockchain.cn/2019/05/15592036460628.png)
+
 
 *坐席位置为陈军老师。*
