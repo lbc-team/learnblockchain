@@ -1,5 +1,5 @@
 ---
-title: 使用Substrate搭建你的第一条区块链
+title: 使用Substrate搭建一条能跨链的区块链
 date: 2019-05-30 22:48:34
 permalink: create-chain-on-substrate
 category:
