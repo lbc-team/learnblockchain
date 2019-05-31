@@ -14,7 +14,7 @@ author: Ashton
 ## 总体架构
 
 ![](https://img.learnblockchain.cn/2019/05/15589392544485.jpg)
-<pclass="image-caption">模块架构图</p>
+<p class="image-caption">模块架构图</p>
 
 如上图所示，总体上EOS主要由keosd，cleos，nodeos三大运行时组件构成：
 
