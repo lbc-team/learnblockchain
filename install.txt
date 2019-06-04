@@ -41,6 +41,7 @@ themes/next/source/css/_custom/custom.styl 添加：
 themes/next/layout/_macro/sidebar.swig 修改：
 
 显示join_solgan 及  join_desc 字段
+修改了社交媒体账号显示。
 
 
 **修改页面显示**：

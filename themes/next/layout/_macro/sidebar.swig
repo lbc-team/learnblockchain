@@ -98,11 +98,28 @@
             </nav>
           {% endif %}
 
+          {% if theme.social %}
+            <div class="links-of-author motion-element">
+              {% for name, link in theme.social %}
+                <span class="links-of-author-item">
+                  {% set sidebarURL = link.split('||')[0] | trim %}
+                  {% if not (theme.social_icons.enable) or (not theme.social_icons.icons_only) %}
+                    {% set sidebarText = name %}
+                  {% endif %}
+                  {% if theme.social_icons.enable %}
+                    {% set sidebarIcon = '<i class="fa fa-fw fa-' + link.split('||')[1] | trim | default('globe') + '"></i>' %}
+                  {% endif %}
+                  {{ next_url(sidebarURL, sidebarIcon + sidebarText, {title: name + ' &rarr; ' + sidebarURL}) }}
+                </span>
+              {% endfor %}
+            </div>
+          {% endif %}
+
           {% if theme.rss %}
             <div class="feed-link motion-element">
               <a href="{{ url_for(theme.rss) }}" rel="alternate">
                 <i class="fa fa-rss"></i>
-                RSS
+                订阅 RSS
               </a>
             </div>
           {% endif %}
@@ -118,23 +135,6 @@
               {% if theme.chat.icon %}<i class="fa fa-{{ theme.chat.icon }}"></i>{% endif %}
                   {{ theme.chat.text }}
                 </a>
-            </div>
-          {% endif %}
-
-          {% if theme.social %}
-            <div class="links-of-author motion-element">
-              {% for name, link in theme.social %}
-                <span class="links-of-author-item">
-                  {% set sidebarURL = link.split('||')[0] | trim %}
-                  {% if not (theme.social_icons.enable) or (not theme.social_icons.icons_only) %}
-                    {% set sidebarText = name %}
-                  {% endif %}
-                  {% if theme.social_icons.enable %}
-                    {% set sidebarIcon = '<i class="fa fa-fw fa-' + link.split('||')[1] | trim | default('globe') + '"></i>' %}
-                  {% endif %}
-                  {{ next_url(sidebarURL, sidebarIcon + sidebarText, {title: name + ' &rarr; ' + sidebarURL}) }}
-                </span>
-              {% endfor %}
             </div>
           {% endif %}
 

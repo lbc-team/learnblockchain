@@ -165,7 +165,7 @@ menu:
   docs: /docs/ || columns
   qa: /categories/QA/ || life-ring
   geth: http://learnblockchain.cn/books/geth/ || book
-  meeting: /categories/dev-meeting/ || flag
+  contribute: https://github.com/lbc-team/learnblockchain || github
   tags: /tags/ || tags
   categories: /categories/ || th
   course: /course/ || spinner
@@ -202,14 +202,13 @@ site_state: false
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 social:
-  GitHub: https://github.com/lbc-team || github
-  Weibo: http://weibo.com/xilibi2003 || weibo
-  知乎: https://www.zhihu.com/people/xiong-li-bing/activities
-  E-Mail: mailto:xlb@upchain.pro || envelope
+  知乎: https://www.zhihu.com/people/xiong-li-bing/activities || quora
+  公众号: https://img.learnblockchain.cn/2019/06/15596574265302.jpg ||  wechat
+  微博: https://weibo.com/517623789 || weibo
 
 social_icons:
   enable: true
-  icons_only: true
+  icons_only: false
   transition: false
 
 
@@ -228,8 +227,8 @@ links:
   友情链接: https://learnblockchain.cn/friends/
 
 
-join_solgan: 扫码加入社区
-join_desc: 专业的区块链技术博客 <br/> 专业的区块链开发者社区
+join_solgan: 加入社区交流群
+join_desc: 关注我们，精彩文章不错过
 
 # Sidebar Avatar
 avatar:
@@ -361,7 +360,7 @@ codeblock:
 wechat_subscriber:
   enable: true
   qcode: /images/qrcode.jpg
-  description: 微信号：深入浅出区块链技术，欢迎订阅
+  description: 欢迎订阅公众号：深入浅出区块链技术
 
 # Reward (Donate)
 reward_settings:

@@ -24,6 +24,7 @@ menu:
   ethers.js: ethers.js  Docs
   qa: Questions
   docs: Docs
+  contribute: Contribute
 
 sidebar:
   overview: Overview
