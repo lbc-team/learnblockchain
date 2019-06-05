@@ -16,12 +16,12 @@ Solidity 系列完整的文章列表请查看[分类-Solidity](https://learnbloc
 <!-- more -->
 ## 写在前面
 
-Solidity 是以太坊智能合约编程语言，阅读本文前，你应该对以太坊、智能合约有所了解，
+Solidity 是[以太坊智能合约](https://learnblockchain.cn/2018/01/04/understanding-smart-contracts/)编程语言，阅读本文前，你应该对以太坊、智能合约有所了解，
 如果你还不了解，建议你先看[以太坊是什么](https://learnblockchain.cn/2017/11/20/whatiseth/)
 
 欢迎订阅[区块链技术专栏](https://xiaozhuanlan.com/blockchaincore)阅读更全面的分析文章。
 
-Solidity API 主要表现为Solidity 内置的特殊的变量及函数，他们存在于全局命名空间里，主要分为以下几类：
+[Solidity](https://learnblockchain.cn/docs/solidity/) API 主要表现为Solidity 内置的特殊的变量及函数，他们存在于全局命名空间里，主要分为以下几类：
 1. 有关区块和交易的属性
 2. ABI编码函数
 3. 有关错误处理

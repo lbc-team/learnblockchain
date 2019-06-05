@@ -15,13 +15,13 @@ author: 虞双齐
 
 <!-- more -->
 
-区块链本是去中心化架构，在以太坊首次遭遇严重黑客攻击智能合约事件时，采用的解决方案却破坏了去中心化理念。
+区块链本是去中心化架构，在[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)首次遭遇严重黑客攻击智能合约事件时，采用的解决方案却破坏了去中心化理念。
 
 这里不讨论其是否违背区块链精神，本文重点介绍解决方案的技术实施细节。方案中涉及网络隔离技术和矿工共识投票技术。且只是从软件上处理，未破坏共识协议。解决方案的成功实施，为区块链分叉提供了实操经验，值得公链开发者学习。
 
 ## 什么是 The DAO 攻击
 
-简单地讲，在2016年4月30日开始，一个名为“The DAO”的初创团队，在以太坊上通过智能合约进行ICO众筹。28天时间，筹得1.5亿美元，成为历史上最大的众筹项目。
+简单地讲，在2016年4月30日开始，一个名为“The DAO”的初创团队，在以太坊上通过[智能合约](https://learnblockchain.cn/2018/01/04/understanding-smart-contracts/)进行ICO众筹。28天时间，筹得1.5亿美元，成为历史上最大的众筹项目。
 
 THE DAO创始人之一Stephan TualTual在6月12日宣布，他们发现了软件中存在的“递归调用漏洞”问题。 不幸的是，在程序员修复这一漏洞及其他问题的期间，一个不知名的黑客开始利用这一途径收集THE DAO代币销售中所得的以太币。6月18日，黑客成功挖到超过360万个以太币，并投入到一个DAO子组织中，这个组织和THE DAO有着同样的结构。
 
@@ -303,7 +303,7 @@ func ApplyDAOHardFork(statedb *state.StateDB) {
 1. [Hard Fork Specification](https://blog.slock.it/hard-fork-specification-24b889e70703)
 1. [PR#2814-finalize the DAO fork](https://github.com/ethereum/go-ethereum/pull/2814)
 
-[WithdrawDAO]:https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754
+[WithdrawDAO]:https://[etherscan](https://learnblockchain.cn/docs/etherscan/).io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754
 
 
 [深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，学区块链都在这里，打造最好的区块链技术博客。

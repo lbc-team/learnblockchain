@@ -19,7 +19,7 @@ Solidity 系列完整的文章列表请查看[分类-Solidity](https://learnbloc
 
 ## 写在前面
 
-Solidity 是以太坊智能合约编程语言，阅读本文前，你应该对以太坊、智能合约有所了解，
+Solidity 是[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)智能合约编程语言，阅读本文前，你应该对以太坊、智能合约有所了解，
 如果你还不了解，建议你先看[以太坊是什么](https://learnblockchain.cn/2017/11/20/whatiseth/)
 
 欢迎订阅[区块链技术专栏](https://xiaozhuanlan.com/blockchaincore)阅读更全面的分析文章。
@@ -56,7 +56,7 @@ contract C {
 ```
 
 有几个地方需要注意一下：
-1. 声明为**view** 和声明为**constant**是等价的，constant是view的别名，constant在计划Solidity 0.5.0版本之后会弃用（constant这个词有歧义，view 也更能表达返回值可视）。
+1. 声明为**view** 和声明为**constant**是等价的，constant是view的别名，constant在计划[Solidity](https://learnblockchain.cn/docs/solidity/) 0.5.0版本之后会弃用（constant这个词有歧义，view 也更能表达返回值可视）。
 2. 访问函数都被标记为view。
 
 当前编译器并未强制要求声明为view，但建议大家对于不会修改状态的函数的标记为view。
@@ -82,7 +82,7 @@ contract C {
 }
 ```
 
-尽管view 和 pure 修饰符编译器并未强制要求使用，view 和 pure 修饰也不会带来gas 消耗的改变，但是更好的编码习惯让我们跟容易发现智能合约中的错误。
+尽管view 和 pure 修饰符编译器并未强制要求使用，view 和 pure 修饰也不会带来gas 消耗的改变，但是更好的编码习惯让我们跟容易发现[智能合约](https://learnblockchain.cn/2018/01/04/understanding-smart-contracts/)中的错误。
 
 
 强烈安利一门课程给大家：[深入详解以太坊智能合约语言Solidity](https://ke.qq.com/course/326528)

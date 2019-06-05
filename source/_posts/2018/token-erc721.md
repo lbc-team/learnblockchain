@@ -20,7 +20,7 @@ author: Tiny熊
 
 在[创建代币](https://learnblockchain.cn/2018/01/12/create_token/)一篇，我们讲到过ERC20代币，
 和ERC20一样，ERC721同样是一个代币标准，ERC721官方简要解释是Non-Fungible Tokens，简写为NFTs，多翻译为非同质代币。 
-> ERC721 是由Dieter Shirley 在2017年9月提出。Dieter Shirley 正是谜恋猫CryptoKitties背后的公司Axiom Zen的技术总监。因此谜恋猫也是第一个实现了ERC721 标准的去中心化应用。ERC721号提议已经被以太坊作为标准接受，但该标准仍处于草稿阶段。本文介绍的ERC721标准基于最新(2018/03/23官方提议。
+> ERC721 是由Dieter Shirley 在2017年9月提出。Dieter Shirley 正是谜恋猫CryptoKitties背后的公司Axiom Zen的技术总监。因此谜恋猫也是第一个实现了ERC721 标准的去中心化应用。ERC721号提议已经被[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)作为标准接受，但该标准仍处于草稿阶段。本文介绍的ERC721标准基于最新(2018/03/23官方提议。
 
 那怎么理解**非同质**代币呢?
 
@@ -147,7 +147,7 @@ interface ERC721Enumerable /* is ERC721 */ {
 
 ## 补充说明
 ### NTF IDs
-NTF ID，即tokenId，在合约中用唯一的uint265进行标识，每个NFT的ID在智能合约的生命周期内不允许改变。推荐的实现方式有：
+NTF ID，即tokenId，在合约中用唯一的uint265进行标识，每个NFT的ID在[智能合约](https://learnblockchain.cn/2018/01/04/understanding-smart-contracts/)的生命周期内不允许改变。推荐的实现方式有：
 1. 从0开始，每新加一个NFT，NTF ID加1
 2. 使用sha3后uuid 转换为 NTF ID
 

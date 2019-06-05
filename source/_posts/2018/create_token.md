@@ -22,7 +22,7 @@ author: Tiny熊
 
 ## 代币Token
 如果不那么追求精确的定义，代币就是数字货币，比特币、以太币就是一个代币。
-利用以太坊的智能合约可以轻松编写出属于自己的代币，代币可以代表任何可以交易的东西，如：积分、财产、证书等等。
+利用[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)的智能合约可以轻松编写出属于自己的代币，代币可以代表任何可以交易的东西，如：积分、财产、证书等等。
 因此不管是出于商业，还是学习很多人想创建一个自己的代币，先贴一个图看看创建的代币是什么样子。
 ![](https://img.learnblockchain.cn/2018/token_info.jpeg!wl)
 
@@ -159,7 +159,7 @@ contract TokenERC20 {
 1. 安装和配置MetaMask请参考[开发、部署第一个去中心化应用](https://learnblockchain.cn/2018/01/12/first-dapp)，不同的上本文选择了以太坊的测试网络Ropsten，如果你没有余额请点击购买buy，进入的网站可以送一些测试以太币给你，配置好之后，界面应该如下：
 ![](https://img.learnblockchain.cn/2018/metamask_main.png!wl)
 
-2. 浏览器打开Remix Solidity IDE，复制以上源码粘贴上，在右侧选项参考如图的设置：
+2. 浏览器打开Remix [Solidity](https://learnblockchain.cn/docs/solidity/) IDE，复制以上源码粘贴上，在右侧选项参考如图的设置：
 ![](https://img.learnblockchain.cn/2018/token_create_remix.jpeg!wl)
  注意Environment和Account和MetaMask保持一致，然后选择合约TokenERC20，填入你想要的发行量，名称及代号，就可以创建合约了。
  这时MetaMask会弹出一个交易确认框，点SUBMIT。待合约部署交易确认之后，复制合约地址。

@@ -17,7 +17,7 @@ Solidity系列完整的文章列表请查看[分类-Solidity](https://learnblock
 <!-- more -->
 ## 写在前面
 
-Solidity 是以太坊智能合约编程语言，阅读本文前，你应该对以太坊、智能合约有所了解，
+[Solidity](https://learnblockchain.cn/docs/solidity/) 是以太坊智能合约编程语言，阅读本文前，你应该对以太坊、智能合约有所了解，
 如果你还不了解，建议你先看[以太坊是什么](https://learnblockchain.cn/2017/11/20/whatiseth/)
 
 欢迎订阅[区块链技术专栏](https://xiaozhuanlan.com/blockchaincore)阅读更全面的分析文章。
@@ -36,7 +36,7 @@ Solidity错误处理就是要保证每次调用都是事务性的。
 ## 如何处理
 
 Solidity提供了两个函数assert和require来进行条件检查，如果条件不满足则抛出异常。assert函数通常用来检查（测试）内部错误，而require函数来检查输入变量或合同状态变量是否满足条件以及验证调用外部合约返回值。
-另外，如果我们正确使用assert，有一个Solidity分析工具就可以帮我们分析出智能合约中的错误，帮助我们发现合约中有逻辑错误的bug。
+另外，如果我们正确使用assert，有一个Solidity分析工具就可以帮我们分析出[智能合约](https://learnblockchain.cn/2018/01/04/understanding-smart-contracts/)中的错误，帮助我们发现合约中有逻辑错误的bug。
 
 
 除了可以两个函数assert和require来进行条件检查，另外还有两种方式来触发异常：

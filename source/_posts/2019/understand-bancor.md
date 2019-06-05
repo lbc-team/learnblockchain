@@ -51,7 +51,7 @@ Bancor协议要求在创建Smart Token的时候必须提供储备金，储备金
 
 ![](https://img.learnblockchain.cn/2019/15553147507540.jpg)
 
-也就是说，储备金比例（CW）等于储备金的价值除以Smart Token的预期价值。比如说，创建一个Smart Token，名叫STAR，初始总量1000万，提供储备金为以太坊10000个。预期一个STAR币的初始价格是0.002个以太，
+也就是说，储备金比例（CW）等于储备金的价值除以Smart Token的预期价值。比如说，创建一个Smart Token，名叫STAR，初始总量1000万，提供储备金为[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)10000个。预期一个STAR币的初始价格是0.002个以太，
 
                     CW = 10000/（0.002*1000*10000） = 0.5
 

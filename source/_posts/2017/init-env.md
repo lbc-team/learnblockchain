@@ -19,7 +19,7 @@ author: Tiny熊
 ### Solidity安装
 
 强烈建议新手使用[Remix -Solidity IDE](http://remix.ethereum.org/)来进行开发。
-Remix 是一个基于浏览器的Solidity，就可以不用安装Solidity，本文的Hello World教程也将基于Remix Solidity IDE来进行。
+Remix 是一个基于浏览器的[Solidity](https://learnblockchain.cn/docs/solidity/)，就可以不用安装Solidity，本文的Hello World教程也将基于Remix Solidity IDE来进行。
 
 如果你想自己安装请参考[Solidity安装指引](https://solidity.readthedocs.io/en/develop/installing-solidity.html)。
 > 更新，开发环境搭建还可以看另一篇文章: [搭建智能合约开发环境Remix IDE及使用](https://learnblockchain.cn/2018/06/07/remix-ide/)。
@@ -35,7 +35,7 @@ brew install ethereum
 安装完以后，就是把geth控制台启动。
 
 ## 启动环境
-在入门篇讲过，geth是一个以太坊客户端，现在利用geth启动一个以太坊（开发者）网络节点。
+在入门篇讲过，geth是一个[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)客户端，现在利用geth启动一个以太坊（开发者）网络节点。
 
 ```
 geth --datadir testNet --dev console 2>> test.log

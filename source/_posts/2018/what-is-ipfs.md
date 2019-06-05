@@ -16,7 +16,7 @@ author: Tiny熊
 
 ## DApp 的缺陷
 
-对区块链有所了解的同学，知道区块链维护的是一个中立的（去中心）、共同信任、难以篡改的数据库、智能合约创造的是一个完全透明（不被干扰）的运行规则，因此可以解决信任问题。
+对区块链有所了解的同学，知道区块链维护的是一个中立的（去中心）、共同信任、难以篡改的数据库、[智能合约](https://learnblockchain.cn/2018/01/04/understanding-smart-contracts/)创造的是一个完全透明（不被干扰）的运行规则，因此可以解决信任问题。
 
 一切看起来很美好，我们可以[开发去中心化应用DApp](https://ke.qq.com/course/335169) 解决信任问题，由此也确实产生了很多的博彩类DApp游戏。
 
@@ -32,7 +32,7 @@ author: Tiny熊
 
 IPFS - InterPlanetary File System 星际文件系统，多数人谈到IPFS都只讲到它的去中心化存储，其实IPFS想要做的远不只存储，其目标是取代HTTP，成为Web3.0时代的基础协议。我们从其[官网](https://ipfs.io/)对IPFS的定义就可以看到其雄心。
 
->  尽管Web3.0目前没有明确定义，从2014年以太坊联合创始人Gavin Wood提出分布式网络的Web3.0概念开始，业界普遍认为Web3.0 特征应该是 分布式、可信任。
+>  尽管Web3.0目前没有明确定义，从2014年[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)联合创始人Gavin Wood提出分布式网络的Web3.0概念开始，业界普遍认为Web3.0 特征应该是 分布式、可信任。
 
 在官网的有这样两个描述：
 1. IPFS is the Distributed Web

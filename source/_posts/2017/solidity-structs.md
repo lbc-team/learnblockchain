@@ -23,7 +23,7 @@ Solidity 是以太坊智能合约编程语言，阅读本文前，你应该对�
 
 ## 结构体(Structs)
 
-Solidity提供**struct**来定义自定义类型，自定义的类型是引用类型。
+[Solidity](https://learnblockchain.cn/docs/solidity/)提供**struct**来定义自定义类型，自定义的类型是引用类型。
 我们看看下面的例子：
 ```js
 pragma solidity ^0.4.11;
@@ -89,7 +89,7 @@ contract CrowdFunding {
 
 **映射类型**，仅能用来作为状态变量，或在内部函数中作为**storage**类型的引用。
 
-可以通过将映射标记为public，来让Solidity创建一个访问器。通过提供一个键值做为参数来访问它，将返回对应的值。
+可以通过将映射标记为public，来让[Solidity](https://learnblockchain.cn/docs/solidity/)创建一个访问器。通过提供一个键值做为参数来访问它，将返回对应的值。
 映射的值类型也可以是映射，使用访问器访问时，要提供这个映射值所对应的键，不断重复这个过程。
 来看一个例子：
 

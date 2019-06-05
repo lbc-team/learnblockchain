@@ -22,7 +22,7 @@ author: Tiny熊
 几乎每一个数字钱包都会把账号的交易列表展示出来，像下面这样一个列表:
 ![](https://img.learnblockchain.cn/2019/15553370001937.jpg!/scale/50%)
 
-这篇文章来看看如何来实现交易列表，首先得了解一点：**以太坊官方的节点服务不提供获取某一个地址的历史交易**。
+这篇文章来看看如何来实现交易列表，首先得了解一点：**[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)官方的节点服务不提供获取某一个地址的历史交易**。
 
 因此实现交易列表需要把区块的交易记录扫描存储在数据库，并由服务器提供交易查询功能接口，过程如下：
 
@@ -37,9 +37,9 @@ author: Tiny熊
 
 Etherscan 是以太坊上应用最广泛的区块链浏览器，也同时提供 [API 服务](https://learnblockchain.cn/docs/etherscan/), 实现交易列表功能其中一个选择就是使用Etherscan API 服务。
 
-Etherscan API 主要包含模块有：
+[Etherscan](https://learnblockchain.cn/docs/etherscan/) API 主要包含模块有：
 * 账号地址相关接口
-* 智能合约相关接口
+* [智能合约](https://learnblockchain.cn/2018/01/04/understanding-smart-contracts/)相关接口
 * 交易相关接口
 * 区块相关接口
 * 事件日志相关接口

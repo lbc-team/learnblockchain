@@ -17,7 +17,7 @@ Solidity系列完整的文章列表请查看[分类-Solidity](https://learnblock
 
 ## 写在前面
 
-Solidity 是以太坊智能合约编程语言，阅读本文前，你应该对以太坊、智能合约有所了解，
+Solidity 是[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)智能合约编程语言，阅读本文前，你应该对以太坊、智能合约有所了解，
 如果你还不了解，建议你先看[以太坊是什么](https://learnblockchain.cn/2017/11/20/whatiseth/)
 
 欢迎订阅[区块链技术专栏](https://xiaozhuanlan.com/blockchaincore)阅读更全面的分析文章。
@@ -151,7 +151,7 @@ contract modifysample {
 }
 
 ```
-上面的智能合约运行test1()之后，状态变量a的值是多少， 是1， 11， 12，还是13呢？
+上面的[智能合约](https://learnblockchain.cn/2018/01/04/understanding-smart-contracts/)运行test1()之后，状态变量a的值是多少， 是1， 11， 12，还是13呢？
 答案是 11, 大家可以运行下test2获取下a值。
 
 我们来分析一下 test1， 它扩展之后是这样的：

@@ -16,7 +16,7 @@ tags:
 author: Tiny熊
 ---
 
-开发钱包相关博客文章索引， 目前只有以太坊，后期加入比特币，EOS等钱包开发文章
+开发钱包相关博客文章索引， 目前只有[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)，后期加入比特币，EOS等钱包开发文章
 
 <!-- more -->
 

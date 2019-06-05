@@ -408,7 +408,7 @@ go-filecoin retrieval-client retrieve-piece < minerAddress >  < CID >
 
 > 其实现在的创建存储矿工，以及矿工创建报价、存储客户提交订单存储，这些笔者认为属于filecoin文件合约的范畴。
 
-> 与以太坊类似，以太坊抽象出了代币合约以及通用智能合约； 而filecoin则是抽象出了文件合约和通用智能合约。
+> 与[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)类似，以太坊抽象出了代币合约以及通用智能合约； 而filecoin则是抽象出了文件合约和通用智能合约。
 
 
 ####  智能合约<a name="智能合约"></a>

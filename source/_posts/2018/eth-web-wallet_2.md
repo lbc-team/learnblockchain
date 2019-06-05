@@ -22,7 +22,7 @@ author: Tiny熊
 
 有一些同学会问，我的账号是Geth生成的，如何导入到钱包呢？使用Geth的同学，应该知道Geth在创建账号时会生成一个对应keystore JSON文件，Keystore文件存储加密后的私钥信息，因此我们需要做的就是导入这个Keystore文件，这个文件通常在同步区块数据的目录下的keystore文件夹（如： ~/.ethereum/keystore）里。
 
-尽管在ethers.js 中，简单的使用一个函数就可以完成keystore文件的导入，不过理解Keystore 文件的作用及原理还是非常有必要的，当然如果你是在没有兴趣，可以直接跳到本文最后一节：使用ethers.js 实现账号导出导入。
+尽管在[ethers.js](https://learnblockchain.cn/docs/ethers.js/) 中，简单的使用一个函数就可以完成keystore文件的导入，不过理解Keystore 文件的作用及原理还是非常有必要的，当然如果你是在没有兴趣，可以直接跳到本文最后一节：使用ethers.js 实现账号导出导入。
 
 
 ## 详细解读 Keystore 文件
@@ -35,7 +35,7 @@ Keystore 文件就是一种以加密的方式存储密钥的文件，这样的�
 
 ### Keystore 文件如何生成的
 
- 以太坊是使用对称加密算法来加密私钥生成Keystore文件，因此对称加密秘钥(注意它其实也是发起交易时需要的解密秘钥)的选择就非常关键，这个秘钥是使用KDF算法推导派生而出。因此在完整介绍Keystore 文件如何生成前，有必要先介绍一下KDF。
+ [以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)是使用对称加密算法来加密私钥生成Keystore文件，因此对称加密秘钥(注意它其实也是发起交易时需要的解密秘钥)的选择就非常关键，这个秘钥是使用KDF算法推导派生而出。因此在完整介绍Keystore 文件如何生成前，有必要先介绍一下KDF。
 
 #### 使用 KDF 生成秘钥
 

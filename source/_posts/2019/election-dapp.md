@@ -132,7 +132,7 @@ module.exports = function(deployer) {
 
 ```
 
-在部署之前，还需要打开以太坊的模拟节点Ganache，并确保Truffle配置文件truffle.js 链接节点的地址和端口与Ganache 一致。
+在部署之前，还需要打开以太坊的模拟节点Ganache，并确保[Truffle](https://learnblockchain.cn/docs/truffle/)配置文件truffle.js 链接节点的地址和端口与Ganache 一致。
 > Ganache 的安装使用可阅读[开发、部署第一个DApp](https://learnblockchain.cn/2018/01/12/first-dapp/)
 > 如果要部署到以太坊正式网络可阅读[用Truffle 开发一个链上记事本](https://learnblockchain.cn/2019/03/30/dapp_noteOnChain/)
 
@@ -296,7 +296,7 @@ npm run dev
 [Truffle 官方文档-中文版](https://learnblockchain.cn/docs/truffle/) 
 
 
-加我微信：xlbxiong 备注：DApp， 加入以太坊DApp开发微信群。
+加我微信：xlbxiong 备注：DApp， 加入[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)DApp开发微信群。
 
 
 加入[知识星球](https://learnblockchain.cn/images/zsxq.png) 成长比别人快一点。

@@ -20,7 +20,7 @@ author: Star Li
 
 输入一笔交易，内部会转换成一个Message对象，传入EVM执行。
 
-如果是一笔普通转账交易，那么直接修改`StateDB`中对应的账户余额即可。如果是智能合约的创建或者调用，则通过EVM中的解释器加载和执行字节码，执行过程中可能会查询或者修改StateDB。
+如果是一笔普通转账交易，那么直接修改`StateDB`中对应的账户余额即可。如果是[智能合约](https://learnblockchain.cn/2018/01/04/understanding-smart-contracts/)的创建或者调用，则通过EVM中的解释器加载和执行字节码，执行过程中可能会查询或者修改StateDB。
 
 
 ## 固定油费（Intrinsic Gas）
@@ -268,7 +268,7 @@ view类型的函数表明其不能修改状态变量，而pure类型的函数则
 
 可以看到，解释器增加了一个readOnly属性，STATICCALL会把该属性置为true，如果出现状态变量的写操作，则会返回一个errWriteProtection错误。
 
-总结：以太坊虚拟机用来执行以太坊上的交易，更改以太坊状态。交易分两种：普通交易和智能合约交易。在执行交易时需要支付油费。智能合约之间的调用有四种方式。
+总结：[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)虚拟机用来执行以太坊上的交易，更改以太坊状态。交易分两种：普通交易和智能合约交易。在执行交易时需要支付油费。智能合约之间的调用有四种方式。
 
 作者Star Li，他的公众号[星想法](https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzU5MzMxNTk2Nw==&scene=124#wechat_redirect)有很多原创高质量文章，欢迎大家关注。
 

@@ -19,7 +19,7 @@ author: Ashton
 ![交易所交易量](https://img.learnblockchain.cn/2019/15561117218102.jpg!/scale/45%)
 
 
-IDEX 有啥特别的呢？与其它去中心化交易所不同，IDEX 采取的是中心化交易戳合，去中心化结算的方式，资产的保存和结算都是在智能合约里，交易所无法动用任何用户资产，但同时用户又能享受中心化交易撮合的快速方便。
+IDEX 有啥特别的呢？与其它去中心化交易所不同，IDEX 采取的是中心化交易戳合，去中心化结算的方式，资产的保存和结算都是在[智能合约](https://learnblockchain.cn/2018/01/04/understanding-smart-contracts/)里，交易所无法动用任何用户资产，但同时用户又能享受中心化交易撮合的快速方便。
 
 ![IDEX](https://img.learnblockchain.cn/2019/15561118926543.jpg!/scale/55%)
 

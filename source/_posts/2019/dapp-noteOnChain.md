@@ -42,7 +42,7 @@ author: Tiny熊
 truffle unbox pet-shop
 ```
 
-使用Truffle 对项目初始化。
+使用[Truffle](https://learnblockchain.cn/docs/truffle/) 对项目初始化。
 
 > 如果没有使用过truffle 可以阅读[开发、部署第一个DApp](https://learnblockchain.cn/2018/01/12/first-dapp/)。
 
@@ -119,7 +119,7 @@ truffle部署的命令是
 truffle migrate
 ```
 
-默认情况下，会部署到本地的Ganache提供的测试网络，本文介绍下如何**通过Truffle部署到太坊官方网络**，这里以部署到以太坊测试网络Ropsten为例进行介绍。
+默认情况下，会部署到本地的Ganache提供的测试网络，本文介绍下如何**通过Truffle部署到太坊官方网络**，这里以部署到[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)测试网络Ropsten为例进行介绍。
 
 
 > Ganache 的安装使用可阅读[开发、部署第一个DApp](https://learnblockchain.cn/2018/01/12/first-dapp/)
@@ -317,7 +317,7 @@ loadNote: function(index) {
 
 ### 发布笔记上链
 
-使用JQuery监听用户点击`add_new`按钮，然后调用合约的 `addNote` 函数把用户输入的笔记存储到智能合约。
+使用JQuery监听用户点击`add_new`按钮，然后调用合约的 `addNote` 函数把用户输入的笔记存储到[智能合约](https://learnblockchain.cn/2018/01/04/understanding-smart-contracts/)。
 
 ```
   bindEvents: function() {

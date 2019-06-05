@@ -16,7 +16,7 @@ author: Tiny熊
 
 ---
 
-很多同学对Solidity 中的Event有疑问，这篇文章就来详细的看看Solidity 中Event到底有什么用？
+很多同学对[Solidity](https://learnblockchain.cn/docs/solidity/) 中的Event有疑问，这篇文章就来详细的看看Solidity 中Event到底有什么用？
 
 <!-- more -->
 
@@ -28,8 +28,8 @@ Solidity 是以太坊智能合约编程语言，阅读本文前，你应该对�
 
 ## 什么是事件Evnet
 
-事件是以太坊虚拟机(EVM)日志基础设施提供的一个便利接口。当被发送事件（调用）时，会触发参数存储到交易的日志中（一种区块链上的特殊数据结构）。这些日志与合约的地址关联，并记录到区块链中.
-来捋这个关系：区块链是打包一系列交易的区块组成的链条，每一个交易“收据”会包含0到多个日志记录，日志代表着智能合约所触发的事件。
+事件是[以太坊虚拟机](https://learnblockchain.cn/2019/04/09/easy-evm/)(EVM)日志基础设施提供的一个便利接口。当被发送事件（调用）时，会触发参数存储到交易的日志中（一种区块链上的特殊数据结构）。这些日志与合约的地址关联，并记录到区块链中.
+来捋这个关系：区块链是打包一系列交易的区块组成的链条，每一个交易“收据”会包含0到多个日志记录，日志代表着[智能合约](https://learnblockchain.cn/2018/01/04/understanding-smart-contracts/)所触发的事件。
 
 **在DAPP的应用中，如果监听了某事件，当事件发生时，会进行回调。**
 不过要注意：日志和事件在合约内是无法被访问的，即使是创建日志的合约。
@@ -181,7 +181,7 @@ instructorEvent.watch(function(error, result) {
 
 ## 参考文章
 
-https://coursetro.com/posts/code/100/Solidity-Events-Tutorial---Using-Web3.js-to-Listen-for-Smart-Contract-Events
+https://coursetro.com/posts/code/100/Solidity-Events-Tutorial---Using-[Web3.js](https://learnblockchain.cn/docs/web3js-0.2x/)-to-Listen-for-Smart-Contract-Events
 https://github.com/ethereum/wiki/wiki/JavaScript-API#contract-events
 
 [深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，打造最好的区块链技术博客。

@@ -221,7 +221,7 @@ export default class App {
 ```
 
 说明：
-❶  从 Truffle 编译部署生成的Json文件引入 合约描述对像
+❶  从 [Truffle](https://learnblockchain.cn/docs/truffle/) 编译部署生成的Json文件引入 合约描述对像
 ❷  这是我们侧链的网络id，在[上一篇](https://learnblockchain.cn/2019/04/29/use-loom/#%E5%9C%A8%E4%BE%A7%E9%93%BE%E4%B8%8A%E5%BC%80%E5%8F%91%E5%92%8C%E9%83%A8%E7%BD%B2%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6) 进行合约部署的时候，可以看到 Network id 的输出提示。
 
 > 注: 在官方的示例中 networkId 使用的是 `default`， 不过我在实际运行时，使用 `default` 作为网络id会出错（找不到对应的合约部署地址）。

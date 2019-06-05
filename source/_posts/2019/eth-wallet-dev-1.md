@@ -39,7 +39,7 @@ author: Tiny熊
 
 我们先来介绍第一个功能：通过生成助记词、Keystore文件、私钥创建钱包账号。
 本系列中，钱包都是指分层确定性钱包，（HD钱包 Hierarchical Deterministic Wallets）， 之前博客有一篇文章[分层钱包](https://learnblockchain.cn/2018/09/28/hdwallet/)进行了详细的介绍，还不熟悉的可以读一下。
-为了保持本文的完整，这里做一个总结性回顾：以太坊及比特币的**地址是由随机生成的私钥经过椭圆曲线等算法单向推倒而来** ，BIP32及BIP44是为方便管理私钥提出的分层推倒方案，BIP39 定义助记词让分层种子的备份更方便。
+为了保持本文的完整，这里做一个总结性回顾：[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)及比特币的**地址是由随机生成的私钥经过椭圆曲线等算法单向推倒而来** ，BIP32及BIP44是为方便管理私钥提出的分层推倒方案，BIP39 定义助记词让分层种子的备份更方便。
 而KeyStore文件是用来解密以太坊保存私钥的一种方式，大家可以阅读下[这篇文章: 账号Keystore文件导入导出](https://learnblockchain.cn/2018/10/25/eth-web-wallet_2/)了解更多。
 
 实现完成的，界面如下图：
@@ -52,7 +52,7 @@ author: Tiny熊
 
 为了完成创建账号功能，我们需要使用到两个库：[Web3j](https://github.com/web3j/web3j/) 和 [bitcoinj](https://github.com/bitcoinj/bitcoinj)
 
-Web3是一套和以太坊通信的封装库，Web3j是Java版本的实现，例如发起交易和智能合约进行交互，下图很好的表达了其作用。
+Web3是一套和以太坊通信的封装库，Web3j是Java版本的实现，例如发起交易和[智能合约](https://learnblockchain.cn/2018/01/04/understanding-smart-contracts/)进行交互，下图很好的表达了其作用。
 ![](https://img.learnblockchain.cn/2019/15525530768209.jpg!wl)
 
 不过本文中的功能，主要是使用了web3j中椭圆曲线加密及KeyStore文件的生成与解密。

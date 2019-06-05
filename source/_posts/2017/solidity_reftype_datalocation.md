@@ -23,7 +23,7 @@ Solidity 是以太坊智能合约编程语言，阅读本文前，你应该对�
 这部分的内容官方英文文档讲的不是很透，因此我在参考Solidity官方文档（当前最新版本：0.4.20）的同时加入了深入分析部分，欢迎订阅[专栏](https://xiaozhuanlan.com/blockchaincore)。
 
 ## 数据位置(Data location)
-在系列第一篇，我们提到 Solidity 类型分为两类：
+在系列第一篇，我们提到 [Solidity](https://learnblockchain.cn/docs/solidity/) 类型分为两类：
 **值类型(Value Type)** 及 **引用类型(Reference Types)**，
 前面我们已经介绍完了值类型，接下来会介绍引用类型。
 
@@ -91,7 +91,7 @@ contract C {
 ## 深入分析
 
 storage 存储结构是在合约创建的时候就确定好了的，它取决于合约所声明状态变量。但是内容可以被（交易）调用改变。
-> Solidity 称这个为状态改变，这也是合约级变量称为**状态变量**的原因。也可以更好的理解为什么状态变量都是storage存储。
+> [Solidity](https://learnblockchain.cn/docs/solidity/) 称这个为状态改变，这也是合约级变量称为**状态变量**的原因。也可以更好的理解为什么状态变量都是storage存储。
 
 memory 只能用于函数内部，memory 声明用来告知EVM在运行时创建一块（固定大小）内存区域给变量使用。
 > storage 在区块链中是用key/value的形式存储，而memory则表现为字节数组

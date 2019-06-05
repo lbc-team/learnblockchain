@@ -18,7 +18,7 @@ Solidity 系列完整的文章列表请查看[分类-Solidity](https://learnbloc
 
 ## 写在前面
 
-Solidity 是以太坊智能合约编程语言，阅读本文前，你应该对以太坊、智能合约有所了解，
+Solidity 是[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)智能合约编程语言，阅读本文前，你应该对以太坊、智能合约有所了解，
 如果你还不了解，建议你先看[以太坊是什么](https://learnblockchain.cn/2017/11/20/whatiseth/)
 
 欢迎订阅[区块链技术专栏](https://xiaozhuanlan.com/blockchaincore)阅读更全面的分析文章。
@@ -41,7 +41,7 @@ Solidity 是以太坊智能合约编程语言，阅读本文前，你应该对�
 
 库有许多使用场景。两个主要的场景如下：
 
-1. 如果有许多合约，它们有一些共同代码，则可以把共同代码部署成一个库。这将节省gas，因为gas也依赖于合约的规模。因此，可以把库想象成使用其合约的父合约。使用父合约（而非库）切分共同代码不会节省gas，因为在Solidity中，继承通过复制代码工作。
+1. 如果有许多合约，它们有一些共同代码，则可以把共同代码部署成一个库。这将节省gas，因为gas也依赖于合约的规模。因此，可以把库想象成使用其合约的父合约。使用父合约（而非库）切分共同代码不会节省gas，因为在[Solidity](https://learnblockchain.cn/docs/solidity/)中，继承通过复制代码工作。
 
 2. 库可用于给数据类型添加成员函数。（参见下一节Using for）
 

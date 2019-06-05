@@ -19,7 +19,7 @@ author: Tiny熊
 
 ## 写在前面
 
-Remix 是以太坊智能合约编程语言Solidity IDE，阅读本文前，你应该对以太坊、智能合约有所了解，
+Remix 是以太坊智能合约编程语言[Solidity](https://learnblockchain.cn/docs/solidity/) IDE，阅读本文前，你应该对以太坊、智能合约有所了解，
 如果还不了解，建议先看[以太坊是什么](https://learnblockchain.cn/2017/11/20/whatiseth/)。
 
 ## Remix IDE 介绍

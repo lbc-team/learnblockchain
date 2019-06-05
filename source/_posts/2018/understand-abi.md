@@ -15,7 +15,7 @@ author: Tiny熊
 
 ## 写在前面
 
-阅读本文前，你应该对以太坊、智能合约有所了解，
+阅读本文前，你应该对以太坊、[智能合约](https://learnblockchain.cn/2018/01/04/understanding-smart-contracts/)有所了解，
 如果你还不了解，建议你先看[以太坊是什么](https://learnblockchain.cn/2017/11/20/whatiseth/)，也可以观看我们的视频：[零基础搞懂区块链](https://ke.qq.com/course/318230
 )和[深入详解以太坊智能合约语言Solidity](https://ke.qq.com/course/326528), 可以系统全面学习理解以太坊、智能合约。
 

@@ -17,7 +17,7 @@ author: 被打劫的强盗
 阅读本文前，你应该对以太坊语言有所了解，如果你还不了解，建议你先看[以太坊是什么](https://learnblockchain.cn/2017/11/20/whatiseth/)
 
 ## go-ethereum客户端安装
-Go-ethereum客户端通常被称为Geth，它是个命令行界面，执行在Go上实现的完整以太坊节点。Geth得益于Go语言的多平台特性，支持在多个平台上使用(比如Windows、Linux、Mac)。Geth是以太坊协议的具体落地实现，通过Geth，你可以实现以太坊的各种功能，如账户的新建编辑删除，开启挖矿，ether币的转移，智能合约的部署和执行等等。所以，我们选择geth工具来进行开发。由于本人是mac，所以优先使用mac进行开发啦。mac中geth安装如下：
+Go-ethereum客户端通常被称为Geth，它是个命令行界面，执行在Go上实现的完整[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)节点。Geth得益于Go语言的多平台特性，支持在多个平台上使用(比如Windows、Linux、Mac)。Geth是以太坊协议的具体落地实现，通过Geth，你可以实现以太坊的各种功能，如账户的新建编辑删除，开启挖矿，ether币的转移，智能合约的部署和执行等等。所以，我们选择geth工具来进行开发。由于本人是mac，所以优先使用mac进行开发啦。mac中geth安装如下：
 
 ```
 brew tap ethereum/ethereum
@@ -98,7 +98,7 @@ geth --datadir data0 --networkid 1108 console
 **web3：**包含了以上对象，还包含一些单位换算的方法
 
 ## 玩转Javascript Console
-进入以太坊Javascript Console后，就可以使用里面的内置对象做一些操作，这些内置对象提供的功能很丰富，比如查看区块和交易、创建账户、挖矿、发送交易、部署智能合约等。接下来介绍几个常用功能，下面的操作中，前面带>的表示在Javascript Console中执行的命令。
+进入以太坊Javascript Console后，就可以使用里面的内置对象做一些操作，这些内置对象提供的功能很丰富，比如查看区块和交易、创建账户、挖矿、发送交易、部署[智能合约](https://learnblockchain.cn/2018/01/04/understanding-smart-contracts/)等。接下来介绍几个常用功能，下面的操作中，前面带>的表示在Javascript Console中执行的命令。
 
 ### 创建账户
 前面只是搭建了私有链，并没有自己的账户，可以在js console中输入eth.accounts来验证：

@@ -23,7 +23,7 @@ Loom （或者称 Loom Network） 是一支探索区块链二层扩容方面技�
 
 **Loom PlasmaChain** 是一条实现了 **[Plasma Cash 框架模型](https://learnblockchain.cn/2018/11/16/plasma-cash/)**的高性能 DPoS 侧链（提供1–3秒的交易确认时间）。
 
-这条侧链带来的特点是显而易见的，它可以获得由以太坊底层网络的安全背书，让我们使用在以太坊上发布的Token（包含 ERC20和 ERC721支持），又可以享受 DPos 共识带来的高性能。
+这条侧链带来的特点是显而易见的，它可以获得由[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)底层网络的安全背书，让我们使用在以太坊上发布的Token（包含 ERC20和 ERC721支持），又可以享受 DPos 共识带来的高性能。
 
 > 以太坊交易确认至少是15秒以上，并且需要消耗一笔 Gas 费用，当然因此牺牲了一些去中心化。
 
@@ -39,7 +39,7 @@ Loom （或者称 Loom Network） 是一支探索区块链二层扩容方面技�
 
     >   有时狭义的Loom SDK就是单指这个工具
 * 一些其他工具，如用来在主链和侧链之间转移资产的工具：plasma-cli  gateway-cli。
-* 用来部署合约及开发DApp 的 JavaScript SDK， 包含 `Loom Truffle Provider` 及 `loom-js`， 这篇文章后面会介绍他的使用。
+* 用来部署合约及开发DApp 的 JavaScript SDK， 包含 `Loom [Truffle](https://learnblockchain.cn/docs/truffle/) Provider` 及 `loom-js`， 这篇文章后面会介绍他的使用。
 
 * 用来部署合约及开发DApp 的 Go SDK。
 * 以及开发游戏相关的 SDK： Cosos SDK、Unity SDK。

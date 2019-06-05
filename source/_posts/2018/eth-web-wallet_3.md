@@ -17,7 +17,7 @@ author: Tiny熊
 
 ## 使用 Provider 连接以太坊网络
 
-我们前面两篇文章介绍创建（或导入）钱包账号的过程都是是离线的，即不需要依赖以太坊网络即可创建钱包账号，但如果想获取钱包账号的相关信息，比如余额、交易记录，发起交易的话，就需要让钱包连上以太坊的网络。
+我们前面两篇文章介绍创建（或导入）钱包账号的过程都是是离线的，即不需要依赖[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)网络即可创建钱包账号，但如果想获取钱包账号的相关信息，比如余额、交易记录，发起交易的话，就需要让钱包连上以太坊的网络。
 
 不管是在 Web3 中，还是Ethers.js 都是使用 Provider 来进行网络连接的，Ethers.js 提供了集成多种 Provider 的方式：
 
@@ -189,7 +189,7 @@ web3.eth.sendRawTransaction(serializedTx, function (err, transactionHash) {
 });
 ```
 
-通过这三步就完成了发送签名交易的过程，ethers.js 里提供了一个简洁的接口，来完成所有这三步操作(强调一下，签名已经在接口里帮我们完成了)，接口如下：
+通过这三步就完成了发送签名交易的过程，[ethers.js](https://learnblockchain.cn/docs/ethers.js/) 里提供了一个简洁的接口，来完成所有这三步操作(强调一下，签名已经在接口里帮我们完成了)，接口如下：
 
 ```js
  activeWallet.sendTransaction({

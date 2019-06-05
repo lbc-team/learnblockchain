@@ -17,14 +17,14 @@ author: Tiny熊
 阅读本文前，如果了解过比特币及以太坊，可以更好的理解本文。欢迎订阅专栏：[区块链技术](https://xiaozhuanlan.com/blockchaincore)
 指引你从头开始学区块链技术。
 
-本文出现EOS是指EOS.io公链项目，不是指以太坊上的EOS Token。
+本文出现EOS是指EOS.io公链项目，不是指[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)上的EOS Token。
 
 
 ## EOS 简介
 
 EOS: Enterprise Operation System 中文意思为：商业级区块链操作系统。
 
-尽管以太坊创造性引入智能合约概念，极大的简化了区块链应用的开发，但以太坊平台依然有一个很大的限制，就是交易确认时间及交易吞吐量比较小，从而严重影响了以太坊进行商业应用。
+尽管以太坊创造性引入[智能合约](https://learnblockchain.cn/2018/01/04/understanding-smart-contracts/)概念，极大的简化了区块链应用的开发，但以太坊平台依然有一个很大的限制，就是交易确认时间及交易吞吐量比较小，从而严重影响了以太坊进行商业应用。
 
 > 交易吞吐量有一个专门的词：TPS （transaction per second 每秒的交易量） 比特币的TPS 是大概7，并且最少几十分钟交易才能被确认，以太坊的TPS大概是20左右，交易的确认一般需要几分钟的时间。
 > 不过比特币以太坊也在不断进化以提高TPS，比如比特币的闪电网络，以太坊的Sharding技术（分片）以及Plasma技术（分层）。

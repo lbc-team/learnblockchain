@@ -340,7 +340,7 @@ location: mining/mqueue.go
     // 一些队列的基本操作
     // 1 长度、push、pop功能
     // 2 Less主要是比较两条交易中的Gas价格，大家可以回头看看type中的消息定义,这里不赘述了
-    // 3 为什么要提供Less接口，留给大家思索一下，熟悉以太坊的可能一眼就看出了
+    // 3 为什么要提供Less接口，留给大家思索一下，熟悉[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)的可能一眼就看出了
 ▼-queueHeap : []nonceQueue
     [methods]
    +Len() : int

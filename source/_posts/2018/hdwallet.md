@@ -75,7 +75,7 @@ m / purpose' / coin' / account' / change / address_index
 `
 m是固定的, Purpose也是固定的，值为44（或者 0x8000002C）
 **Coin type**
-这个代表的是币种，0代表比特币，1代表比特币测试链，60代表以太坊
+这个代表的是币种，0代表比特币，1代表比特币测试链，60代表[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)
 完整的币种列表地址：https://github.com/satoshilabs/slips/blob/master/slip-0044.md
 **Account**
 代表这个币的账户索引，从0开始

@@ -35,7 +35,7 @@ EOS 的全称是 Enterprise Operation System，字面意思为企业级区块链
 
 ## EOS 与 BM
 
-就像谈比特币就离不开中本聪，谈以太坊就离不开 V 神，谈 EOS 就少不了要说一下另一位传奇人物 BM。
+就像谈比特币就离不开中本聪，谈[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)就离不开 V 神，谈 EOS 就少不了要说一下另一位传奇人物 BM。
 
 > BM 原名叫 Daniel Larimer，之所以叫 BM 只是因为他在网上经常使用网名 ByteMaster。
 

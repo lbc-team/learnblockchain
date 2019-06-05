@@ -25,7 +25,7 @@ author: 盖盖
 
 
 ## Plasma 合约
-首先需要将 Plasma 合约部署到主链（以太坊）上作为主链和子链沟通的媒介。Plasma 合约会处理由子链提交的区块，并且将区块的哈希值存在主链上。除此之外，还会处理用户的存款（deposit）、取款（withdrawal/exit）以及争议（challenge）操作。
+首先需要将 Plasma 合约部署到主链（[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)）上作为主链和子链沟通的媒介。Plasma 合约会处理由子链提交的区块，并且将区块的哈希值存在主链上。除此之外，还会处理用户的存款（deposit）、取款（withdrawal/exit）以及争议（challenge）操作。
 
 Plasma 合约中主要包括的**数据结构**有：
 

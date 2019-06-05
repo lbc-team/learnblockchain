@@ -43,7 +43,7 @@ public class TokensViewModel extends ViewModel {
 
 ### 以太坊网络
 
-这里补充下以太坊网络，当前以太坊在使用的网络有5个：
+这里补充下[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)网络，当前以太坊在使用的网络有5个：
 
 * Mainnet ：主网，真正有价值的网络，当前Pow共识；
 * Ropsten ：测试网网络， 使用Pow，和当前的公有链环境一致；

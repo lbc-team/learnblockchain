@@ -22,7 +22,7 @@ author: 零时科技
 有一些EOS 抽奖类 DApp 采用了 `inline action` 方式进行开奖，导致被黑客攻击。
 我们先来看一下 `inline action`和`defer action`分别是什么：
 
-> action就是EOS上消息（EOS系统是以消息通信为基础的）的载体。如果想调用某个智能合约，那么就要给它发 `action` 消息。
+> action就是EOS上消息（EOS系统是以消息通信为基础的）的载体。如果想调用某个[智能合约](https://learnblockchain.cn/2018/01/04/understanding-smart-contracts/)，那么就要给它发 `action` 消息。
 
 * **inline action**
     内联交易：多个不同的`action`在一个`transaction`中（在一个交易中触发了后续多个 Action ），在这个 `transaction` 中，只要有一个 `action` 异常，则整个`transaction` 会失败，所有的 `action` 都将会回滚。

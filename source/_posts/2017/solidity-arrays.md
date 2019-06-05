@@ -35,7 +35,7 @@ Solidity 是以太坊智能合约编程语言，阅读本文前，你应该对�
 所以应该尽量使用**bytes**而不是**byte[]**。
 
 > 可以将字符串s通过bytes(s)转为一个bytes，可以通过**bytes(s).length**获取长度，**bytes(s)[n]**获取对应的UTF-8编码。通过下标访问获取到的不是对应字符，而是UTF-8编码，比如中文编码是多字节，变长的，所以下标访问到的只是其中的一个编码。
-类型为数组的状态变量，可以标记为**public**，从而让Solidity创建一个访问器，如果要访问数组的某个元素，指定数字下标就好了。（稍后代码事例）
+类型为数组的状态变量，可以标记为**public**，从而让[Solidity](https://learnblockchain.cn/docs/solidity/)创建一个访问器，如果要访问数组的某个元素，指定数字下标就好了。（稍后代码事例）
 
 ## 创建内存数组
 可使用new关键字创建一个memory的数组。与stroage数组不同的是，你不能通过.length的长度来修改数组大小属性。我们来看看下面的例子：
@@ -109,7 +109,7 @@ contract C {
      function f() returns (uint[]) { ... }
       }
 ```
-在这个的例子中，如果通过web.js调用能返回数据，但从Solidity中调用不能返回数据。一种绕过这个问题的办法是使用一个非常大的静态数组。
+在这个的例子中，如果通过web.js调用能返回数据，但从[Solidity](https://learnblockchain.cn/docs/solidity/)中调用不能返回数据。一种绕过这个问题的办法是使用一个非常大的静态数组。
 
 ```js
 

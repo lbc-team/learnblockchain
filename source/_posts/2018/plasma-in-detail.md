@@ -22,7 +22,7 @@ author: 盖盖
 在[上一篇](https://learnblockchain.cn/2018/10/20/plasma-framework/)文章中我们已经理解了什么是 Plasma 框架以及它是如何运行的，这一篇文章将对其运行过程中的一些关键部分，包括 Plasma 提交区块的过程，当有恶意行为发生时如何构建防伪证明以及如何退出 Plasma 子链等进行剖析。需要注意的是，由于 Plasma 是一套框架，因此本文只剖析 Plasma 项目的共性，每一部分的实现细则还是需要参考实际的项目，例如 Plasma MVP（Minimal-Viable-Plasma）和 Plasma Cash 等。
 
 ## 存款（Deposit）
-Plasma 的主要思想就是将大部分计算过程都转移到链下进行，用户只有在进入和退出 Plasma Chain 的时候需要跟主链上的智能合约交互，这也是所有 Plasma 应用的标准流程。
+Plasma 的主要思想就是将大部分计算过程都转移到链下进行，用户只有在进入和退出 Plasma Chain 的时候需要跟主链上的[智能合约](https://learnblockchain.cn/2018/01/04/understanding-smart-contracts/)交互，这也是所有 Plasma 应用的标准流程。
 
 用户在将主链的资产（如以太币或者其它 [ERC20](https://learnblockchain.cn/2018/01/12/create_token/) 合约发布的 token）转移到 Plasma Chain 的过程称为存款（Deposit），具体做法是直接向主链上的 Plasma 合约发送以太币或 token。Plasma 合约收到 Deposit 交易后会在子链上创建跟 Deposit 数额一致的交易，并将其打包进区块中，作为存款确认的证明。这个过程如下图所示（来源自[[1]](https://plasma.io/)）。
 

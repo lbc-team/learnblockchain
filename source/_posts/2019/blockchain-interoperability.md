@@ -40,7 +40,7 @@ author: Xiaoyi Wang
 
 1. Alice 通过交易所钱包将自己的比特币打入交易所地址;
 2. Alice 在交易所上挂上卖单1个BTC卖出20ETH价格；
-3. Bob需要将自己的ETH打入交易所的以太坊地址；
+3. Bob需要将自己的ETH打入交易所的[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)地址；
 4. Bob通过交易所挂出购买比特币的单子 20ETH买一个比特币；
 5. 交易所将Alice的卖单和Bob的卖单进行撮合；
 6. 交易所将Alice在交易所存储的1BTC 转移给Bob的比特币地址；
@@ -85,7 +85,7 @@ author: Xiaoyi Wang
 
 侧链是相对于主链而言的，最初的侧链提出是针对比特币做新特性的测试和研发。侧链相对主链而言能够验证和解析主链中的区块数据和账本数据。侧链实现的基础技术是双向锚定（Two-way Peg），通过双向锚定技术可以将数字资产在主链上进行锁定，同时将等价的资产在侧链中释放。相反当侧链中相关资产进行锁定时，主链上锚定的等价资产也可以被释放。
 
-BTC-Relay是号称的史上第一个侧链，BTC-Relay是通过以太坊构建了一个比特币的侧面，运用以太坊的智能合约允许用户验证比特币的交易。这里我们仍然以Alice 1BTC和Bob的20ETH数字资产交换为例阐述相应原理：
+BTC-Relay是号称的史上第一个侧链，BTC-Relay是通过以太坊构建了一个比特币的侧面，运用以太坊的[智能合约](https://learnblockchain.cn/2018/01/04/understanding-smart-contracts/)允许用户验证比特币的交易。这里我们仍然以Alice 1BTC和Bob的20ETH数字资产交换为例阐述相应原理：
 
 1. Bob将20ETH发送到BTCSwap的合约进行冻结；(该合约只要能够确认BTC网络上Bob接收到来自Alice 1BTC就自动将20ETH转给Alice)
 2. Alice 确认Bob冻结信息后，将1 BTC转给Bob比特币账户；

@@ -76,7 +76,7 @@ Solidity是以太坊智能合约编程语言，阅读本文前，你应该对以
 
     同样我们也可以使用delegatecall()，它与call方法的区别在于，仅仅是代码会执行，而其它方面，如（存储，余额等）都是用的当前的合约的数据。delegatecall()方法的目的是用来执行另一个合约中的库代码。所以开发者需要保证两个合约中的存储变量能兼容，来保证delegatecall()能顺利执行。在homestead阶段之前，仅有一个受限的callcode()方法可用，但callcode未提供对msg.sender，msg.value的访问权限。
 
-    上面的这三个方法call()，delegatecall()，callcode()都是底层的消息传递调用，最好仅在万不得已才进行使用，因为他们破坏了Solidity的类型安全。
+    上面的这三个方法call()，delegatecall()，callcode()都是底层的消息传递调用，最好仅在万不得已才进行使用，因为他们破坏了[Solidity](https://learnblockchain.cn/docs/solidity/)的类型安全。
     .gas() 在call(), callcode() 和 delegatecall() 函数下都可以使用， delegatecall()不支持.value()
     
     > 注解：所有合约都继承了address的成员，因此可以使用this.balance查询余额。

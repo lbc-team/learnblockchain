@@ -68,7 +68,7 @@ author: Tiny熊
 
 #### 限制1：可扩展性(Scalability)
 
-第一个限制是*扩展性（scaling）*-建立在以太坊之上的去中心化应用程序被每秒15交易数的共享速率所抑制。 这是因为以太坊仍然使用工作证明，并且以太坊dApps竞争单个区块链的有限资源。
+第一个限制是*扩展性（scaling）*-建立在[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)之上的去中心化应用程序被每秒15交易数的共享速率所抑制。 这是因为以太坊仍然使用工作证明，并且以太坊dApps竞争单个区块链的有限资源。
 
 > 扩展性(scaling): 一个可扩展的系统是一个能够容纳越来越多的请求的系统。
 
@@ -76,7 +76,7 @@ author: Tiny熊
 
 第二个限制是开发人员只有相对较低的灵活性。 由于EVM是一个需要容纳所有用户场景的沙盒，因此它针对常用场景（average use case）进行了优化。 这意味着开发人员必须对其应用程序的设计和效率进行折衷（例如，需要在可能首选UTXO模型的支付平台中使用帐户模型）。 除此之外，它们仅限于一些编程语言，并且不能实现**代码自动执行**。
 
-> 备注：以太坊智能合约的执行需要有外部账号的触发动作。
+> 备注：[以太坊智能合约](https://learnblockchain.cn/2018/01/04/understanding-smart-contracts/)的执行需要有外部账号的触发动作。
 
 #### 限制3：主权（Sovereignty）
 
@@ -101,7 +101,7 @@ Cosmos通过一系列开源工具实现这个愿景，如*Tendermint*，*Cosmos 
 
 ##  什么是 Tendermint BFT 和  ABCI
 
-之前创建一个区块链需要从头开始构建所有三层：网络、共识和应用程序。 以太坊通过提供虚拟机区块链简化了去中心化应用的开发，任何人都可以以智能合约的形式部署自定义逻辑。 但是，它并没有简化区块链本身的开发。 就像比特币一样，Go-Ethereum 仍然是整体耦合的系统，不易自定义。2014年Jae Kwon 创建 Tendermint 就是想要解决这个问题。
+之前创建一个区块链需要从头开始构建所有三层：网络、共识和应用程序。 以太坊通过提供虚拟机区块链简化了去中心化应用的开发，任何人都可以以[智能合约](https://learnblockchain.cn/2018/01/04/understanding-smart-contracts/)的形式部署自定义逻辑。 但是，它并没有简化区块链本身的开发。 就像比特币一样，Go-Ethereum 仍然是整体耦合的系统，不易自定义。2014年Jae Kwon 创建 Tendermint 就是想要解决这个问题。
 
 Tendermint BFT 将区块链网络和共识层打包成通用引擎的解决方案，允许开发人员专注于应用程序开发，而不是复杂的底层协议。 因此，Tendermint可节省大量的开发时间。 
 > Tendermint BFT引擎中使用的[拜占庭容错（bft）](https://github.com/tendermint/tendermint/wiki/Byzantine-Consensus-Algorithm)共识算法这个名称是Tendermint命名的，想了解更多的共识协议和BFT的历史，可以关Tendermint联合创始人伊桑-布克曼注的[播客](https://softwareengineeringdaily.com/2018/03/26/consensus-systems-with-ethan-buchman/)）。
@@ -137,7 +137,7 @@ Cosmos SDK还附带了一组有用的开发者工具：控制台命令行(CLI)�
 
 ### ETHERMINT
 
-Cosmos SDK 很棒的地方在于它的模块化，允许开发人员移植现有的区块链（Go 编写）代码在它上面运行。 例如，*Ethermint*是一个将以太坊虚拟机移植到 SDK 模块中的项目。 *Ethermint*的工作原理完全像以太坊，具有Tendermint BFT 的共识属性。 所有现有的以太坊工具（Truffle，Metamask等））与Ethermint兼容，很容易将已有智能合约移植过来。
+Cosmos SDK 很棒的地方在于它的模块化，允许开发人员移植现有的区块链（Go 编写）代码在它上面运行。 例如，*Ethermint*是一个将[以太坊虚拟机](https://learnblockchain.cn/2019/04/09/easy-evm/)移植到 SDK 模块中的项目。 *Ethermint*的工作原理完全像以太坊，具有Tendermint BFT 的共识属性。 所有现有的以太坊工具（Truffle，Metamask等））与Ethermint兼容，很容易将已有智能合约移植过来。
 
 > *Ethermint* 将以太坊虚拟机转换为Cosmos-SDK模块。 该模块可以与其他SDK模块（如staking）相结合，能够运行以太坊智能合约的全功能的POS区块链。 Ethermint 链与 Comos 兼容。
 

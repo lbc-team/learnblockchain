@@ -17,7 +17,7 @@ author: 虞双齐
 
 ## 创世配置文件
 
-如果你需要搭建以太坊私有链，那么了解创世配置是必须的，否则你大可不关心创世配置。下面是一份 JSON 格式的创世配置示例：
+如果你需要搭建[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)私有链，那么了解创世配置是必须的，否则你大可不关心创世配置。下面是一份 JSON 格式的创世配置示例：
 
 ```json
 {
@@ -286,7 +286,7 @@ func (g *Genesis) ToBlock(db ethdb.Database) *types.Block{
 + ❶ 创世区块无父块，从零初始化全新的 `state`（后续文章会详细讲解 `state`对象）。
 + ❷ 遍历配置中 `Alloc` 项账户集合数据，直接写入 state 中。
     这里不单可以设置 `balance`，还可以设置 `code`、`nonce` 以及任意多个 `storage` 数据。
-    意味着创世时便可以直接部署智能合约。例如下面配置则在创世时部署了一个名为`093f59f1d91017d30d8c2caa78feb5beb0d2cfaf` 的智能合约。
+    意味着创世时便可以直接部署[智能合约](https://learnblockchain.cn/2018/01/04/understanding-smart-contracts/)。例如下面配置则在创世时部署了一个名为`093f59f1d91017d30d8c2caa78feb5beb0d2cfaf` 的智能合约。
 
     ```json
     "alloc": {

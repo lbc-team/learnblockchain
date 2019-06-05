@@ -16,7 +16,7 @@ RLP（Recursive Length Prefix）即**递归长度前缀编码**，RLP主要用�
 
 ## 为什么需要RLP编码
 
-比较常见的序列化方法有`JSON`，`ProtoBuf`，但是这些序列化方法在以太坊这样的场景下都有一些问题。 比如像`Json`编码，编码后的体积比较大。
+比较常见的序列化方法有`JSON`，`ProtoBuf`，但是这些序列化方法在[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)这样的场景下都有一些问题。 比如像`Json`编码，编码后的体积比较大。
 
 ```
 type Persion struct {

@@ -26,7 +26,7 @@ Hydro 觉的这一波淘金人就是各种 DeFi 项目（Decentralized Finance �
 
 ![2018年10月DeFi市场项目图](https://img.learnblockchain.cn/2019/15551643352469.jpg)
 
-目前的DeFi项目主要建立在以太坊公链，以太坊本身的市值已经在180亿美金左右，仅仅在以太坊生态，DeFi都将是一个不小于百亿美金的市场。
+目前的DeFi项目主要建立在[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)公链，以太坊本身的市值已经在180亿美金左右，仅仅在以太坊生态，DeFi都将是一个不小于百亿美金的市场。
 
 ## DeFi 项目
 
@@ -82,7 +82,7 @@ DeFi 项目对自家流量入口的需求是：
 
 ![](https://img.learnblockchain.cn/2019/15551646363206.jpg)
 
-中心化交易所，因为资产不在链上，无法和智能合约交互而无缘DeFi。
+中心化交易所，因为资产不在链上，无法和[智能合约](https://learnblockchain.cn/2018/01/04/understanding-smart-contracts/)交互而无缘DeFi。
 
 去中心化交易所，都将资金结算放在链上，以保证资金的去托管化来实现安全性。而对撮合的不同处理，衍生出3种不同的交易模式：
 

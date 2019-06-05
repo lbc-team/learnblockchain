@@ -42,7 +42,7 @@ function (<parameter types>) {internal|external} [pure|constant|view|payable] [r
 
 如果一个函数变量没有初始化，直接调用它将会产生异常。如果delete了一个函数后调用，也会发生同样的异常。
 
-如果外部函数类型在Solidity的上下文环境以外的地方使用，他们会被视为**function**类型。它会编码为20字节的函数所在地址，和在它之前的4字节的函数方法签名一起作为**bytes24**类型。
+如果外部函数类型在[Solidity](https://learnblockchain.cn/docs/solidity/)的上下文环境以外的地方使用，他们会被视为**function**类型。它会编码为20字节的函数所在地址，和在它之前的4字节的函数方法签名一起作为**bytes24**类型。
 合约中的public的函数，可以使用internal和external两种方式来调用。
 internal访问形式为**f**,  external访问形式为**this.f**
 
@@ -194,7 +194,7 @@ contract Test {
 ![](https://img.learnblockchain.cn/2017/test_func2.jpg!wl)
 可以看到调用pubic函数花销更大，这是为什么呢？
 
-当使用public 函数时，Solidity会立即复制数组参数数据到内存， 而external函数则是从calldata读取，而分配内存开销比直接从calldata读取要大的多。
+当使用public 函数时，[Solidity](https://learnblockchain.cn/docs/solidity/)会立即复制数组参数数据到内存， 而external函数则是从calldata读取，而分配内存开销比直接从calldata读取要大的多。
 那为什么public函数要复制数组参数数据到内存呢？是因为public函数可能会被内部调用，而内部调用数组的参数是当做指向一块内存的指针。
 对于external函数不允许内部调用，它直接从**calldata**读取数据，省去了复制的过程。
 

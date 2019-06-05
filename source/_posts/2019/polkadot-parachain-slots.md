@@ -67,7 +67,7 @@ Parachains 属于构成波卡的外部系统。
 2、Web3 基金会会进行与 on-chain 相同逻辑的 off-chain 拍卖，运行团队来租用插槽，抵押最多 DOT 的团队将获得该插槽
 
 通用价值链的类型包括：
-1、以太坊中继
+1、[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)中继
 2、比特币中继
 3、Edgeware，wasm的智能合约平台
 4、其它关键基础设施，比如去中心化交易所或稳定币

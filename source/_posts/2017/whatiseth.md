@@ -45,9 +45,9 @@ author: Tiny熊
 
 ### 编程语言：Solidity
 智能合约的官方推荐的编程语言是[Solidity](https://learnblockchain.cn/docs/solidity/)，文件扩展名以.sol结尾。
-Solidity语言和JavaScript很相似，用它来开发合约并编译成以太坊虚拟机字节代码。
+[Solidity](https://learnblockchain.cn/docs/solidity/)语言和JavaScript很相似，用它来开发合约并编译成以太坊虚拟机字节代码。
 
-> 还有Vyper，Serpent，LLL及Bamboo，建议大家还是使用Solidity。
+> 还有Vyper，Serpent，LLL及Bamboo，建议大家还是使用[Solidity](https://learnblockchain.cn/docs/solidity/)。
 
 更新：Serpent官方已经不再推荐，建议Serpent的用户转换到Vyper，他们都是类Python语言。
 
@@ -58,7 +58,7 @@ Solidity语言和JavaScript很相似，用它来开发合约并编译成以太�
 EVM（Ethereum Virtual Machine）[以太坊虚拟机](https://learnblockchain.cn/2019/04/09/easy-evm/)是以太坊中智能合约的运行环境。
 
 > Solidity之于EVM，就像之于跟JVM的关系一样，这样大家就容易理解了。
-> 以太坊虚拟机是一个隔离的环境，外部无法接触到在EVM内部运行的代码。
+> [以太坊虚拟机](https://learnblockchain.cn/2019/04/09/easy-evm/)是一个隔离的环境，外部无法接触到在EVM内部运行的代码。
 
 而EVM运行在以太坊节点上，当我们把合约部署到以太坊网络上之后，合约就可以在以太坊网络中运行了。
 
@@ -139,7 +139,7 @@ Gas的目的是限制执行交易所需的工作量，同时为执行支付费�
 
 ## 总结
 
-我们现在来总结一下，以太坊是平台，它让我们方便的使用区块链技术开发去中心化的应用，在这个应用中，使用Solidity来编写和区块链交互的智能合约，合约编写好后之后，我们需要用以太坊客户端用一个有余额的账户去部署及运行合约（使用Truffle框架可以更好的帮助我们做这些事情了）。为了开发方便，我们可以用Geth或Ganache来搭建一个测试网络。
+我们现在来总结一下，以太坊是平台，它让我们方便的使用区块链技术开发去中心化的应用，在这个应用中，使用Solidity来编写和区块链交互的智能合约，合约编写好后之后，我们需要用以太坊客户端用一个有余额的账户去部署及运行合约（使用[Truffle](https://learnblockchain.cn/docs/truffle/)可以更好的帮助我们做这些事情了）。为了开发方便，我们可以用Geth或Ganache来搭建一个测试网络。
 
 注：本文中为了方便大家理解，对一些概念做了类比，有些严格来不是准确，不过我也认为对于初学者，也没有必要把每一个概念掌握的很细致和准确，学习是一个逐步深入的过程，很多时候我们会发现，过一段后，我们会对同一个东西有不一样的理解。
 

@@ -50,7 +50,7 @@ function batchTransfer(address[] _receivers, uint256 _value) public whenNotPause
 
 `batchTransfer`的参数`_value`值为16进制的`800000000000000000000...`，参数`_receivers`数组的大小为2，相乘之后刚好可超过uint256所能表示的整数大小上限，引发溢出问题`amount`实际的值为0，后面的转账操作实际上msg.sender的余额减0， 而对两个账号进行了加16进制的`800000000000000000000...`，最终的结果是相当于增发了2 * 16进制的`800000000000000000000...`。
 
-实际上对于这种整数溢出漏洞，最简单的方法是采用 SafeMath 数学计算库来避免。有趣的是BEC智能合约代码中，其实其他的都使用了SafeMath， 而关键的`uint256 amount = uint256(cnt) * _value`却没有使用。
+实际上对于这种整数溢出漏洞，最简单的方法是采用 SafeMath 数学计算库来避免。有趣的是BEC[智能合约](https://learnblockchain.cn/2018/01/04/understanding-smart-contracts/)代码中，其实其他的都使用了SafeMath， 而关键的`uint256 amount = uint256(cnt) * _value`却没有使用。
 心痛程序员，也心痛韭菜。这句代码改为`uint256 amount = _value.mul(uint256(cnt));`就可以防止溢出问题
 
 所以在做加减乘除的时候请记得一定使用：SafeMath，代码在[这里](https://github.com/OpenZeppelin/zeppelin-solidity/blob/master/contracts/math/SafeMath.sol)
@@ -65,7 +65,7 @@ function batchTransfer(address[] _receivers, uint256 _value) public whenNotPause
 [深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，打造最好的区块链技术博客。
 
 <!--
-Solidity最大可以处理256位数字, 最大值为 `2**256 - 1`, 对(`2**256 - 1`) 加1的结果会溢出归0。`2**255` 乘2也同样会溢出归0。
+[Solidity](https://learnblockchain.cn/docs/solidity/)最大可以处理256位数字, 最大值为 `2**256 - 1`, 对(`2**256 - 1`) 加1的结果会溢出归0。`2**255` 乘2也同样会溢出归0。
 对无符号类型最小值是零，对零做减1会得到 (`2**256 - 1`)。
 
 我们用一段代码验证一下：

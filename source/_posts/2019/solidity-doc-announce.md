@@ -20,7 +20,7 @@ author: Tiny熊
 
 [Solidity 最新 0.5.8 中文文档](https://learnblockchain.cn/docs/solidity/) 根据当前 [最新官方版本v0.5.8](https://solidity.readthedocs.io/) 进行翻译，本翻译最初 [HiBlock](http://hiblock.one/) 社区发起，后经过 [深入浅出区块链社区](https://learnblockchain.cn/) 社区成员根据最新版本补充翻译。
 
-大部分的译者，都是国内顶尖的以太坊开发和研究人员，部分译者如下：
+大部分的译者，都是国内顶尖的[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)开发和研究人员，部分译者如下：
 
 * [杨镇](https://github.com/riversyang) 《深入以太坊智能合约开发》作者，《精通以太坊》译者
 * [姜信宝](https://github.com/bobjiang) HiBlock 区块链社区发起人 ，
@@ -39,11 +39,11 @@ author: Tiny熊
 
 ## Solidity 语言简介 及 文档目录
 
-Solidity 是一门面向合约的、为实现智能合约而创建的高级编程语言。这门语言受到了 C++，Python 和 Javascript 语言的影响，设计的目的是能在以太坊虚拟机（EVM）]上运行。
+Solidity 是一门面向合约的、为实现智能合约而创建的高级编程语言。这门语言受到了 C++，Python 和 Javascript 语言的影响，设计的目的是能在[以太坊虚拟机](https://learnblockchain.cn/2019/04/09/easy-evm/)（EVM）]上运行。
 
 要理解智能合约及虚拟机是怎么运行，推荐这两篇非常好的文章 [完全理解以太坊智能合约](https://learnblockchain.cn/2018/01/04/understanding-smart-contracts/) 及 [深入浅出以太坊虚拟机](https://learnblockchain.cn/2019/04/09/easy-evm/) 
 
-Solidity 是静态类型语言，支持继承、库和复杂的用户定义类型等特性， 以下是完整目录。
+[Solidity](https://learnblockchain.cn/docs/solidity/) 是静态类型语言，支持继承、库和复杂的用户定义类型等特性， 以下是完整目录。
 
 ### 文档目录
 

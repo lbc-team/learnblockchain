@@ -15,7 +15,7 @@ author: Tiny熊
 今天我们来编写一个完整的去中心化（区块链）应用（Dapps）, 本文可以和[编写智能合约](https://learnblockchain.cn/2017/11/24/init-env/)结合起来看。
 2019/03/30更新：
  1. 适配 Truffle v5.0.0;
- 1. 更新Solidity 代码，适配solidity 0.5.0以上版本;
+ 1. 更新[Solidity](https://learnblockchain.cn/docs/solidity/) 代码，适配solidity 0.5.0以上版本;
  2. 适配MetaMask 更新, 适配支持`window.ethereum` 对象;
 
 <!-- more -->
@@ -28,8 +28,8 @@ author: Tiny熊
 ![](https://img.learnblockchain.cn/2018/Petshop.jpg!wl/scale/45%)
 
 从本文，你可以学习到：
-* 搭建智能合约开发环境
-* 创建Truffle项目
+* 搭建[智能合约](https://learnblockchain.cn/2018/01/04/understanding-smart-contracts/)开发环境
+* 创建[Truffle](https://learnblockchain.cn/docs/truffle/)项目
 * 编写智能合约
 * 编译和部署智能合约到区块链
 * 如何通过Web3和智能合约交互
@@ -232,7 +232,7 @@ contract TestAdoption {
 }
 ```
 
-提示：Assert.sol 及 DeployedAddresses.sol是Truffle框架提供，在test目录下并不提供truffle目录。
+提示：Assert.sol 及 DeployedAddresses.sol是[Truffle 框架](https://learnblockchain.cn/docs/truffle/)提供，在test目录下并不提供truffle目录。
 
 TestAdoption合约中添加adopt的测试用例。
 
@@ -275,7 +275,7 @@ Compiling truffle/DeployedAddresses.sol...
 在编辑器中打开`src/js/app.js`
 
 可以看到用来管理整个应用的App对象，init函数加载宠物信息，就初始化[web3](https://github.com/ethereum/web3.js/).
-web3是一个实现了与以太坊节点通信的库，我们利用web3来和合约进行交互。
+web3是一个实现了与[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)节点通信的库，我们利用web3来和合约进行交互。
 
 ### 初始化 web3
 

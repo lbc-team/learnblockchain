@@ -29,7 +29,7 @@ author: Tiny熊
 
 本文的主角 DAI 同样是通过**资产抵押**发行， DAI 是通过**抵押数字资产**发行，**去中心化**发行。
 
-注意加粗的两个关键字**抵押数字资产**和**去中心化**，它是用一套称之为Maker的智能合约发行的，其背后的团队为MakerDAO。
+注意加粗的两个关键字**抵押数字资产**和**去中心化**，它是用一套称之为Maker的[智能合约](https://learnblockchain.cn/2018/01/04/understanding-smart-contracts/)发行的，其背后的团队为MakerDAO。
 
 > Maker目前只支持抵押ETH，后面可能会加入其它代币。
 > DAO (Decentralized Autonomous Organization): 去中心化的自治组织
