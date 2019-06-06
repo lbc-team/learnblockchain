@@ -62,7 +62,7 @@ function batchTransfer(address[] _receivers, uint256 _value) public whenNotPause
 
 
 知识星球**[深入浅出区块链](https://learnblockchain.cn/images/zsxq.png)**做好的区块链技术问答社区，欢迎来提问，作为星球成员福利，成员可加入区块链技术付费交流群。
-[深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，打造最好的区块链技术博客。
+[深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，学区块链都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789) 掌握区块链技术动态。
 
 <!--
 [Solidity](https://learnblockchain.cn/docs/solidity/)最大可以处理256位数字, 最大值为 `2**256 - 1`, 对(`2**256 - 1`) 加1的结果会溢出归0。`2**255` 乘2也同样会溢出归0。

@@ -168,4 +168,4 @@ ERC721标准尽可能遵循 ERC-20 的语义，但由于同质代币与非同质
 2. [EIPS-721](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md)
 
 欢迎来我的知识星球[**深入浅出区块链**](https://learnblockchain.cn/images/zsxq.png)讨论区块链，作为星友福利，星友可加入区块链技术付费交流群。
-[深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，打造最好的区块链技术博客。
+[深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，学区块链都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789) 掌握区块链技术动态。

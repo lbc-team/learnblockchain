@@ -103,5 +103,5 @@ author: 元家昕
 
 本文作者元家昕， 深入浅出区块链经授权转载，为更好的阅读效果对[原文](https://www.jianshu.com/p/84b476a1624e)略有修改。
 
-[深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，学区块链的都在这里，打造最好的区块链技术博客。
+[深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，学区块链都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789)。
 

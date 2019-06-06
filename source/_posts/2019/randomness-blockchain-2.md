@@ -106,5 +106,5 @@ Randao （参考[5]） 是基于[以太坊合约](https://learnblockchain.cn/201
 
 本文依照 BY-NC-SA 许可协议转载，[原文链接](https://blog.priewienv.me/post/randomness-blockchain-2/)。
 
-[深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，学区块链的都在这里，打造最好的区块链技术博客。
+[深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，学区块链都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789)。
 

@@ -123,7 +123,7 @@ if (web3.isAddress(fromAccount) &&
 
 想好好系统学习以太坊DApp开发，这门视频课程[以太坊DAPP开发实战](https://ke.qq.com/course/335169?flowToken=1010386)不容错过。
 
-[深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，打造最好的区块链技术博客。
+[深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，学区块链都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789) 掌握区块链技术动态。
 深入浅出区块链[知识星球](https://learnblockchain.cn/images/zsxq.png)，最专业的区块链问题技术社区，欢迎加入，作为星友福利，星友还可以加入我创建优质区块链技术群，群内聚集了300多位区块链技术大牛和爱好者。
 
 

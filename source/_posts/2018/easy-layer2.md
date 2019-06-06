@@ -180,7 +180,7 @@ Plasma要解决两个最重要的事情，一是子**链的反欺诈**，另一�
 
 本文作者元家昕， 深入浅出经授权区块链转载，为更好的阅读效果对[原文](https://www.jianshu.com/p/cde2157b65bd) 略有修改。
 
-[深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，学区块链的都在这里，打造最好的区块链技术博客。
+[深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，学区块链都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789)。
 
 
 

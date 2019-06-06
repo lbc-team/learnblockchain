@@ -136,5 +136,5 @@ Candle-auction 将能够保证竞拍的安全性，因为没人能够知道竞�
 
 本文作者：CANAAN ， 他的微信： yiheweixin2014 原文首发于：http://boka.network
 
-[深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，学区块链的都在这里，打造最好的区块链技术博客。
+[深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，学区块链都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789)。
 

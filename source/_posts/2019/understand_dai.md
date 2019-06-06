@@ -141,7 +141,7 @@ DAI 由于它的超额抵押借款机制，是一个很好的杠杆做多工具�
 如果你对稳定币感兴趣，我们可以一起交流，我的微信：xlbxiong 备注：稳定币。
 
 加入[知识星球](https://learnblockchain.cn/images/zsxq.png)，和一群优秀的区块链从业者一起学习。
-[深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，打造最好的区块链技术博客。
+[深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，学区块链都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789) 掌握区块链技术动态。
 
 
 

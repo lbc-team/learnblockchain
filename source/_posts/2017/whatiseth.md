@@ -150,7 +150,7 @@ Gas的目的是限制执行交易所需的工作量，同时为执行支付费�
 * [精讲以太坊智能合约开发](https://ke.qq.com/course/326528?flowToken=1010387) - Solidity 语言面面俱到
 * [以太坊DAPP开发实战](https://ke.qq.com/course/335169?flowToken=1010386) - 轻轻松松学会DApp开发
 
-[深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，打造最好的区块链技术博客。
+[深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，学区块链都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789) 掌握区块链技术动态。
 我的**[知识星球](https://learnblockchain.cn/images/zsxq.png)**为各位解答区块链技术问题，欢迎加入讨论，作为星友福利，星友可加入区块链技术交流群，群内已经聚集了300多位区块链技术牛人和爱好者。
 
 

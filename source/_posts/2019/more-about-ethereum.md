@@ -174,6 +174,6 @@ EVM 字节码的图灵完备性，也是其与比特币的脚本系统相比最�
 
 编者注：本文作者风静縠纹平（[作者的简书](https://www.jianshu.com/u/726933951c63)）是以太坊资深专家，经作者本人授权转载。
 
-[深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，打造最好的[区块链技术博客](https://learnblockchain.cn/)。
+[深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，学区块链都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789) 掌握区块链技术动态。
 
 

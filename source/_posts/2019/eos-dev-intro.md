@@ -74,7 +74,7 @@ EOS 底层用来执行智能合约代码的是一个 WebAssembly (WASM)虚拟机
 
 本文作者为深入浅出社区共建者 Ashton ，喜欢他的文章可关注他的[简书](https://www.jianshu.com/u/922115b98e3f)。
 
-[深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，学区块链的都在这里，打造最好的区块链技术博客。
+[深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，学区块链都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789)。
 
 
 

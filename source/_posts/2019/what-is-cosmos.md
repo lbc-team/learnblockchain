@@ -235,7 +235,7 @@ Zones 是常规的异构链, Hubs 是专门为将 Zones 连接在一起而设计
 
 本文参考官网的[What is Cosmos?](https://cosmos.network/intro)。
 
-[深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，学区块链的都在这里，打造最好的区块链技术博客。
+[深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，学区块链都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789)。
 
 <!-- 
 

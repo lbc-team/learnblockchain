@@ -105,6 +105,6 @@ Google play 也已经上架，[链接](https://play.google.com/store/apps/detail
 
 PS: 我们提供专业的钱包定制开发，欢迎咨询微信：xlbxiong 备注：定制开发
 
-[深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，打造最好的区块链技术博客。
+[深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，学区块链都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789) 掌握区块链技术动态。
 
 

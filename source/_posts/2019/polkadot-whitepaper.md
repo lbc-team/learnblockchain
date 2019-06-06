@@ -641,4 +641,4 @@ Polkadot 的需求更加根本。相比于一个完整的统一网络，Polkadot
 
 本文译者：岳利鹏是 ChainX CEO， ChainX 是一个跨链加密资产交易的金融系统，将在Polkadot上线后接入其中作为平行链运行。原始链接：https://chainx.org/polkadot_cn.pdf
 
-[深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，学区块链的都在这里，打造最好的区块链技术博客。
+[深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，学区块链都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789)。

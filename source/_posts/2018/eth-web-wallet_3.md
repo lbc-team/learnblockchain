@@ -257,7 +257,7 @@ web3.eth.sendRawTransaction(serializedTx, function (err, transactionHash) {
 2. [EIP-55](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md)
 3. [Ethers.js](https://docs.ethers.io/ethers.js/html)
 
-[深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，打造最好的区块链技术博客。
+[深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，学区块链都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789) 掌握区块链技术动态。
 
 [深入浅出区块链知识星球](https://learnblockchain.cn/images/zsxq.png)最专业技术问答社区，加入社区还可以在微信群里和300多位区块链技术爱好者一起交流。
 
