@@ -153,11 +153,13 @@ cargo build --release
 
 如果出现了类似下图所示地内容，那恭喜你成功创建了一条本地开发链。
 
-![dev_node](https://imgur.com/IvBT3Kf.png)
+![dev_node](https://img.learnblockchain.cn/2019/06/15598051515020.jpg)
+
 
 现在你可以访问[https://substrate-ui.parity.io](https://substrate-ui.parity.io)，选择Settings，将remote node设置为Local Node (127.0.0.1:9944)，如下图所示：
 
-![ui_local_node](https://imgur.com/MhHLXwb.png)
+![ui_local_node](https://img.learnblockchain.cn/2019/06/15598051743127.jpg)
+
 
 选择Explorer，就能够看到最新的区块在不断产生。
 
@@ -192,7 +194,8 @@ cargo build --release
 
 命令执行之后，应该能看到以下启动信息：
 
-![alice_node](https://i.imgur.com/DIINlNw.png)
+![alice_node](https://img.learnblockchain.cn/2019/06/15598051951500.jpg)
+
 
 打开一个新的命令行窗口，启动Bob节点：
 
@@ -315,4 +318,6 @@ Substrate区块链的初始启动信息在`chainspec`的json文件中维护着�
 
 - [Start a Private Network with Substrate](https://docs.substrate.dev/docs/deploying-a-substrate-node-chain)
 
-本文作者孙凯超， [原文链接](https://zhuanlan.zhihu.com/p/67580341)
+本文作者孙凯超, [原文链接](https://zhuanlan.zhihu.com/p/67580341)
+
+[深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，学区块链都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789)。

@@ -23,6 +23,9 @@ date: 2019-03-24 15:52:24
 * [Tiny熊的博客](http://tinyxiong.com) - Tiny熊个人博客
 * [forecho 的博客](https://blog.forecho.com/) - forecho 个人博客
 * [静轩之别苑](https://quickapp.lovejade.cn/) - 个人博客、前端开发博客
+* [CodeSpots](https://codespots.com) - 前端开发组件收集
+* [小呆导航](https://webjike.com) - 简洁导航站
+* [heycmm](https://www.heycmm.cn) - 殆己博客
 
 
 ## 社区合作伙伴
