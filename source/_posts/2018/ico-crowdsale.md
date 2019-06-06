@@ -175,9 +175,9 @@ addressOfTokenUsedAsReward： 代币合约地址。
 
 
 另外安利几门视频课程给大家：
-1. [通过代币（Token）学以太坊智能合约开发](https://ke.qq.com/course/317230) 
-2. [深入详解以太坊智能合约语言Solidity](https://ke.qq.com/course/326528) 
-3. [以太坊DAPP开发实战](https://ke.qq.com/course/335169) - 轻轻松松学会DAPP开发
+1. [通过代币（Token）学以太坊智能合约开发](https://ke.qq.com/course/317230?flowToken=1010389) 
+2. [深入详解以太坊智能合约语言Solidity](https://ke.qq.com/course/326528?flowToken=1010387) 
+3. [以太坊DAPP开发实战](https://ke.qq.com/course/335169?flowToken=1010386) - 轻轻松松学会DAPP开发
 
 
 如果你在学习中遇到问题，欢迎到我的**[知识星球](https://learnblockchain.cn/images/zsxq.png)**提问，作为星球成员福利，成员可加入区块链技术付费交流群。

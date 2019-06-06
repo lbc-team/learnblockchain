@@ -176,8 +176,8 @@ instructorEvent.watch(function(error, result) {
 以及另外一个常见的场景：想要获取到代币合约中所有的转账记录，也同样需要使用事件过滤器功能，这部分内容请大家订阅小专栏[区块链技术](https://xiaozhuanlan.com/blockchaincore)阅读。
 
 另外强烈安利两门视频课程给大家：
-*  [深入详解以太坊智能合约语言Solidity](https://ke.qq.com/course/326528) - Solidity 语言面面俱到
-* [以太坊DAPP开发实战](https://ke.qq.com/course/335169) - 轻轻松松学会DAPP开发
+*  [深入详解以太坊智能合约语言Solidity](https://ke.qq.com/course/326528?flowToken=1010387) - Solidity 语言面面俱到
+* [以太坊DAPP开发实战](https://ke.qq.com/course/335169?flowToken=1010386) - 轻轻松松学会DAPP开发
 
 ## 参考文章
 

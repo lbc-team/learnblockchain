@@ -239,8 +239,8 @@ $("#button").click(function() {
 
 
 强烈安利两门视频课程给大家：
-* [以太坊DAPP开发实战](https://ke.qq.com/course/335169) - 轻轻松松学会DAPP开发
-* [深入详解以太坊智能合约语言Solidity](https://ke.qq.com/course/326528) -  Solidity 语言面面俱到
+* [以太坊DAPP开发实战](https://ke.qq.com/course/335169?flowToken=1010386) - 轻轻松松学会DAPP开发
+* [深入详解以太坊智能合约语言Solidity](https://ke.qq.com/course/326528?flowToken=1010387) -  Solidity 语言面面俱到
 
 ## 参考文献
 * [Interacting with a Smart Contract through Web3.js (Tutorial)](https://coursetro.com/posts/code/99/Interacting-with-a-Smart-Contract-through-Web3.js-(Tutorial))

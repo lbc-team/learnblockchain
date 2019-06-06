@@ -95,7 +95,7 @@ contract testTUnit {
 
 ```
 
-强烈安利一门课程给大家：[深入详解以太坊智能合约语言Solidity](https://ke.qq.com/course/326528)
+强烈安利一门课程给大家：[深入详解以太坊智能合约语言Solidity](https://ke.qq.com/course/326528?flowToken=1010387)
 
 ## 参考文档
 * [units](https://solidity.readthedocs.io/en/develop/units-and-global-variables.html#units-and-globally-available-variables)

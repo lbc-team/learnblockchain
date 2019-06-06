@@ -198,7 +198,7 @@ Contract mined! address: 0x79544078dcd9d560ec3f6eff0af42a9fc84c7d19 transactionH
 
 第一个合约的意义更重要的是体验智能合约开发流程，对于初学者一些可以选择先放弃一些细节，开发流程打通之后，可以增强信心进行下一步的学习。
 
-系统学习DAPP开发，这门视频课程[以太坊DAPP开发实战](https://ke.qq.com/course/335169)是你不错的选择。
+系统学习DAPP开发，这门视频课程[以太坊DAPP开发实战](https://ke.qq.com/course/335169?flowToken=1010386)是你不错的选择。
 
 [深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，打造最好的区块链技术博客。
 我的**[知识星球](https://learnblockchain.cn/images/zsxq.png)**为各位解答区块链技术问题，欢迎加入讨论。

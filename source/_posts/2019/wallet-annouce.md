@@ -74,7 +74,7 @@ Google play 也已经上架，[链接](https://play.google.com/store/apps/detail
 4. 代码中ERC20_Contract目录提供了一个ERC20合约给大家部署测试Token功能。
 
 
-其他的代码介绍及环境搭建大家就只有等我的文章了，大家也可以学习[网页钱包开发课程](https://ke.qq.com/course/356068?tuin=bd898bbf)，课程详细介绍了开发钱包必备的理论知识。
+其他的代码介绍及环境搭建大家就只有等我的文章了，大家也可以学习[网页钱包开发课程](https://ke.qq.com/course/356068?flowToken=1010359)，课程详细介绍了开发钱包必备的理论知识。
 
 
 

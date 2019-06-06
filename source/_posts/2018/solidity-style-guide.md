@@ -510,7 +510,7 @@ function transfer() external {}
 
 常量应该使用全大写及下划线分割大词的方式，如：MAX_BLOCKS，TOKEN_NAME， CONTRACT_VERSION。
 
-强烈安利一门课程给大家：[深入详解以太坊智能合约语言Solidity](https://ke.qq.com/course/326528)
+强烈安利一门课程给大家：[深入详解以太坊智能合约语言Solidity](https://ke.qq.com/course/326528?flowToken=1010387)
 
 ## 参考文献
 [Solidity style-guide](https://solidity.readthedocs.io/en/v0.4.23/style-guide.html)

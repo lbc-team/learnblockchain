@@ -472,7 +472,7 @@ candy maple cake sugar pudding cream honey rich smooth crumble sweet treat
 如果学习中遇到问题，欢迎加入**[知识星球](https://learnblockchain.cn/images/zsxq.png)**交流。
 
 
-推荐一门课程给大家：[以太坊DAPP开发实战](https://ke.qq.com/course/335169) - 轻轻松松学会DAPP开发
+推荐一门课程给大家：[以太坊DAPP开发实战](https://ke.qq.com/course/335169?flowToken=1010386) - 轻轻松松学会DAPP开发
 
 
 ## 参考文档

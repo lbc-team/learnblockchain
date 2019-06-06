@@ -146,9 +146,9 @@ Gas的目的是限制执行交易所需的工作量，同时为执行支付费�
 本文完，这些概念你都明白了么？现在你可以开始开发了，看看[智能合约开发环境搭建及Hello World合约](https://learnblockchain.cn/2017/11/24/init-env/)
 
 我们特意为区块链技术学习者，提供了几门课程:
-* [入门视频教程](https://ke.qq.com/course/318230) - 入门的最佳选择
-* [精讲以太坊智能合约开发](https://ke.qq.com/course/326528) - Solidity 语言面面俱到
-* [以太坊DAPP开发实战](https://ke.qq.com/course/335169) - 轻轻松松学会DApp开发
+* [入门视频教程](https://ke.qq.com/course/318230?flowToken=1010388) - 入门的最佳选择
+* [精讲以太坊智能合约开发](https://ke.qq.com/course/326528?flowToken=1010387) - Solidity 语言面面俱到
+* [以太坊DAPP开发实战](https://ke.qq.com/course/335169?flowToken=1010386) - 轻轻松松学会DApp开发
 
 [深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，打造最好的区块链技术博客。
 我的**[知识星球](https://learnblockchain.cn/images/zsxq.png)**为各位解答区块链技术问题，欢迎加入讨论，作为星友福利，星友可加入区块链技术交流群，群内已经聚集了300多位区块链技术牛人和爱好者。

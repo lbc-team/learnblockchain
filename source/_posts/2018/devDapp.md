@@ -81,8 +81,8 @@ contract Hello {
 
 
 另外强烈安利两门课程给大家：
-1. [深入详解以太坊智能合约语言Solidity](https://ke.qq.com/course/326528)。
-2. [以太坊DAPP开发实战](https://ke.qq.com/course/335169) - 轻轻松松学会DAPP开发
+1. [深入详解以太坊智能合约语言Solidity](https://ke.qq.com/course/326528?flowToken=1010387)。
+2. [以太坊DAPP开发实战](https://ke.qq.com/course/335169?flowToken=1010386) - 轻轻松松学会DAPP开发
 
 
 ## 补充

@@ -193,7 +193,7 @@ ethers.Wallet.fromMnemonic(mnemonic, path);
 ```
 
 完整源码请订阅[深入浅出区块链技术小专栏](https://xiaozhuanlan.com/blockchaincore)查看， 哈哈，是不是有一点鸡贼，创作不易呀。
-戳链接收看[详细的视频课程讲解](https://ke.qq.com/course/356068?tuin=bd898bbf)。
+戳链接收看[详细的视频课程讲解](https://ke.qq.com/course/356068?flowToken=1010359)。
 
 参考文档:
 [ethers.js](https://docs.ethers.io/ethers.js/html)

@@ -91,9 +91,9 @@ geth attach ipc:testNet/geth.ipc
 更多内容请前往区块链技术小专栏查看[全文链接](https://xiaozhuanlan.com/topic/5617843029)。
 
 我们特意为区块链技术学习者，提供了几门课程:
-* [入门视频教程](https://ke.qq.com/course/318230) - 入门的最佳选择
-* [精讲以太坊智能合约开发](https://ke.qq.com/course/326528) - Solidity 语言面面俱到
-* [以太坊DAPP开发实战](https://ke.qq.com/course/335169) - 轻轻松松学会DAPP开发
+* [入门视频教程](https://ke.qq.com/course/318230?flowToken=1010388) - 入门的最佳选择
+* [精讲以太坊智能合约开发](https://ke.qq.com/course/326528?flowToken=1010387) - Solidity 语言面面俱到
+* [以太坊DAPP开发实战](https://ke.qq.com/course/335169?flowToken=1010386) - 轻轻松松学会DAPP开发
 
 
 [深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，打造最好的区块链技术博客。

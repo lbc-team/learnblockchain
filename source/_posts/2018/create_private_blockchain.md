@@ -353,8 +353,8 @@ eth对象封装了查看交易和区块信息的方法。
 ```
 
 强烈安利几门视频课程给大家：
-* [深入详解以太坊智能合约语言Solidity](https://ke.qq.com/course/326528) -  Solidity 语言面面俱到
-* [以太坊DAPP开发实战](https://ke.qq.com/course/335169) - 轻轻松松学会DAPP开发
+* [深入详解以太坊智能合约语言Solidity](https://ke.qq.com/course/326528?flowToken=1010387) -  Solidity 语言面面俱到
+* [以太坊DAPP开发实战](https://ke.qq.com/course/335169?flowToken=1010386) - 轻轻松松学会DAPP开发
 
 
 [深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，打造最好的区块链技术博客。

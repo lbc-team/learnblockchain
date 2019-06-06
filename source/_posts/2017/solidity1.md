@@ -197,7 +197,7 @@ contract test {
 通过合约代码实例说明类型的使用，请订阅[区块链技术](https://xiaozhuanlan.com/blockchaincore)查看。
 
 
-另外强烈安利一门视频课程给大家： [深入详解以太坊智能合约语言Solidity](https://ke.qq.com/course/326528)。
+另外强烈安利一门视频课程给大家： [深入详解以太坊智能合约语言Solidity](https://ke.qq.com/course/326528?flowToken=1010387)。
 
 ## 参考文档
 [Solidity官方文档-类型](https://solidity.readthedocs.io/en/develop/types.html)

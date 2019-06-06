@@ -115,9 +115,9 @@ P2SH支付中，锁定脚本被密码学哈希所取代，当一笔交易试图�
 
 
 我们特意为区块链技术学习者，提供了几门课程:
-* [入门视频教程](https://ke.qq.com/course/318230) - 入门的最佳选择
-* [精讲以太坊智能合约开发](https://ke.qq.com/course/326528) - Solidity 语言面面俱到
-* [以太坊DAPP开发实战](https://ke.qq.com/course/335169) - 轻轻松松学会DApp开发
+* [入门视频教程](https://ke.qq.com/course/318230?flowToken=1010388) - 入门的最佳选择
+* [精讲以太坊智能合约开发](https://ke.qq.com/course/326528?flowToken=1010387) - Solidity 语言面面俱到
+* [以太坊DAPP开发实战](https://ke.qq.com/course/335169?flowToken=1010386) - 轻轻松松学会DApp开发
 
 [深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，打造最好的区块链技术博客。
 我的**[知识星球](https://learnblockchain.cn/images/zsxq.png)**为各位解答区块链技术问题，欢迎加入讨论。

@@ -169,7 +169,7 @@ a = 11;
 
 这个时候就一目了然了，最后a 为11， 注意第5及第6行是不是执行的。
 
-强烈安利一门课程给大家：[深入详解以太坊智能合约语言Solidity](https://ke.qq.com/course/326528)
+强烈安利一门课程给大家：[深入详解以太坊智能合约语言Solidity](https://ke.qq.com/course/326528?flowToken=1010387)
 
 ## 参考文献
 [官方文档-Function Modifiers](https://solidity.readthedocs.io/en/develop/contracts.html#function-modifiers)

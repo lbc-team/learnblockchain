@@ -153,7 +153,7 @@ console.log("校验和地址："+ util.toChecksumAddress(address1.toString('hex'
 一句话概括下BIP39就是：**通过定义助记词让种子的备份更友好**
 
 
-我为大家录制了一个视频：**[以太坊去中心化网页钱包开发](https://ke.qq.com/course/356068?tuin=bd898bbf)**，从如何创建账号开始，深入探索BIP32、BIP44、BIP39等提案，以及如何存储私钥、发送离线签名交易和Token。
+我为大家录制了一个视频：**[以太坊去中心化网页钱包开发](https://ke.qq.com/course/356068?flowToken=1010359)**，从如何创建账号开始，深入探索BIP32、BIP44、BIP39等提案，以及如何存储私钥、发送离线签名交易和Token。
 
 ## 小结
 

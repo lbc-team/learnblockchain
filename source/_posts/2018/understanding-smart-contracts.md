@@ -267,7 +267,7 @@ contract MyToken {
 
 为了简单省去了一些细节，可以参考这篇文章[创建一个标准的ERC20代币](https://learnblockchain.cn/2018/01/12/create_token/)。
 
-想学习在以太坊上编程可以学习这门课程[以太坊DAPP开发实战](https://ke.qq.com/course/335169)
+想学习在以太坊上编程可以学习这门课程[以太坊DAPP开发实战](https://ke.qq.com/course/335169?flowToken=1010386)
 
 本文的英文原文链接为：http://www.gjermundbjaanes.com/understanding-ethereum-smart-contracts/
 

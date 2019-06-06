@@ -222,7 +222,7 @@ ethers.js 的 Contract 提供了一个非常方便方法：`contract.estimate.fu
 哈哈，恭喜大家，到这里这里就完整的实现了一个基于[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)去中心化网页钱包。
 
 这是一条硬广，欢迎订阅[深入浅出区块链技术小专栏](https://xiaozhuanlan.com/blockchaincore)，目前仅需69元， 订阅就可以查看完整源码，还有其他惊喜哦~。
-戳链接收看[详细的视频课程讲解](https://ke.qq.com/course/356068?tuin=bd898bbf)。
+戳链接收看[详细的视频课程讲解](https://ke.qq.com/course/356068?flowToken=1010359)。
 
 ## 参考文档
 

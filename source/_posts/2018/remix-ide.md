@@ -204,8 +204,8 @@ contract SimpleStorage {
 2. [Remix Document](http://remix.readthedocs.io/en/latest/index.html)
 
 给大家推荐两门特别好的区块链技术学习课程:
-* [精讲以太坊智能合约开发](https://ke.qq.com/course/326528) - Solidity 语言面面俱到
-* [以太坊DAPP开发实战](https://ke.qq.com/course/335169) - 轻轻松松学会DAPP开发
+* [精讲以太坊智能合约开发](https://ke.qq.com/course/326528?flowToken=1010387) - Solidity 语言面面俱到
+* [以太坊DAPP开发实战](https://ke.qq.com/course/335169?flowToken=1010386) - 轻轻松松学会DAPP开发
 
 
 [深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，打造最好的区块链技术博客。

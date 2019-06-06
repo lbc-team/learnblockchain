@@ -36,7 +36,7 @@ author: Tiny熊
 * [分析比特币网络：一种去中心化、点对点的网络架构](https://xiaozhuanlan.com/topic/1670539284)，可以详细了解比特币网络。
 * [比特币区块结构Merkle树及简单支付验证分析](https://xiaozhuanlan.com/topic/1402935768)，可以详细了解区块结构如何验证交易。
 
-学习区块链，这门视频课程[从入门开始搞懂区块链](https://ke.qq.com/course/318230)可以帮助你快速入门，[区块链技术导航站](https://wiki.learnblockchain.cn/)，也是学习的好帮手。
+学习区块链，这门视频课程[从入门开始搞懂区块链](https://ke.qq.com/course/318230?flowToken=1010388)可以帮助你快速入门，[区块链技术导航站](https://wiki.learnblockchain.cn/)，也是学习的好帮手。
 
 [深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，打造最好的区块链技术博客。
 我的**[知识星球](https://learnblockchain.cn/images/zsxq.png)**为各位解答区块链技术问题，欢迎加入讨论。

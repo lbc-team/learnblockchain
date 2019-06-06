@@ -117,7 +117,7 @@ contract MappingUser {
 注意：
 映射并未提供迭代输出的方法，可以自行实现一个这样的数据结构。参考[iterable mapping](https://github.com/ethereum/dapp-bin/blob/master/library/iterable_mapping.sol)
 
-另外强烈安利一门课程给大家： [深入详解以太坊智能合约语言Solidity](https://ke.qq.com/course/326528)。
+另外强烈安利一门课程给大家： [深入详解以太坊智能合约语言Solidity](https://ke.qq.com/course/326528?flowToken=1010387)。
 
 ## 参考文档
 [Solidity官方文档](https://solidity.readthedocs.io/en/develop/types.html#mappings)

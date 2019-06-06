@@ -18,7 +18,7 @@ author: Tiny熊
 
 对区块链有所了解的同学，知道区块链维护的是一个中立的（去中心）、共同信任、难以篡改的数据库、[智能合约](https://learnblockchain.cn/2018/01/04/understanding-smart-contracts/)创造的是一个完全透明（不被干扰）的运行规则，因此可以解决信任问题。
 
-一切看起来很美好，我们可以[开发去中心化应用DApp](https://ke.qq.com/course/335169) 解决信任问题，由此也确实产生了很多的博彩类DApp游戏。
+一切看起来很美好，我们可以[开发去中心化应用DApp](https://ke.qq.com/course/335169?flowToken=1010386) 解决信任问题，由此也确实产生了很多的博彩类DApp游戏。
 
 > 不熟悉DApp的同学可以看我另一篇文章[程序员如何切入区块链去中心化应用开发](https://learnblockchain.cn/2018/08/31/devDapp/).
 
