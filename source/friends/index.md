@@ -29,6 +29,7 @@ date: 2019-03-24 15:52:24
 * [vim教程网](https://vimjc.com) - 专注于Vim配置、插件、Vim命令和Vim教程
 * [木头分享](https://mutou.run) - 分享iOS、安卓、PC工具
 * [咸糖博客](http://xiantang.info) - 咸糖记录编程的地方
+* [猿始森林](https://cnfczn.com/) - 个人博客
 
 
 
