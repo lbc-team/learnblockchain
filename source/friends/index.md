@@ -5,10 +5,10 @@ date: 2019-03-24 15:52:24
 
 ## 排名不分先后
 
+* [区块链技术博客](http://me.tryblockchain.org/)
 * [HiBlock区块链社区](https://hiblock.one/)
 * [磨链社区](http://www.mochain.info/)
 * [登链学院](http://edu.upchain.pro)
-* [区块链技术博客](http://me.tryblockchain.org/)
 * [BG区块链技术论坛](http://blockgeek.org/)
 * [EOS中文社区](https://eosfans.io/)
 * [链客区块链问答社区](https://www.liankexing.com/)

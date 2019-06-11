@@ -3,8 +3,7 @@ title: 关于区块链问答
 permalink: about-qa
 date: 2019-01-12 11:25:59
 categories: 问与答
-top: 1
-comments: false
+comments: ture
 hide_wechat_subscriber: true
 ---
 
