@@ -5,7 +5,7 @@ date: 2019-06-10 11:25:59
 categories: 问与答
 tags: 
     - Solidity
-author: arodriguezdonaire
+author: Tiny熊
 ---
 
 
@@ -29,7 +29,7 @@ def mk_contract_address(sender, nonce):
 **使用 Solidity 代码**：
 
 ```
-//  nonce 为 零时生成的地址
+//  nonce 为 0 时生成的地址
 nonce0 = address(keccak256(0xd6, 0x94, address, 0x80))
 nonce1 = address(keccak256(0xd6, 0x94, address, 0x01))
 ```
@@ -77,8 +77,13 @@ private String calculateContractAddress(String address, long nonce){
 keccak256(0xff ++ senderAddress ++ salt ++ keccak256(init_code))[12:]
 ```
 
-更多信息请参阅[EIP-1014](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1014.md)。
+{% note info %}
 
+CREATE2 在二层扩容尤其是状态通道中很有用, 这里有一个例子来[理解简单的状态通道](https://learnblockchain.cn/docs/solidity/examples/micropayment.html)， 即便状态通道合约还不存在，只要确定创建合约的 salt，init_code, 就可以用状态通道进行支付。
+{% endnote %}
+
+
+更多信息`CREATE2`， 参阅[EIP-1014](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1014.md)。
 
 原问答[链接](https://ethereum.stackexchange.com/questions/760/how-is-the-address-of-an-ethereum-contract-computed)
 
