@@ -143,9 +143,9 @@ bc1qhqap39mpkldjzvqdf3204p732krtnf56mm9aj3          370.998 BTC
 各交易所和用户都应该注意信息的保护，用户在使用开放提现等高级功能时，应提高对安全性的重视，避免信息泄露导致的各种危害，不让攻击者有可乘之机。
 
 
-本文来自专注于区块链生态安全的[Beosin 成都链安](https://www.lianantech.com)
+本文来自 **深入浅出区块链社区合作伙伴**：专注于区块链生态安全的[Beosin 成都链安](https://www.lianantech.com) 
 
-[深入浅出区块链](https://learnblockchain.cn/) - 系统学习区块链，学区块链都在这里，打造最好的区块链技术博客。
+[深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，学区块链都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789)。
 
 
 
