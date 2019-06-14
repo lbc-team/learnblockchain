@@ -15,6 +15,14 @@ date: 2019-03-24 15:52:24
 * [币兔](https://www.bitool.cn/) - 发现DAPP
 * [无退社区](https://wutui.pro/) - 区块链社区
 
+## 社区合作伙伴
+
+* [HPB芯链](https://hpb.io/)  - 高性能软硬结合公链
+* [Conflux](https://www.conflux-chain.org/) - 通过树图技术解决区块链性能问题的潜力公链
+* [零时科技](http://www.noneage.com/) - 专注区块链安全
+* [Beosin成都链安](https://www.lianantech.com/) - 专注区块链安全
+
+
 ## 部分作者及友人 的个人博客
 
 * [Bob's Blog](https://bobjiang.com/) - Bob 个人博客
@@ -27,20 +35,10 @@ date: 2019-03-24 15:52:24
 * [小呆导航](https://webjike.com) - 简洁导航站
 * [heycmm](https://www.heycmm.cn) - 殆己博客
 * [vim教程网](https://vimjc.com) - 专注于Vim配置、插件、Vim命令和Vim教程
-* [木头分享](https://mutou.run) - 分享iOS、安卓、PC工具
 * [咸糖博客](http://xiantang.info) - 咸糖记录编程的地方
 * [猿始森林](https://cnfczn.com/) - 个人博客
 
 
 
-## 社区合作伙伴
-
-* [HPB芯链](https://hpb.io/)  - 高性能软硬结合公链
-* [Conflux](https://www.conflux-chain.org/) - 通过树图技术解决区块链性能问题的潜力公链
-* [零时科技](http://www.noneage.com/) - 专注区块链安全
-* [Beosin成都链安](https://www.lianantech.com/) - 专注区块链安全
-
-
-
-[友链申请](https://learnblockchain.cn/images/tiny_wx_code.jpeg)
+友链申请可添加[微信](https://learnblockchain.cn/images/tiny_wx_code.jpeg)， 或在下方留言。
 
