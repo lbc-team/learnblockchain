@@ -47,7 +47,7 @@ Plasma 合约中主要包括的函数有：
 Operator 可以采用最简单的 REST API 方式实现，子链中的用户可以通过调用简单的 API 获取到子链中区块的数据。
 
 ## 存款（deposit）
-用户 Alice 通过存款（deposit）操作向 Plasma 合约发送带有一定数额的以太币或 ERC20 token 加入 Plasma Chain，这时 Plasma 合约会执行 deposit() 函数，生成一个只包含一个交易的区块，这个交易的 UTXO 记录了 Alice 从主链转移到子链的数额。当这个区块被主链确认后，Alice 就可以使用新生成的 UTXO 向其它用户发送交易了。
+用户 Alice 通过存款（deposit）操作向 Plasma 合约发送带有一定数额的以太币或 [ERC20](https://learnblockchain.cn/2018/01/12/create_token/) token 加入 Plasma Chain，这时 Plasma 合约会执行 deposit() 函数，生成一个只包含一个交易的区块，这个交易的 UTXO 记录了 Alice 从主链转移到子链的数额。当这个区块被主链确认后，Alice 就可以使用新生成的 UTXO 向其它用户发送交易了。
 
 ## 交易（transaction）
 在 Plasma MVP 中，所有用户发送的交易都是直接发送给 Operator，当积累了一定数量的交易后，由 Operator 将交易打包成区块。这里需要注意的是，由于 Plasma MVP 采用的是 UTXO 模型，所以即使交易的收款方不存在，交易也是成立的。

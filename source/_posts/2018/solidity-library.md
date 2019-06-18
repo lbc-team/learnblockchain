@@ -26,7 +26,7 @@ Solidity 是[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)智能�
 
 ## 库
 
-库与合约类似，它也部署在一个指定的地址上（仅被部署一次，当代码在不同的合约可反复使用），然后通过EVM的特性DELEGATECALL (Homestead之前是用CALLCODE)来复用代码。库函数在被调用时，库代码是在发起合约（下文称**主调合约**：主动发起DELEGATECALL调用的合约）的上下文中执行的，使用this将会指向到主调合约，而且库代码可以访问主调合约的存储(storage)。
+库与合约类似，它也部署在一个指定的地址上（仅被部署一次，当代码在不同的合约可反复使用），然后通过EVM的特性DELEGATECALL ([Homestead](https://learnblockchain.cn/2019/06/15/eth-history1/)之前是用CALLCODE)来复用代码。库函数在被调用时，库代码是在发起合约（下文称**主调合约**：主动发起DELEGATECALL调用的合约）的上下文中执行的，使用this将会指向到主调合约，而且库代码可以访问主调合约的存储(storage)。
 
 因为库合约是一个独立的代码，它仅可以访问主调合约明确提供的状态变量，否则，没办法法去知道这些状态变量。
 

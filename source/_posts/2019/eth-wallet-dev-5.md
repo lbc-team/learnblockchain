@@ -126,7 +126,7 @@ Gas Limit用来确定工作量，不像Gas Price 谁时间的变化而浮动，�
 
 对于[智能合约](https://learnblockchain.cn/2018/01/04/understanding-smart-contracts/)交易，gasLimit则根据执行的任务而变化，如果设定的不够，会发生*out-of-gas* 错误，交易就不会打包上链，如果设定的过高，多余的就会退回交易发起者，这也是为什么我把这个费用称为预算的原因。
 
-有些人会认为直接设置高一点的值，反正会退回，但如果合约执行出错，就会吃掉所有的gas，对于ERC20转账，一般推荐设置的值为`90000`， 如果是运行非标准的智能合约，如使用DAPP，可以使用`ethEstimateGas` 函数进行预测。
+有些人会认为直接设置高一点的值，反正会退回，但如果合约执行出错，就会吃掉所有的gas，对于[ERC20](https://learnblockchain.cn/2018/01/12/create_token/)转账，一般推荐设置的值为`90000`， 如果是运行非标准的智能合约，如使用DAPP，可以使用`ethEstimateGas` 函数进行预测。
 
 > 在钱包中运行DAPP，也是钱包的一项重要功能，我会在[小专栏](https://xiaozhuanlan.com/blockchaincore)进行介绍。
 

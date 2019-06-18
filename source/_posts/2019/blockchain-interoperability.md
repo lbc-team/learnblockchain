@@ -116,7 +116,7 @@ Zone: Cosmos中的平行链， Cosmos中平行链需要具备两个前提条件�
 
 以上是使用IBC协议的两个平行链直接进行跨链的基本过程，如果区块链很多，那么这种方式的两两跨链复杂度会呈现组合级别增加。因此Cosmos网络又引入了一种Hub的中继链，所有的平行链都通过IBC连接到Hub，让Hub辅助跨链交易的验证和转移，目前Cosmos实现了一个官方的Hub称为Cosmos Hub（如前图所示）。
 
-如下图所示是Cosmos 网络的详细架构图，Cosmos为方便平行链开发提供了基本服务CosmosSDK包括：共识、网络以及IBC协议等，这样基于Cosmos SDK开发的子链之间都能够方便地互相交互。此外对于非Cosmos SDK 开发的区块链需要使用Peg Zone进行桥接，如图中的Ethereum。
+如下图所示是Cosmos 网络的详细架构图，Cosmos为方便平行链开发提供了基本服务CosmosSDK包括：共识、网络以及IBC协议等，这样基于[Cosmos SDK](https://learnblockchain.cn/docs/cosmos/)开发的子链之间都能够方便地互相交互。此外对于非Cosmos SDK 开发的区块链需要使用Peg Zone进行桥接，如图中的Ethereum。
 
 
 ![](https://img.learnblockchain.cn/2019/15533146255840.jpg!wl)

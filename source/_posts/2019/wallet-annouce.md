@@ -58,7 +58,7 @@ Google play 也已经上架，[链接](https://play.google.com/store/apps/detail
 - [x] 支持导出钱包账号助记词、私钥、Keystore文件；
 - [x] 账户余额查询及转账功能；
 - [x] 支持多个钱包账号管理；
-- [x] 支持ERC20 代币（余额显示、转账、代币币价显示）；
+- [x] 支持[ERC20](https://learnblockchain.cn/2018/01/12/create_token/) 代币（余额显示、转账、代币币价显示）；
 - [x] 历史交易列表显示；
 - [x] 支持DApp Browser 浏览器 
 - [x] 二维码扫描，兼容imToken格式；

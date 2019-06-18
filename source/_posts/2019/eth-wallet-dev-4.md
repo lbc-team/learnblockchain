@@ -235,7 +235,7 @@ web3j对象在TokenRepository初始化的时候完成，在TokenRepository获取
 
 ###  获取 Token 数量
 
-在TokenRepository获取到Token列表之后，如果是ERC20代币会随即会调用`getBalance` 方法。
+在TokenRepository获取到Token列表之后，如果是[ERC20](https://learnblockchain.cn/2018/01/12/create_token/)代币会随即会调用`getBalance` 方法。
 根据前面的介绍获取代币的余额需要调用合约的balanceOf方法，在以太坊上**对合约方法的调用实际上会合约地址发起一个调用，调用的附加数据是函数及参数的ABI编码数据**。
 
 > 之前写过一篇文章：[如何理解以太坊ABI](https://learnblockchain.cn/2018/08/09/understand-abi/)， 大家可以读一下。

@@ -19,7 +19,7 @@ author: Tiny熊
 ## ERC721是什么
 
 在[创建代币](https://learnblockchain.cn/2018/01/12/create_token/)一篇，我们讲到过ERC20代币，
-和ERC20一样，ERC721同样是一个代币标准，ERC721官方简要解释是Non-Fungible Tokens，简写为NFTs，多翻译为非同质代币。 
+和[ERC20](https://learnblockchain.cn/2018/01/12/create_token/)一样，ERC721同样是一个代币标准，ERC721官方简要解释是Non-Fungible Tokens，简写为NFTs，多翻译为非同质代币。 
 > ERC721 是由Dieter Shirley 在2017年9月提出。Dieter Shirley 正是谜恋猫CryptoKitties背后的公司Axiom Zen的技术总监。因此谜恋猫也是第一个实现了ERC721 标准的去中心化应用。ERC721号提议已经被[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)作为标准接受，但该标准仍处于草稿阶段。本文介绍的ERC721标准基于最新(2018/03/23官方提议。
 
 那怎么理解**非同质**代币呢?

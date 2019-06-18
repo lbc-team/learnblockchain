@@ -27,7 +27,7 @@ Loom （或者称 Loom Network） 是一支探索区块链二层扩容方面技�
 
 > 以太坊交易确认至少是15秒以上，并且需要消耗一笔 Gas 费用，当然因此牺牲了一些去中心化。
 
-这张图可以表明 PlasmaChain 与 以太坊的关系，它未来会链接多条侧链，据官方搞 PlasmaChain 集成排名前100的ERC20代币，其中包含6种稳定币。
+这张图可以表明 PlasmaChain 与 以太坊的关系，它未来会链接多条侧链，据官方搞 PlasmaChain 集成排名前100的[ERC20](https://learnblockchain.cn/2018/01/12/create_token/)代币，其中包含6种稳定币。
 
 {% fi https://img.learnblockchain.cn/2019/15565495038560.jpg, PlasmaChain 二层网络图, 图片来源于 Loom 官网 SDK 介绍 %}
 

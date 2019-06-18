@@ -87,9 +87,9 @@ EYBlockchain的隐私操作目前包括3个：隐私代币生成，转账和销�
 ![部署隐私币合约](https://img.learnblockchain.cn/2019/06/0df7b9b3f163b79fb778dfd29bdfab45.jpg)
 
 
-**FToken** - EY发行的ERC20的代币合约，EY OPs Coin，简称OPS。
+**FToken** - EY发行的[ERC20](https://learnblockchain.cn/2018/01/12/create_token/)的代币合约，EY OPs Coin，简称OPS。
 **FTokenShield** - ERC20对应的隐私交易合约，管理所有隐私交易信息。
-**NFToken** - EY发行的ERC721的代币合约，EYToken，简称EYT。
+**NFToken** - EY发行的[ERC721](https://learnblockchain.cn/2018/03/23/token-erc721/)的代币合约，EYToken，简称EYT。
 **NFTokenShield** - ERC721对应的隐私交易合约，管理所有隐私交易信息。
 **GM17** - 零知识验证智能合约。
 **Verifier Registry** - 提供两个功能：1\. 所有零知识验证的验证密钥注册 2\. 所有证明信息的存储。

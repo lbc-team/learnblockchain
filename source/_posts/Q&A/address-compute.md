@@ -68,7 +68,7 @@ private String calculateContractAddress(String address, long nonce){
 
 ## CREATE2
 
-在[EIP-1014](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1014.md)中添加了一个新的操作码 `CREATE2` （在19年1月的君士坦丁堡硬分叉中引入的操作码），它是可以创建合约的另一种方式。
+在[EIP-1014](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1014.md)中添加了一个新的操作码 `CREATE2` （在19年1月的[君士坦丁堡硬分叉](https://learnblockchain.cn/2019/06/15/eth-history1/)中引入的操作码），它是可以创建合约的另一种方式。
 
 
 对于由`CREATE2`创建的合约，其地址将是:

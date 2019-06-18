@@ -107,7 +107,7 @@ contract Sharer {
 当发生assert类型的异常时，Solidity会执行一个无效操作（指令0xfe）。
 在上述的两种情况下，EVM都会撤回所有的状态改变。是因为期望的结果没有发生，就没法继续安全执行。必须保证交易的原子性（一致性，要么全部执行，要么一点改变都没有，不能只改变一部分），所以需要撤销所有操作，让整个交易没有任何影响。
 
-注意assert类型的异常会消耗掉所有的gas, 而require从大都会版本（Metropolis， 即目前主网所在的版本）起不会消耗gas。
+注意assert类型的异常会消耗掉所有的gas, 而require从大都会版本（[Metropolis](https://learnblockchain.cn/2019/06/15/eth-history1/)， 即目前主网所在的版本）起不会消耗gas。
 
 ## 参考文献
 * [Solidity 错误处理](https://solidity.readthedocs.io/en/v0.4.21/control-structures.html#error-handling-assert-require-revert-and-exceptions)
