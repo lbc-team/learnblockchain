@@ -72,7 +72,7 @@ Cosmos 网络没有设置固定的参与规则——任何人都可以创建中�
 由于参与规则不同，这两个网络在治理流程上也存在差异。
 在 Polkadot 网络中，治理决策取决于投票者所质押的 DOT 数量。关于链上投票会有一套正式机制，不过尚未最终确定下来，点击[此处](https://github.com/paritytech/polkadot/wiki/Governance)可了解最新进展。除了采取以质押量决定投票权重的机制之外，Polkadot 还组建了一个委员会来代表不活跃的权益持有者。委员会最开始由 6 人组成，每两周增加 1 人，直到满 24 人为止。每位委员会成员均通过[赞成投票](https://en.wikipedia.org/wiki/Approval_voting)的方式选出。治理流程的具体细节尚未敲定，也就是说有很多方法可以改变中继链的参数，如出块时间、区块奖励等，以及平行链的参与规则。例如，Polkadot 的治理流程可以改变平行链使用权的竞拍机制或所需的 DOT 数量。有一种常见的误解是 DOT 持有者可以通过投票随意弃用某条平行链。实际上，DOT 持有者只能改变参与流程。也就是说一旦竞拍下了某条平行链，在整个[租期](https://twitter.com/PAMauric/status/1118545428809568267)之内都享有这条链的使用权。
 
-另一方面，Cosmos 网络不存在单一的 “治理”流程。每个中心枢纽和分区都有自己的治理流程，因此没有一套应用于整个系统内所有链的核心规则。我们所说的“Cosmos 治理”指的都是 Cosmos Hub 的治理，即由 Tendermint 团队上线的那条链。Cosmos Hub 的规则是，任何人都可以发送一个文本提议，由 ATOM 持有者进行投票表决，ATOM 的质押量决定了投票权重。想知道提议长什么样子，[这里](https://www.mintscan.io/proposals/5)有个例子。如果你想深入了解治理流程的话，可以阅读一下 Chorus One 发布的这篇[文章](https://blog.chorus.one/an-overview-of-cosmos-hub-governance/)，是了解 Cosmos Hub 治理机制的入门材料。
+另一方面，Cosmos 网络不存在单一的 “治理”流程。每个中心枢纽和分区都有自己的治理流程，因此没有一套应用于整个系统内所有链的核心规则。我们所说的“Cosmos 治理”指的都是 Cosmos Hub 的治理，即由 Tendermint 团队上线的那条链。Cosmos Hub 的规则是，任何人都可以发送一个文本提议，由 ATOM 持有者进行投票表决，ATOM 的质押量决定了投票权重。想知道提议长什么样子，[这里](https://www.mintscan.io/proposals/5)有个例子。如果你想深入了解治理流程的话，可以阅读一下 Chorus One 发布的[ Cosmos Hub 治理机制](https://learnblockchain.cn/2019/06/18/comsmos-governance/)，是不错的了解 Cosmos Hub 治理的入门资料。
 
 ##  跨链通信
 
