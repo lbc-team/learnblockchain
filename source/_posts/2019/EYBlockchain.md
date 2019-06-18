@@ -1,5 +1,5 @@
 ---
-title: 零知识证明 - 深入理解 EYBlockchain
+title: 利用 EYBlockchain 在以太坊上创建隐私币
 permalink: EYBlockchain
 un_reward: true
 hide_wechat_subscriber: true
