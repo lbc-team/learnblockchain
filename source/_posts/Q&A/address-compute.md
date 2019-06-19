@@ -26,7 +26,7 @@ def mk_contract_address(sender, nonce):
     return sha3(rlp.encode([normalize_address(sender), nonce]))[12:]
 ```
 
-**使用 Solidity 代码**：
+**使用 [Solidity](https://learnblockchain.cn/docs/solidity/) 代码**：
 
 ```
 //  nonce 为 0 时生成的地址

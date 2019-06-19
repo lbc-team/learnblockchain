@@ -32,7 +32,7 @@ author: Tiny熊
 
 在这方面，EVM 则是非常不同，因此应用相同的假设会导致高度次优的代码执行。因此, 这也是为什么需要开发一种专门针对 EVM 执行环境的语言，这确实可能是比移植现有的语言语法需要做更多的工作, 但它可以更好的产生一个可用的环境而不是有各种 "限制" Go 代码（尽管是有效的）。
 
-也需要注意, 最初的EVM设计可能很糟糕，如果有人找到更好的解决方案时，它将被扩展，升级甚至完全替换。但这是未来的可能性，而 Solidity 是当前的需要。
+也需要注意, 最初的EVM设计可能很糟糕，如果有人找到更好的解决方案时，它将被扩展，升级甚至完全替换。但这是未来的可能性，而 [Solidity](https://learnblockchain.cn/docs/solidity/) 是当前的需要。
 
 原问答[链接](https://ethereum.stackexchange.com/questions/3112/what-is-the-merit-of-creating-new-smart-contract-languages-like-solidity-instead)
 
