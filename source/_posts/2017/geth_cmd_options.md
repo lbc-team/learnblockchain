@@ -77,7 +77,7 @@ Geth在以太坊智能合约开发中最常用的工具（必备开发工具）�
     --txpool.nolocals            为本地提交交易禁用价格豁免
     --txpool.journal value       本地交易的磁盘日志：用于节点重启 (默认: "transactions.rlp")
     --txpool.rejournal value     重新生成本地交易日志的时间间隔 (默认: 1小时)
-    --txpool.pricelimit value    加入交易池的最小的gas价格限制(默认: 1)
+    --txpool.pricelimit value    加入交易池的最小的[gas](https://learnblockchain.cn/2019/06/11/gas-mean/)价格限制(默认: 1)
     --txpool.pricebump value     价格波动百分比（相对之前已有交易） (默认: 10)
     --txpool.accountslots value  每个帐户保证可执行的最少交易槽数量  (默认: 16)
     --txpool.globalslots value   所有帐户可执行的最大交易槽数量 (默认: 4096)

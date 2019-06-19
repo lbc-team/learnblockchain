@@ -152,7 +152,7 @@ const txParams = {
 
 > `nonce` 和 `chainId` 有一个重要的作用就是防止重放攻击，如果没有nonce的活，收款人可能把这笔签名过的交易再次进行广播，没有chainId的话，以太坊上的交易可以拿到以太经典上再次进行广播。
 
-`gasPrice`和`gasLimit`： Gas是以太坊的工作计费机制，是由交易发起者给矿工打包的费用。上面几个参数的设置比较固定，Gas的设置（尤其是gasPrice）则灵活的多。
+`gasPrice`和`gasLimit`： [Gas](https://learnblockchain.cn/2019/06/11/gas-mean/)是以太坊的工作计费机制，是由交易发起者给矿工打包的费用。上面几个参数的设置比较固定，Gas的设置（尤其是gasPrice）则灵活的多。
 
 `gasLimit` 表示预计的指令和存储空间的工作量，如果工作量没有用完，会退回交易发起者，如果不够会发生*out-of-gas* 错误。
 **一个普通转账的交易，工作量是固定的，gasLimit为21000**，合约执行gasLimit则是变化的，也许有一些人会认为直接设置为高一点，反正会退回，但如果合约执行出错，就会吃掉所有的gas。幸运的是web3 和 ethers.js 都提供了测算Gas Limit的方法，下一遍[发送代币](https://learnblockchain.cn/2018/10/26/eth-web-wallet_4/)

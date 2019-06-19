@@ -40,7 +40,7 @@ Solidity是以太坊智能合约编程语言，阅读本文前，你应该对以
     address myAddress = this;
     if (x.balance < 10 && myAddress.balance >= 10) x.transfer(10);
     ```
-   **注解**：如果x是合约地址，合约的回退函数（fallback 函数）会随**transfer**调用一起执行（这个是EVM特性），如果因gas耗光或其他原因失败，转移交易会还原并且合约会抛异常停止。
+   **注解**：如果x是合约地址，合约的回退函数（fallback 函数）会随**transfer**调用一起执行（这个是EVM特性），如果因[gas](https://learnblockchain.cn/2019/06/11/gas-mean/)耗光或其他原因失败，转移交易会还原并且合约会抛异常停止。
    > 关于回退函数（fallback 函数），简单来说它是合约中无函数名函数，下面代码事例中，进进一步讲解回退函数（fallback） 的使用。
 
 

@@ -41,7 +41,7 @@ un_reward: true
     - 配置信息
     - 日志
     - 消息池操作
-    - 消息预览，Gas计算
+    - 消息预览，[Gas](https://learnblockchain.cn/2019/06/11/gas-mean/)计算
     - 消息查询
     - 消息发送
     - 消息等待

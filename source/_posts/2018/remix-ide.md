@@ -190,7 +190,7 @@ contract SimpleStorage {
 
 在本例中，我们跟踪运行步骤的时候，可以看到局部变量的值为2，赋值给状态变量之后，状态变量的值更改为了3，所以可以判断运行当前语句的时候出错了。
 
-* Step detail： 显示当前步骤的gas详情等，如下图:
+* Step detail： 显示当前步骤的[gas](https://learnblockchain.cn/2019/06/11/gas-mean/)详情等，如下图:
 ![](https://img.learnblockchain.cn/2018/remix-debug-gas.png!wl)
 
 

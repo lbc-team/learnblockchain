@@ -96,7 +96,7 @@ contract Sharer {
 
 1. 调用**throw**
 2. 如果调用**require**的参数为false
-3. 如果你通过消息调用一个函数，但在调用的过程中，并没有正确结束(gas不足，没有匹配到对应的函数，或被调用的函数出现异常)。底层操作如call,send,delegatecall或callcode除外，它们不会抛出异常，但它们会通过返回false来表示失败。
+3. 如果你通过消息调用一个函数，但在调用的过程中，并没有正确结束([gas](https://learnblockchain.cn/2019/06/11/gas-mean/)不足，没有匹配到对应的函数，或被调用的函数出现异常)。底层操作如call,send,delegatecall或callcode除外，它们不会抛出异常，但它们会通过返回false来表示失败。
 4. 如果在使用new创建一个新合约时出现第3条的原因没有正常完成。
 5. 如果调用外部函数调用时，被调用的对象不包含代码。
 6. 如果合约没有payable修饰符的public的函数在接收以太币时（包括构造函数，和回退函数）。

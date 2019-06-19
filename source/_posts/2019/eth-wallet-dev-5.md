@@ -72,7 +72,7 @@ author: Tiny熊
 
 ## 设置 Gas 
 
-如果 Gas 设置丢给用户，从体验上说有点说不过去，因此我们给用户一些推荐值。
+如果 [Gas](https://learnblockchain.cn/2019/06/11/gas-mean/) 设置丢给用户，从体验上说有点说不过去，因此我们给用户一些推荐值。
 
 ### Gas Price
 

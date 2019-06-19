@@ -162,9 +162,9 @@ contract Counter {
 
 代码的执行由调用者以称为**Gas**的方式支付费用。 Gas是运行[以太坊虚拟机](https://learnblockchain.cn/2019/04/09/easy-evm/)的燃料。 我们可以将其视为每次执行指令的付款。
 
-在发起调用时，我们必须设置此调用上预计花费的最大gas消耗量（Gas Limit）。 例如，如果我们调用的代码进入永久循环，执行花费不会超过我们设定的最大消耗量（Gas Limit）。
+在发起调用时，我们必须设置此调用上预计花费的最大[gas](https://learnblockchain.cn/2019/06/11/gas-mean/)消耗量（Gas Limit）。 例如，如果我们调用的代码进入永久循环，执行花费不会超过我们设定的最大消耗量（Gas Limit）。
 
-Gas 执行费用由网络的矿工（他们是运行代码的节点）决定。
+[Gas](https://learnblockchain.cn/2019/06/11/gas-mean/) 执行费用由网络的矿工（他们是运行代码的节点）决定。
 
 当然还有很多关于Gas的内容，我们先了解这么多，如果想深入了解以太坊的这一部分，请看看这篇consensys的精品文章：[以太坊，Gas，燃料和费用 （英文）](https://media.consensys.net/ethereum-gas-fuel-and-fees-3333e17fe1dc)
 
