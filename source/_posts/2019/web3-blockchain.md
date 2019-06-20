@@ -1,5 +1,5 @@
 ---
-title: 理解Web 3.0 技术栈及区块链作用
+title: 理解Web 3.0 技术栈及区块链如何助力
 permalink: web3-blockchain
 date: 2019-06-19 20:25:14
 categories: 
