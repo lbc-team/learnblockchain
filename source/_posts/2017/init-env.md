@@ -65,7 +65,7 @@ tail -f test.log
 ![](https://img.learnblockchain.cn/2017/geth_accounts_1.jpg)
 > 也可以使用personal.listAccounts查看账户，
 
-再来看一下账户里的余额，使用一下命令：
+再来看一下账户里的余额，使用以下命令：
 ```
 > eth.getBalance(eth.accounts[0])
 ```

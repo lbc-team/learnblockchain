@@ -158,6 +158,8 @@ topmenu:
   web3: https://learnblockchain.cn/docs/web3js-0.2x/ || book
   truffle: https://learnblockchain.cn/docs/truffle/ || book
   cosmos: https://learnblockchain.cn/docs/cosmos/ || book
+  tendermint: https://learnblockchain.cn/docs/tendermint/ || book
+
 
 menu:
   home: / || home
@@ -165,6 +167,7 @@ menu:
   docs: /docs/ || columns
   qa: /categories/QA/ || life-ring
   geth: http://learnblockchain.cn/books/geth/ || book
+  libra: https://learnblockchain.cn/docs/libra/docs/welcome-to-libra/ || book
   contribute: https://github.com/lbc-team/learnblockchain || github
   tags: /tags/ || tags
   categories: /categories/ || th

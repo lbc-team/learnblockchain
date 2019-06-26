@@ -15,13 +15,15 @@ menu:
   sitemap: Sitemap
   commonweal: Commonweal 404
   course: Course
-  web3: Web3.js CN Docs
+  web3: Web3.js
   wiki: Tech Wiki
-  solidity: Solidity CN Docs
-  etherscan: Etherscan CN Docs
+  solidity: Solidity
+  etherscan: Etherscan
   geth: Geth Develop
-  truffle: Truffle CN Docs
-  ethers.js: ethers.js  Docs
+  truffle: Truffle
+  ethers.js: ethers.js
+  tendermint: Tendermint
+  libra: Libra
   qa: Questions
   docs: Docs
   contribute: Contribute

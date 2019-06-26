@@ -35,6 +35,12 @@ date: 2019-04-11 22:43:45
   * [Cosmos SDK 中文文档](https://learnblockchain.cn/docs/cosmos/)
    Cosmos SDK 让链开发更简单。 
 
+  * [Tendermint 中文文档](https://learnblockchain.cn/docs/tendermint/)
+   Tendermint 中文文档
+
+  * [Libra 中文文档](https://learnblockchain.cn/docs/libra/docs/welcome-to-libra/)
+   Facebook 发起的全球币（稳定币）区块链
+
 更多文档正在路上...
 
 你想要什么文档，欢迎留言。
