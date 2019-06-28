@@ -1,5 +1,5 @@
 ---
-title: 
+title: Pos 会取代 Pow吗？
 permalink: pos-replace-pow
 date: 2019-05-15 10:48:34
 categories: 杂文
