@@ -194,6 +194,6 @@ Move的虚拟机，和EVM相似的地方比较多。它也是一个基于栈的�
 
 本文如有错误，请读者不吝指正。想获取更多的细节，可以阅读白皮书或开源代码。 顺便说一句，[这篇Move白皮书](https://learnblockchain.cn/docs/libra/docs/assets/papers/libra-move-a-language-with-programmable-resources.pdf)写的相当不错，概念准确，而且通俗易懂，没有使用特别形式化的描述或者复杂的数学知识，一个对区块链技术有所了解的读者完全可以一次读懂。这也从侧面反映出Facebook团队专业和务实的风格。
 
-本文作者：刘春明，[Vite Labs](https://vite.org)创始人，区块链技术专家，中国区块链应用研究中心常务理事。
+本文作者：刘春明，[Vite Labs](https://vite.org)创始人，区块链技术专家，中国区块链应用研究中心常务理事。本文转自Vite海盗号：`https://www.8btc.com/article/431396`
 
 [深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，学区块链都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789)。
