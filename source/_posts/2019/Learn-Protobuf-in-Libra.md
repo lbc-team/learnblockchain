@@ -1,5 +1,3 @@
-﻿# Learn-Protobuf-in-Libra
-
 ---
 title: 在Libra中学习Protobuf
 permalink: Learn-Protobuf-in-Libra
