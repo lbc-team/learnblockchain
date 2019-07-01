@@ -1,16 +1,10 @@
-﻿# AC-module
-
-标签（空格分隔）： 文章分享
-
 ---
-
 title: libra的AC模块
 permalink: AC-module
 date: 2019-07-01 10:23:48
 categories: Libra
 tags: Libra
 author: 白振轩
-
 ---
 
 根据Libra的架构图,AC(admission control)是位于Validator与普通用户交互的入口.
