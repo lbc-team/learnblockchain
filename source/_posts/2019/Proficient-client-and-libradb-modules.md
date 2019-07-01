@@ -1,16 +1,10 @@
-﻿# Proficient-client-and-libradb-modules
-
-标签（空格分隔）： 文章分享
-
 ---
-
 title: 打通client与libradb模块的任督二脉
 permalink: Proficient-client-and-libradb-modules
 date: 2019-07-01 10:23:48
 categories: Libra
 tags: Libra
 author: 白振轩
-
 ---
 
 
