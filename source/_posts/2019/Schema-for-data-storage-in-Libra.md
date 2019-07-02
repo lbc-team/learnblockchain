@@ -1,17 +1,19 @@
 ---
-title: 在Libra中学习Protobuf
+title: Libra 源码分析：Libra 中数据存储的 Schema
 permalink: Schema-for-data-storage-in-Libra
-date: 2019-07-01 10:53:48
+date: 2019-06-30 10:53:48
 categories: Libra
-tags: Libra
+tags: 
+    - Libra源码分析
+    - schemadb
 author: 白振轩
 ---
 
-
-Libra数据存储使用的RocksDB这个KV数据库.并且Libra存储和以太坊基本上思路是一样的,就是一个MPT树来保存Libra这个超级状态机.
+Libra数据存储使用的RocksDB这个KV数据库.并且[Libra](https://learnblockchain.cn/docs/libra/docs/welcome-to-libra/)存储和以太坊基本上思路是一样的,就是一个MPT树来保存Libra这个超级状态机.
 
 因为RocksDB中除了KV以外,还存在着ColumnFamilyName这一项,这个用起来有点像Bucket.
 
+<!-- more -->
 
 ## schemadb
 
@@ -62,6 +64,7 @@ pub struct SchemaBatch {
 ```
 
 一般的用法是：
+
 ```
 let db = TestDB::new();
 
@@ -79,11 +82,11 @@ let db = TestDB::new();
     db.flush_all(/* sync = */ true).unwrap();  //刷到硬盘
 ```
 
-正如我在代码注释中提到的,其实这里的关键问题就是Rust中的数据类型很丰富,但是RocksDB中无论是Key还是Value都只能是字节序列, 因此在存取的时候必然涉及到不断地编码和解码`(KeyCodec`和`ValueCodec)`. 如何更方便的实现呢?
+正如我在代码注释中提到的,其实这里的关键问题就是Rust中的数据类型很丰富,但是RocksDB中无论是Key还是Value都只能是字节序列, 因此在存取的时候必然涉及到不断地编码和解码(`KeyCodec`和`ValueCodec`). 如何更方便的实现呢?
 
 ### 编码和解码
 
-在Libra中针对KV中的Key和Value两个字段分别设计了编解码接口. Key的编码解码trait是`KeyCodec,Value`的编解码trait则是`ValueCodec`. 下面是接口,具体的实现则可以[参考AccountState](http://stevenbai.top/libra%E7%B3%BB%E5%88%97/3.libra%E4%B8%AD%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E7%9A%84schema/#AccountState%E7%9A%84%E5%AD%98%E5%8F%96%E8%BF%87%E7%A8%8B)的存取过程.
+在Libra中针对KV中的Key和Value两个字段分别设计了编解码接口. Key的编码解码trait是`KeyCodec,Value`的编解码trait则是`ValueCodec`. 下面是接口,具体的实现则可以[参考AccountState](#AccountState的存取过程)的存取过程.
 
 ```
 /// This trait defines a type that can serve as a [`Schema::Key`].
@@ -146,6 +149,7 @@ macro_rules! define_schema {
 ### 说说`define_schema`这个宏
 
 顺便为了学习宏,这里把这个宏展开一下.
+
 ```
 //输入:
 define_schema!(TestSchema, TestKey, TestValue, "TestCF");
@@ -156,7 +160,9 @@ struct TestValue(u32);
 
 Rust
 ```
+
 对应的内容宏展开后就是:
+
 ```
 impl crate::schema::Schema for TestSchema {
     const COLUMN_FAMILY_NAME: crate::ColumnFamilyName = "TestCF";
@@ -205,9 +211,9 @@ impl ValueCodec<AccountStateSchema> for AccountStateBlob {
 
 以`SchemaBatch`调用过程为例.
 
-1.SchemaBatch.put 放入缓存Vec中
-2.>>SchemaBatch.put中调用Key的encode_key,Value的encode_value编码成字节序列
-3.DB.write_schemas 写入到磁盘
+1. SchemaBatch.put 放入缓存Vec中
+2. >>SchemaBatch.put中调用Key的encode_key,Value的encode_value编码成字节序列
+3. DB.write_schemas 写入到磁盘
 
 SchemaBatch put的实现
 
@@ -226,9 +232,9 @@ pub fn put<S: Schema>(&mut self, key: &S::Key, value: &S::Value) -> Result<()> {
 
 前面通过宏`define_schema`生成的辅助代码`XXSchema`就是为了这里使用,否则参数类型会特别长,并且之间没有强制关联.
 
-### 数据在数据库中存储
+## 数据在数据库中存储
 
-主要是依据storage/libradb/src/schema中的定义
+主要是依据`storage/libradb/src/schema`中的定义
 
 ```
 pub(super) const ACCOUNT_STATE_CF_NAME: ColumnFamilyName = "account_state";
@@ -286,9 +292,9 @@ Version=>TransactionInfo
 Version=>LedgerInfoWithSignatures
 注意这个是放在`DEFAULT_CF_NAME`中的
 
-### schema的使用
+## schema的使用
 
-#### state_store
+### state_store
 
 位于storage/libradb/src/state_store:
 
@@ -397,4 +403,8 @@ pub(crate) struct LedgerStore {
 }
 ```
 
-两者稍微复杂一点,这就不一一列举了,但是思路是完全一样的.
+两者稍微复杂一点,这就不一一列举了，但是思路是完全一样的。
+
+本文作者为深入浅出共建者：白振轩，欢迎大家关注他的[博客](http://stevenbai.top) 。
+
+[深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，学区块链都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789)。

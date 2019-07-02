@@ -1,38 +1,44 @@
 ---
-title: libra的AC模块
+title: Libra 源码分析：Libra 的准入控制(AC)模块
 permalink: AC-module
-date: 2019-07-01 10:23:48
+date: 2019-07-02 10:23:48
 categories: Libra
-tags: Libra
+tags: 
+    - Libra源码分析
 author: 白振轩
 ---
 
-根据Libra的架构图,AC(admission control)是位于Validator与普通用户交互的入口.
+根据Libra的架构图，准入控制模块（AC：admission control，本文中简称AC模块）是位于验证器（Validator）与普通用户交互的入口。
 
-![admission-control](https://img.learnblockchain.cn/2019/06/admission-control.svg)
+<!-- more -->
 
-因此AC基本上就干了两件事,提供了两个接口.一个是`SubmitTransaction`,另一个`是UpdateToLatestLedger`.
+## 准入控制 
+参考 [Libra文档-交易的生命周期](https://learnblockchain.cn/docs/libra/docs/life-of-a-transaction/) ，准入控制模块是验证器的唯一外部接口。 客户端向验证器发出的任何请求都会先转到AC，如图：
 
-主要代码位于`admission_control_service\admission_control_service.rs` 这个是对`admission_control.proto`的`service AdmissionControl`的实现.
+![Libra准入控制](https://learnblockchain.cn/docs/libra/docs/assets/illustrations/validator-sequence.svg)
+
+因此AC基本上就干了两件事，提供了两个接口.一个是`SubmitTransaction`，另一个`是UpdateToLatestLedger`.
+
+主要代码位于`admission_control_service\admission_control_service.rs` 这个是对`admission_control.proto`的`service AdmissionControl`的实现。
 
 ## SubmitTransaction
 
-这个模块主要是接受来自普通用户的Tx,如果合理有效则提交给MemPool模块,最终会进入到block中.
+这个模块主要是接受来自普通用户的Tx，如果合理有效则提交给MemPool模块，最终会进入到block中。
 工作流程:
 
-1.校验Tx,包括三个部分一个是签名是否有效,另一个则是gas是否有效,第三个则是执行Tx中的code是否能够通过.
-2.校验账户余额是否足够,然后通过grpc链接发送给mempool模块
-3.将mempool结果返回给用户
+1. 校验Tx，包括三个部分一个是签名是否有效，另一个则是gas是否有效，第三个则是执行Tx中的code是否能够通过。
+2. 校验账户余额是否足够，然后通过grpc链接发送给mempool模块
+3. 将mempool结果返回给用户
 
-需要说明的是[官方文档](https://developers.libra.org/docs/crates/admission-control)与代码并不完全相符,实际上校验Tx都是在`VMValidator1`中进行的. 相关代码都不在AC模块
+需要说明的是[Libra官方文档](https://learnblockchain.cn/docs/libra/docs/crates/admission-control/)与代码并不完全相符，实际上校验Tx都是在`VMValidator1`中进行的。 相关代码都不在AC模块
 
-## 相关代码简单分析
+### 相关代码简单分析
 
-```
+```rust
 /// Validate transaction signature, then via VM, and add it to Mempool if it passes VM check.
     /// 流程非常简单
     /// 1. 交由本地validator验证Tx执行能否通过,如果不通过报错,否则继续2
-    /// 2.  获取账户最新状态,组装`AddTransactionWithValidationRequest`
+    /// 2. 获取账户最新状态,组装`AddTransactionWithValidationRequest`
     /// 3. 调用mempool grpc接口,添加Tx到mempool中
     pub(crate) fn submit_transaction_inner(
         &self,
@@ -101,15 +107,15 @@ author: 白振轩
     }
 ```
 
-## update_to_latest_ledger
+## UpdateToLatestLedger
 
-AC的另一个功能就是提供查询功能,这个包括账户状态,交易,ContractEvent等的查询. 这实际上可以看做libra所有对外能够提供的服务了.
+AC的另一个功能就是提供查询功能，这个包括账户状态，交易，ContractEvent等的查询。 这实际上可以看做libra所有对外能够提供的服务了。
 
 ### 请求参数
 
-主要有四类请求,深刻理解了这四类请求的所有数据结构,基本上就掌握了如何使用libra了.
+主要有四类请求，深刻理解了这四类请求的所有数据结构，基本上就掌握了如何使用libra了。
 
-```
+```rust
 #[derive(Arbitrary, Clone, Debug, Eq, PartialEq)]
 pub enum RequestItem {
     GetAccountTransactionBySequenceNumber {
@@ -135,12 +141,12 @@ pub enum RequestItem {
 }
 ```
 
-从这些请求里面没有看到任何block相关字样,这也说明了libra有意弱化block概念,直接针对的是transaction.
+从这些请求里面没有看到任何block相关字样，这也说明了libra有意弱化block概念，直接针对的是transaction。
 
 ### 返回结果
 
-请求和返回都位于types/src/get_with_proof.rs, types/src目录下就是系统的核心数据结构所在.
-如果能够把这里面的数据结构都理解透了,理解整个libra不在话下啊.
+请求和返回都位于types/src/get_with_proof.rs， types/src目录下就是系统的核心数据结构所在。
+如果能够把这里面的数据结构都理解透了，理解整个libra不在话下啊。
 
 ```
 #[allow(clippy::large_enum_variant)]
@@ -167,8 +173,9 @@ pub enum ResponseItem {
 
 ### 具体实现
 
-实现非常简单,实际上就是一个请求转达,是直接调用的storage模块的grpc服务,所以阅读我的storage模块相关文章即可.
-```
+实现非常简单，实际上就是一个请求转达，是直接调用的storage模块的grpc服务，所以阅读storage模块相关文章即可，参考：[打通Libra CLI客户端与libradb模块](https://learnblockchain.cn/2019/07/01/Proficient-client-and-libradb-modules/), [Libra 中数据存储的 Schema](https://learnblockchain.cn/2019/06/30/Schema-for-data-storage-in-Libra)。
+
+```rust
    /// Pass the UpdateToLatestLedgerRequest to Storage for read query.
     fn update_to_latest_ledger_inner(
         &self,
@@ -189,13 +196,13 @@ pub enum ResponseItem {
 
 ## 启动流程
 
-AC模块是一个独立的grpc服务,也是一个独立的可执行程序.
-入口处位于`main.rs`.
+AC模块是一个独立的grpc服务，也是一个独立的可执行程序。
+入口处位于`main.rs`。
 这里简单分析一下启动流程
 
 ### main.rs
 
-```
+```rust
 /// Run a Admission Control service in its own process.
 /// It will also setup global logger and initialize config.
 fn main() {
@@ -212,12 +219,13 @@ fn main() {
 }
 ```
 
-首先核心是使用`setup_executable`来解析参数,获取系统配置以及日志. 这个函数做整个libra所有的服务中都是这么使用的.
+首先核心是使用`setup_executable`来解析参数，获取系统配置以及日志。 这个函数做整个libra所有的服务中都是这么使用的。
 
 ### AdmissionControlNode
 
 第二步则是创建`AdmissionControlNode`
-```
+
+```rust
 /// Struct to run Admission Control service in a dedicated process. It will be used to spin up
 /// extra AC instances to talk to the same validator.
 pub struct AdmissionControlNode {
@@ -225,9 +233,10 @@ pub struct AdmissionControlNode {
     node_config: NodeConfig,
 }
 ```
-从定义中无法直接看出依赖,在run函数中可以看出启动过程.
 
-```
+从定义中无法直接看出依赖，在run函数中可以看出启动过程。
+
+```rust
 /// Setup environment and start a new Admission Control service.
     pub fn run(&self) -> Result<()> {
         logger::set_global_log_collector(
@@ -261,10 +270,11 @@ pub struct AdmissionControlNode {
         )
     }
 ```
-实际上在`run_with_clients`中还创建了vm_validator,只不过这个不是独立的服务罢了.
-通过`run_with_clients`我们也可以学习构建grpc服务的流程.
 
-```
+实际上在`run_with_clients`中还创建了vm_validator，只不过这个不是独立的服务罢了。
+通过`run_with_clients`我们也可以学习构建grpc服务的流程。
+
+```rust
 /// This method will start a node using the provided clients to external services.
     /// For now, mempool is a mandatory argument, and storage is Option. If it doesn't exist,
     /// it'll be generated before starting the node.
@@ -334,3 +344,8 @@ pub struct AdmissionControlNode {
         }
     } 
 ```
+
+
+本文作者为深入浅出共建者：白振轩，欢迎大家关注他的[博客](http://stevenbai.top) 。
+
+[深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，学区块链都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789)。
