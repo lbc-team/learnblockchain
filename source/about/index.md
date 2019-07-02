@@ -1,5 +1,5 @@
 ---
-title: 关于深入浅出区块链博客
+title: 关于深入浅出区块链技术博客
 date: 2017-10-24 18:16:10
 ---
 
@@ -61,6 +61,9 @@ date: 2017-10-24 18:16:10
 
 * [杨尉](https://github.com/waynewyang)
   先河系统CTO
+
+* [白振轩](https://github.com/nkbai)
+  目前主要集中在区块链相关领域,公链,layer2都感兴趣。他的[博客](http://stevenbai.top)
 
 * Magic_陈
   互联网行业老兵，有前后端开发经验，熟悉python、go、nodejs等多种语言，目前在国内某一线互联网大厂工作，主要从事devops以及分布式存储方面的工作，注重底层技术，同时对新技术保持敏感。

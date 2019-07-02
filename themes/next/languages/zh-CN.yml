@@ -24,8 +24,8 @@ menu:
   geth: 以太坊设计与实现
   truffle: Truffle
   cosmos: Cosmos SDK
-  tendermint: Tendermint
-  libra: Libra 中文文档
+  tendermint: Tendermint中文文档
+  libra: Libra文档
   qa: 区块链问答
   docs: 技术文档
   contribute: 向我们投稿
