@@ -1,16 +1,11 @@
-﻿# Interpretation-of-libra-mempool-module1
-
-标签（空格分隔）： 文章分享
-
 ---
-
 title: libra的mempool模块解读-1
 permalink: Interpretation-of-libra-mempool-module1
 date: 2019-07-01 10:23:48
 categories: Libra
-tags: Libra
+tags: 
+    - Libra源码分析
 author: 白振轩
-
 ---
 
 Mempool模块主要用于缓存未打包的合法交易,该模块和比特币,以太坊源码中的TxPool功能等价,只要包含两个功能:
@@ -292,6 +287,7 @@ get_block功能非常简单,就是跳出来下一块可以打包的交易,主要
 `read_timeline`: 主要用于节点间mempool中的Tx同步用,就是为每一个Tx都给一个本地唯一的单增的编号,这样推送的时候就知道推送到哪里了,避免重复.
 
 下一篇我会讲解`TransactionStore`,他是维护mempool中Tx的核心数据结构.
+[原文链接-libra的mempool模块解读-1 ](http://stevenbai.top/libra%E7%B3%BB%E5%88%97/6.libra%E7%9A%84mempool%E6%A8%A1%E5%9D%97%E8%A7%A3%E8%AF%BB-1/)
 
 
 
