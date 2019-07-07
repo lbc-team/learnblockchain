@@ -1,28 +1,31 @@
 ---
-title: libra的mempool模块解读-1
-permalink: Interpretation-of-libra-mempool-module1
-date: 2019-07-01 10:23:48
+title: Libra 源码分析： 内存池mempool模块解读-1
+permalink: libra-mempool-module1
+date: 2019-07-03 10:23:48
 categories: Libra
 tags: 
     - Libra源码分析
 author: 白振轩
 ---
 
-Mempool模块主要用于缓存未打包的合法交易,该模块和比特币,以太坊源码中的TxPool功能等价,只要包含两个功能:
+Libra 内存池(Mempool)模块主要用于缓存未打包的合法交易,该模块和比特币,以太坊源码中的TxPool功能等价,只要包含两个功能:
 
-1.接收本地收到的Tx并验证
-2.和其他节点之间互相同步Tx.
+1. 接收本地收到的Tx并验证
+2. 和其他节点之间互相同步Tx.
+
 因为Libra使用的是不会分叉的PBFT共识,所以缓冲池的实现以及管理要简单许多.
+
+<!-- more -->
 
 ## 基本功能
 
-mempool的功能主要是接收来自AC模块的交易,同时和其他节点之间通过网络同步交易.
+[mempool的功能](https://learnblockchain.cn/docs/libra/docs/life-of-a-transaction/#%E5%86%85%E5%AD%98%E6%B1%A0)主要是接收来自[AC模块](https://learnblockchain.cn/2019/07/02/AC-module/)的交易,同时和其他节点之间通过网络同步交易.
 mempool主要用于保存可能打包的交易,主要是指验证合法的交易(包括签名合法,账户金额足够). 可以简单分类:
 
-1.各方面都齐备,可以进入下一块的交易. 主要是seq_number连起来的.
-2.因为seq_number没有连续不能被打包的交易 (比如当前AccountA的Tx中包含了[2,3,4,7,8]交易,但是5没有,所以[7,8]是不可能被打包的)
+1. 各方面都齐备,可以进入下一块的交易. 主要是seq_number连起来的.
+2. 因为seq_number没有连续不能被打包的交易 (比如当前AccountA的Tx中包含了[2,3,4,7,8]交易,但是5没有,所以[7,8]是不可能被打包的)
 
-同时libra中也有和以太坊一样的GasPrice概念(功能也一样),因此如果对于同一账号,seq_number相同的情况下,会选择GasPrice高的那个Tx.
+同时Libra中也有和以太坊一样的GasPrice概念(功能也一样),因此如果对于同一账号,seq_number相同的情况下,会选择GasPrice高的那个Tx.
 根据以上讨论,可以看出实际上Libra唯一的ID可以不认为是交易数据的哈希值,可以把(Address,seq_number)作为唯一的ID,当然这个在比特币以太坊等公链中也行的通.
 因为在Libra中把(Address,seq_number)二元组作为Tx唯一的ID,所以其代码设计中对于Tx的管理和以太坊也不太一样.
 
@@ -33,7 +36,7 @@ mempool主要用于保存可能打包的交易,主要是指验证合法的交易
 
 ## mempool的对外接口
 
-```
+```rust
 pub trait Mempool {
     //主要用于接受来自AC的新增Tx
     fn add_transaction_with_validation(&mut self, ctx: ::grpcio::RpcContext, req: super::mempool::AddTransactionWithValidationRequest, sink: ::grpcio::UnarySink<super::mempool::AddTransactionWithValidationResponse>);
@@ -46,9 +49,9 @@ pub trait Mempool {
 }
 ```
 
-MempoolService的实现位`于mempool/src/mempool_service.rs`,这里的实现就是对于grpc接口数据的处理,真正的处理逻辑位于`CoreMempool`
+MempoolService的实现位于`mempool/src/mempool_service.rs`,这里的实现就是对于grpc接口数据的处理,真正的处理逻辑位于`CoreMempool`
 
-```
+```rust
 #[derive(Clone)]
 pub(crate) struct MempoolService {
     pub(crate) core_mempool: Arc<Mutex<CoreMempool>>,
@@ -98,7 +101,7 @@ pub struct TransactionStore {
 
 在`add_transaction_with_validation`中只是简单解析一下参数就很快进入到`CoreMempool`的`add_txn`中,我们重点解析一下这个函数.
 
-```
+```rust
 /// Used to add a transaction to the Mempool
     /// Performs basic validation: checks account's balance and sequence number
     pub(crate) fn add_txn(
@@ -155,7 +158,8 @@ pub struct TransactionStore {
 
 ### remove_transaction 移除已打包交易
 
-```
+
+```rust
 /// This function will be called once the transaction has been stored
     /// 共识模块确定Tx被打包了,那么缓冲池中的Tx就可以移除了. is_rejected表示没有被打包
     /// 同时is_rejected为false的时候,sequence_number也告诉mempool目前sender之前的Tx都被打包了,
@@ -198,7 +202,7 @@ pub struct TransactionStore {
 
 get_block功能非常简单,就是跳出来下一块可以打包的交易,主要就是seq_number连起来的交易.因为不合法的交易早就已经被踢了.
 
-```
+```rust
 /// Fetches next block of transactions for consensus
     /// `batch_size` - size of requested block
     /// `seen_txns` - transactions that were sent to Consensus but were not committed yet
@@ -287,7 +291,8 @@ get_block功能非常简单,就是跳出来下一块可以打包的交易,主要
 `read_timeline`: 主要用于节点间mempool中的Tx同步用,就是为每一个Tx都给一个本地唯一的单增的编号,这样推送的时候就知道推送到哪里了,避免重复.
 
 下一篇我会讲解`TransactionStore`,他是维护mempool中Tx的核心数据结构.
-[原文链接-libra的mempool模块解读-1 ](http://stevenbai.top/libra%E7%B3%BB%E5%88%97/6.libra%E7%9A%84mempool%E6%A8%A1%E5%9D%97%E8%A7%A3%E8%AF%BB-1/)
+
+本文作者为深入浅出共建者：白振轩， [原文链接-libra的mempool模块解读-1 ](http://stevenbai.top/libra%E7%B3%BB%E5%88%97/6.libra%E7%9A%84mempool%E6%A8%A1%E5%9D%97%E8%A7%A3%E8%AF%BB-1/)
 
 
-
+[深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，学区块链都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789)。
