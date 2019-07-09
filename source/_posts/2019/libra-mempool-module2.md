@@ -1,19 +1,21 @@
 ---
-title: libra的mempool模块解读-2
-permalink: Interpretation-of-libra-mempool-module2
-date: 2019-07-08 10:23:48
+title: Libra 源码分析：内存池mempool模块解读-2
+permalink: libra-mempool-module2
+date: 2019-07-04 10:23:48
 categories: Libra
 tags: 
     - Libra源码分析
+    - mempool 
 author: 白振轩
 ---
 
-[原文地址：libra的mempool模块解读-2](http://stevenbai.top/libra%E7%B3%BB%E5%88%97/7.libra%E7%9A%84mempool%E6%A8%A1%E5%9D%97%E8%A7%A3%E8%AF%BB-2/)
 
-mempool模块对于Tx的管理核心全部集中在`TransactionStore`这个结构,他对外对接的是`CoreMemPool`结构.
+[mempool模块](https://learnblockchain.cn/docs/libra/docs/crates/mempool/)对于Tx的管理核心全部集中在`TransactionStore`这个结构,他对外对接的是`CoreMemPool`结构.
 从`TransactionStore`可以清楚看出缓冲池中Tx增删改查的逻辑.
 
 作为缓冲池,我们先大致说一下这几个功能要考虑的问题.
+
+<!-- more -->
 
 ## 1. `TransactionStore`中的增删改查
 
@@ -30,15 +32,15 @@ mempool模块对于Tx的管理核心全部集中在`TransactionStore`这个结�
 
 ### 1.2 删
 
-1.当缓冲池中的Tx被打包以后,肯定要删
-2.当一个Tx用户指定的过期时间到了,也要删. (每个Tx都有一个过期时间,这个是Libra的独创,在比特币以太坊源码中是没有的).
-3.当一个Tx在缓冲池中呆很久都不能被打包,也要删
-    
+1. 当缓冲池中的Tx被打包以后,肯定要删;
+2. 当一个Tx用户指定的过期时间到了,也要删. (每个Tx都有一个过期时间,这个是Libra的独创,在比特币以太坊源码中是没有的);
+3. 当一个Tx在缓冲池中呆很久都不能被打包,也要删.
+   
 ### 1.3 查
 
-1.新的Tx来的时候要做重复性检查,这是要查
-2.当共识模块需要下一块可以被打包的交易,这时候要快速查
-3.节点之间需要同步Tx,那么要查哪些Tx已经同步,哪些没有,同步到了什么位置.
+1. 新的Tx来的时候要做重复性检查,这是要查
+2. 当共识模块需要下一块可以被打包的交易,这时候要快速查
+3. 节点之间需要同步Tx,那么要查哪些Tx已经同步,哪些没有,同步到了什么位置.
 
 ## 2. 增删改查的实现
 
@@ -50,7 +52,7 @@ mempool模块对于Tx的管理核心全部集中在`TransactionStore`这个结�
 
 看名字,就是一个优先级队列. 它内部用BTreeSet进行组织,排序方式则是gas_price,expiration_time,address,sequence_number. 也就是gas_price高的优先,其次是expiration_time等.
 
-```
+```rust
 pub struct PriorityIndex {
     data: BTreeSet<OrderedQueueKey>,
 }
@@ -58,7 +60,7 @@ pub struct PriorityIndex {
 
 顺便说一下rust中的运算符重载,这个和C++中是一样的,如果一个自定义结构想实现`<,>,==`,那么可以实现`Ord`这个trait,为了直观,我们这里展示一下`OrderedQueueKey`对Ord的实现. 其他几种索引方式大同小异.
 
-```
+```rust
 #[derive(Eq, PartialEq, Clone, Debug, Hash)]
 pub struct OrderedQueueKey {
     pub gas_price: u64,
@@ -95,18 +97,21 @@ impl Ord for OrderedQueueKey {
 #### 2.1.2 TTLIndex
 
 这个是按照过期时间排序,过期时间总共有两种,一种是在缓冲池中呆太久了,另一种是用户指定的过期时间.
-```
+
+```rust
 pub struct TTLIndex {
     data: BTreeSet<TTLOrderingKey>,
     get_expiration_time: Box<dyn Fn(&MempoolTransaction) -> Duration + Send + Sync>,
 }
 ```
-其中get_expiration_time这个回调函数就是用来`从MempoolTransaction`获取不同的时间用的.
+
+其中`get_expiration_time`这个回调函数就是用来`从MempoolTransaction`获取不同的时间用的.
 
 #### 2.1.3 TimelineIndex
 
 这个索引方式主要是服务节点间同步,为每一个Tx都给与一个唯一的编号,这样向其他节点推送Tx的时候只需记住一个整数就知道下次从什么位置开始推送了.
-```
+
+```rust
 /// TimelineIndex is ordered log of all transactions that are "ready" for broadcast
 /// we only add transaction to index if it has a chance to be included in next consensus block
 /// it means it's status != NotReady or it's sequential to other "ready" transaction
@@ -126,9 +131,10 @@ pub struct TimelineIndex {
 
 #### 2.1.4 ParkingLotIndex
 
-ParkingLotIndex主要是记录那些因为seq_number不连续还不能被打包的Tx. 一旦来了新的交易就有可能让不连续的seq_number变成连续的. 或者打包的块中更新了seq_number,从而也可能连起来.
+`ParkingLotIndex`主要是记录那些因为`seq_number`不连续还不能被打包的Tx. 一旦来了新的交易就有可能让不连续的`seq_number`变成连续的. 或者打包的块中更新了`seq_number`,从而也可能连起来.
 后一种情况可能不太直观,比如我本地缓冲池中有AccountA的Tx[2,3,5,6,7],因为4不存在,导致[5,6,7]不可能被打包. 但是突然链上已经被打包的交易中出现了4,这就意味着[5,6,7]都已经Ready了,4只是因为同步延迟我没有收到而已.
-```
+
+```rust
 /// ParkingLotIndex keeps track of "not_ready" transactions
 /// e.g. transactions that can't be included in next block
 /// (because their sequence number is too high)
@@ -149,7 +155,7 @@ pub type TxnPointer = (AccountAddress, u64);
 说句题外话,有了Map这个结构,数据组织以及管理真是轻松了很多,怪不得Go要把Map作为内置的.
 我们提到的各种Index,都是用的有序`BTreeMap`, `BTreeSet`本身就是一个特殊的BTreeMap.
 
-```
+```rust
 /// TransactionStore is in-memory storage for all transactions in mempool
 pub struct TransactionStore {
     // main DS
@@ -179,11 +185,11 @@ pub struct TransactionStore {
 }
 ```
 
-## TransactionStore完整的实现
+## 3. TransactionStore完整的实现
 
 ### 3.1 按照 Tx ID查
 
-```
+```rust
 /// fetch transaction by account address + sequence_number
     pub(crate) fn get(
         &self,
@@ -202,7 +208,8 @@ pub struct TransactionStore {
 ### 3.2 增,改的实现
 
 增很容易,关键是增的时候要考虑删查,所以各种索引都要考虑好.
-```
+
+```rust
 /// insert transaction into TransactionStore
     /// performs validation checks and updates indexes
     pub(crate) fn insert(
@@ -286,7 +293,7 @@ pub struct TransactionStore {
 
 #### 3.3.1 删被打包的交易
 
-``` 
+```rust
   /// handles transaction commit
     /// it includes deletion of all transactions with sequence number <= `sequence_number`
     /// and potential promotion of sequential txns to PriorityIndex/TimelineIndex
@@ -312,7 +319,7 @@ pub struct TransactionStore {
 
 #### 3.3.2 删迟迟不能被打包的交易
 
-```
+```rust
     /// GC old transactions
     pub(crate) fn gc_by_system_ttl(&mut self) {
         //清除所有过期的交易,这里虽然设置的是now,
@@ -368,3 +375,12 @@ pub struct TransactionStore {
 
 不得不说大厂出来的代码质量高,很精炼. 也没多少行core_mempool总共也就五个文件,一千行代码不到.
 其次是因为是联盟链,也不用考虑分叉,所以这部分代码相比以太坊简化了不少. 所谓的好与不好,主要看能不能满足需求吧.
+
+
+本文作者为深入浅出共建者：白振轩， [原文地址：libra的mempool模块解读-2](http://stevenbai.top/libra%E7%B3%BB%E5%88%97/7.libra%E7%9A%84mempool%E6%A8%A1%E5%9D%97%E8%A7%A3%E8%AF%BB-2/)
+
+
+
+[深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，学区块链都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789)。
+
+

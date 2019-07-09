@@ -1,23 +1,24 @@
 ---
-title: libra的mempool模块解读-3
-permalink: Interpretation-of-libra-mempool-module3
-date: 2019-07-09 08:23:48
+title: Libra 源码分析：内存池mempool模块解读-3
+permalink: libra-mempool-module3
+date: 2019-07-05 08:23:48
 categories: Libra
 tags: 
     - Libra源码分析
+    - mempool
 author: 白振轩
 ---
 
-[原文地址：libra的mempool模块解读-3](http://stevenbai.top/libra%E7%B3%BB%E5%88%97/8.libra%E7%9A%84mempool%E6%A8%A1%E5%9D%97%E8%A7%A3%E8%AF%BB-3/)
+内存池mempool模块解读第三篇，这部分我主要研究mempool中的节点间Tx同步. 关键代码都位于`shared_mempool.rs`中.
 
-这部分我主要研究mempool中的节点间Tx同步. 关键代码都位于`shared_mempool.rs`中.
+<!-- more -->
 
 ## 1. 启动过程
 
 先从mempool的启动过程说起,这里可以把前面两部分内容串联起来.
 启动代码位于`runtime.rs`中,
 
-```
+```rust
 /// Handle for Mempool Runtime
 pub struct MempoolRuntime { 
     /// gRPC server to serve request from AC and Consensus
@@ -88,7 +89,7 @@ impl MempoolRuntime {
 
 ### 1.1 start_shared_mempool
 
-```
+```rust
 /// bootstrap of SharedMempool
 /// creates separate Tokio Runtime that runs following routines:
 ///   - outbound_sync_task (task that periodically broadcasts transactions to peers)
@@ -157,7 +158,7 @@ where
 
 ## SharedMempool中的各个子任务
 
-在start_shared_mempool中看到有三个关键地方,分别是
+在`start_shared_mempool`中看到有三个关键地方,分别是:
 
 1. `network_sender`是向外推送Tx的通道
 2. `network_events` 接受其他节点Tx以及状态变化等信息的通道
@@ -167,13 +168,13 @@ where
 
 ### 接受来自底层Network模块的信息推送
 
-主要有三种消息
+主要有三种消息:
 
 1. NewPeer有新的Peer上线
 2. LostPeer Peer下线
 3. Message 主要是就是其他节点推送来的新的Tx
 
-```
+```rust
 /// This task handles inbound network events.
 /// This task handles inbound network events.
 async fn inbound_network_task(smp: SharedMempool, network_events: MempoolNetworkEvents)
@@ -193,7 +194,7 @@ let max_inbound_syncs = smp.config.shared_mempool_max_concurrent_inbound_syncs;
 let f_inbound_network_task = network_events
 ```
 
-```
+```rust
 //filter & map,有必要filter么?
 .filter_map(move |network_event| {
     trace!("SharedMempoolEvent::NetworkEvent::{:?}", network_event);
@@ -270,7 +271,7 @@ let f_inbound_network_task = network_events
 );
 ```
 
-```
+```rust
 // drive the inbound futures to completion
 f_inbound_network_task.await; //永远不结束
 
@@ -278,8 +279,8 @@ crit!("SharedMempool inbound_network_task terminated");
 }
 ```
 
-    上面这段代码很长,有接近100行,但是如果仔细分析的话基本上就是一句代码,不过这一条语句很复杂,占用了从16行到84行基本上70行.
-    我不知道该说这是rust语言的表达能力强还是该诟病rust阅读体验极糟.
+上面这段代码很长,有接近100行,但是如果仔细分析的话基本上就是一句代码,不过这一条语句很复杂,占用了从16行到84行基本上70行.
+我不知道该说这是rust语言的表达能力强还是该诟病rust阅读体验极糟.
 
 还有一个需要说明就是这里async和await搭配使用. 因为函数的声明中使用了async关键字,因此实际上函数的返回值会是一个Future.
 还有就是第94行的`f_inbound_network_task.await`并不是一个死循环,你可以把他想象成一个goroutine,当`network_events`这个channel读不出来数据的时候他会放弃CPU占用. 实际上这也是tokio这个框架在做的事.
@@ -295,7 +296,7 @@ crit!("SharedMempool inbound_network_task terminated");
 
 ### 向外广播来自AC的Tx
 
-```
+```rust
 /// This task handles [`SyncEvent`], which is periodically emitted for us to
 /// broadcast ready to go transactions to peers.
 async fn outbound_sync_task<V>(smp: SharedMempool<V>, mut interval: IntervalStream)
@@ -334,11 +335,11 @@ where
 
 #### 2.2.1 向外广播Tx
 
-相比之下sync_with_peers要复杂一些,但是其功能非常简单,就是针对每个节点推送所有来自自身AC模块的Tx.
+相比之下`sync_with_peers`要复杂一些,但是其功能非常简单,就是针对每个节点推送所有来自自身[AC模块](https://learnblockchain.cn/docs/libra/docs/crates/admission-control/)的Tx.
 稍微复杂的一点就是为了避免重复,使用了`timeline_id`这个技术.
 前面文章也介绍过,就是一个非常简单的针对每一个Tx都有一个编号,并且这个编号是单增的.这样在向节点A推送的时候只需要记住上次推送到了第35个,那么下次就从第36个开始即可.
 
-```
+```rust
 /// sync routine
 /// used to periodically broadcast ready to go transactions to peers
 async fn sync_with_peers<'a>(
@@ -408,7 +409,7 @@ async fn sync_with_peers<'a>(
 
 ### 2.3  gc_task 过期交易回收机制
 
-```
+```rust
 /// GC all expired transactions by SystemTTL
 async fn gc_task(mempool: Arc<Mutex<CoreMempool>>, gc_interval_ms: u64) {
     let mut interval = Interval::new_interval(Duration::from_millis(gc_interval_ms)).compat();
@@ -437,7 +438,7 @@ async fn gc_task(mempool: Arc<Mutex<CoreMempool>>, gc_interval_ms: u64) {
 不知道Libra这种设计,如果发生了拥堵,交易丢失了如何解决.
 我的一个猜想可能是:
 
-1. libra的client要相信validator,他会去validator上查询自己账户的seq_number.
+1. libra的client要相信`validator`,他会去`validator`上查询自己账户的`seq_number`.
 2. libra中Tx是有过期机制的,一旦过期,client就应该认为交易失败了,如果想要继续,就应该重新发送.
 
 ## 3 mempool之间的同步
@@ -446,7 +447,7 @@ async fn gc_task(mempool: Arc<Mutex<CoreMempool>>, gc_interval_ms: u64) {
 
 ### 3.1 发现节点之间的链接方式
 
-```
+```rust
 #[derive(Default)]
 struct SharedMempoolNetwork {
     mempools: HashMap<PeerId, Arc<Mutex<CoreMempool>>>,
@@ -513,7 +514,7 @@ impl SharedMempoolNetwork {
 这里测试代码没有覆盖到广播Tx这种情形.
 这个情形在`deliver_message`中被覆盖到.
 
-```
+```rust
 //send_event,都是发送的NewPeer或者LostPeer事件,是peer向外发送说自己发现了NewPeer(xx)
     fn send_event(&mut self, peer: &PeerId, notif: NetworkNotification) {
         let network_notifs_tx = self.network_notifs_txs.get_mut(peer).unwrap();
@@ -532,7 +533,7 @@ impl SharedMempoolNetwork {
 
 ### 3.3 接收Peer广播出来的Tx
 
-```
+```rust
 /// deliveres next message from given node to it's peer
     /// 这个函数实际上是触发peer向外推送自己缓冲池中的Tx,然后通过`network_reqs_rx`接受推送
     /// 验证推送内容是否符合预期
@@ -583,7 +584,7 @@ impl SharedMempoolNetwork {
 
 #### 3.3.1 一个基本测试case
 
-```
+```rust
 #[test]
 fn test_basic_flow() {
     let (peer_a, peer_b) = (PeerId::random(), PeerId::random());
@@ -620,3 +621,9 @@ fn test_basic_flow() {
 从整体功能来说,这个模块和其他公链的TxPool模块又是非常相似的,基本上就是收集管理Tx,为共识模块提供可以打包的Tx.
 
 同时我们也看到rust进步神速,目前的tokio异步框架已经非常完善,再加上async,await关键字的加持,编写异步程序已经比较简单直接了.
+
+
+本文作者为深入浅出共建者：白振轩，[原文地址：libra的mempool模块解读-3](http://stevenbai.top/libra%E7%B3%BB%E5%88%97/8.libra%E7%9A%84mempool%E6%A8%A1%E5%9D%97%E8%A7%A3%E8%AF%BB-3/)
+
+
+[深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，学区块链都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789)。
