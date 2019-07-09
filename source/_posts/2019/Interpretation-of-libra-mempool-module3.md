@@ -1,16 +1,11 @@
-﻿# Interpretation-of-libra-mempool-module3
-
-标签（空格分隔）： 文章分享
-
 ---
-
 title: libra的mempool模块解读-3
 permalink: Interpretation-of-libra-mempool-module3
 date: 2019-07-09 08:23:48
 categories: Libra
-tags: Libra
+tags: 
+    - Libra源码分析
 author: 白振轩
-
 ---
 
 [原文地址：libra的mempool模块解读-3](http://stevenbai.top/libra%E7%B3%BB%E5%88%97/8.libra%E7%9A%84mempool%E6%A8%A1%E5%9D%97%E8%A7%A3%E8%AF%BB-3/)
