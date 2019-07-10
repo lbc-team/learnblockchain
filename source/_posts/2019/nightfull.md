@@ -121,7 +121,7 @@ PS：特别感谢安永创新中心的技术支持。
 3. （德）JOSEF PIEPRZYK THOMAS HARDJONO JENNIFER SEBERRY．计算机安全基础：中国水利水电出版社，2006年10月
 
 作者：乐扣老师， 无锡优级先科信息技术有限公司首席信息官，南京信息工程大学滨江学院企业教授，中国自动化学会区块链专业委员会委员，主要研发方向于量子计算、区块链、大数据、人工智能等领域。
-原文： https://bihu.com/article/1909887631 ,深入迁出区块链授权转载。
+原文： https://bihu.com/article/1909887631 ,深入浅出区块链授权转载。
 
 
 [深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，学区块链都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789) 掌握区块链技术动态。
