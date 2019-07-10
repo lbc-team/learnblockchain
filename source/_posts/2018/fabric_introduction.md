@@ -3,8 +3,8 @@ title: 联盟链初识以及Fabric环境搭建流程
 permalink: fabric_introduction
 date: 2018-11-21 17:30:27
 categories:
-　- 联盟链
-　- Fabric
+    - 联盟链
+    - Fabric
 tags: Fabric
 author: lgy
 ---
