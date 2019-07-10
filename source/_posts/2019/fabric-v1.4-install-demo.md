@@ -1,10 +1,11 @@
-
 ---
 title: Fabric-V1.4安装配置 及 票据应用示例
 permalink: fabric-v1.4-install-demo
 un_reward: true
 date: 2019-04-21 15:36:54
-categories: Fabric
+categories: 
+  - 联盟链
+  - Fabric
 tags: Fabric
 author: 投河自尽的鱼
 ---

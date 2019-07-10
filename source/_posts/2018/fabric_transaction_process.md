@@ -3,8 +3,8 @@ title: Fabric1.0 交易流程
 permalink: fabric_transaction_process
 date: 2018-11-21 17:30:27
 categories:
-    - Fabric
     - 联盟链
+    - Fabric
 tags:
     - Fabric
 author: lgy

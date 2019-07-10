@@ -3,13 +3,10 @@ title: 联盟链初识以及Fabric环境搭建流程
 permalink: fabric_introduction
 date: 2018-11-21 17:30:27
 categories:
-  - Fabric
-  - 联盟链
-tags:
-    - Fabric
-
+　- 联盟链
+　- Fabric
+tags: Fabric
 author: lgy
-
 ---
 
 这篇文章首先简单介绍了联盟链是什么，再详细的介绍了Fabric环境搭建的整个流程。

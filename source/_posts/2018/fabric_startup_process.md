@@ -3,8 +3,8 @@ title: Fabric 网络环境启动过程详解
 permalink: fabric_startup_process
 date: 2018-11-21 17:30:27
 categories:
-    - Fabric
     - 联盟链
+    - Fabric
 tags:
     - Fabric
 author: lgy
