@@ -10,6 +10,8 @@ author: Tiny熊
 
 Solidity 中很多Hash函数需要bytes作为一个参数，这个时候有时需要把uint转化为bytes　。
 
+<!-- more -->
+
 ## uint 如何转为 bytes　类型
 
 Solidity 中 uint 转 bytes 的几种方法，gas 消耗从少到多：
