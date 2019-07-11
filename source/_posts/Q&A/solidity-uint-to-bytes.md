@@ -8,7 +8,7 @@ tags:
 author: Tiny熊
 ---
 
-Solidity 中很多Hash函数需要bytes作为一个参数，这个时候有时需要把uint转化为bytes　。
+Solidity 中很多[Hash函数,　如：keccak256　](https://learnblockchain.cn/docs/solidity/units-and-global-variables.html#index-5)　等需要bytes作为一个参数，这个时候有时需要把uint转化为bytes　。
 
 <!-- more -->
 
