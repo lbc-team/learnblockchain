@@ -4,6 +4,7 @@ permalink: about-qa
 date: 2019-01-12 11:25:59
 categories: 问与答
 comments: ture
+hide_in_home: true
 top: 1
 hide_wechat_subscriber: true
 ---
