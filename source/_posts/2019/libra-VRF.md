@@ -283,7 +283,9 @@ pub struct VRFPublicKey(ed25519_PublicKey);
 ## 结束语
 
 VRF是一个好东西,给区块链带来了可预测的伪随机性.
-不过在Libra中号称自己使用了VRF,并且也在代码中看到了实现.就是没有找到使用的地方,可能是我的找法不对?
+不过在Libra中号称自己使用了VRF,并且也在代码中看到了实现.
+LibraBFT共识中每一轮的leader 就是由最新提交区块的提议者使用可验证随机函数 VRF来确定的，不过我没有找到使用的地方,可能是我的找法不对?
+
 我看的代码版本是[commit-hash](https://github.com/libra/libra/tree/d324ce75cc9bcc6777a2b45c756f4df2f47c4ef3/crypto)
 
 本文作者为深入浅出共建者：白振轩，[libra中的vrf](https://stevenbai.top/libra系列/9.libra中的vrf/)
