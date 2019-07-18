@@ -42,8 +42,8 @@ chaincode是fabric的智能合约，又叫做链码。Chaincode是生成交易tr
 
 现在，我们在first network的环境中，重新部署一个新的应用，应用逻辑是插入一个学生的成绩（学生姓名，语文成绩，数学成绩），然后计算总成绩记录到链上，通过学生姓名查询学生的总成绩，链码路径放到`fabric-samples/chaincode/win_test/src/fabric-chaincode`目录下，链码下载地址是：https://gitee.com/zh5715615/fabric-chaincode.git。
 
-### 关掉tls
-为了减少参数输入，在这里不引入tls（安全传输层协议）功能，后面再进行讲解，我们关掉tls开关：
+### 先关掉TLS
+为了减少参数输入，在这里不引入TLS（安全传输层协议）功能，后面再进行讲解，我们关掉tls开关：
 
 1. 修改`first-network/docker-compose-cli.yaml`
 
