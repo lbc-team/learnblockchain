@@ -1,22 +1,25 @@
 ---
-title: fabric-first-network
+title: Fabric初探及搭建Fabric第一个网络
 permalink: fabric-first-network
 un_reward: true
 date: 2019-06-28 06:55:59
 categories:
+    - 联盟链
+    - Fabric
 tags:
+    - Fabric
 author: kunpeng
 ---
 
 ## 超级账本介绍
 
-​		超级账本(hyperledger)项目是首个面向企业应用场景的开源分布式账本平台，于2015年12月份由Linux基金会牵头，成立项目组，推动区块链的相关协议，规范，标准的发展。
+超级账本(hyperledger)项目是首个面向企业应用场景的开源分布式账本平台，于2015年12月份由Linux基金会牵头，成立项目组，推动区块链的相关协议，规范，标准的发展。
 
-​		参与超级账本的规范制定，开发的企业和组织有IBM，Intel，Cisco等国际知名机构，国内参与机构有小蚁，布比，万达等企业。
+参与超级账本的规范制定，开发的企业和组织有IBM，Intel，Cisco等国际知名机构，国内参与机构有小蚁，布比，万达等企业。
 
-​		超级账本项目，致力于构建透明，公开，去中心化的企业级分布式应用，主要应用在银行，证券，数字资产等金融领域，减少企业间的信任成本，增加机构之间互助合作的可能性。
+超级账本项目，致力于构建透明，公开，去中心化的企业级分布式应用，主要应用在银行，证券，数字资产等金融领域，减少企业间的信任成本，增加机构之间互助合作的可能性。
 
-
+<!-- more -->
 
 ## 超级账本项目
 
@@ -32,15 +35,15 @@ author: kunpeng
 
 
 
-## Fabric结构介绍
+## Fabric 框架结构
 
 架构图如下：![framework](https://img.learnblockchain.cn/2019/06/28_framework.png!wl)
 
-* 应用程序角度
+### 应用程序角度
 
   1. **身份管理**
 
-     用户注册和登陆系统后，获取到用户注册证书，其他所有的操作都需要与用户证书关联的私钥进行签名，消息接收方首先会进行签名验证，才进行后续的消息处理。
+     用户注册和登陆系统后，获取到用户注册证书，所有其他的操作都需要与用户证书关联的私钥进行签名，消息接收方首先会进行签名验证，才进行后续的消息处理。
 
   2. **账本管理**
 
@@ -48,21 +51,24 @@ author: kunpeng
 
   3. **交易管理**
 
-     账本数据只能通过交易执行才能更新，应用程序通过交易管理提交交易天并获取到交易背书以后，再给排序服务节点提交交易，然后打包生成区块。
+     账本数据只能通过执行交易才能更新，应用程序通过交易管理提交交易并获取到交易背书以后，再给排序服务节点提交交易，然后打包生成区块。
 
   4. **智能合约**
 
-     实现“可编程的账本”，通过链码执行提交的交易，实现基于区块链的只能合约业务逻辑。
+     实现“可编程的账本”，通过链码执行提交的交易，实现基于区块链的智能合约业务逻辑。
 
-* 底层角度
+### 底层角度
 
   1. **成员管理(MSP)**
 
-     MSP对成员管理进行了抽象，每个MSP都会建立一套根信任证书体系，利用PKI对成员身份进行认证，验证成员用户提交请求的签名。结合Fabric-CA或者第三方的CA系统，提供成员注册功能，并对成员身份证书进行管理。
+     MSP对成员管理进行了抽象，每个MSP都会建立一套根信任证书体系，利用公钥基础设施PKI对成员身份进行认证，验证成员用户提交请求的签名。结合Fabric-CA或者第三方的CA系统(Certificate Authority:证书颁发机构)，提供成员注册功能，并对成员身份证书进行管理。
 
   2. **共识服务**
 
-     在分布式节点环境下，要实现同一个链上不同节点区块的一致性，同事要确保区块里的交易有效和有序。共识机制由3个阶段完成：(1)客户端向背书节点提交提案进行背书签名；(2)客户端将背书后的交易提交给排序服务节点进行排序，生成区块和排序服务；(3)广播给记账节点验证交易后写入本地账本。
+     在分布式节点环境下，要实现同一个链上不同节点区块的一致性，同时要确保区块里的交易有效和有序。共识机制由3个阶段完成：
+     (1)　客户端向背书节点提交提案进行背书签名；
+     (2)　客户端将背书后的交易提交给排序服务节点进行排序，生成区块和排序服务；
+     (3)　广播给记账节点验证交易后写入本地账本。
 
   3. **链码服务**
 
@@ -76,11 +82,11 @@ author: kunpeng
 
 ### 环境准备
 
-**linux(ubuntu)**：fabric运行的系统平台；
+**linux(ubuntu)**：Fabric运行的系统平台；
 
 **docker, docker-compose**：部署虚拟化镜像容器，学习时减少机器开销；链码运行环境为docker容器的沙箱环境；
 
-**golang**：fabric运行的基础环境，编译fabric项目。
+**golang**：Fabric运行的基础环境，编译Fabric项目。
 
 
 
@@ -101,7 +107,7 @@ cd fabric
 make all
 ```
 
-* 编译中可能出现的问题
+### 编译中可能出现的问题及解决办法
 
 1. 服务器访问问题
 
@@ -143,42 +149,48 @@ make all
    **解决方法**：
 
    (1). 自己编写buildenv的Dockerfile，将dep拷贝进去；
-   
+
    (2). 注释掉./scripts/check-deps.sh文件中的dep version和dep check两行，因为这两行命令只做了查看版本和检测的功能，在正常情况下是不需要用到的，注释掉不影响fabric的使用,如下：
-   
+
    ![dep-modify](https://img.learnblockchain.cn/2019/06/28_depmodify.png!wl)
 
-* 编译结果
+### 编译结果
 
-  1. 在./build/bin目录下生成了一下执行文件
+  1. 在./build/bin目录下生成了以下执行文件：
 
+   ```text
      chaintool  configtxgen  configtxlator  cryptogen  discover  idemixgen  orderer  peer
-     
+   ```
+
      *注意：要能正常使用fabric，则需要将./build/bin中的执行文件放到环境变量$PATH中*
-  2. 生成了hyperledger fabric的一批镜像，包括
-     
+
+  2. 生成了hyperledger fabric 的一批镜像，包括
+
      ```bash
-     hyperledger/fabric-tools    
-     hyperledger/fabric-buildenv 
-     hyperledger/fabric-ccenv    
-     hyperledger/fabric-orderer  
-     hyperledger/fabric-peer     
-     hyperledger/fabric-ca       
+     hyperledger/fabric-tools
+     hyperledger/fabric-buildenv
+     hyperledger/fabric-ccenv
+     hyperledger/fabric-orderer
+     hyperledger/fabric-peer
+     hyperledger/fabric-ca
      hyperledger/fabric-zookeeper
-     hyperledger/fabric-kafka    
-     hyperledger/fabric-couchdb  
+     hyperledger/fabric-kafka
+     hyperledger/fabric-couchdb
      hyperledger/fabric-baseimage
-     hyperledger/fabric-baseos   
-     hyperledger/fabric-ccenv    
+     hyperledger/fabric-baseos
+     hyperledger/fabric-ccenv
      ```
 
-### 运行first network
+### 运行first network示例程序
+
+fabric-samples文件夹中包含了许多示例,first-network 可以快速引导一个由4个代表2个不同组织的peer节点以及一个排序服务节点的Hyperledger fabric网络,　我们来运行下．
 
 1. 从github下载示例程序
 
    ```bash
    git clone https://github.com/hyperledger/fabric-samples
    ```
+
 2. 进入fabric-samples/first-network目录执行运行脚本
 
    ``` bash
@@ -188,6 +200,10 @@ make all
 
 3. 执行成功结果
 
-   出现以下标志则认为成功：
+   出现以下标志则成功：
 
-   ![end](https://img.learnblockchain.cn/2019/06/28_end.png!wl)
+   ![end](https://img.learnblockchain.cn/2019/06/28_end.png)
+
+在下一篇我们将介绍在这个网络上部署应用：[Fabric 链码Chaincode　的安装、初始化、调用、升级](https://learnblockchain.cn/2019/07/03/chaincode-run/)　。
+
+[深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，学区块链都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789) 掌握区块链技术动态。

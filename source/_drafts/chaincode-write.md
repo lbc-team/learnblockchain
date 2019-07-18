@@ -1,20 +1,23 @@
 ---
-title: 合约编程
-permalink: 合约编程
+title: 编写 Fabric 链码（chaincode）程序
+permalink: chaincode-write
 un_reward: true
 date: 2019-07-16 07:14:53
 categories:
+    - 联盟链
+    - Fabric
 tags:
+    - Fabric
+    - chaincode
 author: kunpeng
 ---
 
 
+## chaincode 基本结构
 
-# 1 chaincode 基本结构
+### 入口main函数
 
-* main函数
-
-  main 函数是合约进入的入口, new一个chaincode结构体后，由shim启动合约进程，如下：
+  main 函数是合约的入口, 创建(new)一个chaincode结构体后，由shim启动合约进程，如下：
 
   ```go
   func main() {
@@ -25,11 +28,10 @@ author: kunpeng
   }
   ```
 
-  
 
-* chaincode结构体
+ ### chaincode结构体
 
-  chaincode的结构体，必须包含Init和Invoke两个接口，作为链码的instantiate/upgrade操作和invoke/query操作。
+  chaincode的结构体，必须包含`Init`和`Invoke`两个接口，作为链码的`instantiate`/`upgrade`操作和`invoke`/`query`操作。
 
   函数体如下：
 
@@ -46,17 +48,15 @@ author: kunpeng
 
     失败示例：return shim.Error("Failed")
 
-  
 
-* Init初始化
+ ### Init初始化
 
   chaincode的初始化可以预处理数据，通过参数将数据传入接口，存入state database或者内存中。
 
   Init函数同时作为instantiate和upgrade操作的入口
 
-  
 
-* Invoke执行函数
+ ### Invoke执行函数
 
   Invoke函数通过stub函数传入的参数，进行相应的处理，可以通过stub的第一个参数作为函数指令，区分不同的接口，如下：
 
@@ -79,32 +79,29 @@ author: kunpeng
 
 
 
-# 2 chaincode调用的包
+## chaincode 调用的包
 
 * peer包
 
-  peer包是fabric的数据结构，由protobuf生成，如上例中的pb.Response就是proposal_response.proto而来。
+  peer包是fabric的数据结构，由`protobuf`生成，如上例中的`pb.Response`就是`proposal_response.proto`而来。
 
 * shim包
 
   shim包是合约内置函数的主体，包括以下两大部分：
 
-  1. 链码内置函数，当中包括三十几种内置函数，具体可参考：./github.com/hyperledger/fabric/core/chaincode/shim/interfaces.go中的接口列表。其他的就是返回值的结构封装，mock单元测试等。
+  1. 链码内置函数，当中包括三十几种内置函数，具体可参考：`./github.com/hyperledger/fabric/core/chaincode/shim/interfaces.go`中的接口列表。其他的就是返回值的结构封装，mock单元测试等。
 
-  2. 扩展函数，参考./github.com/hyperledger/fabric/core/chaincode/shim/ext
+  2. 扩展函数，参考`./github.com/hyperledger/fabric/core/chaincode/shim/ext`
 
      * attrmgr，基于msp的x509证书解析库
      * cid，ca认证接口库
      * entities，bccsp算法接口库
      * statebased，背书策略接口库
 
-     
 
+## chaincode 内置函数（一）
 
-
-# 3 chaincode内置函数（一）
-
-## 3.1 参数获取
+### 参数获取
 
  **GetFunctionAndParameters**：该方法负责接收调用者传过来的参数。
 
@@ -116,7 +113,7 @@ author: kunpeng
 
 
 
-## 3.2 数据存储
+### 数据存储
 
  **PutState**：该方法负责把数据保存到fabric账本中。
 
@@ -126,10 +123,11 @@ author: kunpeng
 
 
 
-## 3.3 事务id，事务时间戳，通道id
+### 事务id，事务时间戳，通道id
 
  **GetTxID**：获取当前调用交易的ID号
 
  **GetTxTimestamp**：获取事务时间戳
 
  **GetChannelID**：返回链码处理提议的通道ID
+
