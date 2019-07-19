@@ -1,6 +1,6 @@
 ---
 title: 分布式一致性协议之Raft
-permalink: geth-rlp-encode
+permalink: raft-protocol
 date: 2019-07-18 20:41:20
 categories: 基础理论
 tags:
