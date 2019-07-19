@@ -37,7 +37,7 @@ author: 清源
 
   证书的结构一般遵循`X.509`规范。
 
-![Alt text](https://raw.githubusercontent.com/Ice-Storm/ice-storm.github.io/master/images/ca/1.png)
+![Alt text](https://img.learnblockchain.cn/2019/07/19_421724404.png)
 
 字段含义
 
@@ -51,7 +51,7 @@ author: 清源
 - 签名：颁发者用私钥对证书信息的签名；
 
 可以通过查看浏览器查看网站证书来快速理解：
-![Alt text](https://raw.githubusercontent.com/Ice-Storm/ice-storm.github.io/master/images/ca/2.png)
+![Alt text](https://img.learnblockchain.cn/2019/07/19_964358896.png)
 
 ## 证书类型
 

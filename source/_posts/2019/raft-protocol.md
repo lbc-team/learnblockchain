@@ -25,7 +25,7 @@ author: 清源
 
   下面是三个状态的状态转换图；
 
-![img](https://github.com/Ice-Storm/ice-storm.github.io/blob/master/images/raft/1.png?raw=true)
+![img](https://img.learnblockchain.cn/2019/07/19_490612654.png)
 
   节点启动的时候，都是跟随者状态，在一段时间没有收到来自领导者的心跳，就从跟随者转变为候选人，发起选举；如果收到含自己的多数选票则转换到领导者；如果发现其他节点比自己更新，则切换到跟随者状态。为了确定其他节点比自己更新，`Raft`又引入了`任期（term）`的概念。
 
@@ -46,7 +46,7 @@ author: 清源
 
 下面的这个gif就展示了这个过程；
 
-![img](https://github.com/Ice-Storm/ice-storm.github.io/blob/master/images/raft/2.gif?raw=true)
+![img](https://img.learnblockchain.cn/2019/07/19_826949971.jpg)
 
 ## 日志复制
 
@@ -81,7 +81,7 @@ author: 清源
 
   如果一个`领导者`把日志复制到大多数其他节点，在应用到状态机之前崩溃了，新选出的领导者，是不知道被复制到大多数节点的日志是否应用到了状态机。
 
-![img](https://github.com/Ice-Storm/ice-storm.github.io/blob/master/images/raft1/1.png?raw=true)
+![img](https://img.learnblockchain.cn/2019/07/19_775599490.png)
 
   **(a)** 中，S1 是领导者，部分的复制了索引位置 2 的日志条目；
   **(b)** 中，S1 崩溃了，然后 S5 在任期 3 里通过 S3、S4 和自己的选票赢得选举，然后从客户端接收了一条不一样的日志条目放在了索引 2 处；
