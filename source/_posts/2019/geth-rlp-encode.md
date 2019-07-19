@@ -1,4 +1,3 @@
-
 ---
 title: 以太坊RLP(递归长度前缀)编码
 permalink: geth-rlp-encode
