@@ -61,7 +61,7 @@ author: kunpeng
 
   1. **成员管理(MSP)**
 
-     MSP对成员管理进行了抽象，每个MSP都会建立一套根信任证书体系，利用公钥基础设施PKI对成员身份进行认证，验证成员用户提交请求的签名。结合Fabric-CA或者第三方的CA系统(Certificate Authority:证书颁发机构)，提供成员注册功能，并对成员身份证书进行管理。
+     MSP对成员管理进行了抽象，每个MSP都会建立一套根信任证书体系，利用公钥基础设施PKI对成员身份进行认证，验证成员用户提交请求的签名。结合Fabric-CA或者第三方的CA系统([Certificate Authority:证书颁发机构](https://learnblockchain.cn/2019/0717/ca/))，提供成员注册功能，并对成员身份证书进行管理。
 
   2. **共识服务**
 

@@ -4,7 +4,7 @@ title: 以太坊RLP(递归长度前缀)编码
 permalink: geth-rlp-encode
 date: 2019-05-20 20:41:20
 categories: 基础理论
-tags: 
+tags:
     - RLP编码
 author: 清源
 ---
@@ -21,7 +21,7 @@ RLP（Recursive Length Prefix）即**递归长度前缀编码**，RLP主要用�
 ```
 type Persion struct {
     Name string
-    Age uint 
+    Age uint
 }
 
 p := &Persion{Name: "Tom", Age: 22}
@@ -93,7 +93,7 @@ abc的编码是131 97 98 99，其实131=128+len("abc"), 97 98 99依次是`a b c`
 ["The length of this sentence is more than 55 bytes, ", "I know it because I pre-designed it"]
 ```
 
-其中前两个字节的计算方式如下： 
+其中前两个字节的计算方式如下：
 ```
 1. "The length of this sentence is more than 55 bytes, "的长度为51(0x33)，根据规则二得出前缀179 （0xb3 = 0x80 + 0x33 ）
 2. "I know it because I pre-designed it"的长度为35(0x23)，根据规则2得出前缀163 （0xa3 = 0x80 + 0x33)
@@ -164,7 +164,7 @@ def to_integer(b):
 https://github.com/ethereum/wiki/wiki/RLP
 http://hidskes.com/blog/2014/04/02/ethereum-building-blocks-part-1-rlp/
 
-本文作者是深入浅出区块链共建者清源，欢迎关注清源的[博客](qyuan.top)，不定期分享一些区块链底层技术文章。
+本文作者是深入浅出区块链共建者清源，欢迎关注清源的[博客](http://qyuan.top)，不定期分享一些区块链底层技术文章。
 备注：编者在原文上略有修改。
 
 
