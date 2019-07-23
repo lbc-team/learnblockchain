@@ -76,7 +76,7 @@ xDai网络出块信息可以在[blockscout浏览器](https://blockscout.com/poa/
 
 把应用部署到 POA 网络上，需要要消耗一点POA币，我们得先想方法获得一些POA，这里我们我使用POA测试网络POA Sokol提供的水管 https://faucet-sokol.herokuapp.com 获取(如果要使用POA主网则需要去交易所购买POA)，进入页面之后，可以看到如下界面：
 
-![](https://img.learnblockchain.cn/2019/07/22_20190722100816.png!wl)
+![获取Sokol网络代币](https://img.learnblockchain.cn/2019/07/22_20190722100816.png!wl)
 
 
 注意一下：Sokol水管为了防止被程序撸羊毛，加入了Google人机身份验证，所以这个页面需要大家**翻墙**访问，输入自己的以太坊账号，点击“REQUEST 0.5 SPOA”，就可以获取到POA Sokol测试的代币 0.5 SPOA。
@@ -86,11 +86,11 @@ xDai网络出块信息可以在[blockscout浏览器](https://blockscout.com/poa/
 
 接下来在　Metamask 查看下账号的 SPOA 余额，看看是否到账，由于Metamask默认网络里面没有POA网络，所有我们通过“CUSTOM RPC”添加一个网络，在“New RPC URL”里输入`https://sokol.poa.network`　，如下图:
 
-![](https://img.learnblockchain.cn/2019/07/23_add-rpc.png!wl)
+![Metamask添加RPC](https://img.learnblockchain.cn/2019/07/23_add-rpc.png!wl)
 
 查了使用Metamask钱包插件之外，还可以使用POA基于MetaMask定制的[Nifty 钱包](https://chrome.google.com/webstore/detail/nifty-wallet/jbdaocneiiinmjbjlgalhcelgbejmnid?hl=en)，Nifty默认就支持POA的各个网络，Nifty 钱包如下图：
 
-![](https://img.learnblockchain.cn/2019/07/23_Nifty.png!wl)
+![Nifty](https://img.learnblockchain.cn/2019/07/23_Nifty.png!wl)
 
 
 > 备注： 查看下账号也可以在[sokol的blockscout浏览器 ](https://blockscout.com/poa/sokol/)查看，Metamask 连接POA网络也是为后面使用DApp做准备。　　

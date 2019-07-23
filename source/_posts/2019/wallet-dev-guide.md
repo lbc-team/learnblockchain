@@ -50,7 +50,7 @@ author: Tiny熊
 * [如何开发一款以太坊安卓钱包系列6 - 获取账号交易列表](https://learnblockchain.cn/2019/04/19/eth-wallet-dev-6/)
 
 
-欢迎钱包开发讨论微信群，加微信：xlbxiong 备注：钱包 
+欢迎钱包开发讨论微信群，加微信：xlbxiong 备注：钱包
 
 如果你有开发钱包、DAPP、交易所、公链、人才招聘等需求，也欢迎勾搭Tiny熊（微信：xlbxiong）
 
