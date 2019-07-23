@@ -1,17 +1,19 @@
 ---
-title: POA网络
+title: 在以太坊侧链POA网络与xDai稳定币链进行DApp开发
 permalink: poa-network
 date: 2019-07-19 20:41:20
 categories:
     - 扩容技术
     - POA
 tags:
-    - Loom
-    - 智能合约
+    - Layer2
+    - POA
+    - xDai
 author: Tiny熊
 ---
 
-由于以太坊又慢又贵的POW共识（尽管如此，以太坊依旧是最受欢迎的DApp平台），催生了各种以太坊测链的方案用来减少以太主网的拥塞，前面我们介绍了Loom SDK， 这篇博客介绍下POA Network。
+由于以太坊又慢又贵的POW共识（尽管如此，以太坊依旧是最受欢迎的DApp平台），催生了各种以太坊测链的方案用来减少以太主网的拥塞，前面我们介绍了Loom SDK， 这篇博客介绍下POA Network以及xDai。
+如果大家想稳定的数字货币做一些智能合约应用，在[Libra](https://learnblockchain.cn/docs/libra/)还没有上线之前，也许你可以尝试一下xDai。
 
 
 <!-- more -->
@@ -31,8 +33,8 @@ PoA网络平均每5秒出一个块， 区块大小是800万Gas，Gas price 固�
 
 PoA网络出块信息可以在[blockscout浏览器](https://blockscout.com/poa/core) 查看详情， 值得提一下，BlockScout 是POA Network的另一个贡献，这是一个功能强大的开源的区块浏览器，支持所有以太坊协议的网络。[Github库](https://github.com/poanetwork/blockscout)
 
-POA 网络的主网称为POA Core，他还有一个测试网络为POA Sokol。其实以太坊主网也有一个POA共识的测试网叫 Kovan 。
-从Metamask 连接到POA Core　只需要加入一个Custom RPC，　加入一下 RPC URL： https://dai.poa.network
+POA 网络的主网称为**POA Core**，他还有一个测试网络为**POA Sokol**。其实以太坊主网也有一个POA共识的测试网叫 Kovan 。
+
 
 
 ## POA的桥接技术(TokenBridge)
@@ -47,12 +49,6 @@ POA 网络的主网称为POA Core，他还有一个测试网络为POA Sokol。�
 
 2. 允许把以太坊网络的ERC 20代币转移到POA 网络（或其他链），这些转移并不会重复产生新的币，它会在接收链创建对应的币而在发起链销毁对应的币。
 3. 不同网络之间的ERC20代币相互转移，有了这个技术我们就可以把昂贵的链上交易转移价格低廉的侧链，让区块链落地有了更多的可能。
-
-
-https://bridge.poa.net
-
-![](https://img.learnblockchain.cn/2019/07/19_poa-tokenbrige.png!wl)
-
 
 其实，POA桥接技术不仅仅可以用于以太坊网络和POA网络相互通信，也有其他的项目使用TokenBridge来进行token的转移，如：Sentinel Chain 和 Virtue Poker。
 
@@ -70,56 +66,140 @@ xDai解决了阻碍数字货币用于日常交易的两个主要因素：价格�
 xDai网络出块信息可以在[blockscout浏览器](https://blockscout.com/poa/dai/) 查看详情。
 
 
-如何将你的钱包连接到 xDai 链
-
-- 从Metamask 连接到 xDai 链的JSON RPC 终端
-
-https://dai.poa.network
+## 在POA 网络上部署应用
 
 
-
-- TokenBridge: 将Dai从以太坊主网转换为xDai链上的xDai
-
-https://dai-bridge.poa.network/
-
-- Netstats: xDai Chain节点概述
-
-http://dai-netstat.poa.network
+我之前有一个教程在[以太坊网络上开发了一个记事本应用](https://learnblockchain.cn/2019/03/30/dapp_noteOnChain/), 这个应用每添加一条记录会消耗不少的gas费用，现在我们把这个记事本应用部署到 POA 网络上。
 
 
+### 利用水管获取POA币
 
-POA 的开源浏览器和钱包创建了一个完整的功能生态系统,游戏在这里有机会发展和成长。
+把应用部署到 POA 网络上，需要要消耗一点POA币，我们得先想方法获得一些POA，这里我们我使用POA测试网络POA Sokol提供的水管 https://faucet-sokol.herokuapp.com 获取(如果要使用POA主网则需要去交易所购买POA)，进入页面之后，可以看到如下界面：
 
-
-
-
-## Deploying your DApp to POA Network
-https://forum.poa.network/t/tutorial-deploying-your-dapp-to-poa-network/1804
+![](https://img.learnblockchain.cn/2019/07/22_20190722100816.png!wl)
 
 
+注意一下：Sokol水管为了防止被程序撸羊毛，加入了Google人机身份验证，所以这个页面需要大家**翻墙**访问，输入自己的以太坊账号，点击“REQUEST 0.5 SPOA”，就可以获取到POA Sokol测试的代币 0.5 SPOA。
 
-### 通过合约实例调用合约函数
+
+###　Metamask 连接到POA网络
+
+接下来在　Metamask 查看下账号的 SPOA 余额，看看是否到账，由于Metamask默认网络里面没有POA网络，所有我们通过“CUSTOM RPC”添加一个网络，在“New RPC URL”里输入`https://sokol.poa.network`　，如下图:
+
+![](https://img.learnblockchain.cn/2019/07/23_add-rpc.png!wl)
+
+查了使用Metamask钱包插件之外，还可以使用POA基于MetaMask定制的[Nifty 钱包](https://chrome.google.com/webstore/detail/nifty-wallet/jbdaocneiiinmjbjlgalhcelgbejmnid?hl=en)，Nifty默认就支持POA的各个网络，Nifty 钱包如下图：
+
+![](https://img.learnblockchain.cn/2019/07/23_Nifty.png!wl)
+
+
+> 备注： 查看下账号也可以在[sokol的blockscout浏览器 ](https://blockscout.com/poa/sokol/)查看，Metamask 连接POA网络也是为后面使用DApp做准备。　　
+
+
+### 使用 Truffle 部署合约到POA网络
+
+Truffle 的基本使用，以及开发这个记事本DApp，本文就不再重复介绍，参考前面的文章：[Truffle教程](https://learnblockchain.cn/2018/01/12/first-dapp/), [用 Truffle 开发一个链上记事本](https://learnblockchain.cn/2019/03/30/dapp_noteOnChain/)，这里主要介绍如果Truffle如何了连接到POA网络。
+
+先把DApp代码克隆到本地，大家可订阅[跨链技术小专栏](https://xiaozhuanlan.com/interchain)获取源代码。
+
+#### truffle配置加入POA网络
+
+然后打开`truffle-config.js` 文件，加入一个`sokol`网络， 方法如下：
+
+```js
+module.exports = {
+
+  networks: {
+    ...
+    sokol: {
+          provider: function() {
+                return new HDWalletProvider(mnemonic, "https://sokol.poa.network")
+          },
+          network_id: 77,
+          gasPrice: 1000000000
+    },
+    ...
+
+```
+
+
+上面 `mnemonic` 处大家用自己的助记词代替。
+
+#### 部署合约
+
+然后使用命令`truffle migrate --network sokol` 进行部署:
+
+```bash
+> truffle migrate --network sokol
+
+...
+
+2_deploy_contract.js
+====================
+
+   Deploying 'NoteContract'
+   ------------------------
+   > transaction hash:    0x48dbba680f3f227b0e6aba42ecf467bf4xlb1324e0d765dcd
+   > Blocks: 2            Seconds: 9
+   > contract address:    0xb89ccfF5c3D4A15F69xLB9D0a9C3ce4a87047a6a
+   > block number:        9867109
+   > block timestamp:     1563892140
+   > account:             0x1a197940bd151xlb53aF8eD04996A880a251D454
+   > balance:             0.999159377
+   > gas used:            537207
+   > gas price:           1 gwei
+   > value sent:          0 ETH
+   > total cost:          0.000537207 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:         0.000537207 ETH
+
+
+Summary
+=======
+> Total deployments:   2
+> Final cost:          0.0007986 ETH
+
+```
+
+####　启动DAPP应用
+
+`npm run dev` 启动DAPP服务， 在浏览起输入地址：`http://localhost:3000` 运行DApp，因为刚刚MetaMask已经连接好了POA 的测试网络Sokoa， 现在可以直接和DApp进行交付。
+
+![](https://img.learnblockchain.cn/2019/07/23_note-on-poa.png!wl)
+
+
+
+## 在稳定币链xDai网络上部署应用
+
+
+在xDai网络上部署和前面的POA测试网络步骤完全一起，只需要把上面 RPC URL更改为 `https://dai.poa.network`
+下面是一个各个网络对应RPC URL 及网络ID的表格：
+
+
+
+| 网络名称              | RPC URL |   网络ID   |  代币  |  浏览器URL |
+| ----------------- | ---- | ------- | ------ |------ |
+| sokol 测试网         |https://sokol.poa.network | 77 | SPOA |https://blockscout.com/poa/sokol/ |
+| POA 主网         | https://core.poa.network | 99 | POA | https://blockscout.com/poa/core |
+| xDai         | https://dai.poa.network | 100 | xDai | https://blockscout.com/poa/dai |
+
+
+下一遍我们继续介绍在以太坊网络和POA网络之间如何使用桥接技术转移代币。最后安利一下我的[跨链技术小专栏](https://xiaozhuanlan.com/interchain)，现在订阅只要19元，订阅要趁早。
 
 
 ## 参考文章
 
-What is POA and How is it Unique?
-https://dgaming.com/media/what-is-poa-and-how-is-it-unique/
+1. [What is POA and How is it Unique?](https://dgaming.com/media/what-is-poa-and-how-is-it-unique/)
+2. [POA - Part 1 - Develop and deploy a smart contract](https://kauri.io/article/549b50d2318741dbba209110bb9e350e/v13/poa-part-1-develop-and-deploy-a-smart-contract)
+3. [POA - Getting Started](https://forum.poa.network/t/getting-started-with-poa-products/2595)
+4. [POA-Network-Whitepaper](https://github.com/poanetwork/wiki/wiki/POA-Network-Whitepaper)
+5. [POA bridge](https://poabridge.com)
+6. [xDai Chain](https://medium.com/poa-network/poa-network-partners-with-makerdao-on-xdai-chain-the-first-ever-usd-stable-blockchain-65a078c41e6a)
 
-
-https://forum.poa.network/c/tokenbridge/poa20-bridge
-
-https://forum.poa.network/t/getting-started-with-poa-products/2595
-
-https://github.com/poanetwork/wiki/wiki/POA-Network-Whitepaper
-
-https://poa.fund/1299.html
-https://poabridge.com
-
-白皮书：https://github.com/poanetwork/wiki/wiki/POA-Network-Whitepaper
-
-POA Network partners with MakerDAO on xDai Chain, the first ever USD-Stable Blockchain!
-https://medium.com/poa-network/poa-network-partners-with-makerdao-on-xdai-chain-the-first-ever-usd-stable-blockchain-65a078c41e6a
 
 
 加入[知识星球](https://learnblockchain.cn/images/zsxq.png)，和一群优秀的区块链从业者一起学习。
