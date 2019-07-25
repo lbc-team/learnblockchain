@@ -15,10 +15,15 @@ Solidity 中很多[Hash函数,　如：keccak256　](https://learnblockchain.cn/
 ## uint 如何转为 bytes　类型
 
 Solidity 中 uint 转 bytes 的几种方法，gas 消耗从少到多：
-1. toBytes0(): 用inline assembly 实现, Gas 消耗最少，最高效的方法，**推荐**。
-2. toBytes1() : 用inline assembly 实现；
+1. toBytes0(): 用inline assembly 实现, Gas 消耗最少，最高效的方法。
+    
+    > 备注： 这个实现在某情况下会出现out-of-gas,  原因未知。
+    
+2. toBytes1() : 用inline assembly 实现 **推荐**；
 3. toBytes2() : 先转化为bytes32，再按一个个直接复制；
 4. toBytes3() :　按一个个直接转换，效率最低。
+
+
 
 ```js
 

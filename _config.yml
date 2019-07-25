@@ -105,7 +105,7 @@ index2_generator:
   exclude:
     - category 技术工坊 # 不包含分类为Hexo的文章
     - category 杂文
-    # - category 问与答
+    - category 问与答
     - path 2019/wallet-dev-guide.md
     - path 2019/hexo-help.md
 
