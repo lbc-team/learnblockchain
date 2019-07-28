@@ -12,7 +12,7 @@ tags:
 author: Tiny熊
 ---
 
-由于以太坊又慢又贵的POW共识（尽管如此，以太坊依旧是最受欢迎的DApp平台），催生了各种以太坊测链的方案用来减少以太主网的拥塞，前面我们介绍了Loom SDK， 这篇博客介绍下POA Network以及xDai。
+由于以太坊又慢又贵的POW共识（尽管如此，以太坊依旧是最受欢迎的DApp平台），催生了各种以太坊侧链的方案用来减少以太主网的拥塞，前面我们介绍了Loom SDK， 这篇博客介绍下POA Network以及xDai。
 如果大家想稳定的数字货币做一些智能合约应用，在[Libra](https://learnblockchain.cn/docs/libra/)还没有上线之前，也许你可以尝试一下xDai。
 
 

@@ -11,6 +11,7 @@ tags:
     - ZoKrates
 author: Star Li
 ---
+
 2018年 Jacob Eberhardt和Stefan Tai两位德国柏林工业大学博士生，提出了[链下计算/链上验证的处理框架](https://www.ise.tu-berlin.de/fileadmin/fg308/publications/2018/2018_eberhardt_ZoKrates.pdf)，并提供了在以太坊上的整个框架的工具链。链下计算/链上验证的思想很早就有，但是能提供比较完善的工具链的实属难得。目前ZoKrates使用zk-SNARK算法实现零知识证明。
 
 本文介绍ZoKrates的思想，工具链的使用以及源代码导读。
