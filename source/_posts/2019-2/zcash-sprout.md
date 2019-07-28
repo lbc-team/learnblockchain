@@ -27,8 +27,8 @@ Zcash中的各种密钥，主要是为了实现下面2类功能：
 2. In-band secret distribution：即“线上”传递，也是Zcash目前采用的方案。线上传递的意思是把这些私密信息加密后直接放到交易中上链，接收方再通过某种方式解密以获得私密信息。
 下面就逐一介绍一下Sprout和Sapling中的密钥系统，以及在签名及In-band secret distribution中的应用。
 
-### 1.Sprout
-#### 1.1 Sprout密钥系统
+## 1. Sprout
+### 1.1 Sprout密钥系统
 Sprout的密钥系统比较简单，参见下图：
 
 ![Sprout密钥系统](https://img.learnblockchain.cn/2019/07/15642765493677.jpg)
@@ -37,21 +37,24 @@ Sprout的密钥系统比较简单，参见下图：
 其中Payment Address是发送方需要用到的，Incoming viewing key是给接收方用的。
 下面会逐一介绍图上的这些密钥的含义，如果你觉得枯燥难懂，可以先跳过，等看完“签名”和“带内秘密分发”之后再回过头来看这段描述，相信会有不一样的体会。
 
-1. $a_{sk}$：Spending Key，用于生成Nullifier
-2. $a_{pk}$：Paying Key，用于生成Note
-3. $sk_{enc}$：Receiving Key，和epk一起生成sharedSecret，进而生成对称密钥，解密所有的Note Plaintext
+1） $a_{sk}$：Spending Key，用于生成Nullifier
+
+2） $a_{pk}$：Paying Key，用于生成Note
+
+3） $sk_{enc}$：Receiving Key，和epk一起生成sharedSecret，进而生成对称密钥，解密所有的Note Plaintext
     $$sharedSecret=Curve25519(sk_{enc},epk)=sk_{enc} \cdot epk=sk_{enc} \cdot esk \cdot G$$
-4. $pk_{enc}$：Transmission Key，和esk一起生成sharedSecret，进而生成对称密钥，加密所有的Note Plaintext
+
+4） $pk_{enc}$：Transmission Key，和esk一起生成sharedSecret，进而生成对称密钥，加密所有的Note Plaintext
 $$ sharedSecret=Curve25519(esk,pk_{enc})=esk \cdot pk_{enc}=esk \cdot 
 sk_{enc} \cdot G $$
     可以发现，和第3项生成的sharedSecret是完全相同的
-5. esk：Ephemeral Secret Key，一个临时私钥，为了生成对称密钥
-6. epk：Ephemeral Public Key，一个临时公钥，为了生成对称密钥，包含在JoinSplit中
-7. $K_{enc}$：用于加密Note Plaintext的对称密钥，通过KDF生成（5个参数的BLAKE2b-256哈希）
-8. JoinSplitPrivateKey：用于对transaction签名
-9. JoinSplitPubKey：用于验证transaction签名，包含在transaction中
+5） esk：Ephemeral Secret Key，一个临时私钥，为了生成对称密钥
+6） epk：Ephemeral Public Key，一个临时公钥，为了生成对称密钥，包含在JoinSplit中
+7） $K_{enc}$：用于加密Note Plaintext的对称密钥，通过KDF生成（5个参数的BLAKE2b-256哈希）
+8） JoinSplitPrivateKey：用于对transaction签名
+9） JoinSplitPubKey：用于验证transaction签名，包含在transaction中
 
-#### 1.2 Sprout中的JoinSplit Signature
+### 1.2 Sprout中的JoinSplit Signature
 Sprout中只有一种签名，叫做JoinSplit Signature，不过不要被它的名字迷惑了，实际上它是整个transaction的签名：
 
 ![](https://img.learnblockchain.cn/2019/07/15642766117208.jpg)
@@ -72,29 +75,29 @@ Zcash既支持类似比特币的透明交易（transparent transaction），又�
 不管是Sprout使用的BCTV14算法，还是Sapling使用的Groth16算法，都存在“Malleability”问题。Malleability可以翻译成“变形”或者“重塑”，指的是可以用已有的proof生成新的合法proof。
 因此，我们必须增加一个签名，用来保证数据不被篡改。但是，签名使用的密钥对是随机生成的，那么当别人收到你的交易后，是不是可以把签名和公钥字段去掉，然后自己生成新的密钥对重新签名？为了解决这个问题，我们把所有Nullifier、joinSplitPubKey还有一个randomSeed组合在一起，计算出一个哈希值hSig，然后再把每个Nullifier的私钥ask跟hSig组合在一起，生成N个哈希值并放进JoinSplit中。经过这一波操作，输入数据就跟所有的私钥还有签名者的公钥绑定在了一起，第三方用户就无法替换签名了。用Zcash白皮书中的话来说，这样就保证了“**所有ask的持有者都授权了签名交易的人**”。
 
-#### 1.3 Sprout in-band secret distribution
+### 1.3 Sprout in-band secret distribution
 
 ![](https://img.learnblockchain.cn/2019/07/15642766885654.jpg)
 
 
 图中红色虚线框内是需要传输的秘密，包含3个数据。Note Plaintext中包含这个秘密，同时还包含一个memo字符串。我们目标是安全地把Note Plaintext发送给交易接收方。
 
-首先看蓝线部分：
-1. 交易发送方拿到接收方的Payment Address，其中包含2个密钥：$$a_{pk} 、 pk_{enc}$$
-2. 然后，随机生成一个临时密钥对esk/epk
-3. 利用$pk_{enc}$和esk生成一个sharedSecret，然后通过KDF生成对称密钥$K_{enc}$
-4. 利用对称密钥对Note Plaintext加密生成$C^{enc}$数据，和epk一起放入交易的JoinSplit中
-5. 接收方从交易的JoinSplit中拿到epk，和$sk_{enc}$一起生成sharedSecret，然后通过KDF生成对称密钥$K_{enc}$（为什么可以生成相同的sharedSecret？参见1.1节的证明）
-6. 接收方用$K_{enc}$解密$C^{enc}$，获得秘密
+首先看**蓝线**部分：
+1） 交易发送方拿到接收方的Payment Address，其中包含2个密钥：$$a_{pk} 、 pk_{enc}$$
+2） 然后，随机生成一个临时密钥对esk/epk
+3） 利用$$pk_{enc}$$和esk生成一个sharedSecret，然后通过KDF生成对称密钥$$K_{enc}$$
+4） 利用对称密钥对Note Plaintext加密生成$C^{enc}$数据，和epk一起放入交易的JoinSplit中
+5） 接收方从交易的JoinSplit中拿到epk，和$$sk_{enc}$$一起生成sharedSecret，然后通过KDF生成对称密钥$$K_{enc}$$（为什么可以生成相同的sharedSecret？参见1.1节的证明）
+6） 接收方用$K_{enc}$解密$C^{enc}$，获得秘密
 
-接下来看红线部分：
+接下来看**红线**部分：
 为了保证数据的正确性，发送方会把秘密和$a_{pk}$一起生成一个哈希值，称为Note Commitment，放入交易的JoinSplit中，供接收方验证。
 
-最后看紫线部分：
+最后看**紫线**部分：
 接收方解出秘密，和$a_{pk}$一起生成哈希值，比对Note Commitment看是否一致。
 
-### 2.Sapling
-#### 2.1 Sapling密钥系统
+## 2.Sapling
+### 2.1 Sapling密钥系统
 Sapling的密钥系统采用了分层结构，比Sprout要复杂很多：
 ![](https://img.learnblockchain.cn/2019/07/15642767224677.jpg)
 
@@ -110,23 +113,23 @@ Payment Address也不再是固定值，而是通过一个随机数d和Incoming V
 Proof Authorizing Key会作为零知识证明的auxiliary输入，参与证明的生成。
 
 下面会逐一介绍这些密钥的作用，同样，你也可以先跳过这些内容，等看完了后面的使用场景再来回顾：
-1. sk：Spending Key
-2. ask：Spend Authorizing Key，通过randomize生成rsk
-3. rsk：Randomized ask，由ask生成，用于给SpendDescription签名
-4. rk：由rsk生成，用于验证SpendDescription签名
-5. nsk：Spend Nullifier Key，作为Proof Authorizing Key的一部分，属于prover的一个auxiliary输入
-6. nk：Nullifier Deriving Key，由nsk生成，用于生成Nullifier
-7. ak：由ask生成，用于和nk一起生成ivk
-8. ivk：Incomming Viewing Key，等于$CRH^{ivk}(repr_{\mathbb J}(ak), nk)$，可以生成多样化的密钥用于加密Note Plaintext
-9. d：一个用于生成Diversified Base的随机数
-10. $pk_d$：Diversified Transmission Key，用于实现In-band secret distribution。接收方可以利用ivk恢复出Note Plaintext。和esk一起生成sharedSecret，然后生成对称密钥，进而加密所有的Note Plaintext
+1） sk：Spending Key
+2） ask：Spend Authorizing Key，通过randomize生成rsk
+3） rsk：Randomized ask，由ask生成，用于给SpendDescription签名
+4） rk：由rsk生成，用于验证SpendDescription签名
+5） nsk：Spend Nullifier Key，作为Proof Authorizing Key的一部分，属于prover的一个auxiliary输入
+6） nk：Nullifier Deriving Key，由nsk生成，用于生成Nullifier
+7） ak：由ask生成，用于和nk一起生成ivk
+8） ivk：Incomming Viewing Key，等于$CRH^{ivk}(repr_{\mathbb J}(ak), nk)$，可以生成多样化的密钥用于加密Note Plaintext
+9） d：一个用于生成Diversified Base的随机数
+10） $pk_d$：Diversified Transmission Key，用于实现In-band secret distribution。接收方可以利用ivk恢复出Note Plaintext。和esk一起生成sharedSecret，然后生成对称密钥，进而加密所有的Note Plaintext
 $$sharedSecret=Jubjub(h_{\mathbb J} \cdot esk, pk_d)=h_{\mathbb J} \cdot esk \cdot pk_d = h_{\mathbb J} \cdot esk \cdot ivk \cdot g_d$$
-11. esk/epk：临时密钥对，用于生成对称密钥
-12. $K_{enc}$：用于加密Note Plaintext的对称密钥，通过KDF生成（2个参数的BLAKE2b-256哈希）
-13. ovk：Outgoing Viewing Key，用于生成ock
-14. ock：Outgoing Cipher Key，由ovk、epk等参数生成，用于加密$pk_d$和esk，生成$C^{out}$
+11） esk/epk：临时密钥对，用于生成对称密钥
+12） $K_{enc}$：用于加密Note Plaintext的对称密钥，通过KDF生成（2个参数的BLAKE2b-256哈希）
+13） ovk：Outgoing Viewing Key，用于生成ock
+14） ock：Outgoing Cipher Key，由ovk、epk等参数生成，用于加密$pk_d$和esk，生成$C^{out}$
 
-#### 2.2 RedDSA和RedJubjub
+### 2.2 RedDSA和RedJubjub
 Zcash中定义了一种新的签名算法：RedDSA。RedDSA类似于Ed25519，但算法略有不同，具体流程参见下图：
 ![](https://img.learnblockchain.cn/2019/07/15642767857801.jpg)
 
@@ -137,7 +140,7 @@ S则通过计算r+sk•Hash(R,vk,M)得到的的一个标量，结果需要对椭
 
 RedJubjub是RedDSA的一个特化，哈希函数选用BLAKE2b-512，椭圆曲线选用Jubjub。
 
-#### 2.3 Spend Authorization Signature
+### 2.3 Spend Authorization Signature
 Sapling中有2种签名，这里先介绍第一种：Spend Authorization Signature。
 这个签名的作用是证明你知道$a_{sk}$，因此你有权花费这边资金。
 ![](https://img.learnblockchain.cn/2019/07/15642768003971.jpg)
@@ -146,7 +149,7 @@ Sapling中有2种签名，这里先介绍第一种：Spend Authorization Signatu
 
 为了不暴露$a_{sk}$对应的公钥，采用了re-randomized key的方式（左侧虚线框），通过一个随机数α和一个randomizer生成一个新的私钥rsk，然后再进行RedJubjub签名。为了保证签名和公钥的不可篡改性，α和rk将作为2个auxiluary输入，参与proof的生成。
 
-#### 2.4 Binding Signature
+### 2.4 Binding Signature
 这个签名是为了证明2件事情：
 1. shield inputs - shield outputs = transparent value change，也就是隐私交易和透明交易之间的金额必须平衡
 2. 保证签名者知道生成所有Value Commitment（cv）的随机数（rcv）
@@ -163,7 +166,7 @@ $$bsk=\Sigma_{i=1}^n rcv_i^{old}-\Sigma_{j=1}^m rcv_j^{new}$$
 $$bvk=\Sigma_{i=1}^n cv_i^{old}-\Sigma_{j=1}^m cv_j^{new}-ValueCommit_0(valueBalance)$$
 需要注意的是，生成valueBalance的ValueCommit时，下标为0，表示使用的随机数rcv为0（因为bsk中其实省略了为0的最后一项）。
 
-#### 2.5 In-band Secret Distribution w/ Incoming Viewing Key
+### 2.5 In-band Secret Distribution w/ Incoming Viewing Key
 Sapling中对密钥进行了更精细的划分，使用Incoming Viewing Key和Full Viewing Key都可以实现In-band Secret Distribution。这里先介绍Incoming View Key的情况：
 ![](https://img.learnblockchain.cn/2019/07/15642768248848.jpg)
 
@@ -173,7 +176,7 @@ Sapling中对密钥进行了更精细的划分，使用Incoming Viewing Key和Fu
 红线部分和Sprout也是相同的，唯一的区别是把SHA256换成了Windowed Pedersen Hash。
 紫线部分验证Note Commitment时只需要使用到Payment Address中的公钥，而Payment Address是可以随机生成的，从而最大限度隐藏了用户信息。
 
-#### 2.6 In-band Secret Distribution w/ Full Viewing Key
+### 2.6 In-band Secret Distribution w/ Full Viewing Key
 Sapling中定义了Full Viewing Key的概念，该密钥既可以查看接收方“Incoming”交易的信息，也可以查看发送方”Outgoing“交易的信息，这就是名字中“Full”的由来。
 ![](https://img.learnblockchain.cn/2019/07/15642768389565.jpg)
 
@@ -181,7 +184,7 @@ Full Viewing Key包含3个密钥：ovk，ak，nk。
 眼尖的朋友可能发现了，有了ak和nk，不就可以生成ivk了吗？所以等价于Full View Key包含了ivk和ovk这2个密钥。这里重点分析一下ovk的作用。
 观察上图可以发现，交易中除了包含$C^{enc}$字段，还增加了一个$C^{out}$字段（绿色部分）。发送方使用ovk和临时密钥epk生成对称密钥ock，然后把用于加密Note Plaintext的2个密钥$pk_d$和esk打包到交易中。Full Viewing Key持有者可以以同样的方式生成对称密钥ock，进而解密$C^{out}$，获得这2个密钥。此时他已经获得了发送方生成Outgoing交易的所有信息，可以直接生成对称密钥解开$C^{enc}$，而不需要借助Incoming Viewing Key了。
 
-### 3.Zcash是如何实现隐私的
+## 3. Zcash是如何实现隐私的
 
 最后，写一点对Zcash实现隐私机制的理解。
 所谓隐私，就是要隐藏一笔交易的发送方(from)、接收方(to)、金额(amount)。
@@ -194,7 +197,7 @@ Full Viewing Key包含3个密钥：ovk，ak，nk。
 3）如何隐藏金额？
 矿工只需要通过零知识证明验证交易的input和output是平衡的，而不需要查询发送方的余额以及转账金额。
 
-### 4.总结
+## 4. 总结
 
 Zcash通过引入精细的密钥机制，在实现了交易签名和私密信息分发的前提下，最大限度隐藏了用户信息。
 在Sprout中，通过joinSplitSig完美解决了malleability问题，同时采用非对称双密钥的形式实现了In-band secret distribution。
