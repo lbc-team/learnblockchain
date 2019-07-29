@@ -1,7 +1,7 @@
 ---
 title: 使用历史权重难度（HWD）预防POW 51%算力攻击
 permalink: hwd-pow
-date: 2019-07-29 15:10:54
+date: 2019-07-29 09:10:54
 categories: 共识
 tags: 
     - POW
