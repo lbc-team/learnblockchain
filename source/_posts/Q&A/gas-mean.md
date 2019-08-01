@@ -1,5 +1,5 @@
 ---
-title: 以太坊中的 "gas(汽油)" 是什么意思？
+title: 以太坊中的 gas(汽油) 是什么意思？
 permalink: gas-mean
 date: 2019-06-11 11:25:59
 categories: 问与答
