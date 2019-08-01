@@ -4,7 +4,7 @@ permalink: zcash-sprout
 un_reward: true
 hide_wechat_subscriber: true
 date: 2019-07-28 15:10:54
-categories: 基础理论
+categories: Zcash
 mathjax: true
 tags: 
     - Zcash

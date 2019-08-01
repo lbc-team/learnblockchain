@@ -106,6 +106,7 @@ ZenGo 可谓业界良心，不单提供了解决方案还开源了代码[Github]
 4. [Guaranteed access](https://zengo.com/how-zengo-guarantees-access-to-customers-funds/)
 5. [Guaranteed access solution](https://zengo.com/a-deep-dive-into-zengo-guaranteed-access-solution/)
 
+加入最专业的[区块链问答社区](https://learnblockchain.cn/images/zsxq.png)，和一群优秀的区块链从业者一起学习。
 
 [深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，[学区块链](https://learnblockchain.cn)都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789) 掌握区块链技术动态，有问题到[区块链问答社区](https://learnblockchain.cn/images/zsxq.png)。
 
