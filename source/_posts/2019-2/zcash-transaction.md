@@ -20,9 +20,7 @@ author: Star Li
 
 ## Sprout
 
-
 ![](https://img.learnblockchain.cn/2019/08/15646253495027.jpg)
-
 
 Sprout使用JoinSplit结构表示一笔交易。JoinSplit中的Vold和Vnew实现了隐私和透明交易的交易金额的平衡。rt是Note commit形成merkle树的树根。nf和cm分别是Nullifier和Note的commitment（在Sprout都是使用的sha256算法）。Note，Note Plaintext， 以及Nullifier相对直白。
 
