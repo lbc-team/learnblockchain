@@ -1,5 +1,5 @@
 ---
-title: Substrate应用 - 抛硬币游戏(一)
+title: 开发一款Substrate应用 - 抛硬币游戏(一)
 date: 2019-08-06 22:48:34
 permalink: substrate-toss
 category:
