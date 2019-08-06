@@ -6,7 +6,7 @@ categories: 区块链安全
 tags: 
     - zkSNARK
     - 零知识证明
-author: 安比实验室 p0n1
+author: 安比实验室 郭宇
 ---
 
 大量零知识证明项目由于错误地使用了某个 zkSNARKs 合约库，引入「输入假名 (Input Aliasing) 」漏洞，可导致伪造证明、双花、重放等攻击行为发生，且攻击成本极低。众多以太坊社区开源项目受影响，其中包括三大最常用的 zkSNARKs 零知开发库 snarkjs、ethsnarks、ZoKrates，以及近期大热的三个混币（匿名转账）应用 hopper、Heiswap、Miximus。这是一场由 Solidity 语言之父 Chris 两年前随手贴的一段代码而引发的血案。

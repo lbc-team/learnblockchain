@@ -5,7 +5,9 @@ un_reward: true
 mathjax: true
 hide_wechat_subscriber: true
 date: 2019-05-27 15:10:54
-categories: 基础理论
+categories: 
+    - 基础理论
+    - 零知识证明
 tags: 
     - 密码学
     - 零知识证明
