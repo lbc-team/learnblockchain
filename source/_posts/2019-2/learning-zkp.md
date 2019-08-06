@@ -31,7 +31,7 @@ author: 安比实验室 郭宇
 
 数学证明最早源于古希腊。他们发明（发现）了公理与逻辑，他们用证明来说服对方，而不是靠权威。这是彻头彻尾的「去中心化」。自古希腊以降，这种方法论影响了整个人类文明的进程。
 
-![勾股定理的证明](https://raw.githubusercontent.com/sec-bit/learning-zkp/master/zkp-intro/1/img/345.png)
+![勾股定理的证明](https://img.learnblockchain.cn/2019/08/06_299785709.png)
 
 上图是「勾股定理」的巧妙证明。历史上曾出现过许许多多精巧的证明，神奇的思路，天才的灵感。一旦一个命题被证明，上帝都无能为力。嗯，对了，还有那个「上帝不是万能的」证明：上帝不能造出一块他举不起来的石头。
 
@@ -45,7 +45,7 @@ author: 安比实验室 郭宇
 
 1910年，罗素发表了洪(zhuan)荒(tou)巨著『数学原理』。在书中，罗素与怀特海试图将数学完整地「形式化」下来。如果能达到这样的目标，所有的数学成果都将以证明的方式建立在坚实的基础上。下图就是『数学原理（卷二）』中的一页：
 
-![](https://raw.githubusercontent.com/sec-bit/learning-zkp/master/zkp-intro/1/img/principle.png)
+![](https://img.learnblockchain.cn/2019/08/06_412481131.png)
 
 其中`110.643`这是一个命题：「1+1=2」，然后接下来就是这个定理的证明。大家可能奇怪，难道 1+1 还需要证明吗？是的，在数学原理一书中，数字 0，1，2，…… 都有严格定义，「加法」、「乘法」、「等于」都要严格定义，然后每一步的推理都需要指出依据。证明意味着什么？证明是可能繁琐无比的、但是每一步推理都严格无误。书中大量的证明都机械式的，按照公理和推理规则进行一种证明的构造，寻找证明就好像可以交给一个人，然后他无脑在公理与推理规则的集合中进行机械查找。
 
@@ -67,7 +67,7 @@ author: 安比实验室 郭宇
 
 时间拨到1985年，乔布斯刚刚离开苹果，而 S. Goldwasser 博士毕业后来到了 MIT，与 S. Micali，Rackoff 合写了一篇能载入计算机科学史册的经典：『交互式证明系统中的知识复杂性』[8]。
 
-![GMR89](https://raw.githubusercontent.com/sec-bit/learning-zkp/master/zkp-intro/1/img/gmr89.png)
+![GMR89](https://img.learnblockchain.cn/2019/08/06_133516724.png)
 
 他们对「证明」一词进行了重新的诠释，并提出了交互式证明系统的概念：通过构造两个图灵机进行「交互」而不是「推理」，来证明一个命题在概率上是否成立。「证明」这个概念再一次被拓展。
 
@@ -127,7 +127,7 @@ Alice: 别废话，掏钱！
 
 张三说他有100块钱，李四说他北大毕业，王五说要和八菲特共进午餐。空口无凭，`Show me the proof`。
 
-![show-me-the-proof](https://raw.githubusercontent.com/sec-bit/learning-zkp/master/zkp-intro/1/img/showmeproof.jpg)
+![show-me-the-proof](https://img.learnblockchain.cn/2019/08/06_534606529.jpg)
 
 那么「零知识证明」能解决数据的信任如何理解呢？在上一篇文章『zkPoD: 区块链，零知识证明与形式化验证，实现无中介、零信任的公平交易』[9]里面，我提到了一个概念「模拟」：
 
@@ -135,7 +135,7 @@ Alice: 别废话，掏钱！
 
 换句话说，当我们收到一个加了密的数据， 然后还有一个零知识证明。这个零知识证明是说 「关于数据的 X 断言成立」，那么这等价于有一个天使在我们耳边悄声说，「关于数据的X 断言成立」！
 
-![trusted-party](https://raw.githubusercontent.com/sec-bit/learning-zkp/master/zkp-intro/1/img/angel.png)
+![trusted-party](https://img.learnblockchain.cn/2019/08/06_870753768.png)
 
 对于这个 `X 断言`，可以非常灵活，它可以是一个 `NP`复杂度的算法。大白话讲只要我们能写一段程序（一个多项式时间的算法）来判断一个数据是否满足 `X 断言`，那么这个断言就可以用零知识证明的方式来表达。通俗点讲，只要数据判定是客观的，那么就零知识证明就适用。
 
@@ -161,27 +161,27 @@ Alice: 别废话，掏钱！
 
 Alice 手里有一个地图三染色的答案，请见下图。这个图总共有 6 个顶点，9 条边。
 
-![3c-0](https://raw.githubusercontent.com/sec-bit/learning-zkp/master/zkp-intro/1/img/3c-0.png)
+![3c-0](https://img.learnblockchain.cn/2019/08/06_814771398.png)
 
 现在 Alice 想证明给 Bob 她有答案，但是又不想让 Bob 知道这个答案。Alice 要怎么做呢？
 
 Alice 先要对染过色的图进行一些「变换」，把颜色做一次大挪移，例如把所有的绿色变成橙色，把所有的蓝色变成绿色，把所有的绿色变成橙色。然后 Alice  得到了一个新的染色答案，这时候她把新的图的每一个顶点都用纸片盖上，然后出示给 Bob 看。
 
-![3c-1](https://raw.githubusercontent.com/sec-bit/learning-zkp/master/zkp-intro/1/img/3c-1.png)
+![3c-1](https://img.learnblockchain.cn/2019/08/06_199728527.png)
 
 看下图，这时候 Bob 要出手了（请见下图），他要随机挑选一条「边」，注意是随机，不让 Alice 提前预测到的随机数。
 
-![3c-2](https://raw.githubusercontent.com/sec-bit/learning-zkp/master/zkp-intro/1/img/3c-2.png)
+![3c-2](https://img.learnblockchain.cn/2019/08/06_543384465.png)
 
 假设 Bob 挑选的是最下面的一条边，然后告诉 Alice。
 
-![3c-3](https://raw.githubusercontent.com/sec-bit/learning-zkp/master/zkp-intro/1/img/3c-3.png)
+![3c-3](https://img.learnblockchain.cn/2019/08/06_708377718.png)
 
 这时候 Alice 揭开这条边两端的纸片，让 Bob 检查，Bob 发现这两个顶点的颜色是不同的，那么 Bob 认为这次检验同构。这时候，Bob 只看到了图的局部，能被说服剩下的图顶点的染色都没问题吗？你肯定觉得这远远不够，也许恰好 Alice 蒙对了呢？其它没暴露的顶点可能是胡乱染色的。
 
 没关系，Bob 可以要求 Alice 再来一遍，看下图
 
-![3c-4](https://raw.githubusercontent.com/sec-bit/learning-zkp/master/zkp-intro/1/img/3c-4.png)
+![3c-4](https://img.learnblockchain.cn/2019/08/06_757232536.png)
 
 Alice 再次把颜色做一次变换，把蓝色改成紫色，改绿色改成棕色，把橙色改成灰色，然后把所有的顶点盖上纸片。然后 Bob 再挑选一条边，比如像上图一样，选择的是一条竖着的边，然后让 Alice 揭开纸片看看，如果这时候 Bob 再次发现这条边两端的顶点颜色不同，那么 Bob 这时候已经有点动摇了，可能 Alice 真的有这个染色答案。可是，两次仍然不够，Bob 还想再多来几遍。
 
@@ -221,7 +221,7 @@ $$
 
 那什么是电路呢？下面是三个不同的「算术电路」：
 
-![circuits](https://raw.githubusercontent.com/sec-bit/learning-zkp/master/zkp-intro/1/img/circuits.png)
+![circuits](https://img.learnblockchain.cn/2019/08/06_482173637.png)
 
 可以看到一个电路由很多个门组成，其中有加法门，还有乘法门。每一个门有几个输入引脚，有几个输出引脚。每一个门做一次加法运算，或乘法运算。别看这么简单，我们平时跑的（没有死循环）代码，都可以用算术电路来表示。
 
@@ -301,6 +301,6 @@ Wai……t，这是有问题的，Bob 拿到电路运算过程中的所有内部
   IEEE Symposium on Security and Privacy (SP). IEEE, 2018.
 
 
-本文来自安比实验室郭宇(原文在[GitHub](https://github.com/sec-bit/learning-zkp))。[安比（SECBIT）实验室](https://secbit.io)专注解决区块链生态中的安全问题，着眼于最前沿的科学理论，追求技术突破与卓越，致力于参与共建共识、可信、有序的区块链经济体。
+本文来自安比实验室郭宇(原文在[GitHub](https://github.com/sec-bit/learning-zkp))。[安比（SECBIT）实验室](https://secbit.io?source=learnblockchain)专注解决区块链生态中的安全问题，着眼于最前沿的科学理论，追求技术突破与卓越，致力于参与共建共识、可信、有序的区块链经济体。
 
 [深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客。

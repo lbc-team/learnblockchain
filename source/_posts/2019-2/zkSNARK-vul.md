@@ -6,7 +6,7 @@ categories: 区块链安全
 tags: 
     - zkSNARK
     - 零知识证明
-author: 安比实验室 郭宇
+author: 安比实验室 p0n1
 ---
 
 大量零知识证明项目由于错误地使用了某个 zkSNARKs 合约库，引入「输入假名 (Input Aliasing) 」漏洞，可导致伪造证明、双花、重放等攻击行为发生，且攻击成本极低。众多以太坊社区开源项目受影响，其中包括三大最常用的 zkSNARKs 零知开发库 snarkjs、ethsnarks、ZoKrates，以及近期大热的三个混币（匿名转账）应用 hopper、Heiswap、Miximus。这是一场由 Solidity 语言之父 Chris 两年前随手贴的一段代码而引发的血案。
@@ -121,6 +121,6 @@ semaphore 是一个使用零知识证明技术的匿名信号系统，该项目�
 
 
 
-本文来自[安比（SECBIT）实验室](https://secbit.io)，作者：p0n1。安比（SECBIT）实验室专注解决区块链生态中的安全问题，着眼于最前沿的科学理论，追求技术突破与卓越，致力于参与共建共识、可信、有序的区块链经济体。
+本文来自[安比（SECBIT）实验室](https://secbit.io?source=learnblockchain)，作者：p0n1。安比（SECBIT）实验室专注解决区块链生态中的安全问题，着眼于最前沿的科学理论，追求技术突破与卓越，致力于参与共建共识、可信、有序的区块链经济体。
 
 [深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客。
