@@ -18,7 +18,7 @@ author: 墨客 陈小虎
 
 第一种是让可信第三方为合约提供随机数，这种情况通常是中心化的解决方案，通过一个可信的oracle来提供独立的随机数源。智能合约发送请求给独立于区块链系统之外的Oracle，当Oracle监听到链上相关请求后，生成随机数并调用回调函数将结果返回区块链。
 
-![](https://oss02.bihu.com/image/20190810/36738a0159ad492fb3be0aee39059eb4_HAYDAKRVHEZA.png)
+![](https://img.learnblockchain.cn/2019/08/10_307561981.png)
 
  
 
@@ -29,7 +29,7 @@ author: 墨客 陈小虎
 第二种是交互式的commit 和reveal。参与过程的多方预先commit一个随机数，然后将hash递交到区块链上。所有参与方都递交完毕后，各方reveal自己的随机数，通过将各自的随机数合并产生一个最终的随机数。这个过程能够保证随机数不被预先知道。但是这个过程有几个问题，第一是需要交互式的多次通讯，自动化实现起来非常困难。第二是如果某方在对自己结果不利的情况下，可以采用不reveal自己随机数来延迟随机数的流程。特别是在参与方比较多的情况下，正确处理好网络的延迟和故意的攻击比较困难。
 
 
-![](https://oss02.bihu.com/image/20190810/1c9d2f22bb8928b01fc5d7973c029941_GU2DIKRTG44Q.png)
+![](https://img.learnblockchain.cn/2019/08/10_194528127.png)
  
 ### 采用链上的公开信息
 
@@ -38,7 +38,7 @@ author: 墨客 陈小虎
 ### 阈值签名
 第四种是从共识层，通过阈值签名的方式，使得每个共识节点递交各自对某个信息的签名片段，在足够多的签名片段收集到之后，任何一个共识节点都可以将签名片段合并成一个合法的可验证的签名。这个签名可以作为随机数源。
 
-![](https://oss02.bihu.com/image/20190810/6c0546ae9d369caf7dbbf1dc2906eacd_GUZDCKRTGE4A.png)
+![](https://img.learnblockchain.cn/2019/08/10_187488904.png)
 
  
 
@@ -59,7 +59,7 @@ author: 墨客 陈小虎
 
 流程如下：
 
- ![](https://oss02.bihu.com/image/20190810/811714462707ed55ffbd0bf7d8cb0391_GY3TAKRTHA4Q.png)
+ ![](https://img.learnblockchain.cn/2019/08/10_584155038.png)
 
 
 
@@ -72,7 +72,7 @@ author: 墨客 陈小虎
 4. 第三步可以持续多次up to m次
 
 5. 下一个节点如果收到足够多的签名片段，则可以产生区块，回到步骤
-![](https://oss02.bihu.com/image/20190810/753b67776fc4e67ef08b1a808df18d24_GYYTQKRVHEYQ.jpg)
+![](https://img.learnblockchain.cn/2019/08/10_556761056.jpg)
 
 
  

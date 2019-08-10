@@ -60,13 +60,13 @@ KYC验证的不足是，该过程通常由第三方提供商（如IDNOW）处理
 
 这些信息都保存到服务提供者数据库中。
 
-![](https://oss02.bihu.com/image/20190810/3630b87d1eded27f396d17ce4f2dd93b_GYYTOKRTHE2Q.png)
+![](https://img.learnblockchain.cn/2019/08/10_663634614.png)
 
 因此，可以用以下公式表达它们之间的关系：
 
-![](https://oss02.bihu.com/image/20190810/cd74ed49a1e1bca2cd8f41cd3706735a_GI4DIKRSGU.png)  
-![](https://oss02.bihu.com/image/20190810/3c34280570edcc2d059aacb057b1c030_GMZTQKRSGU.png)  
-  ![](https://oss02.bihu.com/image/20190810/bb6ba8dbbe82fc796135c2888dc0e458_GI3DGKRSGU.png)
+![](https://img.learnblockchain.cn/2019/08/10_194213051.png)  
+![](https://img.learnblockchain.cn/2019/08/10_182233485.png)  
+  ![](https://img.learnblockchain.cn/2019/08/10_641508907.png)
 
 
 
@@ -85,7 +85,7 @@ KYC验证的不足是，该过程通常由第三方提供商（如IDNOW）处理
 ### 3.2 用户注册流程
 
 用户注册流程图如下：
-![](https://oss02.bihu.com/image/20190810/aa98d55b9ba04844a5dfb03390531374_GEYDAOJKGY4TA.png)
+![](https://img.learnblockchain.cn/2019/08/10_602909971.png)
 
 
 主要步骤包括：
@@ -103,7 +103,7 @@ KYC验证的不足是，该过程通常由第三方提供商（如IDNOW）处理
 ### 3.3 私钥恢复
 
 如果用户密码（password）没有丢失，登录并获取私钥流程图如下：
-![](https://oss02.bihu.com/image/20190810/7827afa9972667a34fb98e3aab2b8d7b_HEZDSKRVHA4A.png)
+![](https://img.learnblockchain.cn/2019/08/10_843600691.png)
 
 
 主要步骤包括：
@@ -119,7 +119,7 @@ KYC验证的不足是，该过程通常由第三方提供商（如IDNOW）处理
 ### 3.4 登录并获取私钥
 
 如果用户密码（password）丢失，或者想用新密码重新保存私钥，密码重置过程需重新保存数据库内容，流程图如下：
-![](https://oss02.bihu.com/image/20190810/9b6907fcd5e3aab67ad136a691a4af48_GEZDANJKG4YDG.png)
+![](https://img.learnblockchain.cn/2019/08/10_885569148.png)
 
 
 主要步骤包括：
