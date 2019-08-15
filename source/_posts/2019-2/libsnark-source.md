@@ -12,7 +12,7 @@ tags:
 author: Star Li
 ---
 
-ibsnark源代码，建议想深入零知识证明的小伙伴都读一读。Bellman库主要围绕Groth16算法，libsnark给出了SNARK相关算法的全貌，各种Relation，Language，Proof System。为了更好的生成R1CS电路，libsnark抽象出protoboard和gadget，方便开发者快速搭建电路。
+[libsnark源代码](https://github.com/scipr-lab/libsnark)，建议想深入[零知识证明](https://learnblockchain.cn/categories/basic/零知识证明/)的小伙伴都读一读。Bellman库主要围绕[Groth16算法](https://learnblockchain.cn/2019/05/27/groth16/)，libsnark给出了SNARK相关算法的全貌，各种Relation，Language，Proof System。为了更好的生成R1CS电路，libsnark抽象出protoboard和gadget，方便开发者快速搭建电路。
 
 <!-- more -->
 
@@ -26,7 +26,7 @@ ibsnark源代码，建议想深入零知识证明的小伙伴都读一读。Bell
 
 ## 1. 源代码目录
 
-源代码在libsnark目录下：
+[源代码](https://github.com/scipr-lab/libsnark)在libsnark目录下：
 
 ![](https://img.learnblockchain.cn/2019/08/15_250097720.png)
 
@@ -76,7 +76,7 @@ libsnark库总结了几种描述语言：
     
     * **SSP** - Square Span Program (DFGK14)
 
-先介绍实现各种语言中需要的“variable” （variable.hpp/variable.tcc)，再详细介绍R1CS以及QAP语言。
+先介绍实现各种语言中需要的“variable” （variable.hpp/variable.tcc)，再详细介绍R1CS以及[QAP](https://learnblockchain.cn/2019/05/07/qsp-qap/)语言。
 
 ### 2.1 **variable**
 
@@ -217,7 +217,7 @@ qap_instance描述的是一个QAP电路，A/B/C对应的多项式表达式（虽
 
 qap_instance_evaluation，记录了在t点上，A/B/C/H以及Z对应的值。
 
-一个QAP电路，对应的primary/auxiliary，称为witness，定义为：
+一个[QAP电路](https://learnblockchain.cn/2019/05/07/qsp-qap/)，对应的primary/auxiliary，称为witness，定义为：
 
 ```cpp
 template<typename FieldT>
@@ -685,3 +685,10 @@ comparison_gadget的**generate_r1cs_witness**函数生成电路的witness。comp
 ## 题外
 
 最近一个月发生好多事情。原有的合作关系的结束，新的合作关系的开始。创业变化就是快。期间，我也自己问自己，自己该何去何从？彷徨，犹豫，对未知的未来，我也不确定。但是，内心有种强烈的感觉，告诉自己，有想法，就去干，保持好奇。也许，内心深处，总有一丝侥幸，万一能走出一条路呢。也许，真的就成了呢？
+
+
+本文作者为深入浅出区块链共建者：Star Li，他的公众号**星想法**有很多原创高质量文章，欢迎大家扫码关注。
+
+![公众号-星想法](https://img.learnblockchain.cn/2019/15572190575887.jpg!/scale/20%)
+
+[深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，学区块链都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789) 掌握区块链技术动态。
