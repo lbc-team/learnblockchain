@@ -2,7 +2,7 @@
 title: 实现一个可管理、增发、兑换、冻结等高级功能的代币
 permalink: create-token2
 date: 2018-01-27 17:04:13
-categories: 
+categories:
     - 以太坊
     - 智能合约
 tags:
@@ -71,7 +71,7 @@ contract MyToken is owned {
 
 给合约添加以下的方法：
 ```js
-function mintToken(address target, uint256 mintedAmount) onlyOwner {
+function mintToken(address target, uint256 mintedAmount) external onlyOwner {
         balanceOf[target] += mintedAmount;
         totalSupply += mintedAmount;
         Transfer(0, owner, mintedAmount);
@@ -88,14 +88,14 @@ function mintToken(address target, uint256 mintedAmount) onlyOwner {
     mapping (address => bool) public frozenAccount;
     event FrozenFunds(address target, bool frozen);
 
-    function freezeAccount(address target, bool freeze) onlyOwner {
+    function freezeAccount(address target, bool freeze) external onlyOwner {
         frozenAccount[target] = freeze;
         FrozenFunds(target, freeze);
     }
 ```
 单单以上的代码还无法冻结，需要把他加入到transfer函数中才能真正生效，因此修改transfer函数
 ```js
-function transfer(address _to, uint256 _value) {
+function transfer(address _to, uint256 _value) public  {
         require(!frozenAccount[msg.sender]);
         ...
 }

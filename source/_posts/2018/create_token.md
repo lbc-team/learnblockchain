@@ -2,7 +2,7 @@
 title:  创建自己的数字货币（ERC20 代币）进行ICO
 permalink: create_token
 date: 2018-01-12 22:36:39
-categories: 
+categories:
     - 以太坊
     - 智能合约
 tags:
@@ -29,7 +29,7 @@ author: Tiny熊
 今天我们就来详细讲一讲怎样创建一个这样的代币。
 
 ### ERC20 Token
-也许你经常看到ERC20和代币一同出现， ERC20是以太坊定义的一个[代币标准](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20-token-standard.md)。
+也许你经常看到ERC20和代币一同出现， ERC20是以太坊定义的一个[代币标准](https://learnblockchain.cn/docs/eips/eip-20.html)。
 要求我们在实现代币的时候必须要遵守的协议，如指定代币名称、总量、实现代币交易函数等，只有支持了协议才能被以太坊钱包支持。
 其接口如下：
 
@@ -58,10 +58,10 @@ symbol： 代币符号
 decimals： 代币小数点位数，代币的最小单位， 18表示我们可以拥有 .0000000000000000001单位个代币。
 totalSupply() : 发行代币总量。
 balanceOf(): 查看对应账号的代币余额。
-transfer(): 实现代币交易，用于给用户发送代币（从我们的账户里）。
-transferFrom():  实现代币用户之间的交易。
-allowance(): 控制代币的交易，如可交易账号及资产。
-approve():  允许用户可花费的代币数。
+transfer(): 实现代币转账交易，用于给用户发送代币（从我们的账户里）。
+transferFrom():  给被授权的用户使用，他可以从我们（参数 from）的账户里发送代币给其他用户（参数 to）。
+allowance(): 返回授权花费的代币数。
+approve():  授权用户可代表我们花费的代币数。
 
 
 ## 编写代币合约代码
@@ -79,7 +79,7 @@ contract TokenERC20 {
     uint8 public decimals = 18;  // 18 是建议的默认值
     uint256 public totalSupply;
 
-    mapping (address => uint256) public balanceOf;  // 
+    mapping (address => uint256) public balanceOf;  //
     mapping (address => mapping (address => uint256)) public allowance;
 
     event Transfer(address indexed from, address indexed to, uint256 value);
@@ -106,8 +106,9 @@ contract TokenERC20 {
         assert(balanceOf[_from] + balanceOf[_to] == previousBalances);
     }
 
-    function transfer(address _to, uint256 _value) public {
+    function transfer(address _to, uint256 _value) public returns (bool) {
         _transfer(msg.sender, _to, _value);
+        return true;
     }
 
     function transferFrom(address _from, address _to, uint256 _value) public returns (bool success) {
@@ -188,7 +189,7 @@ contract TokenERC20 {
 代币交易是不是很简单，只要明白了交易流程，使用其他的钱包也是一样的道理。
 
 另外强烈安利几门视频课程给大家：
-*  [深入详解以太坊智能合约语言Solidity](https://ke.qq.com/course/326528?flowToken=1010387) - Solidity 语言面面俱到
+* [深入详解以太坊智能合约语言Solidity](https://ke.qq.com/course/326528?flowToken=1010387) - Solidity 语言面面俱到
 * [通过代币（Token）学以太坊智能合约开发](https://ke.qq.com/course/317230?flowToken=1010389) 代币开发So Easy
 * [以太坊DAPP开发实战](https://ke.qq.com/course/335169?flowToken=1010386) - 轻轻松松学会DAPP开发
 
