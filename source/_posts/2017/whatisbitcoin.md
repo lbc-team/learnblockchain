@@ -27,7 +27,7 @@ author: Tiny熊
 
 
 比特币使用区块链技术来支撑整个系统的运行，有兴趣的同学，可以详细阅读下这几篇博文：
-* [区块链记账原理](http://learnblockchain.cn//2017/10/25/whatbc) 
+* [区块链记账原理](http://learnblockchain.cn//2017/10/25/whatbc/)
 * [比特币所有权问题](http://learnblockchain.cn/2017/11/02/bitcoin-own/)
 * [比特币如何挖矿](http://learnblockchain.cn/2017/11/04/bitcoin-pow/)
 
