@@ -2,7 +2,7 @@
 title: 使用ethers.js开发以太坊Web钱包1 - 创建钱包账号
 permalink: eth-web-wallet_1
 date: 2018-10-25 18:34:44
-categories: 
+categories:
     - 以太坊
     - 钱包
 tags:
@@ -75,18 +75,18 @@ console.log(randomNumber._hex);
 界面代码（HTML）代码如下（主要是在表格中定义个一个输入框及一个按钮）：
 
 ```html
-                <table>
-                    <tr>
-                        <th>私钥:</th>
-                        <td><input type="text" placeholder="(private key)" id="select-privatekey" /></td>
-                    </tr>
-                    <tr>
-                        <td> </td>
-                        <td>
-                            <div id="select-submit-privatekey" class="submit">加载私钥</div>
-                        </td>
-                    </tr>
-                </table>
+    <table>
+        <tr>
+            <th>私钥:</th>
+            <td><input type="text" placeholder="(private key)" id="select-privatekey" /></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td>
+                <div id="select-submit-privatekey" class="submit">加载私钥</div>
+            </td>
+        </tr>
+    </table>
 ```
 
 对应的逻辑代码(JavaScript)如下：
@@ -117,7 +117,7 @@ console.log(randomNumber._hex);
 
 这是目前主流常见钱包的方式，关于助记词推导过程请阅读[理解开发HD 钱包涉及的 BIP32、BIP44、BIP39](https://learnblockchain.cn/2018/09/28/hdwallet/)。
 
-我们需要先生成一个随机数，然后用随机数生成助记词，随后用助记词创建钱包账号，设计到的API有：
+我们需要先生成一个随机数，然后用随机数生成助记词，随后用助记词创建钱包账号，涉及到的API有：
 
 ```js
 
@@ -193,7 +193,7 @@ ethers.Wallet.fromMnemonic(mnemonic, path);
 ```
 
 完整源码请订阅[深入浅出区块链技术小专栏](https://xiaozhuanlan.com/blockchaincore)查看， 哈哈，是不是有一点鸡贼，创作不易呀。
-戳链接收看[详细的视频课程讲解](https://ke.qq.com/course/356068?flowToken=1010359)。
+
 
 参考文档:
 [ethers.js](https://docs.ethers.io/ethers.js/html)

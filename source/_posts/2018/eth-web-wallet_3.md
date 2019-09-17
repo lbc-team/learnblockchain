@@ -2,7 +2,7 @@
 title: 使用ethers.js开发以太坊Web钱包3 - 展示钱包信息及发起签名交易
 permalink: eth-web-wallet_3
 date: 2018-10-26 10:31:44
-categories: 
+categories:
     - 以太坊
     - 钱包
 tags:
@@ -44,7 +44,7 @@ var provider = new ethers.providers.JsonRpcProvider("http://127.0.0.1:8545");
 var activeWallet = wallet.connect(App.provider);
 ```
 
-> 启动geth的需要注意一下，需要使用 `--rpc --rpccorsdomain` 开启 RPC通信及跨域，
+> 启动geth的需要注意一下，需要使用 `--rpc --rpccorsdomain` 开启 RPC通信及跨域。
 
 ## 展示钱包详情：查询余额及Nonce
 
@@ -148,14 +148,14 @@ const txParams = {
 `to` 和 `value`: 很好理解，就是用户要转账的目标及金额。
 `data`: 是交易时附加的消息，如果是对合约地址发起交易，这会转化为对合约函数的执行，可参考：[如何理解以太坊ABI](https://learnblockchain.cn/2018/08/09/understand-abi/)
 `nonce`: 交易序列号
-`chainId`:  链id，用来去区分不同的链（分叉链）id可在[EIP-55](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md#specification)查询。
+`chainId`:  链id，用来去区分不同的链（分叉链）id可在[EIP-155](https://learnblockchain.cn/docs/eips/eip-155.html)查询。
 
 > `nonce` 和 `chainId` 有一个重要的作用就是防止重放攻击，如果没有nonce的活，收款人可能把这笔签名过的交易再次进行广播，没有chainId的话，以太坊上的交易可以拿到以太经典上再次进行广播。
 
 `gasPrice`和`gasLimit`： [Gas](https://learnblockchain.cn/2019/06/11/gas-mean/)是以太坊的工作计费机制，是由交易发起者给矿工打包的费用。上面几个参数的设置比较固定，Gas的设置（尤其是gasPrice）则灵活的多。
 
 `gasLimit` 表示预计的指令和存储空间的工作量，如果工作量没有用完，会退回交易发起者，如果不够会发生*out-of-gas* 错误。
-**一个普通转账的交易，工作量是固定的，gasLimit为21000**，合约执行gasLimit则是变化的，也许有一些人会认为直接设置为高一点，反正会退回，但如果合约执行出错，就会吃掉所有的gas。幸运的是web3 和 ethers.js 都提供了测算Gas Limit的方法，下一遍[发送代币](https://learnblockchain.cn/2018/10/26/eth-web-wallet_4/)
+**一个普通转账的交易，工作量是固定的，gasLimit为21000**，合约执行gasLimit则是变化的，也许有一些人会认为直接设置为高一点，反正会退回，但如果合约执行出错，就会吃掉所有的gas。幸运的是web3 和 ethers.js 都提供了测算Gas Limit的方法，下一遍[发送代币](https://learnblockchain.cn/2018/10/26/eth-web-wallet_4/) 会进行介绍。
 
 
 `gasPrice`是交易发起者是愿意为工作量支付的**单位**费用，矿工在选择交易的时候，是按照gasPrice进行排序，先服务高出价者，因此如果出价过低会导致交易迟迟不能打包确认，出价过高对发起者又比较亏。
