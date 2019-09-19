@@ -2,7 +2,7 @@
 title:  Truffle 教程：教你开发、部署第一个去中心化应用(Dapp) - 宠物商店
 permalink: first-dapp
 date: 2018-01-12 22:36:39
-categories: 
+categories:
     - 以太坊
     - DApp
 tags:
@@ -105,7 +105,7 @@ contract Adoption {
   function adopt(uint petId) public returns (uint) {
     require(petId >= 0 && petId <= 15);  // 确保id在数组长度内
 
-    adopters[petId] = msg.sender;        // 保存调用这地址 
+    adopters[petId] = msg.sender;        // 保存调用这地址
     return petId;
   }
 
@@ -119,7 +119,7 @@ contract Adoption {
 
 ## 编译部署智能合约
 
-[Truffle](https://learnblockchain.cn/docs/truffle/)集成了一个[开发者控制台](https://learnblockchain.cn/docs/truffle/getting-started/compiling-contracts.html)，可用来生成一个开发链用来测试和部署智能合约。
+[Truffle](https://learnblockchain.cn/docs/truffle/)集成了一个[开发者控制台](https://learnblockchain.cn/docs/truffle/getting-started/using-truffle-develop-and-the-console.html)，可用来生成一个开发链用来测试和部署智能合约。
 
 ### 编译
 
@@ -377,12 +377,12 @@ initContract: function() {
       if (error) {
         console.log(error);
       }
-    
+
       var account = accounts[0];
-    
+
       App.contracts.Adoption.deployed().then(function(instance) {
         adoptionInstance = instance;
-    
+
         // 发送交易领养宠物
         return adoptionInstance.adopt(petId, {from: account});
       }).then(function(result) {
@@ -465,7 +465,7 @@ candy maple cake sugar pudding cream honey rich smooth crumble sweet treat
 ![](https://img.learnblockchain.cn/2018/metamask-transactionsuccess.png!wl)
 
 好了，恭喜你，即将成为一名去中心化式应用开发者的你已经成为迈出了坚实的一步。
-还可以阅读另一篇[开发链上记事本](https://learnblockchain.cn/2019/03/30/dapp_noteOnChain) 进一步巩固DApp 开发。 
+还可以阅读另一篇[开发链上记事本](https://learnblockchain.cn/2019/03/30/dapp_noteOnChain) 进一步巩固DApp 开发。
 
 加我微信：xlbxiong 备注：DApp， 加入以太坊DApp开发微信群。
 
@@ -478,7 +478,7 @@ candy maple cake sugar pudding cream honey rich smooth crumble sweet treat
 ## 参考文档
 
 * [Truffle手册](http://truffleframework.com/tutorials/pet-shop)
-* [Truffle 官方文档-中文版](https://learnblockchain.cn/docs/truffle/) 
+* [Truffle 官方文档-中文版](https://learnblockchain.cn/docs/truffle/)
 
 
 [深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，学区块链都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789) 掌握区块链技术动态。
