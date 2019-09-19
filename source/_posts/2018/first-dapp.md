@@ -465,7 +465,7 @@ candy maple cake sugar pudding cream honey rich smooth crumble sweet treat
 ![](https://img.learnblockchain.cn/2018/metamask-transactionsuccess.png!wl)
 
 好了，恭喜你，即将成为一名去中心化式应用开发者的你已经成为迈出了坚实的一步。
-还可以阅读另一篇[开发链上记事本](https://learnblockchain.cn/2019/03/30/dapp_noteOnChain) 进一步巩固DApp 开发。
+还可以阅读另一篇[开发链上记事本](https://learnblockchain.cn/2019/03/30/dapp_noteOnChain/) 进一步巩固DApp 开发。
 
 加我微信：xlbxiong 备注：DApp， 加入以太坊DApp开发微信群。
 
