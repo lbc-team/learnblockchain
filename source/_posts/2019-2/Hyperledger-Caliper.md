@@ -1,17 +1,22 @@
 ---
 title: Hyperledger Caliper 原理及使用指南
-permalink: Hyperledger　Caliper
+permalink: Hyperledger-Caliper
 un_reward: true
 date: 2019-09-23 14:32:27
 categories:
   - 联盟链
   - Fabric
-tags:
+tags: 
+    - Caliper
+    - 测试
 author: TopJohn
 ---
 
-##介绍
 前段时间花了一段时间来研究Hyperledger Caliper的原理以及使用方式，研究的时候正处于Caliper改动较大的时候，因此也踩了不少的坑，也发现了一些问题，同时也加深了对这个项目的认识，在这里进行一下整理和归纳，以便大家能够更好地使用Caliper。
+
+<!-- more -->
+
+## Caliper 架构
 
 先附上一张官方文档的架构图：
 ![架构图](https://img.learnblockchain.cn/2019/09/23/001.webp)
@@ -50,7 +55,7 @@ Application Layer(应用层)
 
 用户自己的定义的test case可以在benchmark文件夹中实现自己定义的相应JavaScript代码来实现相应的智能合约方法调用以及初始化和结束时要做的事情。
 
-##项目结构
+## 项目结构
 caliper项目中所有的代码都位于`caliper/packages`目录下：
 ```
 ├── caliper-burrow
