@@ -56,13 +56,6 @@ author: 清源
 ![PBFT算法](https://img.learnblockchain.cn/2019/09/15674936101023.jpg)
 
 
-
-
-
-
-
-
-
 ## 日志压缩
 
   `Pbft`算法在运行的过程中，日志会不断累积的，但是在实际的系统中，无论是从日志占用的磁盘空间，还是新节点加入集群，同步日志的网络消耗来看，日志都不能无限的增长。
@@ -99,7 +92,59 @@ author: 清源
   总结一下，在`view-change`中最为重要的就是`C`，`P`，`Q`三个消息的集合，`C`确保了视图变更的时候，`stable checkpoint`之前的状态安全。`P`确保了视图变更前，已经`PREPARE`的消息的安全。`Q`确保了视图变更后`P`集合中的消息安全。回想一下`pre-prepare`和`prepare`阶段最重要的任务是保证，同一个`主节点`发出的请求在同一个`视图（view）`中的顺序是一致的，而在视图切换过程中的`C`，`P`，`Q`三个集合就是解决这个问题的。
 
 
-本文作者是深入浅出区块链共建者清源，欢迎关注清源的[博客](http://qyuan.top)，不定期分享一些区块链底层技术文章。
+## 主动恢复
 
+  集群在运行过程中，可能出现网络抖动、磁盘故障等原因，会导致部分节点的执行速度落后大多数节点，而传统的PBFT拜占庭共识算法并没有实现主动恢复的功能，因此需要添加主动恢复的功能才能参与后续的共识流程，主动恢复会索取网络中其他节点的视图，最新的区块高度等信息，更新自身的状态，最终与网络中其他节点的数据保持一致。
+  在`Raft`中采用的方式是主节点记录每个跟随者提交的日志编号，发送心跳包时携带额外信息的方式来保持同步，在`Pbft`中采用了`视图协商（NegotiateView）`的机制来保持同步。
+  一个节点落后太多，这个时候它收到主节点发来的消息时，对消息`水线（water mark）`的检查会失败，这个时候计时器超时，发送`view-change`的消息，但是由于只有自己发起`view-change`达不到`2f+1`个节点的数量，本来正常运行的节点就退化为一个拜占庭节点，尽管是非主观的原因，为了尽可能保证集群的稳定性，所以加入了`视图协商（NegotiateView）`机制。
+  当一个节点多次`view-change`失败就触发`NegotiateView`同步集群数据，流程如下；
+
+![](https://img.learnblockchain.cn/2019/10/15702691547326.jpg)
+
+
+* 新增节点`Replica 4`发起`NegotiateView`消息给其他节点；
+* 其余节点收到消息以后，返回自己的视图信息，节点ID，节点总数N；
+* `Replica 4`收到`2f+1`个相同的消息后，如果quorum个视图编号和自己不同，则同步view和N；
+* `Replica 4`同步完视图后，发送`RevoeryToCheckpoint`的消息，其中包含自身的`checkpoint`信息；
+* 其余节点收到`RevoeryToCheckpoint`后将自身最新的检查点信息返回给`Replica 4`;
+* `Replica 4`收到quorum个消息后，更新自己的检查点到最新，更新完成以后向正常节点索要pset、qset和cset的信息（即PBFT算法中pre-prepare阶段、prepare阶段和commit阶段的数据）同步至全网最新状态；
+
+## 增删节点
+
+  `Replica 5`新节点加入的流程如下图所示；
+
+![](https://img.learnblockchain.cn/2019/10/15702691911766.jpg)
+
+
+* 新节点启动以后，向网络中其他节点建立连接并且发送`AddNode`消息；
+* 当集群中的节点收到`AddNode`消息后，会广播`AgreeAdd`的消息；
+* 当一个节点收到`2f+1`个`AgreeAdd`的消息后，会发送`AgreeAdd`的消息给`Replica 5`
+* `Replica 5`会从收到的消息中，挑选一个节点同步数据，具体的过程在主动恢复中有说明，同步完成以后发送`JoinNet`
+* 当集群中其他节点收到`JoinNet`之后重新计算视图view，节点总数N，同时将PQC信息封装到`AgreeJoinOrExit`中广播
+* 当收到`2f+1`个有效的`AgreeJoinOrExit`后，新的主节点广播`UpdateNet`消息完成新增节点流程
+
+  删除节点的流程和新增节点的过程类似：
+
+![](https://img.learnblockchain.cn/2019/10/15702691996136.jpg)
+
+
+
+##Q&A
+
+Q：为什么`PBFT`算法需要三个阶段？
+A：假如简化为两个阶段`pre-prepare`和`prepare`，当一个节点A收到`2f+1`个相同的`prepare`后执行请求，一部分节点B发生`view-change`，在`view-change`的过程中是拒收`prepare`消息的，所以这一部分节点的状态机会少执行一个请求，当`view-change`切换成功后重放`prepare`消息，在重放的过程中，节点A也完成了`view-change`，这个时候A就会面临重放的`prepare`已经执行过了，是否需要再次执行？会导致状态机出现二义性。
+
+* * *
+
+Q：view-change阶段集群会不可用么？
+A：view-change阶段集群会出现短暂的不可用，一般在实践的时候都会实现一个缓冲区来减少影响，实现参考 [以太坊TXpool分析](http://qyuan.top/2019/06/02/txpool/)。
+
+* * *
+
+Q：Pbft算法的时间复杂度？
+A：Pbft算法的时间复杂度O(n^2)，在`prepare`和`commit`阶段会将消息广播两次，一般而言，Pbft集群中的节点都不会超过100。
+
+
+本文作者是深入浅出区块链共建者清源，欢迎关注清源的[博客](http://qyuan.top)，不定期分享一些区块链底层技术文章。
 
 [深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，[学区块链](https://learnblockchain.cn/2018/01/11/guide/)都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789)。
