@@ -89,7 +89,7 @@ contract C {
 强烈安利一门课程给大家：[深入详解以太坊智能合约语言Solidity](https://ke.qq.com/course/326528?flowToken=1010387)
 
 ## 参考文献
-[官方文档-函数](https://solidity.readthedocs.io/en/develop/contracts.html#functions)
+[Solidity官方文档-函数](https://learnblockchain.cn/2018/05/17/solidity-functions/)
 
 欢迎来[知识星球](https://learnblockchain.cn/images/zsxq.png)提问，星球内已经聚集了300多位区块链技术爱好者。
 [深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，学区块链都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789) 掌握区块链技术动态。
