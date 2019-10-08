@@ -30,10 +30,11 @@ Solidity 是[以太坊](https://learnblockchain.cn/2017/11/20/whatiseth/)智能�
 1. 写状态变量
 2. 触发事件（events）
 3. 创建其他的合约
-4. call调用附加了以太币
-5. 调用了任何没有**view**或**pure**修饰的函数
-6. 使用了低级别的调用（low-level calls）
-7. 使用了包含特定操作符的内联汇编
+4. 使用 selfdestruct。
+5. call调用附加了以太币
+6. 调用了任何没有**view**或**pure**修饰的函数
+7. 使用了低级别的调用（low-level calls）
+8. 使用了包含特定操作符的内联汇编
 
 看一个例子：
 
@@ -63,7 +64,7 @@ contract C {
 
 ## 纯函数（Pure Functions）
 
-函数可以声明为**view**，表示它即不读取状态，也不修改状态，除了上一节介绍的几种修改状态的情况，以下几种情况被认为是读取了状态：
+函数可以声明为**pure**，表示它即不读取状态，也不修改状态，除了上一节介绍的几种修改状态的情况，以下几种情况被认为是读取了状态：
 1. 读状态变量
 2. 访问了 **this.balance** 或 **\<address>.balance**
 3. 访问了**block**, **tx**, **msg** 的成员 (msg.sig 和 msg.data除外).
