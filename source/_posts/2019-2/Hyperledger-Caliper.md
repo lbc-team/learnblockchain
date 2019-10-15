@@ -6,7 +6,7 @@ date: 2019-09-23 14:32:27
 categories:
   - 联盟链
   - Fabric
-tags: 
+tags:
     - Caliper
     - 测试
 author: TopJohn
@@ -19,7 +19,7 @@ author: TopJohn
 ## Caliper 架构
 
 先附上一张官方文档的架构图：
-![架构图](https://img.learnblockchain.cn/2019/09/23/001.webp)
+![架构图](https://img.learnblockchain.cn/2019/10/14/001.jpg)
 
 Hyperledger Caliper这个项目其主要的核心思想是实现一套通用的区块链性能测试框架，能够支持Hyperledger旗下的所有framework，但是也不限于下面的项目，也可以支持其他的区块链项目，不过需要自己实现adaptation Layer。目前，Caliper已经正式发布了v0.1.0版本，支持Hyperledger Fabric v1.0-v1.4.3、Sawtooth、Iroha、composer和burrow。
 
@@ -41,7 +41,7 @@ Report Generator: 生成HTML格式测试报告。
 Application Layer(应用层)
 
 应用层用于定义区块链网络的配置，测试的相关配置，指benchmark和network两个文件夹的配置。相关配置信息在此不进行展开。
-![配置](https://img.learnblockchain.cn/2019/09/24/002.webp)
+![配置](https://img.learnblockchain.cn/2019/10/14/002.jpg)
 
 整个测试流程，主要包括3个阶段：
 
