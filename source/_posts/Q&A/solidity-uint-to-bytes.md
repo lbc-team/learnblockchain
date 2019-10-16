@@ -1,9 +1,10 @@
 ---
-title: Solidity 中 uint 转 bytes
+title: Solidity 中 uint 转为 bytes
 permalink: solidity-uint-to-bytes
 date: 2019-07-10 11:25:59
 categories: 问与答
 tags:
+    - bytes
     - Solidity
 author: Tiny熊
 ---
