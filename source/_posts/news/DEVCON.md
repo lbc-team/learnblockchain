@@ -1,5 +1,5 @@
 ---
-title: CONSENSYS在DEVCON上有哪些官宣？
+title: CONSENSYS在DEVCON上带来了哪些新东西
 permalink: DEVCON
 un_reward: true
 date: 2019-10-12 11:41:03
@@ -8,11 +8,13 @@ tags: DEVCON
 author: ConsenSys
 ---
 
-![1 million developers](https://img.learnblockchain.cn/2019/10/16/001.jpeg)
+
 
 全球以太坊社区在日本大阪召开了第五届开发者大会，堪称2019年区块链行业中最盛大的一次年度会议，众人瞩目。在这一周里，与会者发布了许多重要消息，更是充满了思想和灵感碰撞的火花。从盛大的开幕式到大量的活动、工作坊和 meetup，都充分展现了区块链与以太坊的活力。其中许多 ConsenSys 的最新消息也十分夺人眼目。
 
 <!-- more -->
+
+![1 million developers](https://img.learnblockchain.cn/2019/10/16/001.jpeg)
 
 ConsenSys 创始人 Joe Lubin 发起了一项旨在将以太坊开发者社区扩大到百万人的运动，除此之外，ConsenSys 资助项目还宣布了其最新的项目导入计划。ConsenSys 的前沿项目，如 MythX、Alethio 和 Infura，宣布推出免费增值模式，以解决生态系统的痛点，智能合约安全、数据分析以及基础设施方面，都将有所改善。
 
@@ -106,4 +108,4 @@ MetaMask 插件是一个脚本，通常在 ENS 和 IPFS 上提供服务，可为
 原文链接：https://news.ethereum.cn/archives/818
 
 
-[深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，学区块链都来这里！
+[深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，学区块链都来这里。
