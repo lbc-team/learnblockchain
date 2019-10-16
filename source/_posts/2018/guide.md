@@ -73,7 +73,7 @@ author: Tiny熊
 * [美链BEC合约漏洞技术分析](https://learnblockchain.cn/2018/04/25/bec-overflow/)
 
 ### Solidity语言教程
-全面学习Solidity语言可以购买图书：[精通以太坊智能合约](http://www.upchain.pro/book.html)
+全面学习Solidity语言可以购买图书：[精通以太坊智能合约](http://edu.upchain.pro/book.html)
 
 * [Solidity 教程系列1 - 类型介绍](https://learnblockchain.cn/2017/12/05/solidity1/)
 * [Solidity 教程系列2 - 地址类型介绍](https://learnblockchain.cn/2017/12/12/solidity2/)
@@ -126,7 +126,7 @@ author: Tiny熊
 * [跨链技术的分析和思考](https://learnblockchain.cn/2019/03/23/blockchain_interoperability/)
 
 
-## IPFS 
+## IPFS
 
 * [站在Web3.0 理解IPFS是什么](https://learnblockchain.cn/2018/12/12/what-is-ipfs/)
 * [IPFS 使用入门](https://learnblockchain.cn/2018/12/25/use-ipfs/)
