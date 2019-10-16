@@ -271,13 +271,13 @@ Mythril工具的平均测试时间为226.2s；而VaaS工具的平均测试时间
 
 **VaaS工具特有检测项用例结果展示说明**
 
-<table width="546" border="0" cellpadding="0" cellspacing="0" style='width:409.50pt;border-collapse:collapse;table-layout:fixed;'>
+<table width="641" border="0" cellpadding="0" cellspacing="0" style='width:480.75pt;border-collapse:collapse;table-layout:fixed;'>
    <col width="168" class="xl65" style='mso-width-source:userset;mso-width-alt:5376;'/>
-   <col width="198" class="xl65" style='mso-width-source:userset;mso-width-alt:6336;'/>
+   <col width="293" class="xl65" style='mso-width-source:userset;mso-width-alt:9376;'/>
    <col width="180" class="xl65" style='mso-width-source:userset;mso-width-alt:5760;'/>
    <tr height="23" style='height:17.25pt;'>
     <td class="xl66" height="23" width="168" style='height:17.25pt;width:126.00pt;' x:str>分类</td>
-    <td class="xl67" width="198" style='width:148.50pt;' x:str>VaaS log <font class="font24">关键字</font></td>
+    <td class="xl67" width="293" style='width:219.75pt;' x:str>VaaS log <font class="font24">关键字</font></td>
     <td class="xl67" width="180" style='width:135.00pt;' x:str>说明</td>
    </tr>
    <tr height="23" style='height:17.25pt;'>
@@ -312,7 +312,7 @@ Mythril工具的平均测试时间为226.2s；而VaaS工具的平均测试时间
    </tr>
    <tr height="39" style='height:29.25pt;'>
     <td class="xl73" height="153" rowspan="5" style='height:114.75pt;border-right:1.0pt solid windowtext;border-bottom:1.0pt solid windowtext;' x:str>不推荐使用<font class="font25">(Deprecated</font><font class="font3"> </font><font class="font25">Usage)</font></td>
-    <td class="xl69" x:str>Redefine Variable From Base <span style='display:none;'>Contracts</span></td>
+    <td class="xl69" x:str>Redefine Variable From Base Contracts</td>
     <td class="xl69" x:str>合约继承中的变量覆盖</td>
    </tr>
    <tr height="23" style='height:17.25pt;'>
@@ -324,7 +324,7 @@ Mythril工具的平均测试时间为226.2s；而VaaS工具的平均测试时间
     <td class="xl69" x:str>未使用的变量</td>
    </tr>
    <tr height="45" style='height:33.75pt;'>
-    <td class="xl69" x:str>Arbitrary Jump with Function T<span style='display:none;'>ype Variable</span></td>
+    <td class="xl69" x:str>Arbitrary Jump with Function Type Variable</td>
     <td class="xl69" x:str>具有函数类型变量的任意跳<span style='display:none;'>转</span></td>
    </tr>
    <tr height="23" style='height:17.25pt;'>
@@ -341,7 +341,7 @@ Mythril工具的平均测试时间为226.2s；而VaaS工具的平均测试时间
     <td class="xl69" x:str>构造函数失配</td>
    </tr>
    <tr height="39" style='height:29.25pt;'>
-    <td class="xl69" x:str>Complex Code In Fallback Fun<span style='display:none;'>ction</span></td>
+    <td class="xl69" x:str>Complex Code In Fallback Function</td>
     <td class="xl69" x:str>fallback<font class="font4">函数使用</font></td>
    </tr>
    <tr height="23" style='height:17.25pt;'>
@@ -376,7 +376,7 @@ Mythril工具的平均测试时间为226.2s；而VaaS工具的平均测试时间
    <![if supportMisalignedColumns]>
     <tr width="0" style='display:none;'>
      <td width="168" style='width:126;'></td>
-     <td width="198" style='width:149;'></td>
+     <td width="293" style='width:220;'></td>
      <td width="180" style='width:135;'></td>
     </tr>
    <![endif]>
