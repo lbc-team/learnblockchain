@@ -271,114 +271,113 @@ Mythril工具的平均测试时间为226.2s；而VaaS工具的平均测试时间
 
 **VaaS工具特有检测项用例结果展示说明**
 
-
-  <table width="1185" border="0" cellpadding="0" cellspacing="0" style='width:888.75pt;border-collapse:collapse;table-layout:fixed;'>
-   <col width="389" style='mso-width-source:userset;mso-width-alt:12448;'/>
-   <col width="425" style='mso-width-source:userset;mso-width-alt:13600;'/>
-   <col width="371" style='mso-width-source:userset;mso-width-alt:11872;'/>
+<table width="546" border="0" cellpadding="0" cellspacing="0" style='width:409.50pt;border-collapse:collapse;table-layout:fixed;'>
+   <col width="168" class="xl65" style='mso-width-source:userset;mso-width-alt:5376;'/>
+   <col width="198" class="xl65" style='mso-width-source:userset;mso-width-alt:6336;'/>
+   <col width="180" class="xl65" style='mso-width-source:userset;mso-width-alt:5760;'/>
    <tr height="23" style='height:17.25pt;'>
-    <td class="xl65" height="23" width="389" style='height:17.25pt;width:291.75pt;' x:str>分类</td>
-    <td class="xl66" width="425" style='width:318.75pt;' x:str>VaaS log <font class="font24">关键字</font></td>
-    <td class="xl66" width="371" style='width:278.25pt;' x:str>说明</td>
-   </tr>
-   <tr height="23" style='height:17.25pt;'>
-    <td class="xl67" height="114" rowspan="5" style='height:85.50pt;border-right:1.0pt solid windowtext;border-bottom:1.0pt solid windowtext;' x:str>ERC20 标准规范（ERC20 Standard）</td>
-    <td class="xl68" x:str>Erc20 Variable</td>
-    <td class="xl68" x:str>ERC20 <font class="font4">变量命名规范</font></td>
-   </tr>
-   <tr height="22" style='height:16.50pt;'>
-    <td class="xl68" x:str>Erc20 Function</td>
-    <td class="xl68" x:str>Erc20<font class="font4">函数命名规范</font></td>
+    <td class="xl66" height="23" width="168" style='height:17.25pt;width:126.00pt;' x:str>分类</td>
+    <td class="xl67" width="198" style='width:148.50pt;' x:str>VaaS log <font class="font24">关键字</font></td>
+    <td class="xl67" width="180" style='width:135.00pt;' x:str>说明</td>
    </tr>
    <tr height="23" style='height:17.25pt;'>
-    <td class="xl68" x:str>Erc20 Event</td>
-    <td class="xl68" x:str>Erc20 event<font class="font4">使用规范</font></td>
+    <td class="xl68" height="115" rowspan="5" style='height:86.25pt;border-right:1.0pt solid windowtext;border-bottom:1.0pt solid windowtext;' x:str>ERC20 <font class="font3">标准规范</font><font class="font2">(ERC20 Standard)</font></td>
+    <td class="xl69" x:str>Erc20 Variable</td>
+    <td class="xl69" x:str>ERC20 <font class="font4">变量命名规范</font></td>
    </tr>
    <tr height="23" style='height:17.25pt;'>
-    <td class="xl68" x:str>Fake Recharge Vulnerability</td>
-    <td class="xl68" x:str>假充值</td>
+    <td class="xl69" x:str>Erc20 Function</td>
+    <td class="xl69" x:str>Erc20<font class="font4">函数命名规范</font></td>
    </tr>
    <tr height="23" style='height:17.25pt;'>
-    <td class="xl68" x:str>Transfer To Zero Address</td>
-    <td class="xl68" x:str>目标地址非零检查</td>
+    <td class="xl69" x:str>Erc20 Event</td>
+    <td class="xl69" x:str>Erc20 event<font class="font4">使用规范</font></td>
    </tr>
    <tr height="23" style='height:17.25pt;'>
-    <td class="xl70" height="45" rowspan="2" style='height:33.75pt;border-right:1.0pt solid windowtext;border-bottom:1.0pt solid windowtext;' x:str>敏感函数调用（Sensitive Function Call）</td>
-    <td class="xl68" x:str>Invoke Extcodesize</td>
-    <td class="xl68" x:str>调用Extcodesize<font class="font4">函数</font></td>
-   </tr>
-   <tr height="22" style='height:16.50pt;'>
-    <td class="xl68" x:str>Invoke Ecrecover</td>
-    <td class="xl68" x:str>调用Ecrecover<font class="font4">函数</font></td>
+    <td class="xl69" x:str>Fake Recharge Vulnerability</td>
+    <td class="xl69" x:str>假充值</td>
    </tr>
    <tr height="23" style='height:17.25pt;'>
-    <td class="xl70" height="114" rowspan="5" style='height:85.50pt;border-right:1.0pt solid windowtext;border-bottom:1.0pt solid windowtext;' x:str>不推荐使用（Deprecated Usage）</td>
-    <td class="xl68" x:str>Redefine Variable From Base Contracts</td>
-    <td class="xl68" x:str>合约继承中的变量覆盖</td>
+    <td class="xl69" x:str>Transfer To Zero Address</td>
+    <td class="xl69" x:str>目标地址非零检查</td>
    </tr>
-   <tr height="22" style='height:16.50pt;'>
-    <td class="xl68" x:str>check_this_balance</td>
-    <td class="xl72" x:str>合约资金受到严格限制</td>
+   <tr height="36" style='height:27.00pt;mso-height-source:userset;mso-height-alt:540;'>
+    <td class="xl71" height="84" rowspan="2" style='height:63.00pt;border-right:1.0pt solid windowtext;border-bottom:1.0pt solid windowtext;' x:str>敏感函数调用<font class="font25">(Sensitive</font><font class="font3"> </font><font class="font25">Function</font><font class="font3"> </font><font class="font25">Call)</font></td>
+    <td class="xl69" x:str>Invoke Extcodesize</td>
+    <td class="xl69" x:str>调用Extcodesize<font class="font4">函数</font></td>
    </tr>
-   <tr height="23" style='height:17.25pt;'>
-    <td class="xl68" x:str>unused_variables</td>
-    <td class="xl68" x:str>未使用的变量</td>
+   <tr height="48" style='height:36.00pt;mso-height-source:userset;mso-height-alt:720;'>
+    <td class="xl69" x:str>Invoke Ecrecover</td>
+    <td class="xl69" x:str>调用Ecrecover<font class="font4">函数</font></td>
    </tr>
-   <tr height="23" style='height:17.25pt;'>
-    <td class="xl68" x:str>Arbitrary Jump with Function Type Variable</td>
-    <td class="xl68" x:str>具有函数类型变量的任意跳转</td>
-   </tr>
-   <tr height="23" style='height:17.25pt;'>
-    <td class="xl68" x:str>Overload Assert</td>
-    <td class="xl68" x:str>重写assert<font class="font4">函数</font></td>
+   <tr height="39" style='height:29.25pt;'>
+    <td class="xl73" height="153" rowspan="5" style='height:114.75pt;border-right:1.0pt solid windowtext;border-bottom:1.0pt solid windowtext;' x:str>不推荐使用<font class="font25">(Deprecated</font><font class="font3"> </font><font class="font25">Usage)</font></td>
+    <td class="xl69" x:str>Redefine Variable From Base <span style='display:none;'>Contracts</span></td>
+    <td class="xl69" x:str>合约继承中的变量覆盖</td>
    </tr>
    <tr height="23" style='height:17.25pt;'>
-    <td class="xl67" height="183" rowspan="8" style='height:137.25pt;border-right:1.0pt solid windowtext;border-bottom:1.0pt solid windowtext;' x:str>solidity编码规范（Solidity Coding Conventions）</td>
-    <td class="xl68" x:str>Compiler Version Declaration</td>
-    <td class="xl68" x:str>编译器版本声明</td>
-   </tr>
-   <tr height="22" style='height:16.50pt;'>
-    <td class="xl68" x:str>Constructor Mistyping</td>
-    <td class="xl68" x:str>构造函数失配</td>
+    <td class="xl69" x:str>check_this_balance</td>
+    <td class="xl74" x:str>合约资金受到严格限制</td>
    </tr>
    <tr height="23" style='height:17.25pt;'>
-    <td class="xl68" x:str>Complex Code In Fallback Function</td>
-    <td class="xl68" x:str>fallback<font class="font4">函数使用</font></td>
+    <td class="xl69" x:str>unused_variables</td>
+    <td class="xl69" x:str>未使用的变量</td>
+   </tr>
+   <tr height="45" style='height:33.75pt;'>
+    <td class="xl69" x:str>Arbitrary Jump with Function T<span style='display:none;'>ype Variable</span></td>
+    <td class="xl69" x:str>具有函数类型变量的任意跳<span style='display:none;'>转</span></td>
    </tr>
    <tr height="23" style='height:17.25pt;'>
-    <td class="xl68" x:str>Unary Operation</td>
-    <td class="xl68" x:str>+= <font class="font4">写成</font><font class="font2">=+</font></td>
+    <td class="xl69" x:str>Overload Assert</td>
+    <td class="xl69" x:str>重写assert<font class="font4">函数</font></td>
    </tr>
    <tr height="23" style='height:17.25pt;'>
-    <td class="xl68" x:str>Constructor Warning</td>
-    <td class="xl68" x:str>缺少主构造函数</td>
+    <td class="xl68" height="200" rowspan="8" style='height:150.00pt;border-right:1.0pt solid windowtext;border-bottom:1.0pt solid windowtext;' x:str>solidity<font class="font3">编码规范</font><font class="font2">(Solidity Coding Conventions)</font></td>
+    <td class="xl69" x:str>Compiler Version Declaration</td>
+    <td class="xl69" x:str>编译器版本声明</td>
    </tr>
    <tr height="23" style='height:17.25pt;'>
-    <td class="xl68" x:str>No Return</td>
-    <td class="xl68" x:str>返回值适配</td>
+    <td class="xl69" x:str>Constructor Mistyping</td>
+    <td class="xl69" x:str>构造函数失配</td>
+   </tr>
+   <tr height="39" style='height:29.25pt;'>
+    <td class="xl69" x:str>Complex Code In Fallback Fun<span style='display:none;'>ction</span></td>
+    <td class="xl69" x:str>fallback<font class="font4">函数使用</font></td>
    </tr>
    <tr height="23" style='height:17.25pt;'>
-    <td class="xl68" x:str>Unchecked Api Return Values</td>
-    <td class="xl68" x:str>没检查API<font class="font4">返回值</font></td>
+    <td class="xl69" x:str>Unary Operation</td>
+    <td class="xl69" x:str>+= <font class="font4">写成</font><font class="font2">=+</font></td>
    </tr>
    <tr height="23" style='height:17.25pt;'>
-    <td class="xl68" x:str>Emit Event Beforerevert</td>
-    <td class="xl68" x:str>事件在revert<font class="font4">前触发了</font></td>
+    <td class="xl69" x:str>Constructor Warning</td>
+    <td class="xl69" x:str>缺少主构造函数</td>
    </tr>
    <tr height="23" style='height:17.25pt;'>
-    <td class="xl73" height="46" rowspan="2" style='height:34.50pt;border-right:1.0pt solid windowtext;border-bottom:1.0pt solid windowtext;' x:str>逻辑验证</td>
-    <td class="xl68" x:str>Call problem</td>
-    <td class="xl68" x:str>call<font class="font4">调用执行总是</font><font class="font2">revert</font></td>
+    <td class="xl69" x:str>No Return</td>
+    <td class="xl69" x:str>返回值适配</td>
    </tr>
    <tr height="23" style='height:17.25pt;'>
-    <td class="xl68" x:str>Function problem</td>
-    <td class="xl68" x:str>Function<font class="font4">执行总是失败</font></td>
+    <td class="xl69" x:str>Unchecked Api Return Values</td>
+    <td class="xl69" x:str>没检查API<font class="font4">返回值</font></td>
+   </tr>
+   <tr height="23" style='height:17.25pt;'>
+    <td class="xl69" x:str>Emit Event Beforerevert</td>
+    <td class="xl69" x:str>事件在revert<font class="font4">前触发了</font></td>
+   </tr>
+   <tr height="23" style='height:17.25pt;'>
+    <td class="xl76" height="46" rowspan="2" style='height:34.50pt;border-right:1.0pt solid windowtext;border-bottom:1.0pt solid windowtext;' x:str>逻辑验证</td>
+    <td class="xl69" x:str>Call problem</td>
+    <td class="xl69" x:str>call<font class="font4">调用执行总是</font><font class="font2">revert</font></td>
+   </tr>
+   <tr height="23" style='height:17.25pt;'>
+    <td class="xl69" x:str>Function problem</td>
+    <td class="xl69" x:str>Function<font class="font4">执行总是失败</font></td>
    </tr>
    <![if supportMisalignedColumns]>
     <tr width="0" style='display:none;'>
-     <td width="389" style='width:292;'></td>
-     <td width="425" style='width:319;'></td>
-     <td width="371" style='width:278;'></td>
+     <td width="168" style='width:126;'></td>
+     <td width="198" style='width:149;'></td>
+     <td width="180" style='width:135;'></td>
     </tr>
    <![endif]>
   </table>
