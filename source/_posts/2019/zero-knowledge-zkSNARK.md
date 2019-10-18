@@ -4,10 +4,9 @@ permalink: zero-knowledge-zksnark
 un_reward: true
 mathjax: true
 date: 2019-04-16 15:10:54
-categories: 
-    - 基础理论
+categories:
     - 零知识证明
-tags: 
+tags:
     - 密码学
     - zkSNARK
     - 零知识证明

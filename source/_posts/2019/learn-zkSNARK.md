@@ -5,10 +5,9 @@ un_reward: true
 mathjax: true
 hide_wechat_subscriber: true
 date: 2019-04-18 15:10:54
-categories: 
-    - 基础理论
+categories:
     - 零知识证明
-tags: 
+tags:
     - 密码学
     - zkSNARK
     - 零知识证明
@@ -226,7 +225,7 @@ skSNARK证明过程分为两部分：a) setup阶段 b）证明阶段。QSP问题
   $E(\beta_ww_1(s)), ... , E(\beta_ww_m(s))$
 
   $E(\beta_vt(s)), E(\beta_wt(s))$
-  
+
 
 **4.2 证明者提供证据**
 
@@ -236,7 +235,7 @@ $$v_{free}(x) = \sum_k a_kv_k(x)$$
 
 证明者需提供的证据如下
 
-- $$V_{free} := E(v_{free}(s)), \ W := E(w(s)),  \ H := E(h(s)),$$  
+- $$V_{free} := E(v_{free}(s)), \ W := E(w(s)),  \ H := E(h(s)),$$
 
 - $$V_{free}' := E(\alpha v_{free}(s)),  W' := E(\alpha w(s)), H' := E(\alpha h(s)), $$
 
@@ -284,7 +283,7 @@ $$= e(g,g)^{(\beta_v\gamma)v_{free}(s)}e(g,g)^{(\beta_w\gamma)w(s)} =  e(g, g)^{
 
 **4.4 $\delta $ 偏移**
 
-为了进一步“隐藏” $$V_{free} 和 W，额外需要采用两个偏移: \delta_{free} 和 \delta_w$$。 
+为了进一步“隐藏” $$V_{free} 和 W，额外需要采用两个偏移: \delta_{free} 和 \delta_w$$。
 $v_{free}(s)/w(s)/h(s)​$进行如下的变形，验证者用同样的逻辑验证。
 
 　$$v_{free}(s) \rightarrow v_{free}(s) + \delta_{free}t(s)$$

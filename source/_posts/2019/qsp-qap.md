@@ -6,10 +6,9 @@ un_reward: true
 mathjax: true
 hide_wechat_subscriber: true
 date: 2019-05-07 15:10:54
-categories: 
-    - 基础理论
+categories:
     - 零知识证明
-tags: 
+tags:
     - 密码学
     - zkSNARK
     - 零知识证明
@@ -182,7 +181,7 @@ $$v_{free}(x) = \sum_k a_kv_k(x)$$
 
 证明者需提供的证据如下：
 
-- $$V_{free} := E(v_{free}(s)), \ W := E(w(s)), \ Y := E(y(s)),  \ H := E(h(s)),$$  
+- $$V_{free} := E(v_{free}(s)), \ W := E(w(s)), \ Y := E(y(s)),  \ H := E(h(s)),$$
 - $$V_{free}' := E(\alpha v_{free}(s)),  W' := E(\alpha w(s)), Y' := E(\alpha y(s)), H' := E(\alpha h(s)), $$
 - $$P := E(\beta_vv_{free}(s) + \beta_ww(s) + \beta_yy(s))$$
 

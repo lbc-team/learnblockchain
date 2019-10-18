@@ -4,10 +4,9 @@ permalink: EYBlockchain
 un_reward: true
 hide_wechat_subscriber: true
 date: 2019-06-13 15:10:54
-categories: 
-    - 基础理论
+categories:
     - 零知识证明
-tags: 
+tags:
     - 密码学
     - EYBlockchain
     - 零知识证明

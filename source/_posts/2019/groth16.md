@@ -5,10 +5,9 @@ un_reward: true
 mathjax: true
 hide_wechat_subscriber: true
 date: 2019-05-27 15:10:54
-categories: 
-    - 基础理论
+categories:
     - 零知识证明
-tags: 
+tags:
     - 密码学
     - 零知识证明
     - Groth16
@@ -165,7 +164,7 @@ $$\alpha \cfrac{\sum_{i=0}^\ell B_i(\beta u_i(x) + \alpha v_i(x) + w_i(x))}{\gam
 
 $$\alpha \cfrac{\sum_{i=\ell+1}^m B_i(\beta u_i(x) + \alpha v_i(x) + w_i(x)) + B_h(x)t(x)}{\delta} = 0$$
 
-所以，$$\sum_{i=0}^\ell B_i(\beta u_i(x) + \alpha v_i(x) + w_i(x)) = 0，\sum_{i=\ell+1}^m B_i(\beta u_i(x) + \alpha v_i(x) + w_i(x)) + B_h(x)t(x)$$ 。 
+所以，$$\sum_{i=0}^\ell B_i(\beta u_i(x) + \alpha v_i(x) + w_i(x)) = 0，\sum_{i=\ell+1}^m B_i(\beta u_i(x) + \alpha v_i(x) + w_i(x)) + B_h(x)t(x)$$ 。
 
 7）等式的右边没有$\beta \gamma$和$\alpha\gamma$
 
