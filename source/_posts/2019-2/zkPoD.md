@@ -2,10 +2,8 @@
 title: zkPoD：区块链，零知识证明与形式化验证，实现无中介、零信任的公平交易
 permalink: zkpod
 date: 2019-07-16 10:10:54
-categories: 
-    - 基础理论
-    - 零知识证明
-tags: 
+categories: 零知识证明
+tags:
     - zkPoD
     - zkSNARK
     - 零知识证明
@@ -247,7 +245,7 @@ zkPoD 的⽬标？我还没想清楚，也许是成为下⼀代互联⽹的基�
 
 [3] Nakamoto, Satoshi. "Bitcoin: A peer-to-peer electronic cash system." (2008).
 
-[4] Maxwell, G. "[Zero knowledge contingent payment](https://en.bitcoin.it/wiki/Zero_Knowledge_Contingent_Payment). 2011." 
+[4] Maxwell, G. "[Zero knowledge contingent payment](https://en.bitcoin.it/wiki/Zero_Knowledge_Contingent_Payment). 2011."
 [5] Greg Maxwell. [The first successful Zero-Knowledge Contingent Payment](https://bitcoincore.org/en/2016/02/26/zero-knowledge-contingent-payments-announcement).
 [6] Campanelli, Matteo, Rosario Gennaro, Steven Goldfeder, and Luca Nizzardo. "Zero-knowledge contingent payments revisited: Attacks and payments for services." In Proceedings of the 2017 ACM SIGSAC Conference on Computer and Communications Security, pp. 229-243\. ACM, 2017.
 

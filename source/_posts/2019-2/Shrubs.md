@@ -3,10 +3,8 @@ title: 零知识证明 - 一种新型的Merkle树（Shrubs）
 permalink: Shrubs
 un_reward: true
 date: 2019-10-15 13:51:39
-categories: 
-    - 基础理论
-    - 零知识证明
-tags: 
+categories: 零知识证明
+tags:
     - Merkle 树
     - Shrubs
     - 零知识证明

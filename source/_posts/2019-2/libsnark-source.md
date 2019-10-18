@@ -2,17 +2,15 @@
 title: 零知识证明 - libsnark源代码分析
 permalink: libsnark-source
 date: 2019-08-15 09:10:54
-categories: 
-    - 基础理论
-    - 零知识证明
-tags: 
+categories: 零知识证明
+tags:
     - libsnark
     - zkSNARK
     - 零知识证明
 author: Star Li
 ---
 
-[libsnark源代码](https://github.com/scipr-lab/libsnark)，建议想深入[零知识证明](https://learnblockchain.cn/categories/basic/零知识证明/)的小伙伴都读一读。Bellman库主要围绕[Groth16算法](https://learnblockchain.cn/2019/05/27/groth16/)，libsnark给出了SNARK相关算法的全貌，各种Relation，Language，Proof System。为了更好的生成R1CS电路，libsnark抽象出protoboard和gadget，方便开发者快速搭建电路。
+[libsnark源代码](https://github.com/scipr-lab/libsnark)，建议想深入[零知识证明](https://learnblockchain.cn/categories/zkp/)的小伙伴都读一读。Bellman库主要围绕[Groth16算法](https://learnblockchain.cn/2019/05/27/groth16/)，libsnark给出了SNARK相关算法的全貌，各种Relation，Language，Proof System。为了更好的生成R1CS电路，libsnark抽象出protoboard和gadget，方便开发者快速搭建电路。
 
 <!-- more -->
 
@@ -21,7 +19,7 @@ author: Star Li
 >     commit 477c9dfd07b280e42369f82f89c08416319e24ae
 >     Author: Madars Virza <madars@mit.edu>
 >     Date:   Tue Jun 18 18:43:12 2019 -0400
->     
+>
 >         Document that we also implement the Groth16 proof system.
 
 ## 1. 源代码目录
@@ -51,13 +49,13 @@ libsnark库总结了几种描述语言：
 * constraint satisfaction problem类
 
     * **R1CS** - Rank-1 Constraint System
-    
+
     * **USCS** - Unitary-Square Constraint System
 
 * circuit satisfaction problem类
 
     * **BACS** - Bilinear Arithmetic Circuit Satisfiability
-    
+
     * **TBCS** - Two-input Boolean Circuit Satisfiability
 
 * ram computation类
@@ -65,15 +63,15 @@ libsnark库总结了几种描述语言：
     RAM是Random Access Machine的缩写。libsnark总结了两种RAM计算框架：
 
     * **tinyRAM**
-    
+
     * **fooRAM**
 
 * arithmetic program类
 
     * **QAP** - Quadratic Arithmetic Program（GGPR13）
-    
+
     * **SQP** - Square Arithmetic Program（GM17）
-    
+
     * **SSP** - Square Span Program (DFGK14)
 
 先介绍实现各种语言中需要的“variable” （variable.hpp/variable.tcc)，再详细介绍R1CS以及[QAP](https://learnblockchain.cn/2019/05/07/qsp-qap/)语言。
@@ -82,7 +80,7 @@ libsnark库总结了几种描述语言：
 
 ```cpp
  template <typename FieldT>
- 
+
  class variable {
      public:
         var_index_t index;
@@ -250,7 +248,7 @@ coefficients_for_ABCs就是witness。为了计算的方便，同时给出了对�
                                                   this->Ht.begin()+this->degree()+1,
                                                   witness.coefficients_for_H.begin(),
                                                   witness.coefficients_for_H.begin()+this->degree()+1);
- 
+
      if (ans_A * ans_B - ans_C != ans_H * this->Zt)
      {
          return false;
@@ -396,12 +394,12 @@ template<typename ppT>
      libff::G2<ppT> beta_g2;
      libff::G1<ppT> delta_g1;
      libff::G2<ppT> delta_g2;
- 
+
      libff::G1_vector<ppT> A_query;
      knowledge_commitment_vector<libff::G2<ppT>, libff::G1<ppT> > B_query;
      libff::G1_vector<ppT> H_query;
      libff::G1_vector<ppT> L_query;
- 
+
      r1cs_gg_ppzksnark_constraint_system<ppT> constraint_system;
      ...
 }
@@ -443,7 +441,7 @@ r1cs_gg_ppzksnark_verification_key记录了CRS中在verify过程需要的信息�
      libff::GT<ppT> alpha_g1_beta_g2;
      libff::G2<ppT> gamma_g2;
      libff::G2<ppT> delta_g2;
- 
+
      accumulation_vector<libff::G1<ppT> > gamma_ABC_g1;
      ...
 }
@@ -464,7 +462,7 @@ template<typename ppT>
      libff::GT<ppT> vk_alpha_g1_beta_g2;
      libff::G2_precomp<ppT> vk_gamma_g2_precomp;
      libff::G2_precomp<ppT> vk_delta_g2_precomp;
- 
+
      accumulation_vector<libff::G1<ppT> > gamma_ABC_g1;
      ...
 }
@@ -498,7 +496,7 @@ r1cs_gg_ppzksnark_keypair包括两部分：r1cs_gg_ppzksnark_proving_key和r1cs_
 }
 ```
 
-### **4.6 ** **r1cs_gg_ppzksnark_generator** 
+### **4.6 ** **r1cs_gg_ppzksnark_generator**
 **r1cs_gg_ppzksnark_generator** 给定一个r1cs_constraint_system的基础上，r1cs_gg_ppzksnark_generator能生成r1cs_gg_ppzksnark_keypair，也就是生成CRS信息。
 
 ```cpp
@@ -560,15 +558,15 @@ libsnark提供了两套Gadget库：gadgetlib1和gadgetlib2。libsnark中很多�
 protoboard是r1cs_constraint_system之上的一层封装。通过一个个的Gadget，向r1cs_constraint_system添加约束。为了让不同的Gadget之间采用统一的Variable以及Lc，protoboard通过”next_free_var"以及"next_free_lc“维护所有Gadget创建的Variable以及Lc。
 
 ```cpp
- template<typename FieldT>                                                                          
- class protoboard {                                                                                  
-   ...                                                                                        
-     FieldT constant_term;                                                                                  
+ template<typename FieldT>
+ class protoboard {
+   ...
+     FieldT constant_term;
      r1cs_variable_assignment<FieldT> values;
      var_index_t next_free_var;
      lc_index_t next_free_lc;
-     std::vector<FieldT> lc_values;                                                                  
-     r1cs_constraint_system<FieldT> constraint_system;  
+     std::vector<FieldT> lc_values;
+     r1cs_constraint_system<FieldT> constraint_system;
      ...
  }
 
@@ -611,20 +609,20 @@ gadget的定义非常的简单：
 comparison_gadget的定义在gadgetlib1/gadgets/basic_gadgets.hpp：
 
 ```cpp
-comparison_gadget(protoboard<FieldT>& pb,                                                      
-                       const size_t n,                                                              
-                       const pb_linear_combination<FieldT> &A,                                      
-                       const pb_linear_combination<FieldT> &B,                                      
-                       const pb_variable<FieldT> &less,                                              
-                       const pb_variable<FieldT> &less_or_eq,                                        
-                       const std::string &annotation_prefix="") :                                    
+comparison_gadget(protoboard<FieldT>& pb,
+                       const size_t n,
+                       const pb_linear_combination<FieldT> &A,
+                       const pb_linear_combination<FieldT> &B,
+                       const pb_variable<FieldT> &less,
+                       const pb_variable<FieldT> &less_or_eq,
+                       const std::string &annotation_prefix="") :
          gadget<FieldT>(pb, annotation_prefix), n(n), A(A), B(B), less(less), less_or_eq(less_or_eq)
-     {                                                                                              
-         alpha.allocate(pb, n, FMT(this->annotation_prefix, " alpha"));                              
-         alpha.emplace_back(less_or_eq); // alpha[n] is less_or_eq                                  
-         alpha_packed.allocate(pb, FMT(this->annotation_prefix, " alpha_packed"));                
-         not_all_zeros.allocate(pb, FMT(this->annotation_prefix, " not_all_zeros"));                
-         pack_alpha.reset(new packing_gadget<FieldT>(pb, alpha, alpha_packed,                           FMT(this->annotation_prefix, " pack_alpha")));  
+     {
+         alpha.allocate(pb, n, FMT(this->annotation_prefix, " alpha"));
+         alpha.emplace_back(less_or_eq); // alpha[n] is less_or_eq
+         alpha_packed.allocate(pb, FMT(this->annotation_prefix, " alpha_packed"));
+         not_all_zeros.allocate(pb, FMT(this->annotation_prefix, " not_all_zeros"));
+         pack_alpha.reset(new packing_gadget<FieldT>(pb, alpha, alpha_packed,                           FMT(this->annotation_prefix, " pack_alpha")));
          all_zeros_test.reset(new disjunction_gadget<FieldT>(pb,                                    pb_variable_array<FieldT>(alpha.begin(), alpha.begin() + n),not_all_zeros, FMT(this->annotation_prefix, " all_zeros_test")));
      };
 ```
@@ -647,10 +645,10 @@ comparison_gadget的generate_r1cs_constraints函数负责添加约束。
 template<typename FieldT>
  void comparison_gadget<FieldT>::generate_r1cs_constraints()
  {
-     generate_boolean_r1cs_constraint<FieldT>(this->pb, not_all_zeros, FMT(this->annotation_prefix, " not_all_zeros"));              
-     pack_alpha->generate_r1cs_constraints(true);                                                    
+     generate_boolean_r1cs_constraint<FieldT>(this->pb, not_all_zeros, FMT(this->annotation_prefix, " not_all_zeros"));
+     pack_alpha->generate_r1cs_constraints(true);
      this->pb.add_r1cs_constraint(r1cs_constraint<FieldT>(1, (FieldT(2)^n) + B - A, alpha_packed), FMT(this->annotation_prefix, " main_constraint"));
-     all_zeros_test->generate_r1cs_constraints();                                                    
+     all_zeros_test->generate_r1cs_constraints();
      this->pb.add_r1cs_constraint(r1cs_constraint<FieldT>(less_or_eq, not_all_zeros, less),     FMT(this->annotation_prefix, " less"));
  }
 ```

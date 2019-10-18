@@ -4,10 +4,8 @@ permalink: zokrates
 un_reward: true
 hide_wechat_subscriber: true
 date: 2019-07-24 15:10:54
-categories: 
-    - 基础理论
-    - 零知识证明
-tags: 
+categories: 零知识证明
+tags:
     - 密码学
     - 零知识证明
     - ZoKrates
@@ -64,7 +62,7 @@ field是DSL电路的基本数据类型。一个field代表一个整数，范围[
 本文中使用的ZoKrates源代码的最后一个commit信息如下：
 
 > commit 87312a55e94055f14f95afeaa2790783d79a1ee5 Author: schaeff thibaut@schaeff.fr Date:   Sun Jun 23 13:35:03 2019 +0200
-> 
+>
 >   remove invalid test case
 
 整个ZoKrates的源代码的目录如下图：
@@ -179,7 +177,7 @@ export-verifier命令，导出以太坊上可以部署的验证证明的智能�
  vk.gamma = Pairing.G2Point();
  vk.delta = Pairing.G2Point();
  vk.gammaABC = new Pairing.G1Point[]();
- 
+
  }
 ```
 

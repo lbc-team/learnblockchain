@@ -2,10 +2,8 @@
 title: 探索零知识证明系列1 - 初识「零知识」与「证明」
 permalink: learning-zkp
 date: 2019-08-01 10:10:54
-categories: 
-    - 基础理论
-    - 零知识证明
-tags: 
+categories: 零知识证明
+tags:
     - zkSNARK
     - 零知识证明
 author: 安比实验室 郭宇
@@ -229,7 +227,7 @@ $$
 
 下面请思考一个场景：Bob 交给 Alice 一段代码 `P`，和一个输入 `x`，让 Alice 来运行一遍，然后把运行结果告诉 Bob。可能这个计算需要消耗资源，而 Bob 把计算过程外包给了 Alice。然后 Alice 运行了一遍，得到了结果 `y`。然后把 `y` 告诉 Bob。下面问题来了：
 
-> 如何让 Bob 在不运行代码的前提下，相信代码 `P` 运行的结果一定是 `y` 呢？ 
+> 如何让 Bob 在不运行代码的前提下，相信代码 `P` 运行的结果一定是 `y` 呢？
 
 这里是思考时间，大家可以想个五分钟 ……
 
@@ -293,7 +291,7 @@ Wai……t，这是有问题的，Bob 拿到电路运算过程中的所有内部
 + [7] Kolata, Gina. "Computer math proof shows reasoning power." *Math Horizons* 4.3 (1997): 22-25.
 + [8] Goldwasser, Shafi, Silvio Micali, and Charles Rackoff. "The knowledge complexity of interactive proof systems." *SIAM Journal on computing* 18.1 (1989): 186-208.
 + [9] zkPoD: 区块链，零知识证明与形式化验证，实现无中介、零信任的公平交易. 安比实验室. 2019.
-+ [10] Oded, Goldreich. "Foundations of cryptography basic tools." (2001). 
++ [10] Oded, Goldreich. "Foundations of cryptography basic tools." (2001).
 + [11] Gennaro, Rosario, et al. "Quadratic span programs and succinct NIZKs without PCPs." Annual
   International Conference on the Theory and Applications of Cryptographic Techniques. Springer Berlin, Heidelberg, 2013.
 + [12] Ben-Sasson, Eli, et al. "Scalable, transparent, and post-quantum secure computational integrity." *IACR Cryptology ePrint Archive* 2018 (2018): 46.

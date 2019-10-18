@@ -2,10 +2,8 @@
 title: 探索零知识证明系列3 - 寻找「知识」
 permalink: zkp-pok
 date: 2019-08-28 10:10:54
-categories: 
-    - 基础理论
-    - 零知识证明
-tags: 
+categories: 零知识证明
+tags:
     - 零知识证明
 author: 安比实验室 郭宇
 ---
@@ -14,7 +12,7 @@ author: 安比实验室 郭宇
 导言：有些理论非常有趣，零知识证明便是其中之一，摸索了许久，想写点什么，与大家一起讨论。本文是『探索零知识证明』系列的第三篇。前两遍是：[（一）初始「零知识」与「证明」](https://learnblockchain.cn/2019/08/01/learning-zkp/) 及 [（二）理解「模拟」](https://learnblockchain.cn/2019/08/06/zkp-simu/)， 本文全文约 8,000 字，少量数学公式。
 
 
-> And what, Socrates, is the food of the soul? Surely, I said, knowledge is the food of the soul.  苏格拉底，什么是灵魂的食物？我说过，当然是知识。 
+> And what, Socrates, is the food of the soul? Surely, I said, knowledge is the food of the soul.  苏格拉底，什么是灵魂的食物？我说过，当然是知识。
 > —— 柏拉图
 
 
@@ -106,10 +104,10 @@ z*G ?= R + c*PK = rG + c*(aG)
 `z` 的计算和验证过程很有趣，有几个关键技巧：
 
 1. 首先 Bob 必须给出一个「随机」挑战数，然后 Bob 在椭圆曲线上同态地检查 `z` 。如果我们把挑战数 `c` 看成是一个未知数，那么 `r+a*c=z` 可以看成是一个一元一次方程，其中 `r` 与 `a` 是方程系数。请注意在 `c` 未知的前提下，如果 `r + a*x = r' + a'*x` 要成立，那么根据 Schwatz-Zippel 定理[3]，极大概率上 `r=r'`，`a=a'` 都成立。也就是说， Alice 在 `c` 未知的前提下，想找到另一对不同的 `r'`,`a'` 来计算 `z` 骗过 Bob 是几乎不可能的。这个随机挑战数 `c` 实现了`r` 和 `a` 的限制。虽然 Bob 随机选了一个数，但是由于 Alice 事先不知道，所以 Alice 不得不使用私钥 `a` 来计算 `z`。这里的关键： `c` 必须是个随机数。
-2. Bob 验证是在椭圆曲线群上完成。Bob 不知道`r`，但是他知道 `r` 映射到曲线上的点`R`；Bob 也不知道 `a`，但是他知道 `a` 映射到曲线群上的点 `PK`，即 `a*G`。通过同态映射与Schwatz-Zippel 定理，Bob 可以校验 `z` 的计算过程是否正确，从而知道 Alice 确实是通过 `r` 和 `a` 计算得出的 `z`，但是又不暴露 `r` 与 `a` 的值。 
+2. Bob 验证是在椭圆曲线群上完成。Bob 不知道`r`，但是他知道 `r` 映射到曲线上的点`R`；Bob 也不知道 `a`，但是他知道 `a` 映射到曲线群上的点 `PK`，即 `a*G`。通过同态映射与Schwatz-Zippel 定理，Bob 可以校验 `z` 的计算过程是否正确，从而知道 Alice 确实是通过 `r` 和 `a` 计算得出的 `z`，但是又不暴露 `r` 与 `a` 的值。
 3. 还有，在协议第一步中产生的随机数 `r` 保证了 `a` 的保密性。因为任何一个秘密当和一个符合「一致性分布」的随机数相加之后的和仍然符合「一致性分布」。
 
-## 证明零知识 
+## 证明零知识
 
 我们这里看一下 Schnorr 协议如何证明一个弱一些的「零知识」性质——「SHVZK」：
 
@@ -200,7 +198,7 @@ W...hat？我们不是刚刚证明过：协议是零知识的吗？零知识就�
 ![schnorr-extractor-1](https://img.learnblockchain.cn/2019/08/15670624162919.jpg)
 
 
-第一步：Alice 选择一个随机数 `r`，并且计算 `R=r*G`，并将 `R` 发给「抽取器」 
+第一步：Alice 选择一个随机数 `r`，并且计算 `R=r*G`，并将 `R` 发给「抽取器」
 
 ![schnorr-extractor-2](https://img.learnblockchain.cn/2019/08/15670624309525.jpg)
 
@@ -252,9 +250,9 @@ W...hat？我们不是刚刚证明过：协议是零知识的吗？零知识就�
 ![ecdsa-sig](https://img.learnblockchain.cn/2019/08/15670625470853.jpg)
 
 
-第一步：Alice 仍然是选择一个随机数 `k`，并将 `k` 映射到椭圆曲线上，得到点 `K` ，然后发送给 Bob 
+第一步：Alice 仍然是选择一个随机数 `k`，并将 `k` 映射到椭圆曲线上，得到点 `K` ，然后发送给 Bob
 
-第二步：Bob 需要产生两个随机数，`c` 和 `e`，然后交给 Alice 
+第二步：Bob 需要产生两个随机数，`c` 和 `e`，然后交给 Alice
 
 第三步：Alice 计算 `s`，并且发送给 Bob，他来验证 `s` 的计算过程是否正确
 

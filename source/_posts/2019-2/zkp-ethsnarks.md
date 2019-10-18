@@ -3,9 +3,7 @@ title: 零知识证明-ethsnarks源代码导读
 permalink: zkp-ethsnarks
 un_reward: true
 date: 2019-09-29 10:58:21
-categories:
-    - 基础理论
-    - 零知识证明
+categories: 零知识证明
 tags:
     - 零知识证明
     - libsnark

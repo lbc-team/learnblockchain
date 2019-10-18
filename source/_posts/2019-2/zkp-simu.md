@@ -2,10 +2,8 @@
 title: 探索零知识证明系列2 - 从「模拟」理解零知识证明
 permalink: zkp-simu
 date: 2019-08-06 10:10:54
-categories: 
-    - 基础理论
-    - 零知识证明
-tags: 
+categories: 零知识证明
+tags:
     - zkSNARK
     - 零知识证明
 author: 安比实验室 郭宇
@@ -260,7 +258,7 @@ Bob 这时候无法感知到时间已经倒退回第一步了，对他来说，�
 + [3]Quisquater, J.J., Quisquater, M., Quisquater, M., Quisquater, M., Guillou, L., Guillou, M.A., Guillou, G., Guillou, A., Guillou, G. and Guillou, S., 1989, August. How to explain zero-knowledge protocols to your children. In *Conference on the Theory and Application of Cryptology* (pp. 628-631). Springer, New York, NY.
 + [4] 柏拉图 and 吴献书, 1986. 理想国 (Vol. 1, No. 986, p. 1). 商务印书馆.
 + [5] Goldwasser, Shafi, Silvio Micali, and Charles Rackoff. "The knowledge complexity of interactive proof systems." *SIAM Journal on computing* 18.1 (1989): 186-208.
-+ [6] Oded, Goldreich. "Foundations of cryptography basic tools." (2001). 
++ [6] Oded, Goldreich. "Foundations of cryptography basic tools." (2001).
 + [7] Rackoff, Charles, and Daniel R. Simon. "Non-interactive zero-knowledge proof of knowledge and chosen ciphertext attack." Annual International Cryptology Conference. Springer, Berlin, Heidelberg, 1991.
 + [8] Goldreich, Oded, Silvio Micali, and Avi Wigderson. "Proofs that yield nothing but their validity or all languages in NP have zero-knowledge proof systems." Journal of the ACM (JACM) 38.3 (1991): 690-728.
 + [9] zkPoD: 区块链，零知识证明与形式化验证，实现无中介、零信任的公平交易. 安比实验室. 2019.

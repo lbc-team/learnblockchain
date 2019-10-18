@@ -15,7 +15,7 @@ Devcon 是以太坊年度开发者大会，每年的大会会介绍以太坊的�
 
 Uniswap 和 Plasma Group 展示了一个 Optimistic Rollup 的去中心化交易所(DEX) Demo，这一个全新的去中心化交易所解决方案，旨在提升交易处理速度和网络拥堵问题。
 
-Optimistic Rollup 可以实现线下对智能合约交易的扩容，本次演示的这个Demo是在太坊 Ropsten 测试网上运行的，每秒可处理约250笔交易。 更多可[查看](https://decrypt.co/10030/plasma-group-and-uniswap-release-new-ethereum-scaling-solution-at-devcon)， 相比Plasma，它利用[零知识证明](https://learnblockchain.cn/categories/basic/%E9%9B%B6%E7%9F%A5%E8%AF%86%E8%AF%81%E6%98%8E/)，是更去信任的方式，非常值得大家继续关注。
+Optimistic Rollup 可以实现线下对智能合约交易的扩容，本次演示的这个Demo是在太坊 Ropsten 测试网上运行的，每秒可处理约250笔交易。 更多可[查看](https://decrypt.co/10030/plasma-group-and-uniswap-release-new-ethereum-scaling-solution-at-devcon)， 相比Plasma，它利用[零知识证明](https://learnblockchain.cn/categories/zkp/)，是更去信任的方式，非常值得大家继续关注。
 
 
 ## V神：POS 及 Eth2
@@ -32,14 +32,14 @@ V神 还介绍了 Eth2 的技术进展，他在会议期间还发表了几遍文
 
 ## TrueBlocks: 构建真正去中心化的应用程序
 
-TrueBlocks 可以加速和链上数据的交互（如获取以太坊地址和合约的数据），速度可以比直接使用RPC接口快上100倍，不像 etherscan 这样的由中心化服务器提供服务， TrueBlocks 是去中心化的，他直接和自己的本地节点交互（如果想要的话，也可以和Infura 这样的基础设施通信）。 
+TrueBlocks 可以加速和链上数据的交互（如获取以太坊地址和合约的数据），速度可以比直接使用RPC接口快上100倍，不像 etherscan 这样的由中心化服务器提供服务， TrueBlocks 是去中心化的，他直接和自己的本地节点交互（如果想要的话，也可以和Infura 这样的基础设施通信）。
 
 TrueBlocks 还开源了代码[GitHub](https://github.com/Great-Hill-Corporation/trueblocks-core)， [官网](http://trueblocks.io)
 
 
 ## Brownie: 基于Python的智能合约开发框架
 
-Truffle 大家已经使用的很多，[Truffle 中文文档](https://learnblockchain.cn/docs/truffle/)，Truffle 是基于Node(JavaScript)的框架，Brownie 则是一款Python的智能合约开发框架， 方便我们进行合约的编译、测试、部署等。 
+Truffle 大家已经使用的很多，[Truffle 中文文档](https://learnblockchain.cn/docs/truffle/)，Truffle 是基于Node(JavaScript)的框架，Brownie 则是一款Python的智能合约开发框架， 方便我们进行合约的编译、测试、部署等。
 
 Brownie 的[官方文档](https://eth-brownie.readthedocs.io/
 )， 喜欢python 的朋友可以试试。
@@ -76,7 +76,7 @@ Lexon 官网: http://www.lexon.tech/
 
 [EIP-1884](https://learnblockchain.cn/docs/eips/eip-1884.html) 对一些操作码重新定义了gas 消耗， 鉴于 EIP-1884 已经被[Istanbul分叉](https://learnblockchain.cn/docs/eips/eip-1679.html)接受，原有的合约最佳编写实践可能会 EIP-1884 而变得不再试用。
 
-## MYKEY：智能钱包 
+## MYKEY：智能钱包
 
 MYKEY是一款基于KEY ID协议的智能钱包，KEY ID协议目前具有以下特点：
  1. 基于智能合约的账户模型
@@ -96,7 +96,7 @@ Chainlink 官网： https://chain.link/
 
 ## Pepo 用户体验感最好区块链社交应用
 
-Pepo的创始人Jason Goldberg及首席开发者Ben Bollen为大家现场演示了Pepo的使用，并表示Pepo是区块链行业有史以来用户体验感最好的社交应用，Pepo 基于一个 OST 的二层网络构建，OST 官网地址： https://ost.com/ 
+Pepo的创始人Jason Goldberg及首席开发者Ben Bollen为大家现场演示了Pepo的使用，并表示Pepo是区块链行业有史以来用户体验感最好的社交应用，Pepo 基于一个 OST 的二层网络构建，OST 官网地址： https://ost.com/
 
 
 [深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，[学区块链](https://learnblockchain.cn/2018/01/11/guide/)都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789)。
