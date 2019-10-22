@@ -1,5 +1,5 @@
 ---
-title: 零知识怎么－Loopring-DEX
+title: 零知识证明－Loopring DEX 3.0
 permalink: Loopring-DEX
 un_reward: true
 date: 2019-10-22 09:28:18
