@@ -1,5 +1,5 @@
 ---
-title: 路印3.0：使用零知识证明提伸去中心化的交易性能
+title: 路印3.0：使用零知识证明提升去中心化的交易性能
 permalink: Loopring-DEX
 un_reward: true
 date: 2019-10-22 09:28:18
