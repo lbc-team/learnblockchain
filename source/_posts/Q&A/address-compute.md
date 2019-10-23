@@ -17,7 +17,7 @@ author: Tiny熊
 
 ## 合约地址生成
 
-以太坊合同的地址是根据创建者（sender）的地址以及创建者发送过的交易数量（nonce）来计算确定的。 `sender`和`nonce` 进行[RLP编码](https://learnblockchain.cn/2019/05/20/geth-rlp-encode/)，然后用`Keccak-256` 进行hash计算。
+以太坊合约的地址是根据创建者（sender）的地址以及创建者发送过的交易数量（nonce）来计算确定的。 `sender`和`nonce` 进行[RLP编码](https://learnblockchain.cn/2019/05/20/geth-rlp-encode/)，然后用`Keccak-256` 进行hash计算。
 
 参考 [pyethereum](https://github.com/ethereum/pyethereum/blob/782842758e219e40739531a5e56fff6e63ca567b/ethereum/utils.py) 代码（Python）：
 
