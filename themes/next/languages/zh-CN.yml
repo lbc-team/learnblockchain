@@ -21,6 +21,7 @@ menu:
   ethers.js: ethers.js
   solidity: Solidity
   etherscan: Etherscan
+  wallet: 钱包开发
   geth: 以太坊设计与实现
   truffle: Truffle
   cosmos: Cosmos SDK

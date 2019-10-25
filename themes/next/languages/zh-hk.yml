@@ -20,6 +20,7 @@ menu:
   wiki: 技术导航
   solidity: Solidity
   etherscan: Etherscan
+  wallet: 錢包開發
   geth: 以太坊设计与实现
   truffle: Truffle
   ethers.js: ethers.js

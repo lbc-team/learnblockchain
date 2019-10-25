@@ -153,7 +153,7 @@ baidu_push: true
 topmenu:
   qa: /categories/QA/ || life-ring
   solidity: https://learnblockchain.cn/docs/solidity/ || book
-  etherscan: https://learnblockchain.cn/docs/etherscan/ || book
+  wallet: https://learnblockchain.cn/2019/04/11/wallet-dev-guide/ || book
   ethers.js: https://learnblockchain.cn/docs/ethers.js/ || book
   web3: https://learnblockchain.cn/docs/web3js-0.2x/ || book
   truffle: https://learnblockchain.cn/docs/truffle/ || book
@@ -167,7 +167,7 @@ menu:
   docs: /docs/ || columns
   qa: /categories/QA/ || life-ring
   geth: http://learnblockchain.cn/books/geth/ || book
-  
+
   tendermint: https://learnblockchain.cn/docs/tendermint/ || book
   contribute: https://github.com/lbc-team/learnblockchain || github
   tags: /tags/ || tags
