@@ -31,7 +31,7 @@ date: 2017-10-24 18:16:10
   写了10多年的代码，带过小团队，区块链技术布道者，深入浅出区块链发起人。
   北航硕士，登链创始人及CTO，[精通以太坊智能合约开发](http://edu.upchain.pro/book.html)作者。
 
-* [Bob](https://github.com/bobjiang) 
+* [Bob](https://github.com/bobjiang)
   HiBlock 社区发起人，敏捷开发培训专家。
 
 * [投河自尽的鱼](https://github.com/fisho2017)
@@ -39,6 +39,9 @@ date: 2017-10-24 18:16:10
 
 * [虞是乎](https://yushuangqi.com)
   磨链社区共建者，Nerthus CTO。
+
+* [Star li](https://github.com/BlockHeader)
+  深耕零知识证明，Dora网络的CTO，公众号：星想法 作者
 
 * [盖盖](https://github.com/gitferry)
   英属哥伦比亚大学电子工程系博士（在读），专注于解决区块链扩容问题，关注最新区块链技术研究，探索区块链在身份认证、物联网、安全与隐私方面的应用。
@@ -49,9 +52,6 @@ date: 2017-10-24 18:16:10
 
 * [TopJohn](https://www.xuanzhangjiong.top)
  区块链开源社区爱好者，磨链社区共建者，目前从事区块链研究相关工作，超级账本TWGC工作组active volunteer。
- 
-* [Star li](https://github.com/BlockHeader)
-  Dora网络的CTO， 公众号：星想法 作者
 
 * [风静縠纹平](https://github.com/riversyang)
   资深软件工程师、架构师；区块链技术布道者；《深入以太坊智能合约开发》作者。
@@ -59,6 +59,9 @@ date: 2017-10-24 18:16:10
 
 * 乐扣
   无锡优级先科信息技术有限公司首席信息官，南京信息工程大学滨江学院企业教授，中国自动化学会区块链专业委员会委员，主要研发方向于量子计算、区块链、大数据、人工智能等领域。
+
+* humyna(微信号）
+  [www.btccfo.com](http://www.btccfo.com/) 站长，区块链布道者
 
 * Ashton
  80后程序员一枚，胸无大志，心无旁骛，自在的享受技术的乐趣，目前醉心于区块链技术...

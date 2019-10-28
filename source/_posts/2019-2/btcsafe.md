@@ -3,9 +3,11 @@ title: 如果量子计算时代到来，我们的比特币安全吗？
 permalink: btcsafe
 un_reward: true
 date: 2019-10-28 09:29:28
-categories:
+categories: 区块链安全
 tags:
-author: 李画、安比实验室创始人郭宇
+    - 量子计算
+    - 安全
+author: 李画、安比实验室郭宇
 ---
 
 量子时代的到来不可避免，巨大的变革将会带来无尽的机会，区块链、密码学与数字资产安全无疑是未来十年的焦点，请扔掉包袱，与我们一起前行。
@@ -116,3 +118,5 @@ www.youtube.com/watch?v=eo7mwcsUbdo；www.youtube.com/watch?v=wlzJyp3Qm7s*
 *[6] Regev,Oded. "Lattice-based cryptography." In Annual International CryptologyConference, pp. 131-141. Springer, Berlin, Heidelberg, 2006.*
 
 [深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，学区块链都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789) 掌握区块链技术动态。
+
+[安比（SECBIT）实验室](https://secbit.io?source=learnblockchain)专注解决区块链生态中的安全问题，着眼于最前沿的科学理论，追求技术突破与卓越，致力于参与共建共识、可信、有序的区块链经济体。
