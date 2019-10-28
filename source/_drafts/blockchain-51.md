@@ -1,5 +1,5 @@
 ---
-title: Blockchain: how a 51% attack works如何实现51%攻击 (double spend attack双花攻击)
+title: Blockchain-how a 51% attack works如何实现51%攻击 (double spend attack双花攻击)
 permalink: Blockchain-51
 un_reward: false
 date: 2019-10-22 09:28:18

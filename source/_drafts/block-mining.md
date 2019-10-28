@@ -1,10 +1,10 @@
 ---
-title: Blockchain: how mining works and transactions are processed in seven steps
+title: Blockchain-how mining works and transactions are processed in seven steps
 permalink: block-mining
 un_reward: false
 date: 2019-10-22 09:28:18
-categories:  
-tags: 
+categories:
+tags:
 author: Jimi S.
 ---
 
