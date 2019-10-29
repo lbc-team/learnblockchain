@@ -39,7 +39,7 @@ un_reward: true
     - 检索客户端
   - 区块链项目
     - filecoin公链
-    - filecoin actors 智能合约 
+    - filecoin actors 智能合约
 
 - filecoin核心通用业务组件
 
@@ -119,7 +119,7 @@ Proof-of-Storage包含复制证明(PoR)和时空证明(PoSt)，其作用主要�
   - 下图中变量i会轮询生成新的时间变量产生随机挑战。
 
 
-![](https://img.learnblockchain.cn/2019/post.png!wl)
+![时空证明](https://img.learnblockchain.cn/2019/post.png!wl)
 
 
 ## 预期共识<a name="预期共识"></a>
@@ -143,13 +143,13 @@ Proof-of-Storage包含复制证明(PoR)和时空证明(PoSt)，其作用主要�
 	- 区块线性扩展，但是数据结构是DAG
 	- EC是一个概率共识，每个周期都使得比前面的区块更加确定，最终达到了足够的确定性
 
-#### 选举方案<a name="选举方案"></a>	
+#### 选举方案<a name="选举方案"></a>
 
 > 预期共识通过选举方案产生
 
-![](https://img.learnblockchain.cn/2019/sle.png!wl)
+![选举方案](https://img.learnblockchain.cn/2019/sle.png!wl)
 
-![](https://img.learnblockchain.cn/2019/sle2.png!wl)
+![选举方案](https://img.learnblockchain.cn/2019/sle2.png!wl)
 
 
 |选举方案属性|说明|
@@ -163,7 +163,7 @@ Proof-of-Storage包含复制证明(PoR)和时空证明(PoSt)，其作用主要�
 
 > 允许用户对他们提供的存储服务进行条件编程，**会形成一个多样化市场**。
 
-- 承包矿工：客户可以提前指定矿工提供服务而不参与市场 
+- 承包矿工：客户可以提前指定矿工提供服务而不参与市场
 - 付款策略：客户可以为矿工设计不同的奖励策略，例如合约可以给矿工支付随着时间的推移越来高的费用
 - 票务服务：合约可以允许矿工存放token和用于代表用户的存储/检索的支付
 - 更复杂的操作：客户可以创建合约来运行数据更新
@@ -201,6 +201,6 @@ Proof-of-Storage包含复制证明(PoR)和时空证明(PoSt)，其作用主要�
 	- wallet addr表示钱包地址
 	- miner id表示矿工id
 
-![](https://img.learnblockchain.cn/2019/filecoin-1.png!wl)
+![filecoin节点](https://img.learnblockchain.cn/2019/filecoin-1.png!wl)
 
 [深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，学区块链都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789) 掌握区块链技术动态。

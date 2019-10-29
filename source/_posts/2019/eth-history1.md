@@ -53,11 +53,11 @@ author: ECN & Tiny熊
 
 
     EIP 2.1：通过交易创建智能合约的成本被提高至21,000至53,000个[gas](https://learnblockchain.cn/2019/06/11/gas-mean/)。通过一个合约创建另一个合约（首选方式）的成本高于通过交易创建合约。通过提高以交易形式创建智能合约的成本，EIP2.1鼓励用户转向以合约创建合约的方式。
-    
+
     EIP 2.2：“s值大于secp256k1n/2的所有交易签名均视为无效。ECDSA恢复预编译合同保持不变并保持接收高s值；这个功能在某些情境下将发挥作用，例如某合同恢复旧的比特币签名。”
-    
+
     EIP 2.3：当合约创建过程中没有足够的gas用以完成操作，该合约将“作废”而非创建一个空白合约。之前的交易可能输出结果包括[成功] [失败]或者[空白]，这一改进则删除了[空白]结果。
-    
+
     EIP 2.4：取消用户挖掘稍高难度区块的激励，即增加可挖掘的区块。此升级将新区快产生的时间稳定在每10-20秒之间，并将网络恢复至每块约15秒的总目标时间。
 
 * **EIP-7**
@@ -67,7 +67,7 @@ author: ECN & Tiny熊
 * **EIP-8：面向未来升级**
 
     EIP-8是一项着眼于未来网络升级计划的改进提案。这一改进旨在确保以太坊上的所有客户端软件都能适应未来的网络协议更新。
-    ![](https://img.learnblockchain.cn/2019/06/15606138989077.jpg)
+    ![EIP-8](https://img.learnblockchain.cn/2019/06/15606138989077.jpg)
 
 
 ## DAO分叉 | 2016年7月20日
@@ -120,7 +120,7 @@ author: ECN & Tiny熊
 
     > **[减少区块奖励](https://media.consensys.net/the-thirdening-what-you-need-to-know-df96599ad857)：**
     > 将区块采矿奖励从每块3 ETH减少到2 ETH。这个改变也被称作“[Thirdening](https://media.consensys.net/the-thirdening-what-you-need-to-know-df96599ad857)”，即以太坊第三次区块奖励减半。
-    
+
     > **推迟“难度炸弹”：**
     > EIP 1234将“难度炸弹”时期推迟12个月，届时将会进行再次投票。
 
@@ -129,7 +129,7 @@ author: ECN & Tiny熊
 放眼未来，“宁静”(Serenity)是以太坊区块链的终极目的地，但在这之前还将经历伊斯坦布尔硬分叉和“以太坊1.x”阶段。伊斯坦布尔硬分叉将主要由围绕着ProgPoW (Programmatic Proof-of-Work)共识算法展开。“宁静”(Serenity)的主要内容包括从工作量证明(PoW)到权益证明(PoS)的完全转变，同时也将完成其他重要的升级：引入信标链(beacon chain)、分片(sharding)概念；以及用eWASM (Ethereum-flavored Web Assembly)替代以太坊虚拟机(EVM)。Serenity的所有升级都将分阶段实现，在此期间，以太坊1.x也将持续得到完善，以确保原始PoW链的延续。要了解即将到来的硬分叉和Serenity，欢迎阅读下一篇文章：[以太坊 2.0 路线图](https://learnblockchain.cn/2019/06/15/eth-serenity/)
 
  
-本文译自：https://media.consensys.net/a-short-history-of-ethereum-a8fdc5b4362c ， 
+本文译自：https://media.consensys.net/a-short-history-of-ethereum-a8fdc5b4362c ，
 同时在 [ECN以太坊中文网](https://ethereum.cn/) 的翻译基础上，加入了原文链接等内容。
 
 [深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，[学区块链](https://learnblockchain.cn/2018/01/11/guide/)都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789) 掌握区块链技术动态。

@@ -2,9 +2,9 @@
 title: 入门 Facebook Libra - 开发环境搭建
 permalink: libra-init
 date: 2019-06-20 20:25:14
-categories: 
+categories:
     - Libra
-tags: 
+tags:
     - Libra
 author: 投河自尽的鱼
 ---
@@ -20,7 +20,7 @@ author: 投河自尽的鱼
 * Libra官网： https://libra.org/zh-CN/
 * Libra白皮书： https://libra.org/zh-CN/white-paper/
 * Libra 技术白皮书： https://developers.libra.org/docs/assets/papers/the-libra-blockchain.pdf
-* Libra 开发者技术文档：https://developers.libra.org/ 
+* Libra 开发者技术文档：https://developers.libra.org/
 * Libra Github： https://github.com/libra/libra
 
 ---
@@ -163,7 +163,7 @@ You should now be able to build the project by running:
 ```
 
 完成后显示如下：
-![](https://img.learnblockchain.cn/2019/06/15610366965462.png)
+![完成后](https://img.learnblockchain.cn/2019/06/15610366965462.png)
 
 ---
 
@@ -171,7 +171,7 @@ You should now be able to build the project by running:
 
 根据官网的指导，先查看account内容：
 
-![](https://img.learnblockchain.cn/2019/06/15610367211287.png)
+![account内容](https://img.learnblockchain.cn/2019/06/15610367211287.png)
 
 * 创建账户 Alice、Bob
 
@@ -186,7 +186,7 @@ libra%
 ```
 
 通过account list查看内容：
-![](https://img.learnblockchain.cn/2019/06/15610367437648.png)
+![account list](https://img.learnblockchain.cn/2019/06/15610367437648.png)
 
 
 将Libra Coins添加到Alice和Bob的账户。
@@ -241,7 +241,7 @@ transfer 0 1 10
 
 下图清晰显示账户转账后的状态：
 
-![](https://img.learnblockchain.cn/2019/06/15610368113447.png)
+![转账后](https://img.learnblockchain.cn/2019/06/15610368113447.png)
 
 ## 总结
 

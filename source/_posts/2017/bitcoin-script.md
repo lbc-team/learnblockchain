@@ -51,7 +51,7 @@ tags:
 实际上比特币的交易被设计为可以纳入多个输入和输出。
 ### 交易结构
 我们来看看完整的交易结构，
-![](https://img.learnblockchain.cn/2017/tx_struce.jpeg!wl)
+![交易结构](https://img.learnblockchain.cn/2017/tx_struce.jpeg!wl)
 
 > 交易的锁定时间定义了能被加到区块链里的最早的交易时间。在大多数交易里，它被设置成0，用来表示立即执行。
 如果锁定时间不是0并且小于5亿，就被视为区块高度，意指在这个指定的区块高度之前，该交易不会被包含在区块链里。
@@ -63,16 +63,16 @@ tags:
 
 ### 交易输入结构
 刚刚我们提过输入需要提供一个解锁脚本，现在来看看一个交易的输入结构：
-![](https://img.learnblockchain.cn/2017/tx_input_struce.jpeg!wl)
+![输入结构](https://img.learnblockchain.cn/2017/tx_input_struce.jpeg!wl)
 
 我们结合整个交易的结构里看输入结构就是这样子：
-![](https://img.learnblockchain.cn/2017/tx_input_overview.jpeg!wl)
+![输入结构1](https://img.learnblockchain.cn/2017/tx_input_overview.jpeg!wl)
 
 ### 交易输出结构
 刚刚我们提过输出是指向一个解锁脚本，具体交易的输出结构为：
-![](https://img.learnblockchain.cn/2017/tx_output_struce.jpeg!wl)
+![交易输出结构](https://img.learnblockchain.cn/2017/tx_output_struce.jpeg!wl)
 我们结合整个交易的结构里看输出结构就是这样子：
-![](https://img.learnblockchain.cn/2017/tx_output_overview.jpeg!wl)
+![交易输出结构1](https://img.learnblockchain.cn/2017/tx_output_overview.jpeg!wl)
 
 ### 交易哈希计算
 在[比特币区块结构Merkle 树及简单支付验证分析](https://xiaozhuanlan.com/topic/1402935768) 讲到区块结构，区块结构包含多个交易的哈希。

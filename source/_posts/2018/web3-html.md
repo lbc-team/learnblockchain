@@ -2,7 +2,7 @@
 title: Web3与智能合约交互实战
 permalink: web3-html
 date: 2018-04-15 21:24:16
-categories: 
+categories:
     - 以太坊
 tags:
     - Web3
@@ -44,18 +44,18 @@ Web3与geth通信使用的是 [JSON-RPC](https://github.com/ethereum/wiki/wiki/J
 pragma solidity ^0.4.21;
 
 contract InfoContract {
-    
+
    string fName;
    uint age;
-   
+
    function setInfo(string _fName, uint _age) public {
        fName = _fName;
        age = _age;
    }
-   
+
    function getInfo() public constant returns (string, uint) {
        return (fName, age);
-   }   
+   }
 }
 ```
 
@@ -197,7 +197,7 @@ web3.eth.defaultAccount = web3.eth.accounts[0];
 接下来需要让我们的``web3``知道我们的合约是什么样的，这里需要用到合约的 [ABI（Application Binary Interface）](https://github.com/ethereum/wiki/wiki/Ethereum-Contract-ABI)。``ABI``可以使我们调用合约的函数，并且从合约中获取数据。
 
 在上文中我们已经在 Remix 中创建了我们的合约，这时重新回到 Remix，在 Compile 的 tab 下我们点击``Details`` 出现的页面中我们可以拷贝合约的``ABI``，如下图所示。
-![](https://img.learnblockchain.cn/2018/ABI.png!wl)
+![拷贝合约的ABI](https://img.learnblockchain.cn/2018/ABI.png!wl)
 将其复制到代码中：
 
 ```js
@@ -231,7 +231,7 @@ $("#button").click(function() {
 
 到此我们就完成了全部的代码，完整代码可以在 [InfoContract](https://github.com/xilibi2003/InfoContract) 中找到。在浏览器中打开``index.html``测试效果如下图（输入名字和年龄后刷新）。
 
-![](https://img.learnblockchain.cn/2018/page.png!wl)
+![在浏览器中打开](https://img.learnblockchain.cn/2018/page.png!wl)
 
 本文中点击"Updata Info"按钮之后，虽然调用智能合约成功，但是当前的界面并没有得到更新，下一篇文章会介绍[Web3监听合约事件更新界面](https://learnblockchain.cn/2018/05/09/solidity-event/)。
 

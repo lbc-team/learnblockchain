@@ -3,7 +3,7 @@ title: 以太坊交易流程及交易池 TXpool 分析
 permalink: eth-txpool
 date: 2019-06-03 20:41:20
 categories: 基础理论
-tags: 
+tags:
     - 以太坊
 author: 清源
 ---
@@ -14,7 +14,7 @@ author: 清源
 
 ## 以太坊交易流程
 
-用户通过 `Json RPC` 向以太坊网络发送的交易请求最后都会被 `go-ethereum/internal/ethapi/api.go` 的`SendTransaction` 函数所接收。 从接收用户传入的参数，到把交易放入交易池等待广播的流程如下图所示： 
+用户通过 `Json RPC` 向以太坊网络发送的交易请求最后都会被 `go-ethereum/internal/ethapi/api.go` 的`SendTransaction` 函数所接收。 从接收用户传入的参数，到把交易放入交易池等待广播的流程如下图所示：
 
 ![交易流程](https://img.learnblockchain.cn/2019/06/15596338384835.png!wl/scale/60%)
 
@@ -102,10 +102,10 @@ TXpool的核心功能
 
 * 缓存交易
 * 在打包区块前，对交易进行验证
-* 过滤无效交易 
+* 过滤无效交易
 * 惩罚恶意发送大量交易的账户
 
-TXpool的核心结构如下图； 
+TXpool的核心结构如下图；
 
 ![TXpool 结构](https://img.learnblockchain.cn/2019/06/15596350432032.png!wl/scale/60%)
 
@@ -117,8 +117,8 @@ TXpool最为核心的结构是两个Map: `queued`和`pending`，用来存未验�
 
 添加交易到TXpool的过程比较简单，总体流程是这样的；
 
-* 验证交易的有效性 - 判断交易的`price`是否大于缓存中最小的，如果小于就拒收，如果大于就删除最小的交易，把本次交易插入`pending` 
-* 如果这个`nonce`已经存在，依然是按照price的大小进行替换 
+* 验证交易的有效性 - 判断交易的`price`是否大于缓存中最小的，如果小于就拒收，如果大于就删除最小的交易，把本次交易插入`pending`
+* 如果这个`nonce`已经存在，依然是按照price的大小进行替换
 * 如果交易有效，不能替换`pending`里面的任何交易，则添加到`queued`中
 
 ## 清理交易池
@@ -132,7 +132,7 @@ TXpool最为核心的结构是两个Map: `queued`和`pending`，用来存未验�
  当满足以下条件的时候就会清理`queued`
 
 * 当`nonce`小于当前账号发送`noce`的最小值，也就是说之前的交易已经全部上链
-* 当前的`nonce`符合条件可以移动到`pending`队列中，先从`queued`清除，然后移动（send）到`pending`中 
+* 当前的`nonce`符合条件可以移动到`pending`队列中，先从`queued`清除，然后移动（send）到`pending`中
 * 账户余额不足以支持该交易的花费了 - 交易数量超过了缓冲区
 
 > 清理`queued`会影响`pending`的大小，所以`queued`清理优先级高
@@ -141,12 +141,12 @@ TXpool最为核心的结构是两个Map: `queued`和`pending`，用来存未验�
 
 >假如AccountSlots为4 有四个超出的账户，它们的数量分别是10， 9， 7，5
 >第一次剔除 [10], 剔除结束 [10]
->第二次剔除 [10, 9] 剔除结束 [9，9] 
->第三次剔除 [9, 9, 7] 剔除结束 [7, 7, 7] 
+>第二次剔除 [10, 9] 剔除结束 [9，9]
+>第三次剔除 [9, 9, 7] 剔除结束 [7, 7, 7]
 >第四次剔除 [7, 7 , 7 ,5] 剔除结束 [5，5，5，5]
 >这个时候如果还是超出限制，则继续剔除
 >第五次剔除 [5, 5 , 5 ,5] 剔除结束 [4，4，4，4]
-    
+
 接着清理`ququed`，规则也很简单，越先进入`queued`的越后删除，直到清理到满足最大队列长度（`GlobalQueue`）为止。
 
 ## 重构交易池(reset)
@@ -157,9 +157,9 @@ TXpool最为核心的结构是两个Map: `queued`和`pending`，用来存未验�
 
 当监听到`ChainHeadEvent`事件时候，我们又该如何调整`queued`和`pending`呢？
 
-首先需要将已经分叉的链回退到同一个区块号上(blockNumebr)，有可能是本地节点领先，有可能是网络上其他节点领先，但无论怎样，都回退到同一个区块号。 
+首先需要将已经分叉的链回退到同一个区块号上(blockNumebr)，有可能是本地节点领先，有可能是网络上其他节点领先，但无论怎样，都回退到同一个区块号。
 
-![](https://img.learnblockchain.cn/2019/06/15596364439683.png!wl/scale/60%)
+![回退到同一个区块号](https://img.learnblockchain.cn/2019/06/15596364439683.png!wl/scale/60%)
 
 
  本地节点回退时，撤销的交易保存到`discarded`切片中，网络上其他节点的撤销交易保存在`included`切片中。

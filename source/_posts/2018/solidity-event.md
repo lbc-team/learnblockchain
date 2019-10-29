@@ -3,7 +3,7 @@ title:  搞懂 Solidity 事件Event - 如何在DApp中使用
 permalink: solidity-event
 date: 2018-05-09 20:37:03
 
-categories: 
+categories:
     - 以太坊
     - 智能合约
 tags:
@@ -37,14 +37,14 @@ Solidity 是以太坊智能合约编程语言，阅读本文前，你应该对�
 在Solidity 代码中，使用event 关键字来定义一个事件，如：
 
 ```js
-event EventName(address bidder, uint amount); 
+event EventName(address bidder, uint amount);
 ```
 
 这个用法和定义函数式一样的，并且事件在合约中同样可以被继承。触发一个事件使用emit(说明，之前的版本里并不需要使用emit)，如：
 
 
 ```js
-emit EventName(msg.sender, msg.value); 
+emit EventName(msg.sender, msg.value);
 ```
 
 触发事件可以在任何函数中调用，如：
@@ -53,7 +53,7 @@ emit EventName(msg.sender, msg.value);
 function testEvent() public {
 
     // 触发一个事件
-     emit EventName(msg.sender, msg.value); 
+     emit EventName(msg.sender, msg.value);
 }
 ```
 
@@ -70,18 +70,18 @@ function testEvent() public {
 pragma solidity ^0.4.21;
 
 contract InfoContract {
-    
+
    string fName;
    uint age;
-   
+
    function setInfo(string _fName, uint _age) public {
        fName = _fName;
        age = _age;
    }
-   
+
    function getInfo() public constant returns (string, uint) {
        return (fName, age);
-   }   
+   }
 }
 ```
 
@@ -165,7 +165,7 @@ instructorEvent.watch(function(error, result) {
 ```
 
 代码更新之后，可以在浏览器查看效果，这是点击"Updata Info"按钮之后，会及时更新界面，如图：
-![](https://img.learnblockchain.cn/2018/solidity_event.jpg!wl)
+![浏览器查看效果](https://img.learnblockchain.cn/2018/solidity_event.jpg!wl)
 
 完整的代码请订阅小专栏[区块链技术](https://xiaozhuanlan.com/blockchaincore)查看。
 
@@ -188,7 +188,7 @@ https://github.com/ethereum/wiki/wiki/JavaScript-API#contract-events
 如果你想和我有密切的联系，欢迎加入知识星球[深入浅出区块链](https://learnblockchain.cn/images/zsxq.png)，我会在星球为大家解答技术问题，作为星友福利，星友可加入我创建的区块链技术群，群内已经聚集了300多位区块链技术牛人和爱好者。
 
 
-<!-- 
+<!--
 有时我们会有这样的需求：获取当前所有姓名及年龄记录，应该如何做呢？
 实际上事件支持过滤器，可以从所有的区块中过滤出符合要求的事件，如：
 

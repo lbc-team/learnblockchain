@@ -21,7 +21,7 @@ author: Tiny熊
 ## 数字钱包概念
 
 钱包用来存钱的，在区块链中，我们的数字资产都会对应到一个账户地址上， 只有拥有账户的钥匙（私钥）才可以对资产进行消费（用私钥对消费交易签名）。
-私钥和地址的关系如下：![](https://img.learnblockchain.cn/2018/9efa20eff737374479d9c6bb86db82b3.png!wl)
+私钥和地址的关系如下：![关系](https://img.learnblockchain.cn/2018/9efa20eff737374479d9c6bb86db82b3.png!wl)
 （图来自精通比特币）
 一句话概括下就是：**私钥通过椭圆曲线生成公钥， 公钥通过哈希函数生成地址，这两个过程都是单向的。**
 
@@ -45,16 +45,16 @@ author: Tiny熊
 
 为了解决这种麻烦，就有了[BIP32 提议](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki)： 根据一个随机数种子通过分层确定性推导的方式得到n个私钥，这样保存的时候，只需要保存一个种子就可以，私钥可以推导出来，如图：
 
-![](https://img.learnblockchain.cn/2018/450b5358b96ef5b32ec775efed901f2a.png!wl/scale/50%)
+![推导](https://img.learnblockchain.cn/2018/450b5358b96ef5b32ec775efed901f2a.png!wl/scale/50%)
 （图来自精通比特币）上图中的孙秘钥就可以用来签发交易。
 
 > 补充说明下 BIP: Bitcoin Improvement Proposals 比特币改进建议, bip32是第32个改进建议。
 BIP32提案的名字是：Hierarchical Deterministic Wallets， 就是我们所说的HD钱包。
 
 来分析下这个分层推导的过程，第一步推导主秘钥的过程：
-![](https://img.learnblockchain.cn/2018/3ec7468aa49d907b0ec66b5d8b41a0a1.png!wl/scale/40%)
+![推导主秘钥的过程](https://img.learnblockchain.cn/2018/3ec7468aa49d907b0ec66b5d8b41a0a1.png!wl/scale/40%)
 
-根种子输入到HMAC-SHA512算法中就可以得到一个可用来创造主私钥(m) 和 一个主链编码（ a master chain code)这一步生成的秘钥（由私钥或公钥）及主链编码再加上一个索引号，将作为HMAC-SHA512算法的输入继续衍生出下一层的私钥及链编码，如下图：![](https://img.learnblockchain.cn/2018/a9a6e6a31f39e812f579a4c8bdf09347.png!wl/scale/40%)
+根种子输入到HMAC-SHA512算法中就可以得到一个可用来创造主私钥(m) 和 一个主链编码（ a master chain code)这一步生成的秘钥（由私钥或公钥）及主链编码再加上一个索引号，将作为HMAC-SHA512算法的输入继续衍生出下一层的私钥及链编码，如下图：![衍生](https://img.learnblockchain.cn/2018/a9a6e6a31f39e812f579a4c8bdf09347.png!wl/scale/40%)
 
 > 衍生推导的方案其实有两个：一个用父私钥推导（称为强化衍生方程），一个用父公钥推导。同时为了区分这两种不同的衍生，在索引号也进行了区分，索引号小于2^31用于常规衍生，而2^31到2^32-1之间用于强化衍生，为了方便表示索引号i'，表示2^31+i。
 
@@ -95,7 +95,7 @@ BIP32 提案可以让我们保存一个随机数种子（通常16进制数表示
 可以简单的做一个对比，下面那一种备份起来更友好：
 ```
 // 随机数种子
-090ABCB3A6e1400e9345bC60c78a8BE7  
+090ABCB3A6e1400e9345bC60c78a8BE7
 // 助记词种子
 candy maple cake sugar pudding cream honey rich smooth crumble sweet treat
 ```
@@ -106,7 +106,7 @@ candy maple cake sugar pudding cream honey rich smooth crumble sweet treat
 
 助记词生成的过程是这样的：先生成一个128位随机数，再加上对随机数做的校验4位，得到132位的一个数，然后按每11位做切分，这样就有了12个二进制数，然后用每个数去查[BIP39定义的单词表](https://github.com/bitcoin/bips/blob/master/bip-0039/bip-0039-wordlists.md)，这样就得到12个助记词，这个过程图示如下：
 
-![](https://img.learnblockchain.cn/2018/71c0af9474a51296096c3c806ca8f1a1.png!wl/scale/70%)
+![过程图](https://img.learnblockchain.cn/2018/71c0af9474a51296096c3c806ca8f1a1.png!wl/scale/70%)
 （图来源于网络）
 
 下面是使用bip39生成生成助记词的一段代码：
@@ -126,7 +126,7 @@ PBKDF2基本原理是通过一个为随机函数(例如 HMAC 函数)，把助记
 
 密钥拉伸函数需要两个参数：助记词和盐。盐可以提高暴力破解的难度。 盐由常量字符串 "mnemonic" 及一个可选的密码组成，注意使用不同密码，则拉伸函数在使用同一个助记词的情况下会产生一个不同的种子，这个过程图示图下:
 
-![](https://img.learnblockchain.cn/2018/d37f78f8f2d859369d99fc5e0a76c184.png!wl/scale/80%)
+![过程图](https://img.learnblockchain.cn/2018/d37f78f8f2d859369d99fc5e0a76c184.png!wl/scale/80%)
 （图来源于网络）
 
 同样代码来表示一下：

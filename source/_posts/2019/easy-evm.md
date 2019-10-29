@@ -16,7 +16,7 @@ author: Star Li
 ## 以太坊虚拟机
 
 以太坊虚拟机，简称EVM，是用来执行以太坊上的交易的。业务流程如下图：
-![](https://img.learnblockchain.cn/2019/15548145070948.jpg)
+![业务流程](https://img.learnblockchain.cn/2019/15548145070948.jpg)
 
 输入一笔交易，内部会转换成一个Message对象，传入EVM执行。
 
@@ -69,7 +69,7 @@ EVM的每条指令称为一个OpCode，占用一个字节，所以指令集最�
 
 前面分析完了EVM解释执行的主要流程，可能有些同学会问：那么EVM怎么知道交易想调用的是合约里的哪个函数呢？别急，前面提到跟合约代码一起送到解释器里的还有一个Input，而这个Input数据是由交易提供的。
 
-![](https://img.learnblockchain.cn/2019/15548155517748.jpg)
+![Input数据](https://img.learnblockchain.cn/2019/15548155517748.jpg)
 
 Input数据通常分为两个部分：
 
@@ -101,7 +101,7 @@ Input数据通常分为两个部分：
 
 最后一个EXTCODECOPY不太常用，一般是为了审计第三方合约的字节码是否符合规范，消耗的gas一般也比较多。这些指令对应的操作如下图所示：
 
-![](https://img.learnblockchain.cn/2019/15548158875900.jpg)
+![指令对应的操作](https://img.learnblockchain.cn/2019/15548158875900.jpg)
 
 ## 合约调用合约
 
@@ -165,7 +165,7 @@ CALL和CALLCODE的区别在于：代码执行的上下文环境不同。
 
 具体来说，CALL修改的是**被调用者**的storage，而CALLCODE修改的是**调用者**的storage。
 
-![](https://img.learnblockchain.cn/2019/15548164197499.jpg)
+![storage](https://img.learnblockchain.cn/2019/15548164197499.jpg)
 
 
 我们写个合约验证一下我们的理解：
@@ -175,7 +175,7 @@ pragma solidity ^0.4.25;
 
 contract A {
   int public x;
-   
+
   function inc_call(address _contractAddress) public {
       _contractAddress.call(bytes4(keccak256("inc()")));
   }
@@ -186,7 +186,7 @@ contract A {
 
 contract B {
   int public x;
-   
+
   function inc() public {
       x++;
   }
@@ -195,13 +195,13 @@ contract B {
 
 我们先调用一下`inc_call()`，然后查询合约A和B中x的值有什么变化：
 
-![](https://img.learnblockchain.cn/2019/15548164969951.jpg)
+![x的值](https://img.learnblockchain.cn/2019/15548164969951.jpg)
 
 可以发现，合约B中的x被修改了，而合约A中的x还等于0。
 
 我们再调用一下`inc_callcode()`试试：
 
-![](https://img.learnblockchain.cn/2019/15548165059270.jpg)
+![x还等于0](https://img.learnblockchain.cn/2019/15548165059270.jpg)
 
 可以发现，这次修改的是合约A中x，合约B中的x保持不变。
 
@@ -222,7 +222,7 @@ pragma solidity ^0.4.25;
 
 contract A {
   int public x;
-   
+
   function inc_callcode(address _contractAddress) public {
       _contractAddress.callcode(bytes4(keccak256("inc()")));
   }
@@ -233,7 +233,7 @@ contract A {
 
 contract B {
   int public x;
-   
+
   event senderAddr(address);
   function inc() public {
       x++;
@@ -244,13 +244,13 @@ contract B {
 
 我们首先调用一下inc_callcode()，观察一下log输出：
 
-![](https://img.learnblockchain.cn/2019/15548165876226.jpg)
+![log输出](https://img.learnblockchain.cn/2019/15548165876226.jpg)
 
 可以发现，msg.sender指向合约A的地址，而非交易发起者的地址。
 
 我们再调用一下inc_delegatecall()，观察一下log输出：
 
-![](https://img.learnblockchain.cn/2019/15548165964198.jpg)
+![log输出](https://img.learnblockchain.cn/2019/15548165964198.jpg)
 
 可以发现，msg.sender指向的是交易的发起者。
 
@@ -264,7 +264,7 @@ view类型的函数表明其不能修改状态变量，而pure类型的函数则
 
 话不多说，我们就先看看STATICCALL的实现代码吧：
 
-![](https://img.learnblockchain.cn/2019/15548166792555.jpg)
+![实现代码](https://img.learnblockchain.cn/2019/15548166792555.jpg)
 
 可以看到，解释器增加了一个readOnly属性，STATICCALL会把该属性置为true，如果出现状态变量的写操作，则会返回一个errWriteProtection错误。
 

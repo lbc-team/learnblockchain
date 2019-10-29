@@ -3,7 +3,7 @@ title: DApp教程：用Truffle 开发一个链上记事本
 permalink: dapp_noteOnChain
 un_reward: true
 date: 2019-03-30 21:29:55
-categories: 
+categories:
     - 以太坊
     - DApp
 tags:
@@ -27,7 +27,7 @@ author: Tiny熊
 2. 查看之前(自己的)记事本
 
 **实现效果：**
-![记事本DApp 效果图](https://img.learnblockchain.cn/2019/15539548973073.jpg!wl/scale/35%)
+![记事本DApp效果图](https://img.learnblockchain.cn/2019/15539548973073.jpg!wl/scale/35%)
 
 本合约也部署到以太坊官方测试网络Ropsten， 如Englist first Note 的交易记录可以在[EtherScan查询](https://ropsten.etherscan.io/tx/0xd6b7366fa06a643be0de7abc26e04b0509595f9a1cf216e6f7c29f1ad78c8775)。
 
@@ -57,7 +57,7 @@ truffle unbox pet-shop
 ```javasrcipt
 pragma solidity ^0.5.0;
 
-contract NoteContract {    
+contract NoteContract {
     mapping(address => string [] ) public notes;
 
     constructor() public {
@@ -87,7 +87,7 @@ contract NoteContract {
 
 ```javasrcipt
     event ModifyNote(address, uint index);
-    
+
     function modifyNote(address own, uint index, string memory note) public {
         notes[own][index] = note;
         emit ModifyNote(own, index);
@@ -141,7 +141,7 @@ npm install truffle-hdwallet-provider
 
 在使用Infura之前，我们需要注册一个访问Infura服务的Token， 注册地址为：[https://infura.io/register](https://infura.io/register)， 注册后创建一个  Project, 复制节点url：
 
-![](https://img.learnblockchain.cn/2019/15540848537217.jpg!wl/scale/35%)
+![注册界面图](https://img.learnblockchain.cn/2019/15540848537217.jpg!wl/scale/35%)
 
 ### 为 truffle 配置一个新网络
 
@@ -172,7 +172,7 @@ var mnemonic = "orange apple banana ... ";
       network_id: 3,
       gas: 7003605,
       gasPrice: 100000000000,
-    } 
+    }
   }
 ```
 
@@ -244,7 +244,7 @@ Truffle Boxs为项目生成了html前端文件`src/index.html`，删除原来Box
  在`initWeb3`函数中，完成web3的初始化：
 
 ```javascript
-    // 最新dapp 浏览器或MetaMask  
+    // 最新dapp 浏览器或MetaMask
     if (window.ethereum) {
       App.web3Provider = window.ethereum;
       try {
@@ -292,7 +292,7 @@ getNotes: function() {
       App.noteLength = len;
       if (len > 0) {
         App.loadNote( len - 1);
-      } 
+      }
     }).catch(function(err) {
     });
 }
@@ -351,7 +351,7 @@ npm run dev
 
 ## 参考文档
 
-[Truffle 官方文档-中文版](https://learnblockchain.cn/docs/truffle/) 
+[Truffle 官方文档-中文版](https://learnblockchain.cn/docs/truffle/)
 
 
 加我微信：xlbxiong 备注：DApp， 加入以太坊DApp开发微信群。

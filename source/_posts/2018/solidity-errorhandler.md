@@ -2,7 +2,7 @@
 title: 智能合约语言 Solidity 教程系列9 - 错误处理
 permalink: solidity-errorhandler
 date: 2018-04-07 20:35:47
-categories: 
+categories:
     - 以太坊
     - Solidity
 tags:
@@ -68,11 +68,11 @@ contract Sharer {
 我们实际运行下，看看异常是如何发生的：
 
 1. 首先打开[Remix](https://remix.ethereum.org)，贴入代码，点击创建合约。如下图：
-![](https://img.learnblockchain.cn/2018/solidity_error1.jpg!wl)
+![异常](https://img.learnblockchain.cn/2018/solidity_error1.jpg!wl)
 
 2. 运行测试1：附加1wei (奇数)去调用sendHalf，这时会发生异常，如下图:
 
-![](https://img.learnblockchain.cn/2018/solidity_error2.jpg!wl)
+![异常](https://img.learnblockchain.cn/2018/solidity_error2.jpg!wl)
 
 3. 运行测试2：附加2wei 去调用sendHalf，运行正常。
 4. 运行测试3：附加2wei以及sendHalf参数为当前合约本身，在转账是发生异常，因为合约无法接收转账，错误提示上图类似。

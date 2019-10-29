@@ -2,9 +2,9 @@
 title: FileStorm的共识机制
 permalink: filestorm
 date: 2019-09-01 10:10:54
-categories: 
+categories:
     - FileStorm
-tags: 
+tags:
     - FileStorm
 author: 献哥
 ---
@@ -21,7 +21,7 @@ FileStorm区块链出块验证采用的是dPOS，Delegated Proof of Stake，或�
 
 FileStorm的文件验证采用的是类似PBFT，或称实用拜占庭容错的共识。实用拜占庭容错共识的核心是，所有节点中不能有超过三分之一的坏节点，在n>=3f+1的前提下，可以通过少量的信息交换达成共识。信息传递的方式可用下图表示。
 
-![](https://img.learnblockchain.cn/2019/09/15674925768119.png)
+![信息传递的方式](https://img.learnblockchain.cn/2019/09/15674925768119.png)
 
 
 ## 存储、分片

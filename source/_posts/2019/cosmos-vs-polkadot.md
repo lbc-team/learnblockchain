@@ -3,7 +3,7 @@ title: Cosmos 与 波卡 Polkadot 的五大区别
 permalink: comsmos-vs-polkadot
 date: 2019-06-18 10:45:14
 categories: 跨链
-tags: 
+tags:
     - Cosmos
     - Polkadot
 author: Julian Koh
@@ -90,7 +90,7 @@ Polkadot 和 Cosmos 之间的另一个差别是跨链通信协议及其设计目
 Cosmos 采用了完全不同的跨链通信方式。因为每条链上都有自己的验证者，所以很有可能会出现分区中的验证者串谋的情况。也就是说，如果有两个分区需要通信，A 分区需要必须信任 Cosmos Hub（通信枢纽）以及 B 分区中的验证者。从理论上来说，A 分区的人在决定向 B 分区发送信息之前，需要调查一下 B 分区的验证者。不过我觉得实际情况没那么糟糕。 [Polychain Labs](https://hubble.figment.network/cosmos/chains/cosmoshub-2/validators/B1167D0437DB9DF0D533EE2ACDE48107139BDD2E) 或 Zaki Manian 的 [iqlusion](https://hubble.figment.network/cosmos/chains/cosmoshub-2/validators/95E060D07713070FE9822F6C50BD76BCCBF9F17A) 等知名验证者节点可能会验证多条链，逐渐建立起良好的声誉。也就是说，当 A 分区的人看到 B 分区是由 Polychain Labs 和 iqlusion 验证的，可能会因此决定信任 B 分区。
 
 然而，即使一条链得到了人们的信任，也有可能被怀有恶意的攻击者控制，出现各种问题。有一段[对话](https://youtu.be/_qUnCUZHc5g)中提到了一个很好的例子：
-![](https://img.learnblockchain.cn/2019/06/15608262563931.png)
+![例子](https://img.learnblockchain.cn/2019/06/15608262563931.png)
 <p class="image-caption">代币分散于不同分区的 Cosmos 网络</p>
 
 假设上图中的小红点代表一种名为 ETM 的代币，即 Ethermint 分区的原生代币。A、B、C 三个分区的用户想要使用 ETM 来运行各自分区内的一些应用程序，而且他们都信任 Ethermint 分区，因此通过跨链通信在各自的分区内接受了一些 ETM 。现在假设 Ethermint 分区的验证者串谋发动双花攻击，任意转移 ETM 代币。这也会对剩余网络造成影响，因为 ETM 代币也存在于其他分区中。不过受波及的只有 Ethermint 或其他分区中的 ETM 代币持有者。Ethermint 分区中的恶意验证者只能毁掉自己的分区，破坏不了其他分区。这就是 Cosmos 架构的目标——确保恶意行为无法影响整个网络。

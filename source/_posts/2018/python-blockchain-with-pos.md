@@ -10,7 +10,7 @@ author: Magic_陈
 ---
 
 
-# 区块链中的共识算法
+## 区块链中的共识算法
 
 在比特币公链架构解析中，就曾提到过为了实现去中介化的设计，比特币设计了一套共识协议，并通过此协议来保证系统的稳定性和防攻击性。 并且我们知道，截止目前使用最广泛，也是最被大家接受的共识算法，是我们先前介绍过的POW(proof of work)[工作量证明算法](https://learnblockchain.cn/2017/11/04/bitcoin-pow/)。目前市值排名前二的比特币和以太坊也是采用的此算法。
 
@@ -23,8 +23,8 @@ author: Magic_陈
 
 Proof of stake，译为权益证明。你可能已经猜到了，权益证明简单理解就是拥有更多token的人，有更大的概率获得记账权利，然后获得奖励。 这个概率具体有多大呢？ 下面我们在代码实现中会展示，分析也放在后面。 当然，POS是会比POW更好吗？ 会更去中心化吗？ 现在看来未必，所以我们这里也不去对比谁优谁劣。 我们站在中立的角度，单纯的来讨论讨论POS这种算法。
 
-# 代码实战
-## 生成一个Block
+## 代码实战
+### 生成一个Block
 既然要实现POS算法，那么就难免要生成一条链，链又是由一个个Block生成的，所以下面我们首先来看看如何生成Block，当然在前面的内容里面，关于如何生成Block，以及交易、UTXO等等都已经介绍过了。由于今天我们的核心是实现POS，所以关于Block的生成，我们就用最简单的实现方式，好让大家把目光聚焦在核心的内容上面。
 
 我们用三个方法来实现生成一个合法的区块
@@ -90,7 +90,7 @@ def is_block_valid(newblock, oldblock):
 
 这里为了更灵活，我们没有用类的实现方式，直接采用函数来实现了Block生成，相信很容易看懂。
 
-## 创建一个TCP服务器
+### 创建一个TCP服务器
 由于我们需要用权益证明算法来选择记账人，所以需要从很多Node(节点)中选择记账人，也就是需要一个server让节点链接上来，同时要同步信息给节点。因此需要一个TCP长链接。
 
 ```python
@@ -193,7 +193,7 @@ class HandleConn(BaseRequestHandler):
         validators[address] = balance
         print(validators)
 ```
-这一段就是我们提到的Node 客户端添加自己到候选人的代码，每链接一个客户端，就会添加一个候选人。 这里我们用添加的时间戳的hash来记录候选人。 当然也可以用其他的方式，比如我们代码里面的client_address 
+这一段就是我们提到的Node 客户端添加自己到候选人的代码，每链接一个客户端，就会添加一个候选人。 这里我们用添加的时间戳的hash来记录候选人。 当然也可以用其他的方式，比如我们代码里面的client_address
 
 
 ```python
@@ -271,7 +271,7 @@ def annouce_blockchain(request):
 
 看完了，节点跟Server交互的部分，接下来是最重要的部分，
 
-## POS算法实现
+### POS算法实现
 
 ```python
 def pick_winner(announcements):
@@ -318,9 +318,9 @@ def pick_winner(announcements):
 ```
 p = mount['NodeA']/mount['All']
 ```
-文字描述就是其token数目在总数中的占比。 比如总数有100个，他有10个，那么其获得记账权的概率就是0.1， 到这里核心的部分就写的差不多了，接下来，我们来添加节点，开始测试吧 
+文字描述就是其token数目在总数中的占比。 比如总数有100个，他有10个，那么其获得记账权的概率就是0.1， 到这里核心的部分就写的差不多了，接下来，我们来添加节点，开始测试吧
 
-# 测试POS的记账方式
+## 测试POS的记账方式
 在测试之前，起始还有一部分工作要做，前面我们的run方法需要完善下，代码如下：
 
 ```python
@@ -366,35 +366,35 @@ def candidate(candidate_blocks):
 if __name__ == '__main__':
     run()
 ```
-# 添加节点连接到TCPServer
+## 添加节点连接到TCPServer
 为了充分减少程序的复杂性，tcp client我们这里就不实现了，可以放在后面拓展部分。 毕竟我们这个系统是很容易扩展的，后面我们拆分了多线程的部分，在实现tcp client就是一个完整的分布式系统了。
 
 所以，我们这里用linux自带的命令 nc，不知道nc怎么用的同学可以google或者 man nc
-![](https://img.learnblockchain.cn/2018/de1ec95397b1f627c1ded8fc3ac256e1.png!wl)
+![命令 nc](https://img.learnblockchain.cn/2018/de1ec95397b1f627c1ded8fc3ac256e1.png!wl)
 
-- 启动服务    运行 python pos.py  
+- 启动服务    运行 python pos.py
 - 打开3个终端
 - 分别输入下面命令
     - nc localhost 9090
 
 终端如果输出
 ```
-Enter token balance: 
+Enter token balance:
 ```
 说明你client已经链接服务器ok啦.
 
-# 测试POS的记账方式
+## 测试POS的记账方式
 接下来依次按照提示操作。 balance可以按心情来操作，因为这里是测试，我们输入100，
 紧接着会提示输入BPM，我们前面提到过，输入BPM是为了生成Block，那么就输入吧，随便输入个9. ok， 接下来就稍等片刻，等待记账。
 输出如同所示
-![](https://img.learnblockchain.cn/2018/4eee010dfd46e7672d48d063b08cae47.png!wl)
+![输出](https://img.learnblockchain.cn/2018/4eee010dfd46e7672d48d063b08cae47.png!wl)
 依次在不同的终端，根据提示输入数字，等待消息同步。
 
-# 生成区块链
+## 生成区块链
 下面是我这边获得的3个block信息。
-![](https://img.learnblockchain.cn/2018/1e5f93c93cc2bc5443902b89abd4ac02.png!wl)
+![3个block信息](https://img.learnblockchain.cn/2018/1e5f93c93cc2bc5443902b89abd4ac02.png!wl)
 
-# 总结
+## 总结
 在上面的代码中，我们实现了一个完整的基于POS算法记账的链，当然这里有许多值得扩展与改进的地方。
 - python中多线程开销比较大，可以改成协程的方式
 - TCP建立的长链接是基于TCPServer，是中心化的方式，可以改成P2P对等网络
@@ -408,11 +408,11 @@ Enter token balance:
 go语言的实现感觉要更好理解一点，也显得要优雅一点。这也是为什么go语言在分布式领域要更抢手的原因之一吧！
 
 
-# 项目地址
+## 项目地址
 - https://github.com/csunny/py-bitcoin/
 
 
-# 参考
+## 参考
 - https://medium.com/@mycoralhealth/code-your-own-proof-of-stake-blockchain-in-go-610cd99aa658
-  
+
 我的**[专栏](https://xiaozhuanlan.com/eosio)**专注区块链底层技术开发，P2P网络、加密技术、MerkleTree、DAG、DHT等等，另外对于分布式系统的学习也很有帮助。欢迎大家交流。
