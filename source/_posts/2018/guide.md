@@ -9,8 +9,8 @@ tags:
     - 入门
 author: Tiny熊
 ---
+为了帮助小伙伴们系统学习区块链技术，我们建了这个索引贴，方便大家找到自己感兴趣的文章，从入门到精通一步步学习区块链开发。你也可以使用左侧的[分类](https://learnblockchain.cn/categories/)、[标签](https://learnblockchain.cn/tags/)及**搜索**功能。
 
-本章的文章越来越多，本文是一个索引帖，方便找到自己感兴趣的文章，你也可以使用左侧的[分类](https://learnblockchain.cn/categories/)、[标签](https://learnblockchain.cn/tags/)及**搜索**功能。
 有新文章时会更新本文，建议大家加入收藏夹中，如果你觉得本站不错，欢迎你转发给朋友。
 
 <!-- more -->
