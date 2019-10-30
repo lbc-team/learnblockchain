@@ -22,7 +22,7 @@ author: 影无双
 
 从区块链的民主性上来看，51%攻击从理论上讲是可行的。本文将详细的解释如何实施51%攻击，读完后相信你就能对51%攻击(双花攻击)有一个比较客观的认识，知道是否需要为此担心。
 
-如果你还不是很清楚矿工是如何打包交易数据的，我建议你先花５分钟阅读一下[矿工如何用七个步骤向区块链添加交易](https://medium.com/@Mala44/how-a-miner-adds-transactions-to-the-blockchain-in-seven-steps-856053271476)，如果你还不清楚什么是区块链，我建议你从[这里](https://www.cnblogs.com/blockchainnote/p/11724181.html)开始。
+在此之前，希望您想了解一下[比特币如何挖矿（挖矿原理）](https://learnblockchain.cn/2017/11/04/bitcoin-pow/)，[比特币如何达成共识](https://learnblockchain.cn/2017/12/07/bitcoin-sonsensus/),[区块链记账原理](https://learnblockchain.cn/2017/10/25/whatbc/)，如果你还不清楚什么是区块链，我建议你从[了解比特币](https://learnblockchain.cn/2017/10/23/whatisbitcoin/)开始。
 
 ## 区块链=自治
 
@@ -108,6 +108,6 @@ author: 影无双
 
 ![一个巨大的矿场](https://img.learnblockchain.cn/2019/10/15724203067927.jpg)
 
-本文来自社区共建者**影无双**。
+*本文来自社区共建者**影无双**。*
 
-[深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，学区块链都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789) 掌握区块链技术动态。
+[深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，学区块链都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789)。
