@@ -66,4 +66,6 @@ author: 影无双
 > 有一种例外，恶意参与者的算力真的超过全网其他人的总和，从理论上讲是有可能篡改区块链的，这就叫做51%攻击，目前遭受过[51%攻击](https://learnblockchain.cn/2019/01/09/consensus-security-51/)的著名区块链如bitGold、Verge、Ethereum Classic。
 
 
+*本文来自社区共建者**影无双**。*
+
 [深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，学区块链都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789)。

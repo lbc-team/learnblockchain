@@ -22,7 +22,7 @@ author: 影无双
 
 从区块链的民主性上来看，51%攻击从理论上讲是可行的。本文将详细的解释如何实施51%攻击，读完后相信你就能对51%攻击(双花攻击)有一个比较客观的认识，知道是否需要为此担心。
 
-在此之前，希望您想了解一下[比特币如何挖矿（挖矿原理）](https://learnblockchain.cn/2017/11/04/bitcoin-pow/)，[比特币如何达成共识](https://learnblockchain.cn/2017/12/07/bitcoin-sonsensus/),[区块链记账原理](https://learnblockchain.cn/2017/10/25/whatbc/)，如果你还不清楚什么是区块链，我建议你从[了解比特币](https://learnblockchain.cn/2017/10/23/whatisbitcoin/)开始。
+在此之前，希望您想了解一下[比特币如何挖矿（挖矿原理）](https://learnblockchain.cn/2017/11/04/bitcoin-pow/)，[比特币如何达成共识](https://learnblockchain.cn/2017/12/07/bitcoin-sonsensus/),[区块链记账原理](https://learnblockchain.cn/2017/10/25/whatbc/)，如果你还不清楚什么是区块链，我建议你从[这里](https://learnblockchain.cn/2019/10/30/whatblockchain/)开始。
 
 ## 区块链=自治
 
