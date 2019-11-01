@@ -31,12 +31,15 @@ date: 2019-04-11 22:43:45
 
   * [Truffle 中文文档](https://learnblockchain.cn/docs/truffle/)
     以太坊 DApp 开发框架让你爱不释手。
-    
+
   * [以太坊改进提案EIPs](https://learnblockchain.cn/docs/eips/)
      以太坊改进提案（EIPs）描述了以太坊平台的标准，包括核心协议规范，客户端 API和合同标准。
 
+  * [ENS(以太坊域名服务) 中文文档](https://learnblockchain.cn/docs/ens/)
+     ENS是以太坊域名服务，是一个基于以太坊区块链的分布式、开放和可扩展的命名系统。
+
   * [Cosmos SDK 中文文档](https://learnblockchain.cn/docs/cosmos/)
-   Cosmos SDK 让链开发更简单。 
+   Cosmos SDK 让链开发更简单。
 
   * [Tendermint 中文文档](https://learnblockchain.cn/docs/tendermint/)
    Tendermint 中文文档

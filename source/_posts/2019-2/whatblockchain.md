@@ -1,7 +1,6 @@
 ---
 title: 区块链技术入门-区块链是什么
 permalink: whatblockchain
-un_reward: true
 date: 2019-10-30 15:49:56
 categories:
   - 基础理论
