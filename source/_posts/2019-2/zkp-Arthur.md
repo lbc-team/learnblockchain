@@ -10,7 +10,6 @@ author: 安比实验室 郭宇
 ---
 
 
-
 > “Challenges are at times an indication of Lord's trust in you.”   挑战，有时是上天信任你的一种表现。
 >
 > ― **D. Todd Christofferson**
