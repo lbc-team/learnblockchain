@@ -10,6 +10,7 @@ author: 安比实验室
 ---
 
 本文收集了关于零知识证明的一些学习资料（包括科普文章，论文，开源仓库及相关学习网站等），并对这些资源进行了整理分析，希望能对大家有所帮助。
+
 <!------more------->
 
 零知识证明技术是现代密码学三大基础之一，由 S.Goldwasser、S.Micali 及 C.Rackoff 在 20 世纪 80 年代初提出。早期的零知识证明由于其效率和可用性等限制，未得到很好的利用，仅停留在理论层面。直到近年来，零知识证明的理论研究才开始不断突破，同时区块链也为零知识证明创造了大展拳脚的机会，因而走进大众视野。
@@ -569,7 +570,7 @@ author: 安比实验室
 
 [6] https://zkp.science/
 
-[7] https://zhuanlan.zhihu.com/p/89386868?utm_source=wechat_session&utm_medium=social&utm_oi=26765481213952
+[7] https://zhuanlan.zhihu.com/p/89386868
 
 本文来自安比实验室郭宇(原文在[GitHub](https://github.com/sec-bit/learning-zkp/blob/master/zkp-resource-list.md))。[安比（SECBIT）实验室](https://secbit.io?source=learnblockchain)专注解决区块链生态中的安全问题，着眼于最前沿的科学理论，追求技术突破与卓越，致力于参与共建共识、可信、有序的区块链经济体。
 

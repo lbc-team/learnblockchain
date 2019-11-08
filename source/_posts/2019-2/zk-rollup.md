@@ -6,7 +6,9 @@ date: 2019-11-07 13:55:22
 categories: 
     - 扩容技术
     - Rollup
-tags: ZK Rollup
+tags: 
+    - ZK Rollup
+    - 零知识证明
 author: PPLabs
 ---
 
