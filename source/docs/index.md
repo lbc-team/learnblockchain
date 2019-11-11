@@ -17,6 +17,9 @@ date: 2019-04-11 22:43:45
 
 **目前已有文档**：
 
+  * [以太坊知识库](https://learnblockchain.cn/eth/)
+    收录以太坊相关的内容，方便更多人检索。
+
   * [Web3.js 中文文档](https://learnblockchain.cn/docs/web3js-0.2x/)
     Web3 是应用程序和以太坊交互的桥梁。
 
