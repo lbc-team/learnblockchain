@@ -11,11 +11,11 @@ author: Frank Lee
 
 十月底于台北矽谷会议中心举行的 **Crosslink 2019 Taiwan**，吸引了来自世界各地的区块链爱好者们齐聚一堂。第一天的议程，邀请到了**以太坊基金会（Etherium Foundation, EF）**的核心研究员 Danny Ryan，会中分享了[**以太坊 2.0 （Ethereum 2.0）**](https://learnblockchain.cn/2019/06/15/eth-serenity/)目前的研究方向以及遇到的挑战，演讲的内容主要包含了以太坊 2.0 的架构，新的分片提案，**执行环境（Execution Environments, EE）以及双向桥接（Two-Way Bridge）**等议题。
 <!-----more----->
-![Danny Ryan](https://img.learnblockchain.cn/2019/11/18/001.jpg)
+![Danny-Ryan](https://img.learnblockchain.cn/2019/11/18/001.jpg)
 
 ## 一、以太坊 2.0 的架构
 
-![以太坊 2.0 架构](https://img.learnblockchain.cn/2019/11/18/002.jpg)
+![以太坊2.0架构](https://img.learnblockchain.cn/2019/11/18/002.jpg)
 
 ### 第零阶段（Phase 0）
 
@@ -56,7 +56,7 @@ author: Frank Lee
 
 ## 三、执行环境
 
-![以太坊 1.0 简易架构图](https://img.learnblockchain.cn/2019/11/18/004.jpg)
+![以太坊1.0简易架构图](https://img.learnblockchain.cn/2019/11/18/004.jpg)
 
 在之前设计的以太坊 2.0 和以太坊 1.0 中，状态在共识机制里，扮演着非常重要的角色，共识机制会随时去读写所有的状态，不管是执行的概念、交易的概念、帐户的概念、树状结构的概念、以及所有在数据结构中的概念，都深深地融入共识中。
 
@@ -68,7 +68,7 @@ author: Frank Lee
 
 但是在以太坊 2.0 的第二阶段中，我们可以支持多个执行环境。也可以有多个状态根，不同的帐户模型等。举个例子，你可以定义一个脸书币执行环境（Libra EE），以便在以太坊 2.0 上运行Libra。或者，您可以定义一个比特币执行环境（BitCoin EE），这样就可以在以太坊 2.0 上运行比特币。
 
-![以太坊 2.0 简易架构图](https://img.learnblockchain.cn/2019/11/18/005.jpg)
+![以太坊2.0简易架构图](https://img.learnblockchain.cn/2019/11/18/005.jpg)
 
 在以太坊 2.0 简易架构图中我们可以看到状态根，它可能是 32 Bytes 的 Blob，上面有 WASM 的**执行码（Execution Code）**，可以在使用者层级中去做细部设定。图片右边有一个链，链上有一般的交易数据以及见证（Witnesses），见证实际上显示在数据库的区块中，你需要针对该状态而不是数据库执行该笔交易，而且还需要证明数据对于当前状态根是有效的。举个例子，如果我们要在帐户 A 和帐户 B 之间传递数值，假设从帐户 A 移动 5 以太币到帐户 B，我们不能直接说帐户和**余额（Balance）**是确实可用的，在过程中，我们需要加入**见证数据（Witness Data）**，来证明两个帐户当前的状态，当执行码正在执行交易数据时，状态根可以修改和更新状态树。
 
