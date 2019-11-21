@@ -128,6 +128,8 @@ author: ECN & Tiny熊
 
 放眼未来，“宁静”(Serenity)是以太坊区块链的终极目的地，但在这之前还将经历伊斯坦布尔硬分叉和“以太坊1.x”阶段。伊斯坦布尔硬分叉将主要由围绕着ProgPoW (Programmatic Proof-of-Work)共识算法展开。“宁静”(Serenity)的主要内容包括从工作量证明(PoW)到权益证明(PoS)的完全转变，同时也将完成其他重要的升级：引入信标链(beacon chain)、分片(sharding)概念；以及用eWASM (Ethereum-flavored Web Assembly)替代以太坊虚拟机(EVM)。Serenity的所有升级都将分阶段实现，在此期间，以太坊1.x也将持续得到完善，以确保原始PoW链的延续。要了解即将到来的硬分叉和Serenity，欢迎阅读下一篇文章：[以太坊 2.0 路线图](https://learnblockchain.cn/2019/06/15/eth-serenity/)
 
+2019/11/20日更新，伊斯坦布尔分叉已确定，可阅读[伊斯坦布尔硬分叉有哪些更新](https://learnblockchain.cn/2019/11/21/istanbul-update/)
+
  
 本文译自：https://media.consensys.net/a-short-history-of-ethereum-a8fdc5b4362c ，
 同时在 [ECN以太坊中文网](https://ethereum.cn/) 的翻译基础上，加入了原文链接等内容。
