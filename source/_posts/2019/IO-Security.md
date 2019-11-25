@@ -20,8 +20,6 @@ author: NoneAge
 
 输入输出的安全问题来源于开发人员编码过程中的粗心大意以及应有的安全意识的缺失。这些安全问题对于网站来说是非常严峻的，对数据库，网站管理权限，内网都有巨大威胁。而且利用手法很多，如利用任意文件上传漏洞可直接获取网站shell，利用命令执行漏洞可执行命令反弹shell，利用SQL注入漏洞可查看和修改数据库信息，利用服务端请求伪造（SSRF）漏洞可攻击内网等。因此关于输入输出的安全测试必不可少，并且是重中之重，丝毫不能疏忽和遗漏。以下是对交易所进行测试后列出的详细测试条目，以及一些存在输入输出安全问题的经典案例。
 
-
-
 ## 二、测试列表
 
 输入输出安全
@@ -55,19 +53,24 @@ author: NoneAge
 
 下图为测试XSS时截图：
 
-​	![XSS PAYLOAD](./1.png)
+![](https://img.learnblockchain.cn/2019/11/15746642395323.jpg)
 
-  成功弹框
 
-![XSS ALERT](./2.png)
+
+成功弹框
+
+![XSS ALERT](https://img.learnblockchain.cn/2019/11/15746642486724.jpg)
+
 
 成功获取后台管理员cookie：
 
-![XSS GET COOKIE](./3.png)
+![XSS GET COOKIE](https://img.learnblockchain.cn/2019/11/15746642623642.jpg)
+
+
 
 用管理员cookie登录后台
 
-![CONSOL LOG](./4.png)
+![CONSOL LOG](https://img.learnblockchain.cn/2019/11/15746642842423.jpg)
 
 
 
@@ -79,13 +82,12 @@ author: NoneAge
 
 下图为手工注入测试过程：
 
-![SQLI](./5.png)
+![[SQLI 手工注入](https://img.learnblockchain.cn/2019/11/15746642973262.jpg)
+
 
 工具测试过程：
 
-![SQLMAP](./6.png)
-
-
+![SQLMAP ](https://img.learnblockchain.cn/2019/11/15746643133507.jpg)
 
 ### 代码注入测试
 
@@ -95,25 +97,23 @@ author: NoneAge
 
 访问网站不存在的目录，管理员开启了debug信息：
 
-![DEBUG](./7.png)
+![DEBUG](https://img.learnblockchain.cn/2019/11/15746643238026.jpg)
+
 
 根据ThinkPHP相关版本漏洞，验证漏洞是否存在，可以看到禁用方法：
 
-![PHPINFO](./8.png)
+![PHPINFO](https://img.learnblockchain.cn/2019/11/15746643350297.jpg)
+
+
 
 写入木马后，连接成功，拿到网站管理员权限：
 
-![ANTSWORD](./9.png)
-
-
+![ANTSWORD](https://img.learnblockchain.cn/2019/11/15746643524412.jpg)
 
 ---
 
-**人和机器总是要产生交互**
+**人和机器总是要产生交互,交互就意味着危险,有输入输出的地方就是危险的多发地**
 
-**交互就意味着危险**
-
-**有输入输出的地方就是危险的多发地**
 
 *注：以上所有测试均已经过相关交易所授权，请勿自行非法测试。*
 
