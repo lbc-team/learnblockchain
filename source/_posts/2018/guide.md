@@ -54,7 +54,7 @@ author: Tiny熊
 * [以太坊开发入门](https://learnblockchain.cn/2017/11/20/whatiseth/)
 * [智能合约开发环境搭建及Hello World合约](https://learnblockchain.cn/2017/11/24/init-env/)
 * [搭建智能合约开发环境Remix IDE及使用](https://learnblockchain.cn/2018/06/07/remix-ide/)
-* [以太坊客户端Geth命令用法-参数详解](https://learnblockchain.cn/2017/11/29/geth_cmd_options)
+* [以太坊客户端Geth命令用法-参数详解](https://learnblockchain.cn/2017/11/29/geth_cmd_options/)
 * [Geth控制台使用实战及Web3.js使用](https://learnblockchain.cn/2017/12/01/geth_cmd_short/)
 * [如何搭建以太坊私有链](https://learnblockchain.cn/2018/03/18/create_private_blockchain/)
 * [深入浅出以太坊虚拟机](https://learnblockchain.cn/2019/04/09/easy-evm/)
@@ -134,21 +134,21 @@ author: Tiny熊
 
 ## FileCoin
 
-* [1 filecoin概念](https://learnblockchain.cn/2019/02/18/filecoin-code-analysis-1)
-* [2 filecoin通用语言理解](https://learnblockchain.cn/2019/02/20/filecoin-code-analysis-2)
-* [3 filecoin开发网使用](https://learnblockchain.cn/2019/02/22/filecoin-code-analysis-3)
-* [4 filecoin源码顶层架构分析](https://learnblockchain.cn/2019/02/28/filecoin-code-analysis-4)
-* [5 filecoin源码协议层分析之心跳协议](https://learnblockchain.cn/2019/03/04/filecoin-code-analysis-5)
-* [6 filecoin源码协议层分析之hello握手协议](https://learnblockchain.cn/2019/03/04/filecoin-code-analysis-6)
-* [7 filecoin源码协议层分析之存储协议](https://learnblockchain.cn/2019/03/05/filecoin-code-analysis-7)
-* [8 filecoin源码协议层分析之检索协议](https://learnblockchain.cn/2019/03/05/filecoin-code-analysis-8)
-* [9 filecoin源码分析之支撑包分析(1)](https://learnblockchain.cn/2019/03/06/filecoin-code-analysis-9)
-* [10 filecoin源码分析之支撑包分析(2)](https://learnblockchain.cn/2019/03/07/filecoin-code-analysis-10)
-* [11 filecoin源码分析之内部接口层api包分析](https://learnblockchain.cn/2019/03/07/filecoin-code-analysis-11)
-* [12 filecoin源码分析之内部接口层plumbing＆porcelain接口](https://learnblockchain.cn/2019/03/07/filecoin-code-analysis-12)
-* [13 filecoin源码分析之服务层actor及vm](https://learnblockchain.cn/2019/03/08/filecoin-code-analysis-13)
-* [14 filecoin源码分析之服务层链同步、共识协议及挖矿](https://learnblockchain.cn/2019/03/09/filecoin-code-analysis-14)
-* [15 filecoin源码分析之节点运行逻辑](https://learnblockchain.cn/2019/03/10/filecoin-code-analysis-15)
+* [1 filecoin概念](https://learnblockchain.cn/2019/02/18/filecoin-code-analysis-1/)
+* [2 filecoin通用语言理解](https://learnblockchain.cn/2019/02/20/filecoin-code-analysis-2/)
+* [3 filecoin开发网使用](https://learnblockchain.cn/2019/02/22/filecoin-code-analysis-3/)
+* [4 filecoin源码顶层架构分析](https://learnblockchain.cn/2019/02/28/filecoin-code-analysis-4/)
+* [5 filecoin源码协议层分析之心跳协议](https://learnblockchain.cn/2019/03/04/filecoin-code-analysis-5/)
+* [6 filecoin源码协议层分析之hello握手协议](https://learnblockchain.cn/2019/03/04/filecoin-code-analysis-6/)
+* [7 filecoin源码协议层分析之存储协议](https://learnblockchain.cn/2019/03/05/filecoin-code-analysis-7/)
+* [8 filecoin源码协议层分析之检索协议](https://learnblockchain.cn/2019/03/05/filecoin-code-analysis-8/)
+* [9 filecoin源码分析之支撑包分析(1)](https://learnblockchain.cn/2019/03/06/filecoin-code-analysis-9/)
+* [10 filecoin源码分析之支撑包分析(2)](https://learnblockchain.cn/2019/03/07/filecoin-code-analysis-10/)
+* [11 filecoin源码分析之内部接口层api包分析](https://learnblockchain.cn/2019/03/07/filecoin-code-analysis-11/)
+* [12 filecoin源码分析之内部接口层plumbing＆porcelain接口](https://learnblockchain.cn/2019/03/07/filecoin-code-analysis-12/)
+* [13 filecoin源码分析之服务层actor及vm](https://learnblockchain.cn/2019/03/08/filecoin-code-analysis-13/)
+* [14 filecoin源码分析之服务层链同步、共识协议及挖矿](https://learnblockchain.cn/2019/03/09/filecoin-code-analysis-14/)
+* [15 filecoin源码分析之节点运行逻辑](https://learnblockchain.cn/2019/03/10/filecoin-code-analysis-15/)
 
 ## 其他
 
@@ -160,7 +160,7 @@ author: Tiny熊
 
 推荐大家订阅[深入浅出区块链技术小专栏](https://xiaozhuanlan.com/blockchaincore)，目前仅需69元（不定时涨价哦）， 部分源码和进阶内容仅在小专栏开放，订阅小专栏还有其他惊喜哦~。
 
-通过视频课程学习区块链技术，推荐大家关注**登链学院**， 公众号: edupchain， 成为[课程体验师](https://learnblockchain.cn/course)还可以免费学习课程。
+通过视频课程学习区块链技术，推荐大家关注**登链学院**， 公众号: edupchain， 成为[课程体验师](https://learnblockchain.cn/course/)还可以免费学习课程。
 
 如果在学习过程中遇到问题，可以关注最专业的区块链问答社区：[《知识星球：深入浅出区块链》](https://learnblockchain.cn/images/zsxq.png)，跟随星主一起学习，可以让你无论从广度还是深度上都提升一个层次。
 加星主微信：xlbxiong， 还进入专属的微信交流群，同时链接数千区块链开发者。
