@@ -7,8 +7,7 @@ categories:
     - 区块链安全
 tags:
     - 交易所安全
-    - 渗透测试
-    - 业务逻辑
+    - 接口安全
 author: NoneAge
 ---
 
@@ -65,7 +64,8 @@ API，英文全称Application Programming Interface，翻译为“应用程序�
 
 如下图所示，批量下单0.9999个代币，当15分钟后，系统默认取消交易，然后钱包中心钱包将返回1个代币给卖家，获取额为代币：
 
-![精度刷取代币](./assets/jingdu.png)
+![利用精度漏洞刷取代币](https://img.learnblockchain.cn/2019/11/15750112085975.jpg)
+
 
 建议严格按照4位小数精度进行算术运算，并对下单频率以及数量进行限制。
 
@@ -77,8 +77,7 @@ API，英文全称Application Programming Interface，翻译为“应用程序�
 
 在进行身份甄别时，邮箱验证码因其免费的缘故被广泛使用。但是在开发过程中没有正确的限制接口频率，就可能被利用进行电子邮箱炸弹攻击。电子邮件炸弹是最古老的匿名攻击之一，通过设置一台机器不断的大量的向同一地址发送电子邮件，攻击者能够耗尽接受者网络的宽带。 
 
-![Email Bomb](./assets/email.png)
-
+![Email Bomb 邮件炸 ](https://img.learnblockchain.cn/2019/11/15750112600372.jpg)
 
 
 #### 短信验证接口
@@ -89,7 +88,8 @@ API，英文全称Application Programming Interface，翻译为“应用程序�
 
 - 对于公司来说，发送短信一般借助第三方运营商，每条短信需要支付费用，如果一天被刷几十万条，一天造成上万的亏损。
 
-![SMS Bomb](./assets/sms.png)
+![SMS Bomb](https://img.learnblockchain.cn/2019/11/15750112907226.jpg)
+
 
 
 
@@ -97,7 +97,8 @@ API，英文全称Application Programming Interface，翻译为“应用程序�
 
 零时科技安全团队在对某交易所进行安全测试时发现，可不停购买数量为负数的代币，然后确认付款，在商家后台无法进行确认收款，可以批量生产垃圾订单，而且会导致短信炸弹。请求如下：
 
-![批量刷单](./assets/shuadan.png)
+![批量刷单](https://img.learnblockchain.cn/2019/11/15750113075524.jpg)
+
 
 此漏洞是由于可以接受非法参数以及未作频率限制共同造成。不仅影响到业务流程的正常运转，而且耗费了大量的短信资源。这种类似于薅羊毛的技术单次看来危害较小，所以经常会被忽略，但如果被无限制的利用，羊毛出在羊身上，终有秃噜皮的一天。
 
@@ -110,11 +111,8 @@ API，英文全称Application Programming Interface，翻译为“应用程序�
 **免得猛虎下山，反噬其主。**
 
 
-
-
 *注：以上所有测试均已经过相关交易所授权，请勿自行非法测试。*
 
 本文由深入浅出区块链社区合作伙伴 - [零时科技安全团队](https://noneage.com/)提供。
-
 
 [深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，[学习区块链技术](https://learnblockchain.cn/2018/01/11/guide/)都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789) 掌握区块链技术动态。

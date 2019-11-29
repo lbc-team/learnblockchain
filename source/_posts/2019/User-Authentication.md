@@ -54,9 +54,8 @@ author: NoneAge
 
 零时科技安全团队建议，各大交易所在传输口令信息时，能够使用加密传输的方式，且最好不要留下加密算法的明显线索（加密用何种算法，密钥是什么等），保障信息安全。
 
-![明文传输](./assets/User-Authentication1.png)
 
-
+![明文传输](https://img.learnblockchain.cn/2019/11/15750109637488.jpg)
 
 ### 用户登录过程测试
 
@@ -66,9 +65,7 @@ author: NoneAge
 
 零时科技安全团队建议，各大交易所在登录页面应同时使用图形或更复杂的验证码；对同一IP发出的请求频率和数量进行限制。
 
-![撞库](./assets/User-Authentication2.png)
-
-
+![撞库](https://img.learnblockchain.cn/2019/11/15750109860964.jpg)
 
 ### 验证码策略
 
@@ -76,8 +73,8 @@ author: NoneAge
 
 零时科技安全团队建议各大交易所使用验证码保障自身安全时，应使用随机多位的验证码，有条件的话最好使用字母和数字混杂的高强度验证码，并限制验证码输入错误的次数，采取一定措施。
 
-![验证码爆破](./assets/User-Authentication3.png)
 
+![验证码爆破](https://img.learnblockchain.cn/2019/11/15750110010116.jpg)
 
 
 ---
