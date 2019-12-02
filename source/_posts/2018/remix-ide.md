@@ -7,9 +7,7 @@ categories:
     - 智能合约
 tags:
     - Remix
-
 author: Tiny熊
-
 ---
 
 

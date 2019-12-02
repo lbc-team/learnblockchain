@@ -6,7 +6,6 @@ categories: 比特币
 tags:
     - Merkle树
     - SPV简单支付验证
-
 author: Tiny熊
 ---
 

@@ -2,7 +2,6 @@
 title:  搞懂 Solidity 事件Event - 如何在DApp中使用
 permalink: solidity-event
 date: 2018-05-09 20:37:03
-
 categories:
     - 以太坊
     - 智能合约
@@ -11,9 +10,7 @@ tags:
     - Event
     - Web3.js
     - 智能合约
-
 author: Tiny熊
-
 ---
 
 很多同学对[Solidity](https://learnblockchain.cn/docs/solidity/) 中的Event有疑问，这篇文章就来详细的看看Solidity 中Event到底有什么用？

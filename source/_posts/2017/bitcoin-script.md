@@ -3,8 +3,8 @@ title: 比特币脚本及交易分析 - 智能合约雏形
 permalink: bitcoin-script
 date: 2017-11-10 17:05:33
 categories: 比特币
-tags:
-    - 比特币脚本
+tags: 比特币脚本
+author: Tiny熊
 ---
 
 大家都有转过账，每笔交易是这样的：张三账上减￥200，李四账上加￥200。
