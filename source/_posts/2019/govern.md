@@ -1,6 +1,7 @@
 ---
 title: 谈谈区块链（去中心化）治理
 date: 2019-06-01 14:23:00
+permalink: govern
 categories: 杂文
 tags: 治理
 author: Tiny熊

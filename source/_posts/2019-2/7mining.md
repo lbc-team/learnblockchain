@@ -2,8 +2,7 @@
 title: 区块链技术入门-挖矿的7个步骤
 permalink: 7mining
 date: 2019-10-31 15:34:29
-categories:
-  - 基础理论
+categories: 入门
 tags:
   - 区块链入门
 author: 影无双

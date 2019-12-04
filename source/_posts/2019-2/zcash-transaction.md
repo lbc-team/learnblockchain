@@ -2,7 +2,9 @@
 title: Zcash - 图解Transaction结构
 permalink: nullifier-hash
 date: 2019-08-01 10:10:54
-categories: Zcash
+categories: 
+    - 零知识证明
+    - Zcash
 tags: 
     - Zcash
     - 零知识证明

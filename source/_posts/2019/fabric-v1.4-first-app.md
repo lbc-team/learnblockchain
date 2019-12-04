@@ -2,7 +2,7 @@
 title: 利用Hyperledger Fabric开发第一个区块链应用
 date: 2019-04-22 11:04:46
 permalink: fabric-v1.4-first-app
-catagories: 
+categories: 
   - 联盟链
   - Fabric
 tags:

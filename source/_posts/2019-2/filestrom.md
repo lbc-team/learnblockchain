@@ -3,6 +3,7 @@ title: FileStorm的共识机制
 permalink: filestorm
 date: 2019-09-01 10:10:54
 categories:
+    - 分布式存储
     - FileStorm
 tags:
     - FileStorm

@@ -2,8 +2,7 @@
 title: 区块链入门-51%攻击原理
 permalink: 51attack
 date: 2019-10-30 10:35:06
-categories:
-    - 区块链安全
+categories: 入门
 tags:
     - 区块链入门
     - 共识安全

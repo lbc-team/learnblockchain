@@ -3,7 +3,9 @@ title: ENS-为你的钱包添加多币种支持
 permalink: ENS-wallet
 un_reward: true
 date: 2019-12-04 12:04:54
-categories: ENS
+categories: 
+    - 以太坊
+    - ENS
 tags:  ENS
 author: makoto_inoue
 ---
