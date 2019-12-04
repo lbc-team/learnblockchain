@@ -7,7 +7,6 @@ categories:
     - 区块链安全
 tags:
     - 交易所安全
-    - 渗透测试
     - 信息泄露
 author: NoneAge
 ---
