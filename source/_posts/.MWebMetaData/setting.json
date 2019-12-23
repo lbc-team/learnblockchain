@@ -1,0 +1,10 @@
+{
+  "name" : "_posts",
+  "fileExtension" : ".md",
+  "autoUploadInsertedImageKey" : "image-learnblog-https:\/\/v0.api.upyun.com\/",
+  "autoUploadInsertedImage" : true,
+  "folderType" : 10,
+  "mediaFloder" : "media",
+  "orderBy" : 0,
+  "newlinesToBR" : 0
+}

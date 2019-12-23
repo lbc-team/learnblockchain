@@ -8,6 +8,7 @@ categories:
 tags:
     - DApp
     - Vue.js
+    - Web3.js
 author: Tiny熊
 ---
 
