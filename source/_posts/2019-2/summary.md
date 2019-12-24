@@ -238,6 +238,6 @@ ETH公链今年未发生较严重的DApp攻击事件，一是因为ETH公链上�
 
 面对当前时有发生的因区块链系统安全漏洞引起的资产被盗事件，以及利用数字资产进行犯罪、传销、跑路等不法行为，区块链安全公司需全力以赴，承担起责任，为行业健康发展多做贡献，一方面协助相关企业做好安全防护工作，提升安全防护能力，减少安全损失；另一方面，继续大力协助政府监管机构做好调查取证等工作，以切实加强安全监管，多为行业发展发出正能量的声音，带头建立起有序的行业规范，并促进安全标准建设。
 
-*本文来自 深入浅出区块链社区合作伙伴：专注于区块链生态安全的[Beosin 成都链安](https://www.lianantech.com/?utm_source=learnblockchain.cn)*
+本文来自 深入浅出区块链社区合作伙伴：专注于区块链生态安全的[Beosin 成都链安](https://www.lianantech.com/?utm_source=learnblockchain.cn)
 
 [深入浅出区块链](https://learnblockchain.cn/) - 打造高质量区块链技术博客，学区块链都来这里，关注[知乎](https://www.zhihu.com/people/xiong-li-bing/activities)、[微博](https://weibo.com/517623789) 掌握区块链技术动态。

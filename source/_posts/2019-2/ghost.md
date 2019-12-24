@@ -5,7 +5,7 @@ un_reward: true
 date: 2019-12-16 10:16:25
 categories: 以太坊
 tags: Ghost
-author: Qin Yuan
+author: 清源
 ---
 在比特币中，每个区块的出块时间被设置为10分钟，为什么需要10分钟呢？按照常识来说，出块速度越快可以打包的交易就越多，系统的吞吐率也就越高。
 

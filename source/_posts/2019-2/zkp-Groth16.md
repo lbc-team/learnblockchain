@@ -12,7 +12,9 @@ author: Star Li
 ---
 
 Groth16算法是zkSNARK的典型算法，目前在ZCash，Filecoin，Coda等项目中使用。本文从计算量的角度详细分析Groth16计算。Groth16计算分成三个部分：Setup针对电路生成Pk/Vk（证明/验证密钥），Prove在给定witness/statement的情况下生成证明，Verify通过Vk验证证明是否正确。
+
 <!----more--->
+
 本文中所有的术语和数学符号和Groth16论文保持一致（[On the Size of Pairing-based Non-interactive Arguments](https://eprint.iacr.org/2016/260.pdf)，具体的计算在17/18页）：
 
 对Groth16算法的理解可查看：
